@@ -1,5 +1,0 @@
-#summary Wishlist items
-
-= What do you want to see in Tagbase? =
-
-Tell us what you want here by leaving comments!
