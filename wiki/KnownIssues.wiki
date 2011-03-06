@@ -1,9 +1,0 @@
-#summary Quick list of known usage issues
-
-= Introduction =
-
-Weird issues are documented here
-
-= Details =
-
-- Bubble graph is limited to 4000 records
