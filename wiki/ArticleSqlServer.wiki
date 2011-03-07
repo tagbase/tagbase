@@ -1,16 +1,22 @@
-#summary One-sentence summary of this page.
-# labels Featured
+#summary Migrating to Microsoft SQL Server
 
-<wiki:toc max_depth="2" />
 
 = Introduction =
 
-Add your content here.
+Microsoft SQL Server is a enterprise, commerical scale data management system. A free version is available, with up to 10 Gb storage, SQL Server Express can be downloaded from http://www.microsoft.com/express/Database. 
+
+For the Express version, we recommend installing the "Database and Management Tools" option, which is the default on their website.
 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Tagbase is currently ported to SQL Server 2008. For backward compatibility to Server 2005, contact us at `<tagbase.org@gmail.com>` for further assistance.
+
+Download the correct files for:
+  # *[http://tagbase.googlecode.com/svn/trunk/files/TagBase4_3SqlServer2008R2.zip SQL Server 2008 R2]*
+  # *[http://tagbase.googlecode.com/svn/trunk/files/TagBase4_3SqlServer2008.zip SQL Server 2008 R1]*
+
+And follow the instructions here to set up your SQL server:
+
+ * *[http://tagbase.googlecode.com/svn/trunk/docs/QuickMgmtSqlServerTagbase.pdf Tagbase SQL Server Setup Instructions]*
+

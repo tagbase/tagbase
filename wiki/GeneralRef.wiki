@@ -1,16 +1,23 @@
-#summary One-sentence summary of this page.
-# labels Featured
+#summary Useful resources in general for working with Microsoft Access
 
 <wiki:toc max_depth="2" />
 
-= Introduction =
+= Quick Guides for Microsoft Access =
 
-Add your content here.
+  *  *[http://tagbase.googlecode.com/svn/trunk/docs/access-quick-reference-2007.pdf Access 2007]* 
+  *  *[http://tagbase.googlecode.com/svn/trunk/docs/access-quick-reference-2003.pdf Access 2003]*
+  *  *[http://tagbase.googlecode.com/svn/trunk/docs/access-quick-reference-2000-97.pdf Access 97/2000]*
 
 
-= Details =
+= Built-in functions, accessible in queries =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+ * http://www.techonthenet.com/access/functions
+
+= Introduction to MS Access & VBA =
+
+ * http://www.functionx.com/access/Lesson01.htm
+ * http://www.functionx.com/vbaccess/Lesson01.htm
+
+= Other resources =
+
+ * http://www.mvps.org/access/resources/othersites.htm

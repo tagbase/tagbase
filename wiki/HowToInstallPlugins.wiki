@@ -5,7 +5,7 @@
 
 === A zip file containing all required plugins is available [http://tagbase.googlecode.com/svn/trunk/files/plugins.zip here]. ===
 
-If you have a x64 system, you will go to the webpages and download the correct version
+If you have a 64-bit system, you will go to the webpages and download the correct version
 
 == 1. `XtrFun.dll` == 
 ==== http://www.xlxtrfun.com/XlXtrFun/XlXtrFun.htm ====

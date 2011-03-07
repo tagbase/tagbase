@@ -13,12 +13,8 @@ http://tagbase.googlecode.com/svn/trunk/images/MissingRef1.jpg
   * Click once again on the splash screen to close it and begin the following fix
 
 This happens when
-  #  plugins are not correctly installed, or
-  #  you are switching from working on a more recent version of MS Office to working in an older version of MS Office.
-
-= Plugins =
-
-Refer to [HowToInstallPlugins Plugins Installation] to check you have correctly installed all plugins
+  #  you are switching from working on a more recent version of MS Office to working in an older version of MS Office or
+  #  plugins are not correctly installed.
 
 = Switching from new to old versions of MS Office =
 
@@ -39,6 +35,18 @@ http://tagbase.googlecode.com/svn/trunk/images/MissingRef3.jpg
 
   * Click `OK` and you are done!
 
-If you can't find a replacement, it is likely you don't have the plugins installed correctly. 
+If you can't find a replacement, it is likely you don't have the plugins installed correctly. A video for updating the references can be seen [http://accessblog.net/2006/05/how-to-deal-with-missing-references.html here] by Alex Dybenko.
 
-A video can be seen [http://accessblog.net/2006/05/how-to-deal-with-missing-references.html here] by Alex Dybenko.
+= Plugins =
+
+  * Press ALT+F11 to open the Visual Basic Editor. Or navigate from the menu: `Tools` > `Macros` > `Visual Basic Editor`
+
+  * In the new window, `Microsoft Visual Basic - Missing References`, go to `Tool` > `References`
+
+  * You should see something like:
+
+  {{{ MISSING: MapWinGis Components }}}
+
+http://tagbase.googlecode.com/svn/trunk/images/MissingRef4.jpg
+
+Refer to [HowToInstallPlugins Plugins Installation] to install all required plugins.
