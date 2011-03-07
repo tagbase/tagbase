@@ -1,16 +1,56 @@
-#summary One-sentence summary of this page.
-# labels Featured
+#summary Basic terms you will want to know while working with Tagbase
 
 <wiki:toc max_depth="2" />
 
-= Introduction =
+= Abbreviations =
 
-Add your content here.
+== Manufacturers/ Tags ==
 
+  * Archival or Arc: Archival tags (both Wildlife Computers, Lotek Wireless)
+  * LTD: Lotek Wireless
+  * MT: Microwave Telemetry
+  * PAT or PSAT: Pop-up archival tags
+  * SPOT: smart-position only tags (Wildlife Computers)
+  * FastGPS: Fast-loc GPS (global positioning system) tag configuration (Wildlife Computers)
+  * WC: Wildlife Computers
 
-= Details =
+== Details for Wildlife Computers only ==
+  
+  * BinInfo: the definition of values for the 12-, 14- or more bins for `time-at-depth` (TAD) and `time-at-temperature` (TAT) histogram data collection, depending on tag model
+  * FrequencyData: PAT tags `time-at-depth` and `time-at-temperature` data
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+== Tables/ Queries ==
+  * *Proc*: Processed, where most data in Tagbase will be
+  * Sum: Summary (not important, mentioned for completeness)
+  * Tmp: Temporary (not important, mentioned for completeness)
+
+== Forms/ Graphs == 
+  * Freq: Frequency (i.e. `TAT`/`TAD`)
+  * Pdt: WC `PDT` worksheet data for PAT tags
+  * Wtd: Weighted
+  * Temp: Temperature
+  * TS: Time Series
+
+= Terminology =
+
+When you work with TagBase in Microsoft Access, Access offers you Tables, Queries, Forms, Reports, Macros, and Modules. Here's a quick overview of what these are and when to use them (provided by *_[http://allenbrowne.com/casu-01.html Allen Browne]_*).
+
+=== Tables ===
+http://allenbrowne.com/graphics/table.gif
+All data is stored in tables. When you create a new table, Access asks you define fields (column headings), giving each a unique name, and telling Access the data type. Use the "Text" type for most data, including numbers that don't need to be added e.g. phone numbers or postal codes. Using Wizards, Access will walk you through the process of creating common tables such as lists of names and addresses. Once you have defined a table's structure, you can enter data. Each new row that you add to the table is called a record. To define relationships between tables, click Database Tools > Relationships in Access 2007 and above, or choose Relationships from the Tools menu in Access 95, 97, 2000.
+
+=== Queries ===
+http://allenbrowne.com/graphics/query.gif
+Use a query to find or operate on the data in your tables. With a query, you can display the records that match certain criteria (e.g. all the members called "Barry"), sort the data as you please (e.g. by Surname), and even combine data from different tables. You can edit the data displayed in a query (in most cases), and the data in the underlying table will change. Special queries can also be defined to make wholesale changes to your data, e.g. delete all members whose subscriptions are 2 years overdue, or set a "State" field to "WA" wherever postcode begins with 6.
+
+=== Forms === 
+http://allenbrowne.com/graphics/form.gif
+These are screens for displaying data from and inputting data into your tables. The basic form has an appearance similar to an index card: it shows only one record at a time, with a different field on each line. If you want to control how the records are sorted, define a query first, and then create a form based on the query.
+
+=== Macros ===
+http://allenbrowne.com/graphics/macro.gif
+An Access Macro is a script for doing some job. For example, to create a button which opens a report, you could use a macro which fires off the "OpenReport" action. Macros can also be used to set one field based on the value of another (the "SetValue" action), to validate that certain conditions are met before a record saved (the "CancelEvent" action) etc.
+
+=== Modules ===
+http://allenbrowne.com/graphics/module.gif
+This is where you write your own functions and programs if you want to. Everything that can be done in a macro can also be done in a module, but you don't get the Macro interface that prompts you what is needed for each action. Modules are far more powerful, and are essential if you plan to write code for a multi-user environment, since macros cannot include error handling. Most serious Access users start out with macros to get a feel for things, but end up using modules almost exclusively. On the other hand, if your needs are simple, you may never need to delve into the depths of Access modules.
