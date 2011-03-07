@@ -1,5 +1,4 @@
-#summary One-sentence summary of this page.
-_Announcements of the latest project features_
+#summary Announcements of the latest project features
 
 Welcome to the What's New page for Project Tagbase. Here you'll find descriptions of our latest and exciting improvements.
 

@@ -1,17 +1,37 @@
 #summary One-sentence summary of this page.
 #labels Featured
-# labels Featured
 
 <wiki:toc max_depth="2" />
 
 = Introduction =
 
-Add your content here.
+Tagbase is ideal for
+   * Centralizing tag data within a unified relational model
+   * Integrating with metadata and auxiliary data
+   * Querying data efficiently (subset, regroup, summarize)
+   * Visualizing data rapidly (e.g. forms with MS-Graph)
+   * Integrating with other tools as a backend database and manage result outputs
+
+= Starting Tagbase =
+
+  * Unzip the latest release compressed archieve (.zip) into a convenient location
+    `C:\Tagbase`
+  * You should be able to open the Tagbase MS Access (.mdb) file
+  * The following welcome screen should appear. Click on it to close.
+  
+http://tagbase.googlecode.com/svn/trunk/images/screenprint.jpg
+
+  * If you come across any error messages of problems, refer to
+    # HowToInstallPlugins to set up the additional plugins correctly
+    # ArticleMissing to ensure the correct libraries are referenced
+
+= Understanding the workflow =
+
+Tagbase is geared towards maintaining post-manufacturer processed data files for display and analysis. By default, most of the hardware status messages will not be assimilated. Examples of hardware messages include the RawData worksheet from Wildlife Computer PAT tag files (.xls), “Light too dim” data column for Lotek Wireless Archival tag files (.csv), or, “Wet/Dry State” for Wildlife Computers Archival tag files (.csv). 
+
+It is highly recommended that you always adopt the practice of archiving raw files, including files that are downloaded from the tag directly and output files after processing with manufacturer’s software suite. Then use Tagbase to maintain data that are quality control and carefully maintained for data visualization and analysis purposes. 
 
 
-= Details =
+= Present limitations =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+When you need to deal a large number of archival tags, it will be more efficient to implement Tagbase in a high-end database management system, see ArticleSqlServer for instructions, rather than using the standard Microsoft Access release of Tagbase. Nonetheless, it is a good exercise to familiarize yourself with Tagbase in MS Access first, before setting it up in other systems.
