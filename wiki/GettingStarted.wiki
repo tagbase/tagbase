@@ -12,7 +12,7 @@ Tagbase is ideal for
    * Visualizing data rapidly (e.g. forms with MS-Graph)
    * Integrating with other tools as a backend database and manage result outputs
 
-<wiki:gadget url="http://tagbase.googlecode.com/svn/trunk/docs/presentation.xml" width="555" height="451" />
+<wiki:gadget url="http://tagbase.googlecode.com/svn/trunk/docs/presentation.xml" width="410" height="342" />
 
 = Starting Tagbase =
 
