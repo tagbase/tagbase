@@ -4,7 +4,7 @@ A list of resources that we are aware of for tagging applications. Feel free to 
 
 <wiki:toc max_depth="2" />
 
-= State-space models for geolocation, Kalman filter suite (`TrackIt`, `Ukfsst`, `Kfsst`, `Kftrack`) =
+== State-space models for geolocation, Kalman filter suite (`TrackIt`, `Ukfsst`, `Kfsst`, `Kftrack`) ==
 ==== https://www.soest.hawaii.edu/tag-data/software/ ====
 
 A suite of statistical models to estimate position errors, movement model parameters, and most probable positions from tracking data. Refer to:
@@ -13,25 +13,25 @@ A suite of statistical models to estimate position errors, movement model parame
    [http://www.int-res.com/abstracts/meps/v419/p71-84/ Open Access] available!
 
 
-= Webpage and R libaries of Ben Galaurdi =
+== Webpage and R libaries of Ben Galaurdi ==
 ==== http://pubpages.unh.edu/~galuardi/galuardi.html ====
 
 Great utilities are provided here to work tag data in the [http://www.r-project.org/ R] environment.
 
 
-= NOAA ERDDAP =
+== NOAA ERDDAP ==
 ==== http://coastwatch.pfeg.noaa.gov/erddap/index.html ====
 
 ERDDAP (the Environmental Research Division's Data Access Program) is a data server that gives you a simple, consistent way to download subsets of scientific datasets in common file formats and make graphs and maps. This particular ERDDAP installation has oceanographic data (for example, data from satellites and buoys). 
 
 
-== NOAA Xtractomatic Data Client =
+== NOAA Xtractomatic Data Client ==
 ==== http://coastwatch.pfel.noaa.gov/xtracto/ ====
 
 Xtractomatic is a set of free routines that allow client-side access of environmental data served by the Thematic Real-time Environmental Distributed Data System (THREDDS) at the Pacific Fisheries Environmental Laboratory. 
 
 
-= Electronic Tagging Data Repository =
+== Electronic Tagging Data Repository ==
 ==== https://www.soest.hawaii.edu/tag-data/ ====
 
 https://www.soest.hawaii.edu/tag-data/image/banner.gif
@@ -41,7 +41,14 @@ A facility for exchange of data derived from electronic tags developed by John S
 The Electronic Tagging Data Repository (ETDR) is a facility for storage of data and metadata derived from electronic tags. ETDR makes extensive use of tools developed by the Knowledge Network for Biocomplexity (KNB). All metadata of the ETDR conform to the Ecological Metadata Language (EML) and eXtensible Markup Language (XML). EML is a fully documented open standard developed for ecological data and adapted for electronic tags. XML is a robust file format developed by w3.org. The data are housed on a metacat server which stores, retrieves and displays data conforming to the EML standard.
 
 
-= Ocean Data View =
+== Satellite Tracking and Analysis Tool (STAT) ==
+==== http://www.seaturtle.org/stat/ ====
+
+http://www.seaturtle.org/images/logo3.gif
+
+The Satellite Tracking and Analysis Tool (STAT) automates the process of working with satellite tracking data, including daily data downloads, backups and map updates. STAT is a free open access product with a user-friendly online interface that provides a suite of integrated data analysis and filtering tools.
+
+== Ocean Data View ==
 ==== http://odv.awi.de/ ====
 
 http://odv.awi.de/fileadmin/user_upload/keyvisuals/banner/header-image.jpg
@@ -51,13 +58,13 @@ Ocean Data View (ODV) is a software package for the interactive exploration, ana
 It offers very simple and interactive features to visualize your tag data!
 
 
-= Marine Geospatial Ecology Tools = 
+== Marine Geospatial Ecology Tools == 
 ==== http://code.env.duke.edu/projects/mget ====
 
 Marine Geospatial Ecology Tools (MGET), also known as the GeoEco Python package, is an open source geoprocessing toolbox designed for coastal and marine researchers and GIS analysts who work with spatially-explicit ecological and oceanographic data in scientific or management workflows. MGET includes over 180 tools useful for a variety of tasks, such as converting oceanographic data to ArcGIS formats, identifying fronts in sea surface temperature images, fitting and evaluating statistical models such as GAMs and GLMs by integrating ArcGIS with the R statistics program, analyzing coral reef connectivity by simulating hydrodynamic larval dispersal, and building grids that summarize fishing effort, CPUE and other statistics. Currently under development are tools for identifying eddy cores in sea surface height images, for analyzing connectivity networks, for estimating fishing effort when no effort data are available, for predicting hard bottom habitat from coarse grain bathymetry, and much more. 
 
 
-= AD Model Builder =
+== AD Model Builder ==
 ==== http://www.admb-project.org/ ====
 
 http://www.soest.hawaii.edu/Illust/admb_dev/image/admb_banner_deep.jpg
