@@ -3,7 +3,7 @@
 
 = Tagbase Plugins =
 
-=== A zip file containing at these plugins is available [http://tagbase.googlecode.com/svn/trunk/files/plugins.zip here]. ===
+=== A zip file containing all required plugins is available [http://tagbase.googlecode.com/svn/trunk/files/plugins.zip here]. ===
 
 If you have a x64 system, you will go to the webpages and download the correct version
 
