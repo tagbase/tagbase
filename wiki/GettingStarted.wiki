@@ -4,13 +4,14 @@
 <wiki:toc max_depth="2" />
 
 = Introduction =
-
+<wiki:comment>
 Tagbase is ideal for
    * Centralizing tag data within a unified relational model
    * Integrating with metadata and auxiliary data
    * Querying data efficiently (subset, regroup, summarize)
    * Visualizing data rapidly (e.g. forms with MS-Graph)
    * Integrating with other tools as a backend database and manage result outputs
+</wiki:comment>
 
 <wiki:gadget url="http://tagbase.googlecode.com/svn/trunk/docs/presentation.xml" width="410" height="342" />
 
