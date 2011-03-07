@@ -3,3 +3,5 @@
 = What do you want to see in Tagbase? =
 
 Tell us what you want here by leaving comments!
+
+http://tagbase.googlecode.com/svn/trunk/images/tagbase-logo3shark.jpg
