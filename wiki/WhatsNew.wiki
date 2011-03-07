@@ -3,14 +3,20 @@
 
 <wiki:toc max_depth="2" />
 
-= Introduction =
+_Announcements of the latest project features_
 
-Add your content here.
+Welcome to the What's New page for Project Tagbase. Here you'll find descriptions of our latest and exciting improvements.
 
+= March 2010 =
 
-= Details =
+== Our website tagbase.org is fully operational! ==
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Hope you will like our graphics and materials 
+
+== Tagbase 4.1 enters first public release ==
+
+This is our stable version. Mapping is not yet included by will be released during Tuna Conference.
+
+http://www.tunaconference.org/Home.htm
+
+This year's theme will be on "Data Challenges", and we plan to showcase Tagbase front and centered.
