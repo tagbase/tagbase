@@ -9,7 +9,7 @@
     * [ArticleDisplay Display and Graphs]
     * [ArticleExport Exporting data]
   * [ArticleSqlServer Setting up SQL Server]
-  * [ArticleMissing Handling "Missing References" error]
+  * [ArticleMissingRefs Handling "Missing References" error]
   * [GeneralRef General References]
   * [WebResources Web Resources]
   * [WishList Tell us what you want!]
