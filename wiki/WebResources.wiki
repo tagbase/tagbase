@@ -9,7 +9,8 @@ A list of resources that we are aware of for tagging applications. Feel free to 
 
 A suite of statistical models to estimate position errors, movement model parameters, and most probable positions from tracking data. Refer to:
 
-   {{{Lam, Chi H., Anders Nielsen, and John R. Sibert. Incorporating sea-surface temperature to the light-based geolocation model TrackIt. Marine Ecology Progress Series MEPS 419:71-84 (2010). [http://www.int-res.com/abstracts/meps/v419/p71-84/ Open Access]}}}
+   {{{Lam, Chi H., Anders Nielsen, and John R. Sibert. Incorporating sea-surface temperature to the light-based geolocation model TrackIt. Marine Ecology Progress Series MEPS 419:71-84 (2010).}}}
+   [http://www.int-res.com/abstracts/meps/v419/p71-84/ Open Access] available!
 
 
 = Webpage and R libaries of Ben Galaurdi =
@@ -24,6 +25,12 @@ Great utilities are provided here to work tag data in the [http://www.r-project.
 ERDDAP (the Environmental Research Division's Data Access Program) is a data server that gives you a simple, consistent way to download subsets of scientific datasets in common file formats and make graphs and maps. This particular ERDDAP installation has oceanographic data (for example, data from satellites and buoys). 
 
 
+== NOAA Xtractomatic Data Client =
+==== http://coastwatch.pfel.noaa.gov/xtracto/ ====
+
+Xtractomatic is a set of free routines that allow client-side access of environmental data served by the Thematic Real-time Environmental Distributed Data System (THREDDS) at the Pacific Fisheries Environmental Laboratory. 
+
+
 = Electronic Tagging Data Repository =
 ==== https://www.soest.hawaii.edu/tag-data/ ====
 
@@ -36,6 +43,8 @@ The Electronic Tagging Data Repository (ETDR) is a facility for storage of data 
 
 = Ocean Data View =
 ==== http://odv.awi.de/ ====
+
+http://odv.awi.de/fileadmin/user_upload/keyvisuals/banner/header-image.jpg
 
 Ocean Data View (ODV) is a software package for the interactive exploration, analysis and visualization of oceanographic and other geo-referenced profile or sequence data. ODV runs on Windows (7, Vista, XP, 9x, Me, NT, 2000), Mac OS X, Linux, and UNIX (Solaris, Irix, AIX) systems. ODV data and configuration files are platform-independent and can be exchanged between different systems. 
 
