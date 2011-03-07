@@ -1,16 +1,44 @@
-#summary One-sentence summary of this page.
-# labels Featured
+#summary Troubleshooting missing references in Microsoft Access
 
 <wiki:toc max_depth="2" />
 
-= Introduction =
+= The problem =
 
-Add your content here.
+When Tagbase first starts up, it hangs on the splash screen and reports an error.
+
+http://tagbase.googlecode.com/svn/trunk/images/MissingRef1.jpg
+
+  * Close the Microsoft Visual Basic window and click `OK` when prompted to stop the debugger
+  * Click `Halt` to stop the code
+  * Click once again on the splash screen to close it and begin the following fix
+
+This happens when
+  #  plugins are not correctly installed, or
+  #  you are switching from working on a more recent version of MS Office to working in an older version of MS Office.
+
+= Plugins =
+
+Refer to [HowToInstallPlugins Plugins Installation] to check you have correctly installed all plugins
+
+= Switching from new to old versions of MS Office =
+
+# Press ALT+F11 to open the Visual Basic Editor. Or navigate from the menu: `Tools` > `Macros` > `Visual Basic Editor`
+
+# In the new window, `Microsoft Visual Basic - Missing References`, go to `Tool` > `References`
+
+# You should see something like:
+
+  {{{ MISSING: Microsoft Excel Object Library 10.0 }}}
+
+http://tagbase.googlecode.com/svn/trunk/images/MissingRef2.jpg
 
 
-= Details =
+# Uncheck the missing reference, and replace with (tick) the correct reference from the list (scroll).
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+http://tagbase.googlecode.com/svn/trunk/images/MissingRef3.jpg
+
+Click `OK` and you are done!
+
+If you can't find a replacement, it is likely you don't have the plugins installed correctly. 
+
+A video can be seen [http://accessblog.net/2006/05/how-to-deal-with-missing-references.html here] by Alex Dybenko.
