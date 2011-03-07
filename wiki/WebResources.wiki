@@ -18,6 +18,12 @@ A suite of statistical models to estimate position errors, movement model parame
 Great utilities are provided here to work tag data in the [http://www.r-project.org/ R] environment.
 
 
+= NOAA ERDDAP =
+==== http://coastwatch.pfeg.noaa.gov/erddap/index.html ====
+
+ERDDAP (the Environmental Research Division's Data Access Program) is a data server that gives you a simple, consistent way to download subsets of scientific datasets in common file formats and make graphs and maps. This particular ERDDAP installation has oceanographic data (for example, data from satellites and buoys). 
+
+
 = Electronic Tagging Data Repository =
 ==== https://www.soest.hawaii.edu/tag-data/ ====
 
@@ -27,9 +33,26 @@ A facility for exchange of data derived from electronic tags developed by John S
 
 The Electronic Tagging Data Repository (ETDR) is a facility for storage of data and metadata derived from electronic tags. ETDR makes extensive use of tools developed by the Knowledge Network for Biocomplexity (KNB). All metadata of the ETDR conform to the Ecological Metadata Language (EML) and eXtensible Markup Language (XML). EML is a fully documented open standard developed for ecological data and adapted for electronic tags. XML is a robust file format developed by w3.org. The data are housed on a metacat server which stores, retrieves and displays data conforming to the EML standard.
 
+
+= Ocean Data View =
+==== http://odv.awi.de/ ====
+
+Ocean Data View (ODV) is a software package for the interactive exploration, analysis and visualization of oceanographic and other geo-referenced profile or sequence data. ODV runs on Windows (7, Vista, XP, 9x, Me, NT, 2000), Mac OS X, Linux, and UNIX (Solaris, Irix, AIX) systems. ODV data and configuration files are platform-independent and can be exchanged between different systems. 
+
+It offers very simple and interactive features to visualize your tag data!
+
+
+= Marine Geospatial Ecology Tools = 
+==== http://code.env.duke.edu/projects/mget ====
+
+Marine Geospatial Ecology Tools (MGET), also known as the GeoEco Python package, is an open source geoprocessing toolbox designed for coastal and marine researchers and GIS analysts who work with spatially-explicit ecological and oceanographic data in scientific or management workflows. MGET includes over 180 tools useful for a variety of tasks, such as converting oceanographic data to ArcGIS formats, identifying fronts in sea surface temperature images, fitting and evaluating statistical models such as GAMs and GLMs by integrating ArcGIS with the R statistics program, analyzing coral reef connectivity by simulating hydrodynamic larval dispersal, and building grids that summarize fishing effort, CPUE and other statistics. Currently under development are tools for identifying eddy cores in sea surface height images, for analyzing connectivity networks, for estimating fishing effort when no effort data are available, for predicting hard bottom habitat from coarse grain bathymetry, and much more. 
+
+
 = AD Model Builder =
 ==== http://www.admb-project.org/ ====
 
 http://www.soest.hawaii.edu/Illust/admb_dev/image/admb_banner_deep.jpg
 
 AD Model Builder, or ADMB, the most powerful software package for the development of state-of-the-art nonlinear models, can now be freely downloaded for Windows, Linux, MacOS, and Sun/SPARC. This should projectile you into serious ecological modeling! A very powerful set of tools used by ecologists and stock assessment scientists.
+
+
