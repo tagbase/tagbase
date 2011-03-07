@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary A quick guide to getting started with Tagbase
 #labels Featured
 
 <wiki:toc max_depth="2" />
@@ -19,15 +19,15 @@ Tagbase is ideal for
   * You should be able to open the Tagbase MS Access (.mdb) file
   * The following welcome screen should appear. Click on it to close.
   
-http://tagbase.googlecode.com/svn/trunk/images/screenprint.jpg
+http://tagbase.googlecode.com/svn/trunk/images/screenprint.png
 
   * If you come across any error messages of problems, refer to
-    # HowToInstallPlugins to set up the additional plugins correctly
-    # ArticleMissing to ensure the correct libraries are referenced
+    # [HowToInstallPlugins How to install plugins] to set up the additional plugins correctly
+    # [ArticleMissing Handling "Missing References" error] to ensure the correct libraries are referenced
 
 = Understanding the workflow =
 
-Tagbase is geared towards maintaining post-manufacturer processed data files for display and analysis. By default, most of the hardware status messages will not be assimilated. Examples of hardware messages include the RawData worksheet from Wildlife Computer PAT tag files (.xls), “Light too dim” data column for Lotek Wireless Archival tag files (.csv), or, “Wet/Dry State” for Wildlife Computers Archival tag files (.csv). 
+Tagbase is geared towards maintaining post-manufacturer processed data files for display and analysis. By default, most of the hardware status messages will not be assimilated. Examples of hardware messages include the RawData worksheet from Wildlife Computer PAT tag files (.xls), 'Light too dim' data column for Lotek Wireless Archival tag files (.csv), or, 'Wet/Dry State' for Wildlife Computers Archival tag files (.csv). 
 
 It is highly recommended that you always adopt the practice of archiving raw files, including files that are downloaded from the tag directly and output files after processing with manufacturer’s software suite. Then use Tagbase to maintain data that are quality control and carefully maintained for data visualization and analysis purposes. 
 
