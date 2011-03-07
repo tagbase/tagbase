@@ -27,10 +27,9 @@ http://tagbase.googlecode.com/svn/trunk/images/screenprint.png
 
 = Understanding the workflow =
 
-Tagbase is geared towards maintaining post-manufacturer processed data files for display and analysis. By default, most of the hardware status messages will not be assimilated. Examples of hardware messages include the 'RawData' worksheet from Wildlife Computer PAT tag files (.xls), 'Light too dim' data column for Lotek Wireless Archival tag files (.csv), or, 'Wet/Dry State' for Wildlife Computers Archival tag files (.csv). 
+Tagbase is geared towards maintaining post-manufacturer processed data files for display and analysis. By default, most of the hardware status messages will not be assimilated. Examples of hardware messages include the `RawData` worksheet from Wildlife Computer PAT tag files (.xls), `Light too dim` data column for Lotek Wireless Archival tag files (.csv), or, `Wet/Dry State` for Wildlife Computers Archival tag files (.csv). 
 
 It is highly recommended that you always adopt the practice of archiving raw files, including files that are downloaded from the tag directly and output files after processing with manufacturer's software suite. Then use Tagbase to maintain data that are quality control and carefully maintained for data visualization and analysis purposes. 
-
 
 = Present limitations =
 
