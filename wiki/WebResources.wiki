@@ -73,6 +73,6 @@ AD Model Builder, or ADMB, the most powerful software package for the developmen
 
 
 == Other notable resources ==
- * [http://www.tableausoftware.com/public _*Tableau Public*_] can be a great way to share and show your data
- * [http://www.passagesoftware.net/ _*Pattern Analysis, Spatial Statistics and Geographic Exegesis, PASSaGE*_] is a free, integrated, easy-to-use software package for performing spatial analysis and statistics on biological and other data. 
- * [http://www.ecoevol.ufg.br/sam/ _*SAM - Spatial Analysis in Macroecology*_] is a free program designed as a package of tools for spatial statistical analysis, mainly for applications in Surface Pattern Spatial Analysis
+ * *[http://www.tableausoftware.com/public Tableau Public]* can be a great way to share and show your data
+ * *[http://www.passagesoftware.net Pattern Analysis, Spatial Statistics and Geographic Exegesis, PASSaGE]* is a free, integrated, easy-to-use software package for performing spatial analysis and statistics on biological and other data. 
+ * *[http://www.ecoevol.ufg.br/sam SAM - Spatial Analysis in Macroecology]* is a free program designed as a package of tools for spatial statistical analysis, mainly for applications in Surface Pattern Spatial Analysis
