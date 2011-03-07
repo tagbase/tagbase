@@ -1,16 +1,9 @@
-#summary One-sentence summary of this page.
-# labels Featured
+#summary Getting around with the Form Navigation Tool
 
-<wiki:toc max_depth="2" />
+This tool is opened by default when you start Tagbase. It allows you to sub-select the operations you want to do (e.g. import or export), and takes you to the right place to carry out the operation. 
 
-= Introduction =
+http://tagbase.googlecode.com/svn/trunk/images/FormNavigate.jpg
 
-Add your content here.
+Read the descriptions on the form to help to move around in Tagbase.
 
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+If you have closed this tool and want to bring it up again, you can simply – find it in `Forms` > `NavigateForms`
