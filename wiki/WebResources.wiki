@@ -19,6 +19,11 @@ A suite of statistical models to estimate position errors, movement model parame
 Great utilities are provided here to work tag data in the [http://www.r-project.org/ R] environment.
 
 
+== Geolocation toolbox by Martin Pedersen == 
+==== http://www2.imm.dtu.dk/~mwp/?Geolocation_toolbox ====
+
+Geolocation toolbox in Matlab using hidden Markov models
+
 == NOAA ERDDAP ==
 ==== http://coastwatch.pfeg.noaa.gov/erddap/index.html ====
 
