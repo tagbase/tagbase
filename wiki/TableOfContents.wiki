@@ -11,3 +11,5 @@
   * [ArticleSqlServer Setting up SQL Server]
   * [ArticleMissing Handling "Missing References" error]
   * [GeneralRef General References]
+  * [WebResources Web Resources]
+  * [WishList Tell us what you want!]

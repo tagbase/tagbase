@@ -1,0 +1,34 @@
+#summary Useful resources across the web shared by our fellow colleagues & friends
+
+A list of resources that we are aware of for tagging applications. Feel free to add yours with the comments.
+
+<wiki:toc max_depth="2" />
+
+= State-space models for geolocation, Kalman filter suite (TrackIt, Ukfsst, Kfsst, Kftrack) =
+==== https://www.soest.hawaii.edu/tag-data/software/ ====
+
+A suite of statistical models to estimate position errors, movement model parameters, and most probable positions from tracking data. Refer to:
+
+Lam, Chi H., Anders Nielsen, and John R. Sibert. Incorporating sea-surface temperature to the light-based geolocation model TrackIt. Marine Ecology Progress Series MEPS 419:71-84 (2010). [http://www.int-res.com/abstracts/meps/v419/p71-84/ Open Access] for details
+
+
+= Webpage and R libaries of Ben Galaurdi =
+==== http://pubpages.unh.edu/~galuardi/galuardi.html ====
+
+Great utilities are provided here to work tag data in the [http://www.r-project.org/ R] environment.
+
+= Electronic Tagging Data Repository =
+==== https://www.soest.hawaii.edu/tag-data/ ====
+
+https://www.soest.hawaii.edu/tag-data/image/banner.gif
+
+A facility for exchange of data derived from electronic tags developed by John Sibert and Johnoel Ancheta of [http://www.soest.hawaii.edu/PFRP/pfrp1.html Pelagic Fisheries Research Program] at University of Hawaii at Manoa. It is a part of the developing new culture of science where more is gained by sharing information than by locking it away in dark filing cabinets.
+
+The Electronic Tagging Data Repository (ETDR) is a facility for storage of data and metadata derived from electronic tags. ETDR makes extensive use of tools developed by the Knowledge Network for Biocomplexity (KNB). All metadata of the ETDR conform to the Ecological Metadata Language (EML) and eXtensible Markup Language (XML). EML is a fully documented open standard developed for ecological data and adapted for electronic tags. XML is a robust file format developed by w3.org. The data are housed on a metacat server which stores, retrieves and displays data conforming to the EML standard.
+
+= AD Model Builder =
+==== http://www.admb-project.org/ ====
+
+http://www.soest.hawaii.edu/Illust/admb_dev/image/admb_banner_deep.jpg
+
+AD Model Builder, or ADMB, the most powerful software package for the development of state-of-the-art nonlinear models, can now be freely downloaded for Windows, Linux, MacOS, and Sun/SPARC. This should projectile you into serious ecological modeling! A very powerful set of tools used by ecologists and stock assessment scientists.
