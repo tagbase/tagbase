@@ -16,8 +16,8 @@
 
 == Details for Wildlife Computers only ==
   
-  * BinInfo: the definition of values for the 12-, 14- or more bins for `time-at-depth` (TAD) and `time-at-temperature` (TAT) histogram data collection, depending on tag model
-  * FrequencyData: PAT tags `time-at-depth` and `time-at-temperature` data
+  * `BinInfo`: the definition of values for the 12-, 14- or more bins for `time-at-depth` (TAD) and `time-at-temperature` (TAT) histogram data collection, depending on tag model
+  * `FrequencyData`: PAT tags `time-at-depth` and `time-at-temperature` data
 
 == Tables/ Queries ==
   * *Proc*: Processed, where most data in Tagbase will be
@@ -33,7 +33,7 @@
 
 = Terminology =
 
-When you work with TagBase in Microsoft Access, Access offers you Tables, Queries, Forms, Reports, Macros, and Modules. Here's a quick overview of what these are and when to use them (provided by *_[http://allenbrowne.com/casu-01.html Allen Browne]_*).
+When you work with Tagbase in Microsoft Access, Access offers you Tables, Queries, Forms, Reports, Macros, and Modules. Here's a quick overview of what these are and when to use them (provided by *Allen Browne* at http://allenbrowne.com/casu-01.html ).
 
 === Tables ===
 http://allenbrowne.com/graphics/table.gif
@@ -49,7 +49,7 @@ These are screens for displaying data from and inputting data into your tables. 
 
 === Macros ===
 http://allenbrowne.com/graphics/macro.gif
-An Access Macro is a script for doing some job. For example, to create a button which opens a report, you could use a macro which fires off the "OpenReport" action. Macros can also be used to set one field based on the value of another (the "SetValue" action), to validate that certain conditions are met before a record saved (the "CancelEvent" action) etc.
+An Access Macro is a script for doing some job. For example, to create a button which opens a report, you could use a macro which fires off the `"OpenReport"` action. Macros can also be used to set one field based on the value of another (the `"SetValue"` action), to validate that certain conditions are met before a record saved (the `"CancelEvent"` action) etc.
 
 === Modules ===
 http://allenbrowne.com/graphics/module.gif
