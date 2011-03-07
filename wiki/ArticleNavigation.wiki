@@ -6,4 +6,4 @@ http://tagbase.googlecode.com/svn/trunk/images/FormNavigate.jpg
 
 Read the descriptions on the form to help to move around in Tagbase.
 
-If you have closed this tool and want to bring it up again, you can simply – find it in `Forms` > `NavigateForms`
+If you have closed this tool and want to bring it up again, you can simply find it in `Forms` > `NavigateForms`

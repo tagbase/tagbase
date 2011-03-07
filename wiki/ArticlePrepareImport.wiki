@@ -1,0 +1,74 @@
+#summary Preparation for importing tag data
+
+<wiki:toc max_depth="2" />
+
+= Introduction =
+
+Take some time to familiarize yourself with the operations of manufacturer software, as there are quite a few options to choose from. You should have a good understanding of the output formats and data in each file, and consult the corresponding documentation as they can be unintuitive in its naming or organization.
+
+Note manufactuer may update their software frequently, and we can only support stable, public releases of those programs. 
+
+= Essential information needed for import =
+
+Before you import any files, make sure you have the following 
+
+  # `!TagCode` – the serial code of your tag and has to be a unique. This unique code will allow us to distinguish a single tag from others.
+  # `!Date_Deploy` – the date time of your deployment
+  # `!Date_Popoff` – the date time of your tag recovery or pop-off
+  # Tag setup or configuration file (e.g. a .html file from Wildlife Computer Host program)
+
+= Supported formats =
+
+|| *Tag manufacturer* || *Tag types* || *Supported processed files from software* || *Abbreviation* ||
+|| [http://www.lotek.com/downloads.htm Lotek Wireless] || Archival || Viewer2000 || Lotek ||
+|| [http://www.microwavetelemetry.com Microwave Telemetry]|| Popup archival / recovered popup || None || MT ||
+|| [http://www.wildlifecomputers.com/downloads.aspx Wildlife Computers] || Archival, popup archival, SPOT, Argos Fast-GPS || WC-AMP, !HexDecode, WC-DAP 2.0 & 3.0, GPE version 1 & 2 || WC ||
+
+We try our best to cover most tag file formats, but it is likely we can miss some of them. You would be amazed how many variations are possible even with a single tag model and a specific manufactuer. software version. If you find specific formats that you would like to include or have troubles importing, leave us a comment or file an issue.
+
+= Formatting your tag files =
+
+== PAT tag files (.xls) from WC and MT ==
+
+ * Files should have been processed by the manufacturer software
+ * No further preparation is necessary except your own quality control practices
+
+== WC DAP Processor output files (.csv) for multiple tag types ==
+
+ * Make sure you checked on this option - 
+   {{{ 
+     Save Stored Archive Data in CSV Files 
+   }}}
+
+http://tagbase.googlecode.com/svn/trunk/images/ImportDap.jpg
+
+Otherwise, any time series data won't be output
+
+== Archival tag files ==
+
+|| *Configuration* || *File1 - time series* || *File2 - positions* ||
+|| Lotek|| `TimeSeries.csv` || `DateLog.csv` ||
+|| Wildlife Computer || `.csv` from !HexDecode or Instrument Helper || `.xls` from TSP/GPE ||
+|| Wildlife Computer DAP || `.csv` from DAP || saved `.csv` from GPE2 ||
+
+  # Usually 2 files required for each tag
+  # All files must have a header line (header line does not have to be the first line in the file, although recommended)
+
+==== For Lotek Wireless (using Viewer2000 software) ===
+   * File #1 is the time series file (e.g. `!.BIN.TimeSeries.csv`)
+   * File #2 is the day log file (e.g. `!.BIN.DayLog.csv`) with location data
+
+==== For Wildlife Computers: ====
+  * File #1 is the time series file (.csv), obtained from !HexDecode, Instrument Helper or DAP software 
+  * What to turn OFF (uncheck) in HexDecode:
+        # Include rows with no sensor data
+        # Hour Markers & Battery Voltages
+        # Deployment/ Duty Cycle Markers 
+        # Date Range (off by default)
+  * While using (checked):
+        # Titles of Fields in First Row
+        # Date stamps as dd/mm/yyyy (default)
+        # Time stamps as hh:mm:ss (default)
+  * File #2 is the output file (.xls) with location data, obtained from WC-TSP or GPE software
+  * For DAP, make sure you are running GPE2 to get File #2
+
