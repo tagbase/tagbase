@@ -21,7 +21,7 @@ Move/Copy to location - `C:\Windows\System32`
 Move/Copy to location - `C:\Windows`
 
 == 3. `MapWinGis ActiveX control` ==
-==== http://tagbase.googlecode.com/svn/trunk/files/MSINET.zip ====
+==== http://www.mapwindow.org/downloads/index.php?show_details=2 ====
 ==== Purpose - Mapping functions ====
 
   * Step A: Unzip `MapWinGIS47SRa-x86.zip` into `C:\Program Files\MapWindow`
@@ -35,7 +35,7 @@ Move/Copy to location - `C:\Windows`
 If Step B failed: install this file first, [http://www.microsoft.com/downloads/en/details.aspx?familyid=A5C84275-3B97-4AB7-A40D-3802B2AF5FC2&displaylang=en vcredist_x86_2008.exe] and repeat Step B.
 
 == 4. `MSINET.OCX` ==
-==== http://www.mapwindow.org/downloads/index.php?show_details=2 ====
+==== http://tagbase.googlecode.com/svn/trunk/files/MSINET.zip ====
 ==== Purpose - Microsoft Internet transfer protocol and ActiveX control ====
 
 Move/Copy to location - `C:\WINDOWS\system32`
