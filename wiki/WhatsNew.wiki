@@ -1,11 +1,9 @@
 #summary One-sentence summary of this page.
-# labels Featured
-
-<wiki:toc max_depth="2" />
-
 _Announcements of the latest project features_
 
 Welcome to the What's New page for Project Tagbase. Here you'll find descriptions of our latest and exciting improvements.
+
+<wiki:toc max_depth="2" />
 
 = March 2010 =
 
