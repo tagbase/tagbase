@@ -12,13 +12,7 @@ Tagbase is ideal for
    * Visualizing data rapidly (e.g. forms with MS-Graph)
    * Integrating with other tools as a backend database and manage result outputs
 
-<iframe src="http://spreadsheets.google.com/embeddedform?key=pcei2KUN61t4vbuSjTGjzNw" width="310" height="566" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-<?xml version="1.0" encoding="UTF-8" ?> 
-<Module>
-  <ModulePrefs title="Gadget Form Example" />
-  <Content type="url" href="http://spreadsheets.google.com/embeddedform?key=pcei2KUN61t4vbuSjTGjzNw" />
-</Module>
-<wiki:gadget url="..." width="310" height="566" />
+<wiki:gadget url="http://tagbase.googlecode.com/svn/trunk/files/presentation.xml" width="555" height="451" />
 
 = Starting Tagbase =
 
