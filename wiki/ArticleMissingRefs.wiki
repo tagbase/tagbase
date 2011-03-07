@@ -22,22 +22,22 @@ Refer to [HowToInstallPlugins Plugins Installation] to check you have correctly 
 
 = Switching from new to old versions of MS Office =
 
-  # Press ALT+F11 to open the Visual Basic Editor. Or navigate from the menu: `Tools` > `Macros` > `Visual Basic Editor`
+  * Press ALT+F11 to open the Visual Basic Editor. Or navigate from the menu: `Tools` > `Macros` > `Visual Basic Editor`
 
-  # In the new window, `Microsoft Visual Basic - Missing References`, go to `Tool` > `References`
+  * In the new window, `Microsoft Visual Basic - Missing References`, go to `Tool` > `References`
 
-  # You should see something like:
+  * You should see something like:
 
   {{{ MISSING: Microsoft Excel Object Library 10.0 }}}
 
 http://tagbase.googlecode.com/svn/trunk/images/MissingRef2.jpg
 
 
-  # Uncheck the missing reference, and replace with (tick) the correct reference from the list (scroll).
+  * Uncheck the missing reference, and replace with (tick) the correct reference from the list (scroll).
 
 http://tagbase.googlecode.com/svn/trunk/images/MissingRef3.jpg
 
-  # Click `OK` and you are done!
+  * Click `OK` and you are done!
 
 If you can't find a replacement, it is likely you don't have the plugins installed correctly. 
 
