@@ -12,14 +12,7 @@ Tagbase is ideal for
    * Visualizing data rapidly (e.g. forms with MS-Graph)
    * Integrating with other tools as a backend database and manage result outputs
 
-<?xml version="1.0" encoding="UTF-8" ?> 
-<Module>
-  <ModulePrefs title="Tagbase presentation" />
-  <Content type="url" href="https://docs.google.com/present/embed?id=dgs49pt3_5hpp855fp&interval=10&loop=true" />
-</Module>
-
-<wiki:gadget url="..." width="555" height="451" />
-
+<wiki:gadget url="http://tagbase.googlecode.com/svn/trunk/files/presentation.xml" width="555" height="451" />
 
 = Starting Tagbase =
 
