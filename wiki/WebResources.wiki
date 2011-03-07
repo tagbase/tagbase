@@ -72,3 +72,7 @@ http://www.soest.hawaii.edu/Illust/admb_dev/image/admb_banner_deep.jpg
 AD Model Builder, or ADMB, the most powerful software package for the development of state-of-the-art nonlinear models, can now be freely downloaded for Windows, Linux, MacOS, and Sun/SPARC. This should projectile you into serious ecological modeling! A very powerful set of tools used by ecologists and stock assessment scientists.
 
 
+== Other notable resources ==
+ * [http://www.tableausoftware.com/public *Tableau Public*] can be a great way to share and show your data
+ * [http://www.passagesoftware.net/ *Pattern Analysis, Spatial Statistics and Geographic Exegesis, PASSaGE*] is a free, integrated, easy-to-use software package for performing spatial analysis and statistics on biological and other data. 
+ * [http://www.ecoevol.ufg.br/sam/ *SAM - Spatial Analysis in Macroecology*] is a free program designed as a package of tools for spatial statistical analysis, mainly for applications in Surface Pattern Spatial Analysis
