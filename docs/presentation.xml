@@ -3,3 +3,4 @@
   <ModulePrefs title="Tagbase presentation" />
   <Content type="url" href="https://docs.google.com/present/embed?id=dgs49pt3_5hpp855fp&interval=10&loop=true" />
 </Module>
+<UserPref name="projectName" default_value=""/>
