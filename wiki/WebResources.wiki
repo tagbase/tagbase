@@ -24,6 +24,17 @@ Great utilities are provided here to work tag data in the [http://www.r-project.
 
 Geolocation toolbox in Matlab using hidden Markov models
 
+
+== Pelagic Habitat Analysis Module (PHAM) ==
+==== http://phamlite.com/aboutpham.html ====
+
+http://tagbase.googlecode.com/svn/trunk/images/pham.jpg
+
+PHAM is a set of software tools designed to assist fisheries managers, scientists, and researchers to examine and predict the habitat for pelagic ocean biota utilising presence/absence or abundance data for the biota combined with environmental datasets such as satellite imagery, bathymetry, survey cruises, and ocean circulation models.
+
+The software has been developed to reside within the [http://www.runeasy.com/ Environmental Analysis System (EASy)] Geographic Information System (GIS), specifically for [http://netviewer.usc.edu/projects.htm marine applications]. 
+
+
 == NOAA ERDDAP ==
 ==== http://coastwatch.pfeg.noaa.gov/erddap/index.html ====
 
