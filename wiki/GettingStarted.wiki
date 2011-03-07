@@ -24,7 +24,7 @@ Tagbase is ideal for
   
 http://tagbase.googlecode.com/svn/trunk/images/screenprint.png
 
-  * If you come across any error messages of problems, refer to
+  === If you come across any error messages of problems, refer to ===
     # [HowToInstallPlugins How to install plugins] to set up the additional plugins correctly
     # [ArticleMissingRefs Handling "Missing References" error] to ensure the correct libraries are referenced
 
