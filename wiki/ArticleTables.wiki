@@ -9,7 +9,7 @@ Here are the main groups of table that your data and metadata reside. This is us
 == Metadata tables ==
 
   * `FishInfo` - Table with information about individual tagged fish, such as species, body length
-  * `TagInfo` - Table with Tag Summary Information, including the unique TagCode for each tag, deploy and popoff information
+  * `TagInfo` - Table with Tag Summary Information, including the unique `TagCode` for each tag, deploy and popoff information
   * `TagInfo_Extra` - Table with other metadata for a tag
   * `SpeciesInfo` - Table with species standardized name and [http://www.itis.gov/ TSN identifier listings]
   * `WC_BinInfo` - Table with Wildlife Computers Tag Bin classification scheme data
