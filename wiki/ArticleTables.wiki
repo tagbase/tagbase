@@ -60,7 +60,7 @@ Here are the main groups of table that your data and metadata reside. This is us
 
 === If you want to know the details about any of the above tables, you can select that table and click *Design* === 
 
-http://tagbase.googlecode.com/svn/trunk/images/TablesDesign.png
+http://tagbase.googlecode.com/svn/trunk/images/TablesDesign.jpg
 
 And a detailed list of fields with their descriptions will be shown
 
