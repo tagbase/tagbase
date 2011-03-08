@@ -106,4 +106,4 @@ http://tagbase.googlecode.com/svn/trunk/images/TablesRelate5.jpg
 
 For more recent versions of Access, you can get that from:
 
-   # the *Database Tools* tab, in the *Show/Hide* group, click *Relationships*
+   * the *Database Tools* tab, in the *Show/Hide* group, click *Relationships*
