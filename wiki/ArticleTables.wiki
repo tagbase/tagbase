@@ -1,4 +1,4 @@
-#summary Understanding a key component of Tagbase
+#summary Understanding the key components of Tagbase
 
 <wiki:toc max_depth="2" />
 
