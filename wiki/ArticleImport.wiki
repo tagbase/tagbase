@@ -48,7 +48,7 @@ For each tag you import, make sure you have the following Essential fields (5, Y
 Tips -
 For Wildlife Computer DAP (.csv) output files, 
 you can use the wildcard character (star or asterisk or *) 
-in a single entry to denote all files beginning with the same prefix. See an example [http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg here].
+in a single entry to denote all files beginning with the same prefix. See a screenshot below.
 }}}
 
   * `TagCode` - This is the serial code of your tag and has to be a unique. Use the same !`TagCode` for archival tags where there are two output files for each tag.
@@ -78,5 +78,7 @@ in a single entry to denote all files beginning with the same prefix. See an exa
 Tips -
 When a setup/ configuration file is supplied (.htm), 
 Tagbase will try to gather information for these three fields. 
-Therefore you can leave these fields blank. See an example [http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg here].
+Therefore you can leave these fields blank.
 }}}
+
+http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg
