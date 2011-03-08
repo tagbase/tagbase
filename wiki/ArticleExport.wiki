@@ -1,16 +1,17 @@
-#summary One-sentence summary of this page.
-# labels Featured
-
-<wiki:toc max_depth="2" />
+#summary Export data to standard output formats
 
 = Introduction =
 
-Add your content here.
-
+Tagbase support export to selected [WebResources#State-space_models_for_geolocation_-_Kalman_filter_suite geolocation methods] and [WebResources#Ocean_Data_View Ocean Data View].
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+To export:
+
+ # From the Form Navigation Tool, select Export from Operations, and then Export_TagData
+ # Follow the instructions to export data.
+ # The *Required* fields are `TagID` and `Export Type`
+ # and the Optional fields are `File Name`, `Folder Path` and `Depth Filter (WC PAT only)`
+ # `Depth Filter` is only used when SST data are coming from *`Proc_WC_PDT`*, instead of *`Proc_WC_Locations`*
+
+http://tagbase.googlecode.com/svn/trunk/images/PlotForms4.jpg
