@@ -4,7 +4,7 @@
 
 = Introduction =
 
-The Display/ Plot forms have pre-set graphs that plot your tag data. A variety of plot forms, along with a specified description of what are being plotted, are accessible through the Form Navigation Tool > Plot. Examples of these plots include:
+The Display/Plot forms have pre-set graphs that plot your tag data. A variety of plot forms, along with a specified description of what are being plotted, are accessible through the [ArticleNavigation Form Navigation Tool] > *Plot*. Examples of these plots include:
 
   # XY/Time Series
   # Histogram
