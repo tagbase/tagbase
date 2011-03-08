@@ -14,20 +14,21 @@
 
 == A fish or an animal  ==
 
-In Tagbase, we take an individual organism as our basis for an operation unit. Although we should use a more generic term like organism or release, we allow ourselves to be marine- and fish- centric, and refer any single unit as a *`Fish`*. 
+In Tagbase, we take an individual organism as our basis for an operation unit. Although we should use a more generic term like organism or release, we allow ourselves to be marine- and fish- centric, and refer any single unit as a *Fish*. 
 
 Of course, we do love our birds, turtles, jellyfish, and yes, whales and dolphins.
 
 == For the impatient ones, a quick guide to Tagbase import ==
 
-Available here: 
 http://tagbase.googlecode.com/svn/trunk/docs/TagBaseQuickImport.ppt
 
+= Step 1 - Setting up the batch job file from the Excel template =
 
-= Step 1 – Setting up the batch job file from the Excel template =
-
-{{{ Tips -
-You can modify a copy of the template from the sample dataset or locate and click on the TagBaseBatchJob.xlt in the `<template>` folder
+{{{ 
+Tips -
+You can modify a copy of the template from the sample dataset 
+or locate and click on the TagBaseBatchJob.xlt in 
+the <templates> folder
 }}}
 
 http://tagbase.googlecode.com/svn/trunk/images/ImportJob1.jpg
@@ -36,7 +37,7 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportJob1.jpg
 
 Each row of data corresponds to a single tag output file. You can have 2 or more rows of data for an archival tag or for a double-tagged fish. All essential and required fields must be present for each row of data. 
 
-For each tag you import, make sure you have the following Essential fields (5, Yellow): !`IndivID`, Filename, !`TagCode`, !`TagPTTID`, !`TagManufacturer`
+For each tag you import, make sure you have the following Essential fields (5, Yellow): `IndivID`, Filename, `TagCode`, `TagPTTID`, `TagManufacturer`
 
 === Essential fields ===
 
@@ -48,11 +49,11 @@ For each tag you import, make sure you have the following Essential fields (5, Y
 For Wildlife Computer DAP (.csv) output files, you can use the wildcard character (star or asterisk or *) in a single entry to denote all files beginning with the same prefix. See an example [http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg here].
 }}}
 
-!`TagCode` – This is the serial code of your tag and has to be a unique. Use the same !`TagCode` for archival tags where there are two output files for each tag.
+!`TagCode` ï¿½ This is the serial code of your tag and has to be a unique. Use the same !`TagCode` for archival tags where there are two output files for each tag.
 
-!`TagPTTID` – This can be the PTT code you use for Argos transmission, or a label of your own.
+!`TagPTTID` ï¿½ This can be the PTT code you use for Argos transmission, or a label of your own.
 
-!`TagManufacturer` – This denotes the type of data to import, it must be from one of these 4 options: WC or Wildlife Computers, MT or Microwave Telemetry, Archival, SPOT.
+!`TagManufacturer` ï¿½ This denotes the type of data to import, it must be from one of these 4 options: WC or Wildlife Computers, MT or Microwave Telemetry, Archival, SPOT.
 
 === Additional required fields ===
 ==== for Archival tags (6, Turquoise) ====
@@ -65,11 +66,11 @@ For Wildlife Computer DAP (.csv) output files, you can use the wildcard characte
 
 ==== Wildlife Computers PAT tags (3, Orange)====
 
-  * !`BinSampleInterval` – This denotes in hours (e.g. 2, 6, 12 or 24), how frequent is your time-at-depth or time-at-temperature is being sampled
+  * !`BinSampleInterval` ï¿½ This denotes in hours (e.g. 2, 6, 12 or 24), how frequent is your time-at-depth or time-at-temperature is being sampled
 
-  * !`BinID_Depth` – the identifier (any number < 100) that corresponds to a particular binning scheme, `BinID`, having been set in !*`WC_BinInfo`* table (see Step 3)
+  * !`BinID_Depth` ï¿½ the identifier (any number < 100) that corresponds to a particular binning scheme, `BinID`, having been set in !*`WC_BinInfo`* table (see Step 3)
 
-  * !`BinID_Temperature` – the identifier (any number >= 100) that corresponds to a particular binning scheme, `BinID`, having been set in !*`WC_BinInfo`* table (see Step 3)
+  * !`BinID_Temperature` ï¿½ the identifier (any number >= 100) that corresponds to a particular binning scheme, `BinID`, having been set in !*`WC_BinInfo`* table (see Step 3)
 
 {{{ Tips -
 When a setup/ configuration file is supplied (.htm), Tagbase will try to gather information for these three fields. Therefore you can leave them blank. See an example [http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg here].
