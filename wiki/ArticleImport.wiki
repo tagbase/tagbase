@@ -6,11 +6,11 @@
 
 == 5 steps to import tag data: ==
 
-  # Set up a batch job file from the Excel template, <!TagBaseBatchJob.xlt>
+  # Set up a batch job file from the Excel template, _!TagBaseBatchJob.xlt_
   # Put the batch job file into the folder where your tag data files are
-  # Start Tagbase 
-  # Set up Binning schemes (only for WC PAT tags)
-  # Import via !Batch_Import_TagData form
+  # Start *Tagbase*
+  # Set up binning schemes (only for WC PAT tags)
+  # Import via !_Batch_Import_TagData form_
 
 == A fish or an animal  ==
 
