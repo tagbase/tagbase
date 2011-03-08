@@ -10,7 +10,7 @@
   # Put the batch job file into the folder where your tag data files are
   # Start *Tagbase*
   # Set up binning schemes (only for WC PAT tags)
-  # Import via _!Batch_Import_TagData form_
+  # Import via _!Batch_Import_TagData_ form
 
 == A fish or an animal  ==
 
