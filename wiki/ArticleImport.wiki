@@ -6,7 +6,7 @@
 
 == 5 steps to import tag data: ==
 
-  # Set up a batch job file from the Excel template, !<TagBaseBatchJob.xlt>
+  # Set up a batch job file from the Excel template, <!TagBaseBatchJob.xlt>
   # Put the batch job file into the folder where your tag data files are
   # Start Tagbase 
   # Set up Binning schemes (only for WC PAT tags)
