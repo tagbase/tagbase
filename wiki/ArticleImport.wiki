@@ -46,7 +46,9 @@ For each tag you import, make sure you have the following Essential fields (5, Y
 
 {{{ 
 Tips -
-For Wildlife Computer DAP (.csv) output files, you can use the wildcard character (star or asterisk or *) in a single entry to denote all files beginning with the same prefix. See an example [http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg here].
+For Wildlife Computer DAP (.csv) output files, 
+you can use the wildcard character (star or asterisk or *) 
+in a single entry to denote all files beginning with the same prefix. See an example [http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg here].
 }}}
 
   * `TagCode` - This is the serial code of your tag and has to be a unique. Use the same !`TagCode` for archival tags where there are two output files for each tag.
@@ -66,12 +68,15 @@ For Wildlife Computer DAP (.csv) output files, you can use the wildcard characte
 
 ==== Wildlife Computers PAT tags (3, Orange)====
 
-  * !`BinSampleInterval` � This denotes in hours (e.g. 2, 6, 12 or 24), how frequent is your time-at-depth or time-at-temperature is being sampled
+  * `BinSampleInterval` - This denotes in hours (e.g. 2, 6, 12 or 24), how frequent is your time-at-depth or time-at-temperature is being sampled
 
-  * !`BinID_Depth` � the identifier (any number < 100) that corresponds to a particular binning scheme, `BinID`, having been set in !*`WC_BinInfo`* table (see Step 3)
+  * `BinID_Depth` - the identifier (any number < 100) that corresponds to a particular binning scheme, `BinID`, having been set in !*`WC_BinInfo`* table (see Step 3)
 
-  * !`BinID_Temperature` � the identifier (any number >= 100) that corresponds to a particular binning scheme, `BinID`, having been set in !*`WC_BinInfo`* table (see Step 3)
+  * `BinID_Temperature` - the identifier (any number >= 100) that corresponds to a particular binning scheme, `BinID`, having been set in !*`WC_BinInfo`* table (see Step 3)
 
-{{{ Tips -
-When a setup/ configuration file is supplied (.htm), Tagbase will try to gather information for these three fields. Therefore you can leave them blank. See an example [http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg here].
+{{{ 
+Tips -
+When a setup/ configuration file is supplied (.htm), 
+Tagbase will try to gather information for these three fields. 
+Therefore you can leave these fields blank. See an example [http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg here].
 }}}
