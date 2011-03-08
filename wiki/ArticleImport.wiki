@@ -51,7 +51,7 @@ you can use the wildcard character (star or asterisk or *)
 in a single entry to denote all files beginning with the same prefix. See a screenshot below.
 }}}
 
-  * `TagCode` - This is the serial code of your tag and has to be a unique. Use the same !`TagCode` for archival tags where there are two output files for each tag.
+  * `TagCode` - This is the serial code of your tag and has to be a unique. Use the same `TagCode` for archival tags where there are two output files for each tag.
 
   * `TagPTTID` - This can be the PTT code you use for Argos transmission, or a label of your own.
 
