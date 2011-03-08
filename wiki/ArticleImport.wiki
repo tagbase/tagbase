@@ -89,3 +89,29 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg
 
   * `FAOSpeciesCode` - 3 character codes for [http://www.fao.org/fishery/collection/asfis/en FAO]
   * other fields are found towards the end of the job spreadsheet
+
+= Step 2 - Save your batch job file =
+
+Save your job file (e.g _!MyTagbaseJob1.xls_) into the folder where your data files are located or where appropriate.
+
+= Step 3 - Start TagBase =
+
+This should be very easy!
+
+= Step 4 - Setting up the WC_BinInfo (Wildlife Computers PAT tags only) =
+
+You may have used multiple histogram binning schemes for the time-at-depth or time-at-temperature worksheets. Depending on the tag model as well, there can be 12 or 14 Bins. 
+
+You can skip this step if you are providing the configuration file (.htm) as an entry in the job file (e.g _!MyTagbaseJob1.xls_).
+
+All the binning schemes can be specified in *`WC_BinInfo`* table in the following way:
+
+ # In *`Tables`*, double-click to open the *`WC_BinInfo`* table
+ # Modify or add binning schemes are explained below
+
+http://tagbase.googlecode.com/svn/trunk/images/ImportBins.jpg
+
+  * `BinID` – Unique ID for a particular scheme. By convention, `BinID` < 100 is used for depth, `BinID` > 100 for temperature. The above example, showed two schemes of 12 bins (`BinID` = 1 for depth and `BinID` = 100 for temperature). 
+  * `BinMin`, `BinMax` – fill in the physical values for a specific bin (1-12)
+  * `Bin` - should go from 1-12 or 14
+  * `BinRange` - is a housekeeping, optional note field
