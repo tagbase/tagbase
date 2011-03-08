@@ -1,16 +1,13 @@
-#summary One-sentence summary of this page.
-# labels Featured
+#summary Mapping with MapWinGis in Tagbase
 
 <wiki:toc max_depth="2" />
 
 = Introduction =
 
-Add your content here.
-
+This is one of the most exciting integration in Tagbase, with diverse functionalities from shapefile generation, oceanographic data download to interactive data lookup. We are still gathering comments on what other capabilities we should add. So stay tuned for the release in Tagbase 4.5, due out in May 2011.
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Check back later for tutorial videos :) 
+
+http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
