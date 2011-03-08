@@ -1,16 +1,109 @@
-#summary One-sentence summary of this page.
-# labels Featured
+#summary Understanding a key component of Tagbase
 
 <wiki:toc max_depth="2" />
 
-= Introduction =
+= Tables =
 
-Add your content here.
+Here are the main groups of table that your data and metadata reside. This is useful to know when you are trying to set up your own queries, or modify the data. 
+
+== Metadata tables ==
+
+  * `FishInfo` – Table with information about individual tagged fish, such as species, body length
+  * `TagInfo` – Table with Tag Summary Information, including the unique TagCode for each tag, deploy and popoff information
+  * `TagInfo_Extra` – Table with other metadata for a tag
+  * `SpeciesInfo` – Table with species standardized name and [http://www.itis.gov/ TSN identifier listings]
+  * `WC_BinInfo` - Table with Wildlife Computers Tag Bin classification scheme data
+  * `AnalysisInfo` - Table with metadata that describe an analysis you carry out
 
 
-= Details =
+== Archival tag data tables ==
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+  * `Proc_Archival_TempLight` – table with fully processed depth, temperature and light time series data
+  * `Proc_Archival_Location` – table with fully processed WC light-based geolocation data (older tag models)
+  * `Proc_WC_Locations` –  table with fully processed WC light-based geolocation data (newer tag models)
+  * `Proc_LTD_DayLog` – table with Lotek `DayLog` data (daily summary of positions, sst and others)
+  * `Proc_LTD_MissionDate` – Table with Lotek data that matches up mission day (day at liberty) with a Date (mission date)
+
+
+== Microwave Telemetry PAT ==
+
+  * MT_ObservationTypes – contains description of ID fields used in Microwave Telemetry Processed Depth Temperature table, Proc_MT_DepthTemp
+  * Proc_MT_DepthTemp – table with fully processed MicrowaveTelemetry Pressure & Depth Data
+  * Proc_MT_GPSdata – table with fully processed Microwave Telemetry Argos Data
+  * Proc_MT_Location – table with fully processed Microwave Telemetry manufacturer light-based geolocation data
+
+
+== Wildlife Computers ==
+
+  * `Proc_WC_FrequencyData` – table with fully processed Wildlife Computers Time-at-Depth and Time-at-Temperature data
+  * `Proc_WC_Locations` – table with fully processed WC light-based geolocation data
+  * `Proc_WC_LocationsLight` – table with fully processed Wildlife Computers manufacturer light data in the `<Locations>` worksheet
+  * `Proc_WC_PDT` – table with fully processed Wildlife Computers PDT Data 
+  * `Proc_WC_Status` – table with fully processed Wildlife Computers Argos data from the Status worksheet
+  * `Proc_WC_GPS` – table with fully processed Wildlife Computers DAP Fastloc data
+  * `Proc_WC_Argos` – table with fully processed WC DAP Argos (shared by PAT and SPOT) data
+  * `WC_ObservationTypes` - contains description of ID fields used in Wildlife Computers DAP output csv e.g `MinMaxTemp`; `LightLocs`. Extra fields that are not in WC-AMP
+  * `InterpolatedTimes` - contains interpolated Wildlife Computers location solar event times
+
+
+== Support tables ==
+  * `SpotArgosAccuracyDefinition` - contains location class information
+  * `Analysis_ParameterTypes` - contain listings of parameter types for analyses
+  * `Moon` - contains fraction of the Moon Illuminated at UTC Midnight (from [http://www.usno.navy.mil/USNO/astronomical-applications/data-services/frac-moon-ill US Navy]
+  * `OdvHeader` - contains header information for export to Ocean Data View, see [WebResources Web Resources] for more info.
+  * `ErddapImage` - for mapping, contains metadata for images downloaded from ERDDAP
+  * `ErddapInfo` - for mapping, contains metadata for ERDDAP griddap products
+  * `MapInfo` - for mapping, holds data from mouse selection from the map window
+  * `DbConnection` - table with ODBC connection strings for MS SQL Server, see [ArticleSqlServer Setting up SQL Server] for details
+  * `Web` - table with useful URLs that *Tagbase* uses
+
+
+=== If you want to know the details about any of the above tables, you can select that table and click *Design* === 
+
+http://tagbase.googlecode.com/svn/trunk/images/TablesDesign.png
+
+And a detailed list of fields with their descriptions will be shown
+
+
+= Relationships =
+
+Relationships are a key feature of database systems and allow us to specify how data fields are related to each other among various tables. In TagBase, there are two key relationships that link up all data:
+
+  # *`FishInfo`* table <--> *`TagInfo`* table
+  # *`TagInfo`* table <--> All downstream data tables
+
+== 1. *`FishInfo`* table <--> *`TagInfo`* table ==
+
+These two tables are linked by the `FishID` field, which any individual fish you have imported data for should have a unique `FishID` (a long integer). For each `FishID`, i.e. a distinctive individual, you can one or multiple tags, as represented by a unique `TagID`. For example, you can have a fish, `FishID` = 5, carrying two tags, `TagID` = 10 and 11. 
+
+This way, metadata can be added to the *`FishInfo`* table or new tables that are linked to the *`FishInfo`* table; while, tag data are related back to an individual fish through *`TagInfo`*.
+
+http://tagbase.googlecode.com/svn/trunk/images/TablesRelate1.jpg
+
+=== Example Case: Modify the species information of a newly imported fish ===
+
+_Scenario_
+When you have imported a new tag from a new fish using the _!Batch_Import_TagData_ form (see [ArticleImport Importing data]), this new fish will be assigned a new `FishID` (= 8, in this example) in the *`FishInfo`* table. If you did not provide a `FAOspeciesCode` (see [ArticlePrepareImport Preparing for import]), Tagbase has no idea which species this new fish is, this fish will be associated with a `SpeciesTSN` = -999 (null value) in the same `*FishInfo*` table. 
+
+This `SpeciesTSN` corresponds to a record in the *`SpeciesInfo`* table. Open the table and you can find a record for `SpeciesTSN` = -999. Obviously, you may want to describe your species better than "Generic fish". So you can add a new record in this table, such as the below example.
+
+http://tagbase.googlecode.com/svn/trunk/images/TablesRelate2.jpg
+
+Now, go back to the *`FishInfo`* table, and enter the new `SpeciesTSN` with a value, 159903 for `FishID` = 8, and your fish will be associated with "White Shark" instead. That's it!
+
+http://tagbase.googlecode.com/svn/trunk/images/TablesRelate3.jpg
+
+
+== 2. *`TagInfo`* table <--> All downstream data tables ==
+
+Data from a tag file are stored in multiple tables, for example, for an archival tag, the depth-temperature-light time series data are stored in one table, while the location estimates are stored in another. *`TagInfo`* table connects all these data tables together through the `TagID` field. Every individual tag you import will have a unique `TagID` (a number), and all the data for that particular tag will be associated with the unique `TagID`. In this way, data that belong to one tag can be obtained from different data tables using its `TagID`. 
+
+http://tagbase.googlecode.com/svn/trunk/images/TablesRelate4.jpg
+
+=== If you want to know all the relationships in TagBase, you can bring up the Relationships diagram by using the toolbar button, as shown below: ===
+
+http://tagbase.googlecode.com/svn/trunk/images/TablesRelate5.jpg
+
+For more recent versions of Access, you can get that from:
+
+   # the *Database Tools* tab, in the *Show/Hide* group, click *Relationships*
