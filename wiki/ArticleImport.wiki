@@ -6,11 +6,11 @@
 
 == 5 steps to import tag data: ==
 
-  # Set up a batch job file from the Excel template, TagBaseBatchJob.xlt
+  # Set up a batch job file from the Excel template, !TagBaseBatchJob.xlt
   # Put the batch job file into the folder where your tag data files are
   # Start Tagbase 
   # Set up Binning schemes (only for WC PAT tags)
-  # Import via Batch_Import_TagData form
+  # Import via !Batch_Import_TagData form
 
 == A fish or an animal  ==
 
@@ -40,17 +40,18 @@ For each tag you import, make sure you have the following Essential fields (5, Y
 
 === Essential fields ===
 
-!`IndivID` - This number denotes how many individual fish (or animal) you are trying to import. If you have data for 10 fish, this !`IndivID` should start from 1 for the first fish, then increment by one all the way to 10 for each of the remaining fish. The same !`IndivID` number can be used for the same fish that carries multiple tags or has data from two or more output files.
+  * `IndivID` - This number denotes how many individual fish (or animal) you are trying to import. If you have data for 10 fish, this !`IndivID` should start from 1 for the first fish, then increment by one all the way to 10 for each of the remaining fish. The same !`IndivID` number can be used for the same fish that carries multiple tags or has data from two or more output files.
 
-`Filename` - This is the filename of the file you are importing. Include the file extension (.csv or .xls). The file directory path (e.g. <C:\Data\...>) is necessary if the batch job file does not sit in the same directory as your data files you want to import.
+  * `Filename` - This is the filename of the file you are importing. Include the file extension (.csv or .xls). The file directory path (e.g. <C:\Data\...>) is necessary if the batch job file does not sit in the same directory as your data files you want to import.
 
-{{{ Tips -
+{{{ 
+Tips -
 For Wildlife Computer DAP (.csv) output files, you can use the wildcard character (star or asterisk or *) in a single entry to denote all files beginning with the same prefix. See an example [http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg here].
 }}}
 
-!`TagCode` - This is the serial code of your tag and has to be a unique. Use the same !`TagCode` for archival tags where there are two output files for each tag.
+  * `TagCode` - This is the serial code of your tag and has to be a unique. Use the same !`TagCode` for archival tags where there are two output files for each tag.
 
-!`TagPTTID` - This can be the PTT code you use for Argos transmission, or a label of your own.
+  * `TagPTTID` - This can be the PTT code you use for Argos transmission, or a label of your own.
 
 !`TagManufacturer` - This denotes the type of data to import, it must be from one of these 4 options: WC or Wildlife Computers, MT or Microwave Telemetry, Archival, SPOT.
 
