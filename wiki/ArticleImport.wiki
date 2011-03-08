@@ -36,7 +36,7 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportJob1.jpg
 
 Each row of data corresponds to a single tag output file. You can have 2 or more rows of data for an archival tag or for a double-tagged fish. All essential and required fields must be present for each row of data. 
 
-For each tag you import, make sure you have the following Essential fields (5, Yellow): `IndivID`, `Filename`, `TagCode`, `TagPTTID`, `TagManufacturer`
+For each tag you import, make sure you have the following Essential fields (Yellow): `IndivID`, `Filename`, `TagCode`, `TagPTTID`, `TagManufacturer`
 
 === Essential fields ===
 
@@ -58,7 +58,7 @@ in a single entry to denote all files beginning with the same prefix. See a scre
  * `TagManufacturer` - This denotes the type of data to import, it must be from one of these 4 options: WC or Wildlife Computers, MT or Microwave Telemetry, Archival, SPOT.
 
 === Additional required fields ===
-====   for Archival tags (6, Turquoise) ====
+====   for Archival tags (Turquoise) ====
  * `DateTime_Deploy`
  * `DateTime_Popoff` 
  * `Lat_Deploy`
@@ -68,7 +68,7 @@ in a single entry to denote all files beginning with the same prefix. See a scre
 
 Lat is latitude and Lon is longitude
 
-====  for Wildlife Computers PAT tags (3, Orange)====
+====  for Wildlife Computers PAT tags (Orange)====
 
   * `BinSampleInterval` - This denotes in hours (e.g. 2, 6, 12 or 24), how frequent is your time-at-depth or time-at-temperature is being sampled
 
