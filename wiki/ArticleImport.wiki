@@ -4,7 +4,7 @@
 
 = Overview =
 
-== 5 steps to import tag data: ==
+== 5 steps to import tag data ==
 
   # Set up a batch job file from the Excel template, _!TagBaseBatchJob.xlt_
   # Put the batch job file into the folder where your tag data files are
@@ -32,7 +32,7 @@ or locate and click on the TagBaseBatchJob.xlt in the <templates> folder
 
 http://tagbase.googlecode.com/svn/trunk/images/ImportJob1.jpg
 
-=== General outline ===
+=== General principle ===
 
 Each row of data corresponds to a single tag output file. You can have 2 or more rows of data for an archival tag or for a double-tagged fish. All essential and required fields must be present for each row of data. 
 
@@ -84,3 +84,8 @@ Therefore you can leave these fields blank.
 }}}
 
 http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg
+
+====  Optional fields ====
+
+  * `FAOSpeciesCode` - 3 character codes for [http://www.fao.org/fishery/collection/asfis/en FAO]
+  * other fields are found towards the end of the job spreadsheet
