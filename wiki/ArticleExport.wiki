@@ -14,4 +14,4 @@ To export:
  # and the optional fields are `File Name`, `Folder Path` and `Depth Filter (WC PAT only)`
  # `Depth Filter` is only used when SST data are coming from *`Proc_WC_PDT`*, instead of *`Proc_WC_Locations`*
 
-http://tagbase.googlecode.com/svn/trunk/images/PlotForms4.jpg
+http://tagbase.googlecode.com/svn/trunk/images/PlotForms4.png
