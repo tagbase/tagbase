@@ -94,11 +94,11 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg
 
 Save your job file (e.g _!MyTagbaseJob1.xls_) into the folder where your data files are located or where appropriate.
 
-= Step 3 - Start TagBase =
+= Step 3 - Start Tagbase =
 
 This should be very easy!
 
-= Step 4 - Setting up the WC_BinInfo (Wildlife Computers PAT tags only) =
+= Step 4 - Setting up the *`WC_BinInfo`* (Wildlife Computers PAT tags only) =
 
 You may have used multiple histogram binning schemes for the time-at-depth or time-at-temperature worksheets. Depending on the tag model as well, there can be 12 or 14 Bins. 
 
@@ -111,7 +111,7 @@ All the binning schemes can be specified in *`WC_BinInfo`* table in the followin
 
 http://tagbase.googlecode.com/svn/trunk/images/ImportBins.jpg
 
-  * `BinID` – Unique ID for a particular scheme. By convention, `BinID` < 100 is used for depth, `BinID` > 100 for temperature. The above example, showed two schemes of 12 bins (`BinID` = 1 for depth and `BinID` = 100 for temperature). 
-  * `BinMin`, `BinMax` – fill in the physical values for a specific bin (1-12)
+  * `BinID` - Unique ID for a particular scheme. By convention, `BinID` < 100 is used for depth, `BinID` > 100 for temperature. The above example, showed two schemes of 12 bins (`BinID` = 1 for depth and `BinID` = 100 for temperature). 
+  * `BinMin`, `BinMax` - fill in the physical values for a specific bin (1-12)
   * `Bin` - should go from 1-12 or 14
   * `BinRange` - is a housekeeping, optional note field
