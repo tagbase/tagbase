@@ -8,12 +8,12 @@ Here are the main groups of table that your data and metadata reside. This is us
 
 == Metadata tables ==
 
-  * `FishInfo` - Table with information about individual tagged fish, such as species, body length
-  * `TagInfo` - Table with Tag Summary Information, including the unique `TagCode` for each tag, deploy and popoff information
-  * `TagInfo_Extra` - Table with other metadata for a tag
-  * `SpeciesInfo` - Table with species standardized name and [http://www.itis.gov/ TSN identifier listings]
-  * `WC_BinInfo` - Table with Wildlife Computers Tag Bin classification scheme data
-  * `AnalysisInfo` - Table with metadata that describe an analysis you carry out
+  * `FishInfo` - table with information about individual tagged fish, such as species, body length
+  * `TagInfo` - table with Tag Summary Information, including the unique `TagCode` for each tag, deploy and popoff information
+  * `TagInfo_Extra` - table with other metadata for a tag
+  * `SpeciesInfo` - table with species standardized name and [http://www.itis.gov/ TSN identifier listings]
+  * `WC_BinInfo` - table with Wildlife Computers Tag Bin classification scheme data
+  * `AnalysisInfo` - table with metadata that describe an analysis you carry out
 
 
 == Archival tag data tables ==
@@ -27,10 +27,10 @@ Here are the main groups of table that your data and metadata reside. This is us
 
 == Microwave Telemetry PAT ==
 
-  * MT_ObservationTypes - contains description of ID fields used in Microwave Telemetry Processed Depth Temperature table, Proc_MT_DepthTemp
-  * Proc_MT_DepthTemp - table with fully processed MicrowaveTelemetry Pressure & Depth Data
-  * Proc_MT_GPSdata - table with fully processed Microwave Telemetry Argos Data
-  * Proc_MT_Location - table with fully processed Microwave Telemetry manufacturer light-based geolocation data
+  * `MT_ObservationTypes` - contains description of ID fields used in Microwave Telemetry Processed Depth Temperature table, Proc_MT_DepthTemp
+  * `Proc_MT_DepthTemp` - table with fully processed MicrowaveTelemetry Pressure & Depth Data
+  * `Proc_MT_GPSdata` - table with fully processed Microwave Telemetry Argos Data
+  * `Proc_MT_Location` - table with fully processed Microwave Telemetry manufacturer light-based geolocation data
 
 
 == Wildlife Computers ==
