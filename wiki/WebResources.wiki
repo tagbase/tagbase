@@ -5,7 +5,7 @@ A list of resources that we are aware of for tagging applications. Feel free to 
 <wiki:toc max_depth="2" />
 
 == State-space models for geolocation - Kalman filter suite ==
-=== `TrackIt`, `Ukfsst`, `Kfsst`, `Kftrack`) ===
+=== (`TrackIt`, `Ukfsst`, `Kfsst`, `Kftrack`) ===
 ==== https://www.soest.hawaii.edu/tag-data/software/ ====
 
 A suite of statistical models to estimate position errors, movement model parameters, and most probable positions from tracking data. Refer to:
