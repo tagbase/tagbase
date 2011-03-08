@@ -8,40 +8,40 @@ Here are the main groups of table that your data and metadata reside. This is us
 
 == Metadata tables ==
 
-  * `FishInfo` – Table with information about individual tagged fish, such as species, body length
-  * `TagInfo` – Table with Tag Summary Information, including the unique TagCode for each tag, deploy and popoff information
-  * `TagInfo_Extra` – Table with other metadata for a tag
-  * `SpeciesInfo` – Table with species standardized name and [http://www.itis.gov/ TSN identifier listings]
+  * `FishInfo` - Table with information about individual tagged fish, such as species, body length
+  * `TagInfo` - Table with Tag Summary Information, including the unique TagCode for each tag, deploy and popoff information
+  * `TagInfo_Extra` - Table with other metadata for a tag
+  * `SpeciesInfo` - Table with species standardized name and [http://www.itis.gov/ TSN identifier listings]
   * `WC_BinInfo` - Table with Wildlife Computers Tag Bin classification scheme data
   * `AnalysisInfo` - Table with metadata that describe an analysis you carry out
 
 
 == Archival tag data tables ==
 
-  * `Proc_Archival_TempLight` – table with fully processed depth, temperature and light time series data
-  * `Proc_Archival_Location` – table with fully processed WC light-based geolocation data (older tag models)
-  * `Proc_WC_Locations` –  table with fully processed WC light-based geolocation data (newer tag models)
-  * `Proc_LTD_DayLog` – table with Lotek `DayLog` data (daily summary of positions, sst and others)
-  * `Proc_LTD_MissionDate` – Table with Lotek data that matches up mission day (day at liberty) with a Date (mission date)
+  * `Proc_Archival_TempLight` - table with fully processed depth, temperature and light time series data
+  * `Proc_Archival_Location` - table with fully processed WC light-based geolocation data (older tag models)
+  * `Proc_WC_Locations` - table with fully processed WC light-based geolocation data (newer tag models)
+  * `Proc_LTD_DayLog` - table with Lotek `DayLog` data (daily summary of positions, sst and others)
+  * `Proc_LTD_MissionDate` - table with Lotek data that matches up mission day (day at liberty) with a Date (mission date)
 
 
 == Microwave Telemetry PAT ==
 
-  * MT_ObservationTypes – contains description of ID fields used in Microwave Telemetry Processed Depth Temperature table, Proc_MT_DepthTemp
-  * Proc_MT_DepthTemp – table with fully processed MicrowaveTelemetry Pressure & Depth Data
-  * Proc_MT_GPSdata – table with fully processed Microwave Telemetry Argos Data
-  * Proc_MT_Location – table with fully processed Microwave Telemetry manufacturer light-based geolocation data
+  * MT_ObservationTypes - contains description of ID fields used in Microwave Telemetry Processed Depth Temperature table, Proc_MT_DepthTemp
+  * Proc_MT_DepthTemp - table with fully processed MicrowaveTelemetry Pressure & Depth Data
+  * Proc_MT_GPSdata - table with fully processed Microwave Telemetry Argos Data
+  * Proc_MT_Location - table with fully processed Microwave Telemetry manufacturer light-based geolocation data
 
 
 == Wildlife Computers ==
 
-  * `Proc_WC_FrequencyData` – table with fully processed Wildlife Computers Time-at-Depth and Time-at-Temperature data
-  * `Proc_WC_Locations` – table with fully processed WC light-based geolocation data
-  * `Proc_WC_LocationsLight` – table with fully processed Wildlife Computers manufacturer light data in the `<Locations>` worksheet
-  * `Proc_WC_PDT` – table with fully processed Wildlife Computers PDT Data 
-  * `Proc_WC_Status` – table with fully processed Wildlife Computers Argos data from the Status worksheet
-  * `Proc_WC_GPS` – table with fully processed Wildlife Computers DAP Fastloc data
-  * `Proc_WC_Argos` – table with fully processed WC DAP Argos (shared by PAT and SPOT) data
+  * `Proc_WC_FrequencyData` - table with fully processed Wildlife Computers Time-at-Depth and Time-at-Temperature data
+  * `Proc_WC_Locations` - table with fully processed WC light-based geolocation data
+  * `Proc_WC_LocationsLight` - table with fully processed Wildlife Computers manufacturer light data in the `<Locations>` worksheet
+  * `Proc_WC_PDT` - table with fully processed Wildlife Computers PDT Data 
+  * `Proc_WC_Status` - table with fully processed Wildlife Computers Argos data from the Status worksheet
+  * `Proc_WC_GPS` - table with fully processed Wildlife Computers DAP Fastloc data
+  * `Proc_WC_Argos` - table with fully processed WC DAP Argos (shared by PAT and SPOT) data
   * `WC_ObservationTypes` - contains description of ID fields used in Wildlife Computers DAP output csv e.g `MinMaxTemp`; `LightLocs`. Extra fields that are not in WC-AMP
   * `InterpolatedTimes` - contains interpolated Wildlife Computers location solar event times
 
@@ -69,10 +69,10 @@ And a detailed list of fields with their descriptions will be shown
 
 Relationships are a key feature of database systems and allow us to specify how data fields are related to each other among various tables. In TagBase, there are two key relationships that link up all data:
 
-  # *`FishInfo`* table <--> *`TagInfo`* table
-  # *`TagInfo`* table <--> All downstream data tables
+  # *`FishInfo`* table <- -> *`TagInfo`* table
+  # *`TagInfo`* table <- -> All downstream data tables
 
-== 1. *`FishInfo`* table <--> *`TagInfo`* table ==
+== 1. *`FishInfo`* table <- -> *`TagInfo`* table ==
 
 These two tables are linked by the `FishID` field, which any individual fish you have imported data for should have a unique `FishID` (a long integer). For each `FishID`, i.e. a distinctive individual, you can one or multiple tags, as represented by a unique `TagID`. For example, you can have a fish, `FishID` = 5, carrying two tags, `TagID` = 10 and 11. 
 
@@ -100,7 +100,7 @@ Data from a tag file are stored in multiple tables, for example, for an archival
 
 http://tagbase.googlecode.com/svn/trunk/images/TablesRelate4.jpg
 
-=== If you want to know all the relationships in TagBase, you can bring up the Relationships diagram by using the toolbar button, as shown below: ===
+=== If you want to know all the relationships in Tagbase, you can bring up the Relationships diagram by using the toolbar button, as shown below: ===
 
 http://tagbase.googlecode.com/svn/trunk/images/TablesRelate5.jpg
 
