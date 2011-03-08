@@ -94,7 +94,7 @@ Now, go back to the *`FishInfo`* table, and enter the new `SpeciesTSN` with a va
 http://tagbase.googlecode.com/svn/trunk/images/TablesRelate3.jpg
 
 
-== 2. *`TagInfo`* table <--> All downstream data tables ==
+== 2. *`TagInfo`* table <- -> All downstream data tables ==
 
 Data from a tag file are stored in multiple tables, for example, for an archival tag, the depth-temperature-light time series data are stored in one table, while the location estimates are stored in another. *`TagInfo`* table connects all these data tables together through the `TagID` field. Every individual tag you import will have a unique `TagID` (a number), and all the data for that particular tag will be associated with the unique `TagID`. In this way, data that belong to one tag can be obtained from different data tables using its `TagID`. 
 
