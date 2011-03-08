@@ -67,7 +67,7 @@ And a detailed list of fields with their descriptions will be shown
 
 = Relationships =
 
-Relationships are a key feature of database systems and allow us to specify how data fields are related to each other among various tables. In TagBase, there are two key relationships that link up all data:
+Relationships are a key feature of database systems and allow us to specify how data fields are related to each other among various tables. In Tagbase, there are two key relationships that link up all data:
 
   # *`FishInfo`* table <- -> *`TagInfo`* table
   # *`TagInfo`* table <- -> All downstream data tables
@@ -83,7 +83,7 @@ http://tagbase.googlecode.com/svn/trunk/images/TablesRelate1.jpg
 === Example Case: Modify the species information of a newly imported fish ===
 
 _Scenario_
-When you have imported a new tag from a new fish using the _!Batch_Import_TagData_ form (see [ArticleImport Importing data]), this new fish will be assigned a new `FishID` (= 8, in this example) in the *`FishInfo`* table. If you did not provide a `FAOspeciesCode` (see [ArticlePrepareImport Preparing for import]), Tagbase has no idea which species this new fish is, this fish will be associated with a `SpeciesTSN` = -999 (null value) in the same `*FishInfo*` table. 
+When you have imported a new tag from a new fish using the _!Batch_Import_TagData_ form (see [ArticleImport Importing data]), this new fish will be assigned a new `FishID` (= 8, in this example) in the *`FishInfo`* table. If you did not provide a `FAOspeciesCode` (see [ArticlePrepareImport Preparing for import]), Tagbase has no idea which species this new fish is, this fish will be associated with a `SpeciesTSN` = -999 (null value) in the same *`FishInfo`* table. 
 
 This `SpeciesTSN` corresponds to a record in the *`SpeciesInfo`* table. Open the table and you can find a record for `SpeciesTSN` = -999. Obviously, you may want to describe your species better than "Generic fish". So you can add a new record in this table, such as the below example.
 
