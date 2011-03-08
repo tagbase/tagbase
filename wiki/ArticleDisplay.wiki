@@ -1,16 +1,47 @@
-#summary One-sentence summary of this page.
-# labels Featured
+#summary Visualize your data quickly in Tagbase
 
 <wiki:toc max_depth="2" />
 
 = Introduction =
 
-Add your content here.
+The Display/ Plot forms have pre-set graphs that plot your tag data. A variety of plot forms, along with a specified description of what are being plotted, are accessible through the Form Navigation Tool > Plot. Examples of these plots include:
 
+  # XY/Time Series
+  # Histogram
+  # Bubble Plots
 
-= Details =
+http://tagbase.googlecode.com/svn/trunk/images/PlotForms3.png
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+http://tagbase.googlecode.com/svn/trunk/images/PlotForms2.png
+
+http://tagbase.googlecode.com/svn/trunk/images/PlotForms1.png
+
+== Our recommendations ==
+
+  # Plot forms are accessible through the [ArticleNavigation The Form Navigation Tool] or under *`Forms`* in Access
+  # Read the description of a form on the [ArticleNavigation The Form Navigation Tool] to get an idea of what a form does for you
+  # Just play around with the forms! Or make new ones on your own, using existing ones as examples if needed.
+
+= Usage tips on using Plot forms =
+
+ * When you open a form and MS Access displays the following error message `An error occurred while sending data to the OLE server (the application used to create the object`. Just click *OK*. Nothing has gone wrong; it is just a little glitch in Access.
+
+  * Go through the selection items in the direction from *left* to *right* and click the *Plot* button
+
+  * If you hit the *Plot* button without making any selections on `Date/Time Range`, Tagbase will try plot all the time points.
+ 
+  * To see the plotted data in a spreadsheet view, double-click anywhere on a graph.
+  
+  You can copy the data table to clipboard and paste it in Excel or other software. 
+
+http://tagbase.googlecode.com/svn/trunk/images/PlotTips1.jpg
+
+ * To modify the graph properties, right-click anywhere on a graph, and select from the pop-up menu. Graph properties are similar to those in Excel.
+
+http://tagbase.googlecode.com/svn/trunk/images/PlotTips2.jpg
+
+ * To change the X or Y-axis (or gridlines), right-click on an axis (a gridline), and select *Format Axis* from the pop-up menu.
+
+http://tagbase.googlecode.com/svn/trunk/images/PlotTips3.jpg
+
+* To copy the graph as an object for Excel or Powerpoint, just click on the graph, and press *`Ctrl+C`* or *Edit* > *Copy Chart* from the menu. The data will also be embedded.
