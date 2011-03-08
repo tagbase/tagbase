@@ -36,7 +36,7 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportJob1.jpg
 
 Each row of data corresponds to a single tag output file. You can have 2 or more rows of data for an archival tag or for a double-tagged fish. All essential and required fields must be present for each row of data. 
 
-For each tag you import, make sure you have the following Essential fields (5, Yellow): `IndivID`, Filename, `TagCode`, `TagPTTID`, `TagManufacturer`
+For each tag you import, make sure you have the following Essential fields (5, Yellow): `IndivID`, `Filename`, `TagCode`, `TagPTTID`, `TagManufacturer`
 
 === Essential fields ===
 
@@ -48,11 +48,11 @@ For each tag you import, make sure you have the following Essential fields (5, Y
 For Wildlife Computer DAP (.csv) output files, you can use the wildcard character (star or asterisk or *) in a single entry to denote all files beginning with the same prefix. See an example [http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg here].
 }}}
 
-!`TagCode` � This is the serial code of your tag and has to be a unique. Use the same !`TagCode` for archival tags where there are two output files for each tag.
+!`TagCode` - This is the serial code of your tag and has to be a unique. Use the same !`TagCode` for archival tags where there are two output files for each tag.
 
-!`TagPTTID` � This can be the PTT code you use for Argos transmission, or a label of your own.
+!`TagPTTID` - This can be the PTT code you use for Argos transmission, or a label of your own.
 
-!`TagManufacturer` � This denotes the type of data to import, it must be from one of these 4 options: WC or Wildlife Computers, MT or Microwave Telemetry, Archival, SPOT.
+!`TagManufacturer` - This denotes the type of data to import, it must be from one of these 4 options: WC or Wildlife Computers, MT or Microwave Telemetry, Archival, SPOT.
 
 === Additional required fields ===
 ==== for Archival tags (6, Turquoise) ====
