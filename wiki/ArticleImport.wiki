@@ -58,7 +58,7 @@ in a single entry to denote all files beginning with the same prefix. See a scre
  * `TagManufacturer` - This denotes the type of data to import, it must be from one of these 4 options: WC or Wildlife Computers, MT or Microwave Telemetry, Archival, SPOT.
 
 === Additional required fields ===
-==== for Archival tags (6, Turquoise) ====
+====   for Archival tags (6, Turquoise) ====
  * !DateTime_Deploy 
  * !DateTime_Popoff 
  * !Lat_Deploy 
@@ -66,7 +66,7 @@ in a single entry to denote all files beginning with the same prefix. See a scre
  * !Lat_Popoff
  * !Lon_Popoff
 
-==== Wildlife Computers PAT tags (3, Orange)====
+====  for Wildlife Computers PAT tags (3, Orange)====
 
   * `BinSampleInterval` - This denotes in hours (e.g. 2, 6, 12 or 24), how frequent is your time-at-depth or time-at-temperature is being sampled
 
