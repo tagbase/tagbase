@@ -58,7 +58,7 @@ in a single entry to denote all files beginning with the same prefix. See a scre
  * `TagManufacturer` - This denotes the type of data to import, it must be from one of these 4 options: WC or Wildlife Computers, MT or Microwave Telemetry, Archival, SPOT.
 
 === Additional required fields ===
-====   for Archival tags (Turquoise) ====
+====   for Archival tags (Turquoise) [optional for other tags, see Tips below] ====
  * `DateTime_Deploy`
  * `DateTime_Popoff` 
  * `Lat_Deploy`
@@ -66,7 +66,16 @@ in a single entry to denote all files beginning with the same prefix. See a scre
  * `Lat_Popoff`
  * `Lon_Popoff`
 
-Lat is latitude and Lon is longitude
+_Popoff_ is used loosely here, which can also mean tag recovery or retrieval
+
+{{{ 
+Tips -
+You can fill in these fields for other tag types other than archival, 
+Tagbase will use the information you enter here instead of the automated
+data lookup from your tag files. In this way, your manual entry will always
+take precedence over our automation.
+}}}
+
 
 ====  for Wildlife Computers PAT tags (Orange)====
 
@@ -115,3 +124,10 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportBins.jpg
   * `BinMin`, `BinMax` - fill in the physical values for a specific bin (1-12)
   * `Bin` - should go from 1-12 or 14
   * `BinRange` - is a housekeeping, optional note field
+
+= Step 5 - Import via _!Batch_Import_TagData_ form =
+
+  # You can browse from the [ArticleNavigation Form Navigation Tool] > Import > Batch_Import_TagData or locate it under *`Forms`*
+  # Follow the instructions on the form to import - which direct you to locate the job file and initiate import
+
+http://tagbase.googlecode.com/svn/trunk/images/ImportBatch.jpg
