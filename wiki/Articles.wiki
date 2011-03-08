@@ -19,9 +19,13 @@ Have fun!
 
     * [ArticleTerms Abbreviations and Terminology]
     * [ArticleNavigation The Form Navigation Tool]
+    * [ArticlePrepareImport Preparing for import]
     * [ArticleImport Importing data]
     * [ArticleTables Data tables and Relationships]
     * [ArticleDisplay Display and Graphs]
+    * [ArticleMap Integrated Mapping]
     * [ArticleExport Exporting data]
+    * [ArticleSqlServer Setting up SQL Server]
+    * [ArticleMissingRefs Handling "Missing References" error]
 
 A pdf documentation, which provides the basis for this online help is available [http://tagbase.googlecode.com/svn/trunk/docs/TagBase.pdf here].
