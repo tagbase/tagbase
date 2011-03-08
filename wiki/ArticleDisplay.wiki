@@ -16,10 +16,10 @@ http://tagbase.googlecode.com/svn/trunk/images/PlotForms2.png
 
 http://tagbase.googlecode.com/svn/trunk/images/PlotForms1.png
 
-== Our recommendations ==
+= Our recommendations =
 
-  # Plot forms are accessible through the [ArticleNavigation The Form Navigation Tool] or under *`Forms`* in Access
-  # Read the description of a form on the [ArticleNavigation The Form Navigation Tool] to get an idea of what a form does for you
+  # Plot forms are accessible through the [ArticleNavigation Form Navigation Tool] or under *`Forms`* in Access
+  # Read the description of a form on the [ArticleNavigation Form Navigation Tool] to get an idea of what a form does for you
   # Just play around with the forms! Or make new ones on your own, using existing ones as examples if needed.
 
 = Usage tips on using Plot forms =
@@ -44,4 +44,4 @@ http://tagbase.googlecode.com/svn/trunk/images/PlotTips2.jpg
 
 http://tagbase.googlecode.com/svn/trunk/images/PlotTips3.jpg
 
-* To copy the graph as an object for Excel or Powerpoint, just click on the graph, and press *`Ctrl+C`* or *Edit* > *Copy Chart* from the menu. The data will also be embedded.
+ * To copy the graph as an object for Excel or Powerpoint, just click on the graph, and press *`Ctrl+C`* or *Edit* > *Copy Chart* from the menu. The data will also be embedded.
