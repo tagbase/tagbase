@@ -59,12 +59,14 @@ in a single entry to denote all files beginning with the same prefix. See a scre
 
 === Additional required fields ===
 ====   for Archival tags (6, Turquoise) ====
- * !DateTime_Deploy 
- * !DateTime_Popoff 
- * !Lat_Deploy 
- * !Lon_Deploy
- * !Lat_Popoff
- * !Lon_Popoff
+ * `DateTime_Deploy`
+ * `DateTime_Popoff` 
+ * `Lat_Deploy`
+ * `Lon_Deploy`
+ * `Lat_Popoff`
+ * `Lon_Popoff`
+
+Lat is latitude and Lon is longitude
 
 ====  for Wildlife Computers PAT tags (3, Orange)====
 
