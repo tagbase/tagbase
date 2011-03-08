@@ -27,8 +27,7 @@ http://tagbase.googlecode.com/svn/trunk/docs/TagBaseQuickImport.ppt
 {{{ 
 Tips -
 You can modify a copy of the template from the sample dataset 
-or locate and click on the TagBaseBatchJob.xlt in 
-the <templates> folder
+or locate and click on the TagBaseBatchJob.xlt in the <templates> folder
 }}}
 
 http://tagbase.googlecode.com/svn/trunk/images/ImportJob1.jpg
