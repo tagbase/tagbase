@@ -81,6 +81,15 @@ It offers very simple and interactive features to visualize your tag data!
 Marine Geospatial Ecology Tools (MGET), also known as the `GeoEco` Python package, is an open source geoprocessing toolbox designed for coastal and marine researchers and GIS analysts who work with spatially-explicit ecological and oceanographic data in scientific or management workflows. MGET includes over 180 tools useful for a variety of tasks, such as converting oceanographic data to ArcGIS formats, identifying fronts in sea surface temperature images, fitting and evaluating statistical models such as GAMs and GLMs by integrating ArcGIS with the R statistics program, analyzing coral reef connectivity by simulating hydrodynamic larval dispersal, and building grids that summarize fishing effort, CPUE and other statistics. Currently under development are tools for identifying eddy cores in sea surface height images, for analyzing connectivity networks, for estimating fishing effort when no effort data are available, for predicting hard bottom habitat from coarse grain bathymetry, and much more. 
 
 
+== Geospatial Modelling Environment ==
+==== http://www.spatialecology.com/gme/index.htm ====
+==== http://www.spatialecology.com/htools/tooldesc.php ====
+
+GME provides a suite of analysis and modelling tools, ranging from small 'building blocks' that you can use to construct a sophisticated work-flow, to completely self-contained analysis programs. It also uses the extraordinarily powerful open source software R as the statistical engine to drive some of the analysis tools.
+
+Note: Current development is based on ArcGIS 10
+
+
 == AD Model Builder ==
 ==== http://www.admb-project.org/ ====
 
