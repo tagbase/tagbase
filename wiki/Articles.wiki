@@ -29,3 +29,11 @@ Have fun!
     * [ArticleMissingRefs Handling "Missing References" error]
 
 A pdf documentation, which provides the basis for this online help is available [http://tagbase.googlecode.com/svn/trunk/docs/TagBase.pdf here].
+
+= Upcoming Case Studies =
+   * Processing track data from TrackIt/ Ukfsst - the whole story from Tagbase and back
+   * What can you do with Ocean Data View? Using goodies from Tagbase suite
+   * Connecting Tagbase to your favourite package through Open Database Connectivity (ODBC) - an exmaple with R and Matlab
+   * Advanced Form Series - 1. Flexible Histogram Generator
+   * Advanced Form Series - 2. Sharing tracks with GPS Visualizer
+   * Advanced Form Series - 3. Interpolating sunrise/ sunset times
