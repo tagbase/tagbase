@@ -17,7 +17,10 @@ A suite of statistical models to estimate position errors, movement model parame
 == Webpage and R libaries of Ben Galaurdi ==
 ==== http://pubpages.unh.edu/~galuardi/galuardi.html ====
 
-Great utilities are provided here to work tag data in the [http://www.r-project.org/ R] environment.
+http://tagbase.googlecode.com/svn/trunk/images/Tag04233-2005UD_small.jpg
+Full-sized image [http://tagbase.googlecode.com/svn/trunk/images/Tag04233-2005UD.png here]
+
+Great utilities are provided here to work tag data in the [http://www.r-project.org/ R] environment. Refer to [http://rparticle.web-p.cisti.nrc.ca/rparticle/AbstractTemplateServlet?calyLang=eng&journal=cjfas&volume=67&year=0&issue=6&msno=f10-033 Galaurdi et al.] for details. Data courtesy of Large Pelagics Research Center, UMass Amherst.
 
 
 == Geolocation toolbox by Martin Pedersen == 
