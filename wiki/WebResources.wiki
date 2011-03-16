@@ -113,6 +113,13 @@ http://www.soest.hawaii.edu/Illust/admb_dev/image/admb_banner_deep.jpg
 AD Model Builder, or ADMB, the most powerful software package for the development of state-of-the-art nonlinear models, can now be freely downloaded for Windows, Linux, MacOS, and Sun/SPARC. This should projectile you into serious ecological modeling! A very powerful set of tools used by ecologists and stock assessment scientists.
 
 
+== Orange ==
+==== http://orange.biolab.si/ ====
+
+http://orange.biolab.si/orange-logo-w.png
+
+Open source data visualization and analysis for novice and experts. Data mining through visual programming or Python scripting. Components for machine learning. Extensions for bioinformatics and text mining. Packed with features for data analytics.
+
 == General file management practices ==
  * *[http://tortoisesvn.tigris.org/ TortoiseSVN]* is a version control software for Subversion. It enables Subversion commands directly in Windows explorer, and lets you keep tracks of the history of changes to your files
  * *[http://www.educ.umu.se/~cobian/cobianbackup.htm Cobian Backup]* is a free backup program that can be used to schedule and backup your files and directories from their original location to other directories/drives in the same computer or other computer in your network and FTP. 
