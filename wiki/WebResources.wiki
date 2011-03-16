@@ -56,7 +56,9 @@ Xtractomatic is a set of free routines that allow client-side access of environm
 
 
 == NOAA Environmental Data Connector ==
-==== http://www.pfeg.noaa.gov/products/EDC/images/edcbanner3x.jpg ===
+==== http://www.asascience.com/software/arcgistools/edc.shtml ====
+==== http://www.pfeg.noaa.gov/products/EDC/ ====
+http://www.pfeg.noaa.gov/products/EDC/images/edcbanner3x.jpg
 
 The Environmental Data Connector (EDC) is a tool that allows users to connect to THREDDS/OPeNDAP servers from within ArcGIS and download environmental data.  It was developed for the National Oceanic and Atmospheric Administration (NOAA) Fisheries by Applied Science Associates, Inc. (ASA). The EDC is available in two versions: the original EDC which is designed to work in conjunction with ArcGIS, and the EDC Standalone version which can be run outside ArcGIS.
 
