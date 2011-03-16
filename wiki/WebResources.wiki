@@ -55,6 +55,12 @@ ERDDAP (the Environmental Research Division's Data Access Program) is a data ser
 Xtractomatic is a set of free routines that allow client-side access of environmental data served by the Thematic Real-time Environmental Distributed Data System (THREDDS) at the Pacific Fisheries Environmental Laboratory. 
 
 
+== NOAA Environmental Data Connector ==
+==== http://www.pfeg.noaa.gov/products/EDC/images/edcbanner3x.jpg ===
+
+The Environmental Data Connector (EDC) is a tool that allows users to connect to THREDDS/OPeNDAP servers from within ArcGIS and download environmental data.  It was developed for the National Oceanic and Atmospheric Administration (NOAA) Fisheries by Applied Science Associates, Inc. (ASA). The EDC is available in two versions: the original EDC which is designed to work in conjunction with ArcGIS, and the EDC Standalone version which can be run outside ArcGIS.
+
+
 == Electronic Tagging Data Repository ==
 ==== https://www.soest.hawaii.edu/tag-data/ ====
 
