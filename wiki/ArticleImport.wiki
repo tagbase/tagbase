@@ -57,6 +57,12 @@ in a single entry to denote all files beginning with the same prefix. See a scre
 
  * `TagManufacturer` - This denotes the type of data to import, it must be from one of these 4 options: WC or Wildlife Computers, MT or Microwave Telemetry, Archival, SPOT.
 
+{{{ 
+Tips -
+1. Recovered WC PAT should be denoted as "Archival"
+2. Recovered MT PAT should remain as "Microwave Telemetry"
+}}}
+
 === Additional required fields ===
 ====   for Archival tags (Turquoise) [optional for other tags, see Tips below] ====
  * `DateTime_Deploy`
