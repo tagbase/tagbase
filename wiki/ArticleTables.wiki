@@ -41,7 +41,9 @@ Here are the main groups of table that your data and metadata reside. This is us
   * `Proc_WC_PDT` - table with fully processed Wildlife Computers PDT Data 
   * `Proc_WC_Status` - table with fully processed Wildlife Computers Argos data from the Status worksheet
   * `Proc_WC_GPS` - table with fully processed Wildlife Computers DAP Fastloc data
-  * `Proc_WC_Argos` - table with fully processed WC DAP Argos (shared by PAT and SPOT) data
+  * `Proc_WC_Argos` - table with fully processed Wildlife Computers DAP Argos (shared by PAT and SPOT) data
+  * `Proc_WC_SeriesRange` - table with precision/accuracy information for Wildlife Computers transmitted archival time series. The time series itself resides in `Proc_Archival_TempLight`. Usually available from MiniPAT models
+  * `Proc_WC_Observations` - a normalized table to hold various pieces of Wildlife Computers DAP information. Used in conjunction with `WC_ObservationTypes`
   * `WC_ObservationTypes` - contains description of ID fields used in Wildlife Computers DAP output csv e.g `MinMaxTemp`; `LightLocs`. Extra fields that are not in WC-AMP
   * `InterpolatedTimes` - contains interpolated Wildlife Computers location solar event times
 
