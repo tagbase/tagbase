@@ -24,6 +24,13 @@ http://tagbase.googlecode.com/svn/trunk/images/PlotForms1.png
 
 = Usage tips on using Plot forms =
 
+{{{ 
+Troubleshoot -
+Forms sometimes misbehave and don't display properly. When that happens, close all forms and try run this: 
+*Macros* > *RestorePlotForms*. 
+A confirmation message will appear after it has completed.
+}}}
+
  * When you open a form and MS Access displays the following error message `An error occurred while sending data to the OLE server (the application used to create the object`. Just click *OK*. Nothing has gone wrong; it is just a little glitch in Access.
 
   * Go through the selection items in the direction from *left* to *right* and click the *Plot* button
