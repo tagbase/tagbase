@@ -27,7 +27,7 @@ http://tagbase.googlecode.com/svn/trunk/images/PlotForms1.png
 {{{ 
 Troubleshoot -
 Forms sometimes misbehave and don't display properly. When that happens, close all forms and try run this: 
-*Macros* > *RestorePlotForms*. 
+                            Macros > RestorePlotForms
 A confirmation message will appear after it has completed.
 }}}
 
