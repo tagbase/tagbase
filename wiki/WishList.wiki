@@ -1,5 +1,5 @@
 #summary Wishlist items
-http://tagbase.googlecode.com/svn/trunk/images/tagbase-logo3turtle.jpg
+http://tagbase.googlecode.com/svn/trunk/images/tagbase.gif
 
 = What do you want to see in Tagbase? =
 
