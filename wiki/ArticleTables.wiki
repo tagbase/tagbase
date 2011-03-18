@@ -37,7 +37,7 @@ Here are the main groups of table that your data and metadata reside. This is us
 
   * `Proc_WC_FrequencyData` - table with fully processed Wildlife Computers Time-at-Depth and Time-at-Temperature data
   * `Proc_WC_Locations` - table with fully processed Wildlife Computers light-based geolocation data
-  * `Proc_WC_LocationsLight` - table with fully processed Wildlife Computers manufacturer light data in the `<Locations>` worksheet or `<-LightLoc.csv>`
+  * `Proc_WC_LocationsLight` - table with fully processed Wildlife Computers manufacturer light data in the `<Locations>` worksheet or processed WC-GPE2 exported results into `LightLoc.csv`
   * `Proc_WC_PDT` - table with fully processed Wildlife Computers PDT Data 
   * `Proc_WC_Status` - table with fully processed Wildlife Computers Argos data from the Status worksheet
   * `Proc_WC_GPS` - table with fully processed Wildlife Computers DAP Fastloc data
