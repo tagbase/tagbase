@@ -28,8 +28,8 @@ And follow the instructions here to set up your SQL server:
  * Depending on your Windows operating systems, you might have difficulty in *`Attach`* the `Tagbase.mdf` and `Tagbase_log.ldf` files in the SQL Server Management Studio, due to permission issues. 
  * When that happens, you can copy these two files into the data folder of the SQL server data directory, such as:
    `C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA`
- * *Tagbase* will now show up in the !`ObjectExplorer` as `Read-Only`
- * Right-click on it, select `Properties` > `Options` > `State` 
- * Set "False" to the option `Database Read-Only`
+ * *Tagbase* will now show up in the `ObjectExplorer` as `Read-Only`
+ * Right-click on it, select `Properties` > `Options` > scroll down to `State` 
+ * Set "_False_" to the option `Database Read-Only`
  * For more information on SQL Server Management Studio, find out [http://msdn.microsoft.com/en-us/library/ms174173.aspx here]
  
