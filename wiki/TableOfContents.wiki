@@ -1,4 +1,5 @@
   * [WhatsNew What's New?]
+  * [OurVision Learn About Our Vision!]
   * [GettingStarted Getting Started]
   * [HowToInstallPlugins Plugins Installation]
   * [Articles Help Articles]

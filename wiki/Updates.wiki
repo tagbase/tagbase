@@ -1,5 +1,17 @@
 #summary To-do items for upcoming updates
 
+= March 22, 2011 =
+
+  # A bug here in the MapWindow form
+
+    'Needs to do something about the 0-360
+        'flgLonTbx = 0 for 0-360; 1 for -180 to 0-180; 2 for -180 to -1
+    flgLonTbx = IIf(Me.tbxMinX < 0, 1, 0) + IIf(Me.tbxMinX < 0, 1, 0)
+
+    the latter part should be, Me.tbxMax
+
+  # Comment out or remove code in module, InternetFiles such that you don't need the MSINET.OCX anymore! The code in function, HTTPDownloadFile doesn't need it anyways.
+
 = March 13, 2011 =
 
   # Add a query to show just deploy/recovery locations for MapWindow, using GoogleMapDat1
