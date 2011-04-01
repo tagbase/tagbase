@@ -89,6 +89,12 @@ Ocean Data View (ODV) is a software package for the interactive exploration, ana
 
 It offers very simple and interactive features to visualize your tag data!
 
+== Ethographer ==
+==== http://sites.google.com/site/ethographer ====
+
+http://sites.google.com/site/ethographer/_/rsrc/1286177709369/home/LogoBBA.jpg?height=113&width=320
+
+Ethographer is a collection of functions that enables bio-logging data to be viewed and analyzed and that works on IGOR Pro (WaveMetrics, Inc.). 
 
 == Marine Geospatial Ecology Tools == 
 ==== http://code.env.duke.edu/projects/mget ====
