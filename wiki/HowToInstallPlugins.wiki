@@ -3,6 +3,13 @@
 
 = Tagbase Plugins =
 
+== The following plugins are used only to extend Tagbase capabilities, thus they are *OPTIONAL*. The core functions will work without any of them ==
+
+If you decide to bypass the plugins, refer to [ArticleMissingRefs here] to remove the missing references from the database, which are the following:
+
+   * `MapWinGIS` Components
+   * Microsoft Internet Transfer Control 6.0 (SP4)
+
 === A zip file containing all required plugins is available [http://tagbase.googlecode.com/svn/trunk/files/plugins.zip here]. ===
 
 If you have a 64-bit system, you will go to the webpages and download the correct version
