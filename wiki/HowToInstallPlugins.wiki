@@ -3,7 +3,7 @@
 
 = Tagbase Plugins =
 
-== Plugins are *OPTIONAL*. The core functions of Tagbase will work without any of them ==
+== Plugins are _OPTIONAL_. The core functions of Tagbase will work without any of them ==
 
 If you decide to bypass the plugins, refer to [ArticleMissingRefs here] to remove the missing references from the database, which are the following:
 
