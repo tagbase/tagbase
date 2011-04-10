@@ -1,8 +1,11 @@
 #summary To-do items for upcoming updates
 
+= April 09, 2011 =
+  # Add Moon curve to PAT_Explorer form
+
 = March 22, 2011 =
 
-  # A bug here in the MapWindow form
+  # A bug here in the MapWindow form - already taken care of
 
     'Needs to do something about the 0-360
         'flgLonTbx = 0 for 0-360; 1 for -180 to 0-180; 2 for -180 to -1
