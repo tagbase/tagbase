@@ -1,5 +1,17 @@
 #summary To-do items for upcoming updates
 
+= April 19, 2011 =
+  # OdvWC2 should be
+
+SELECT DISTINCT TagID, DateTime FROM Proc_WC_FrequencyData
+UNION SELECT DISTINCT TagID, DateTime FROM Proc_WC_PDT
+UNION SELECT DISTINCT TagID, DateValue(DateTime) FROM Proc_WC_FrequencyData
+UNION SELECT DISTINCT TagID, DateValue(DateTime) FROM Proc_WC_PDT
+ORDER BY 1, 2;
+
+# Add distinct to avoid unnecessary looping!
+?LoopTagIdInterpolate("SELECT DISTINCT Cruise FROM OdvTAD", "OdvTAD")
+
 = April 09, 2011 =
   # Add Moon curve to PAT_Explorer form
 
