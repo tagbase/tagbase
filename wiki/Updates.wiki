@@ -1,5 +1,9 @@
 #summary To-do items for upcoming updates
 
+= May 23, 2011 =
+
+# Seamless import via manufacturer software; start with DesertStar
+
 = April 19, 2011 =
   # OdvWC2 should be
 
