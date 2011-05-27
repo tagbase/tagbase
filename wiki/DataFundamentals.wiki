@@ -46,12 +46,12 @@ _This list is not meant to be comprehensive. Please suggest more as comments_
   * Wildlife Computers: Electronic tags for wildlife research: http://www.wildlifecomputers.com
 
 ==== A simple overview of equipments available for animals submerged underwater ====
-|| *Tag manufacturer* || *Acoustic* || *Archival* || *Popup* || *Radio-linked telemetry* || Data used for geopositioning||
-|| [http://www.cefastechnology.co.uk Cefas] || No || Yes || No || Yes || Satellite ||
-|| [http://www.desertstar.com Desert Star] || No || Yes || Yes || No || Magnetic ||
-|| [http://www.microwavetelemetry.com Microwave Telemetry ] || No || No || Yes || No || Light ||
-
-
+|| *Tag manufacturer* || *Acoustic* || *Archival* || *Popup* || *Radio-linked telemetry* || *Signals used for geopositioning*||
+|| [http://www.cefastechnology.co.uk Cefas] || No || _Yes_ || No || _Yes_ || Radio ||
+|| [http://www.desertstar.com Desert Star] || No || _Yes_ || _Yes_ || No || Magnetic ||
+|| [http://www.lotek.com Lotek] || No || _Yes_ || _Yes_ || No || Light ||
+|| [http://www.microwavetelemetry.com Microwave Telemetry] || No || No || _Yes_ || Yes (for birds only) || Light ||
+|| [http://www.smru.st-and.ac.uk Sea Mammal Research Unit] || No || _Yes_ || No || Yes || Radio ||
 
 =  Other resources =
 
