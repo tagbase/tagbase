@@ -9,17 +9,17 @@
   * Moving beyond centralized tag data systems to a more distributed architecture allowing integration of remote Tagbase servers and webservices
 
 = Tag manufacturers =
-=== _not comprehensive_ ===
-  * Cefas Technology Ltd (CTL): http://www.cefastechnology.co.uk
-  * Desert Star Systems LLC: Underwater and Defense Systems : http://www.desertstar.com/
-  * Lotek Wireless: Fish and wildlife monitoring systems: http://www.lotek.com/
-  * Microwave Telemetry Inc.: Bird and Fish Tracking Transmitters: http://www.microwavetelemetry.com/
-  * Sea Mammal Research Unit: http://www.smru.st-and.ac.uk/
-  * Sirtrack: Wildlife tracking solutions: http://www.sirtrack.com/
-  * Sonotronics: Underwater Ultrasonic Tracking Equipment: http://www.sonotronics.com/
-  * Starr-Oddi: Marine Device Manufacturing: http://www.star-oddi.com/
-  * Vemco: Acoustic telemetry for fish monitoring transmitters and receivers: http://www.vemco.com/index.php
-  * Wildlife Computers: Electronic tags for wildlife research: http://www.wildlifecomputers.com/
+==== _Not comprehensive_ ====
+  * Cefas Technology Limited (CTL): http://www.cefastechnology.co.uk
+  * Desert Star Systems LLC: Underwater and Defense Systems : http://www.desertstar.com
+  * Lotek Wireless: Fish and wildlife monitoring systems: http://www.lotek.com
+  * Microwave Telemetry Inc.: Bird and Fish Tracking Transmitters: http://www.microwavetelemetry.com
+  * Sea Mammal Research Unit: http://www.smru.st-and.ac.uk
+  * Sirtrack: Wildlife tracking solutions: http://www.sirtrack.com
+  * Sonotronics: Underwater Ultrasonic Tracking Equipment: http://www.sonotronics.com
+  * Star-Oddi: Data loggers & sensors for fish research and other industries: http://www.star-oddi.com
+  * Vemco: Acoustic telemetry for fish monitoring transmitters and receivers: http://www.vemco.com
+  * Wildlife Computers: Electronic tags for wildlife research: http://www.wildlifecomputers.com
 
 =  Other resources =
 
