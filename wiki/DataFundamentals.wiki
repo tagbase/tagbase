@@ -53,9 +53,9 @@ _This list is not meant to be comprehensive. Please suggest more as comments_
 || [http://www.microwavetelemetry.com Microwave Telemetry] || - || - || _Yes_ || Yes (birds only) || Light ||
 || [http://www.smru.st-and.ac.uk Sea Mammal Research Unit] || - || _Yes_ || - || Yes || Radio ||
 || [http://www.sirtrack.com Sirtrack] || - || - || - || Yes || Radio ||
-|| [http://www.sonotronics.com Sonotronics] || _Yes_ || - || - || - || Acoustic ||
+|| [http://www.sonotronics.com Sonotronics] || _Yes_ || _Yes_ || - || - || Acoustic ||
 || [http://www.star-oddi.com Star-Oddi] || - || _Yes_ || - || - || Magnetic ||
-|| [http://www.vemco.com Vemco] || _Yes_ || - || - || - || Acoustic ||
+|| [http://www.vemco.com Vemco] || _Yes_ || _Yes_ || - || - || Acoustic ||
 || [http://www.wildlifecomputers.com Wildlife Computers] || - || _Yes_ || _Yes_ || _Yes_ || Light ||
 
 
