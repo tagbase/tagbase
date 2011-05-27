@@ -4,11 +4,11 @@ Welcome to the What's New page for Project Tagbase. Here you'll find description
 
 <wiki:toc max_depth="2" />
 
-= May 2010 =
+= May 2011 =
 
 == Tagbase 4.5 is released! ==
 
-= March 2010 =
+= March 2011 =
 
 == Our website tagbase.org is fully operational! ==
 
