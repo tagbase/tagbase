@@ -1,4 +1,4 @@
-#summary A general introduction to taggging data
+#summary A general introduction to electronic tags
 
 <wiki:toc max_depth="4" />
 
