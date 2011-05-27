@@ -1,6 +1,6 @@
 #summary A general introduction to taggging data
 
-<wiki:toc max_depth="2" />
+<wiki:toc max_depth="4" />
 
 = For new users of electronic tagging ... =
 
@@ -23,7 +23,8 @@ Standard button-size lithium batteries are usually used to power most tags for u
   ==== Acoustic tags ====
 
 = Tag manufacturers =
-==== _Not comprehensive_ ====
+_Not comprehensive_
+
   * Cefas Technology Limited (CTL): http://www.cefastechnology.co.uk
   * Desert Star Systems LLC: Underwater and Defense Systems : http://www.desertstar.com
   * Lotek Wireless Inc.: Fish and wildlife monitoring systems: http://www.lotek.com
