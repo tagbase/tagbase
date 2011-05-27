@@ -1,12 +1,15 @@
 #summary A general introduction to taggging data
 
+<wiki:toc max_depth="2" />
+
 = For new users of electronic tagging ... =
 
-  * Porting of the backend database to other enterprise type data management platforms beyond SQLserver, and in particular to the free, open source Postgre SQL system
+= Popular platforms =
 
-  * Development of web interfaces for Tagbase for data importation and visualization, and allow controlled, brower-based access to Tagbase backend particularly useful for tag data management where multiple, distributed contributors involved (e.g. institutions, larger tagging projects)
-
-  * Moving beyond centralized tag data systems to a more distributed architecture allowing integration of remote Tagbase servers and webservices
+  * GPS or Argos satellite radio-linked telemetry tags (SRLT)
+  * Archival tags
+  * Popup satellite archival tags (PSAT or PAT)
+  * Acoustic tags
 
 = Tag manufacturers =
 ==== _Not comprehensive_ ====
