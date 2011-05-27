@@ -1,0 +1,17 @@
+#summary A general introduction to taggging data
+
+= For new users of electronic tagging ... =
+
+  * Porting of the backend database to other enterprise type data management platforms beyond SQLserver, and in particular to the free, open source Postgre SQL system
+
+  * Development of web interfaces for Tagbase for data importation and visualization, and allow controlled, brower-based access to Tagbase backend particularly useful for tag data management where multiple, distributed contributors involved (e.g. institutions, larger tagging projects)
+
+  * Moving beyond centralized tag data systems to a more distributed architecture allowing integration of remote Tagbase servers and webservices
+
+=  Other resources =
+
+  * Promote improves, standards-based tag data management and best practices
+
+  * Provide a free and open toolset (Tagbase) for electronic tag data management and visualization useful to researchers
+
+  * Serve as a forum for the tagging community (i.e. end-user researchers, tag manufacturers, tool developers) on matters pertaining to tag data management. More specifically, we seek to facilitates discussions on data management issues, requirements, standards development, and technical coordination.
