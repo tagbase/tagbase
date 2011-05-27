@@ -32,7 +32,7 @@ Pop-up satellite archival tags offer a fishery-independent solution to tagging a
 Acoustic transmitters or pingers are archival tags that can be implanted in the peritoneal cavity of an animal such as salmon, or attached externally with epoxy or wires, e.g. on a lobster. Listening arrays or individual hydrophones can be used to receive data from the transmitters. Active tracking will involve following a tagged fish with a hydrophone, while data packets are received continuously at a receiver in a listening array whenever a fish is within the range of a receiver. At the end of a study, the receivers in the array are then retrieved and the complete data archive can be downloaded. Acoustic tags usually only measure depth and or temperature. They can be particularly useful in studying schooling fish, such as tunas around purse-seine fisheries using fish aggregating devices (FADs). Surface acoustic systems have also been developed, which are connected to Argos satellites for data transfer, allowing the monitoring of remote areas for an extended period of time for up to a year ([http://www.springerlink.com/content/h0q30607183x8005/abstract/ Dagorn et al. 2007]).
 
 = Tag manufacturers =
-_Not comprehensive_
+_This list is not meant to be comprehensive. Please suggest more as comments_
 
   * Cefas Technology Limited (CTL): http://www.cefastechnology.co.uk
   * Desert Star Systems LLC: Underwater and Defense Systems : http://www.desertstar.com
@@ -44,6 +44,14 @@ _Not comprehensive_
   * Star-Oddi: Data loggers & sensors for fish research and other industries: http://www.star-oddi.com
   * Vemco: Acoustic telemetry for fish monitoring transmitters and receivers: http://www.vemco.com
   * Wildlife Computers: Electronic tags for wildlife research: http://www.wildlifecomputers.com
+
+==== A simple overview of equipments available for animals submerged underwater ====
+|| *Tag manufacturer* || *Acoustic* || *Archival* || *Popup* || *Radio-linked telemetry* || Data used for geopositioning||
+|| [http://www.cefastechnology.co.uk Cefas] || No || Yes || No || Yes || Satellite ||
+|| [http://www.desertstar.com Desert Star] || No || Yes || Yes || No || Magnetic ||
+|| [http://www.microwavetelemetry.com Microwave Telemetry ] || No || No || Yes || No || Light ||
+
+
 
 =  Other resources =
 
