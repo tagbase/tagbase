@@ -8,10 +8,19 @@
 
   * Moving beyond centralized tag data systems to a more distributed architecture allowing integration of remote Tagbase servers and webservices
 
+= Tag manufacturers =
+=== _not comprehensive_ ===
+  * Cefas Technology Ltd (CTL): http://www.cefastechnology.co.uk
+  * Desert Star Systems LLC: Underwater and Defense Systems : http://www.desertstar.com/
+  * Lotek Wireless: Fish and wildlife monitoring systems: http://www.lotek.com/
+  * Microwave Telemetry Inc.: Bird and Fish Tracking Transmitters: http://www.microwavetelemetry.com/
+  * Sea Mammal Research Unit: http://www.smru.st-and.ac.uk/
+  * Sirtrack: Wildlife tracking solutions: http://www.sirtrack.com/
+  * Sonotronics: Underwater Ultrasonic Tracking Equipment: http://www.sonotronics.com/
+  * Starr-Oddi: Marine Device Manufacturing: http://www.star-oddi.com/
+  * Vemco: Acoustic telemetry for fish monitoring transmitters and receivers: http://www.vemco.com/index.php
+  * Wildlife Computers: Electronic tags for wildlife research: http://www.wildlifecomputers.com/
+
 =  Other resources =
 
-  * Promote improves, standards-based tag data management and best practices
-
-  * Provide a free and open toolset (Tagbase) for electronic tag data management and visualization useful to researchers
-
-  * Serve as a forum for the tagging community (i.e. end-user researchers, tag manufacturers, tool developers) on matters pertaining to tag data management. More specifically, we seek to facilitates discussions on data management issues, requirements, standards development, and technical coordination.
+  * [http://www.coml.org/comlfiles/scor/SCOR-tagging.pdf Census of Marine Life - Tagging basics]
