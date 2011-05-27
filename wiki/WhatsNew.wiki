@@ -8,6 +8,8 @@ Welcome to the What's New page for Project Tagbase. Here you'll find description
 
 == Tagbase 4.5 is released! ==
 
+Please give this a try and let us know what you think!
+
 = March 2011 =
 
 == Our website tagbase.org is fully operational! ==
