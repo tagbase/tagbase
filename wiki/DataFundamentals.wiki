@@ -45,7 +45,7 @@ _This list is not meant to be comprehensive. Please suggest more as comments_
   * Vemco: Acoustic telemetry for fish monitoring transmitters and receivers: http://www.vemco.com
   * Wildlife Computers: Electronic tags for wildlife research: http://www.wildlifecomputers.com
 
-==== Overview of equipments available for animals submerged underwater ====
+==== Overview of tag platforms available for animals submerged underwater ====
 || *Tag manufacturer* || *Acoustic* || *Archival* || *Popup* || *Radio-linked telemetry* || *Signals used for geopositioning*||
 || [http://www.cefastechnology.co.uk Cefas] || - || _Yes_ || - || _Yes_ || Radio ||
 || [http://www.desertstar.com Desert Star] || - || _Yes_ || _Yes_ || - || Magnetic ||
