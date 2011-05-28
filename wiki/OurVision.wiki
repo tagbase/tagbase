@@ -6,7 +6,9 @@
 
   * Development of web interfaces for Tagbase for data importation and visualization, and allow controlled, brower-based access to Tagbase backend particularly useful for tag data management where multiple, distributed contributors involved (e.g. institutions, larger tagging projects)
 
-  * Moving beyond centralized tag data systems to a more distributed architecture allowing integration of remote Tagbase servers and webservices
+  * Moving beyond centralized tag data systems to a more distributed architecture allowing integration of remote Tagbase servers and web-services
+
+  * Support more tag platforms (high priority: acoustic tags) whenever possible
 
 =  With tagbase.org we hope to =
 
