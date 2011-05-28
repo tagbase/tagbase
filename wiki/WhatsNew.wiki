@@ -10,6 +10,8 @@ Welcome to the What's New page for Project Tagbase. Here you'll find description
 
 Please give this a try and let us know what you think!
 
+We are adding new wiki pages to help you along. Write and tell us your experience too.
+
 = March 2011 =
 
 == Our website tagbase.org is fully operational! ==
