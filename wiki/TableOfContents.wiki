@@ -1,6 +1,6 @@
   * [WhatsNew What's New?]
   * [OurVision Learn About Our Vision!]
-  * [DataFundamentals Fundamentals of tagging data]
+  * [DataFundamentals Fundamentals of tagging]
   * [GettingStarted Getting Started]
   * [HowToInstallPlugins Plugins Installation]
   * [Articles Help Articles]
