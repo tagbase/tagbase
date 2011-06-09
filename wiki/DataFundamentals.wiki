@@ -50,7 +50,7 @@ _This list is not meant to be comprehensive. Please suggest more as comments_
 || [http://www.cefastechnology.co.uk Cefas] || - || _Yes_ || - || _Yes_ || Light, Radio ||
 || [http://www.desertstar.com Desert Star] || - || _Yes_ || _Yes_ || - || Magnetic ||
 || [http://www.lotek.com Lotek] || _Yes_ || _Yes_ || _Yes_ || - || Light, Radio ||
-|| [http://www.microwavetelemetry.com Microwave Telemetry] || - || - || _Yes_ || Yes (birds only) || Light ||
+|| [http://www.microwavetelemetry.com Microwave Telemetry] || - || - || _Yes_ || _Yes_ (birds only) || Light ||
 || [http://www.smru.st-and.ac.uk Sea Mammal Research Unit] || - || _Yes_ || - || Yes || Radio ||
 || [http://www.sirtrack.com Sirtrack] || - || - || - || Yes || Radio ||
 || [http://www.sonotronics.com Sonotronics] || _Yes_ || _Yes_ || - || - || Acoustic ||
