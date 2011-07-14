@@ -4,6 +4,12 @@ Welcome to the What's New page for Project Tagbase. Here you'll find description
 
 <wiki:toc max_depth="2" />
 
+= July 2011 =
+
+== Tagbase is published in PLOS One ==
+
+Check it out here: http://dx.plos.org/10.1371/journal.pone.0021810
+
 = May 2011 =
 
 == Tagbase 4.5 is released! ==
