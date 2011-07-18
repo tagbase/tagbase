@@ -40,7 +40,7 @@ For each tag you import, make sure you have the following Essential fields (Yell
 
 === Essential fields ===
 
-  * `IndivID` - This number denotes how many individual tag you are trying to import. If you have data for 10 tags, this !`IndivID` should start from 1 for the first tag, then increment by one all the way to 10. The same !`IndivID` number can be used for the same tag that has data from two or more output files.
+  * `IndivID` - This number denotes how many individual tag you are trying to import. If you have data for 10 tags, this `IndivID` should start from 1 for the first tag, then increment by one all the way to 10. The same !`IndivID` number can be used for the same tag that has data from two or more output files.
 
   * `Filename` - This is the filename of the file you are importing. Include the file extension (.csv or .xls). The file directory path (e.g. <C:\Data\...>) is necessary if the batch job file does not sit in the same directory as your data files you want to import.
 
