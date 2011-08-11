@@ -4,7 +4,7 @@
 
   * Porting of the backend database to other enterprise type data management platforms beyond SQLserver, and in particular to the free, open source Postgre SQL system
 
-  * Development of web interfaces for Tagbase for data importation and visualization, and allow controlled, brower-based access to Tagbase backend particularly useful for tag data management where multiple, distributed contributors involved (e.g. institutions, larger tagging projects)
+  * Development of web interfaces for Tagbase for data importation and visualization, and allow controlled, browser-based access to Tagbase backend particularly useful for tag data management where multiple, distributed contributors involved (e.g. institutions, larger tagging projects)
 
   * Moving beyond centralized tag data systems to a more distributed architecture allowing integration of remote Tagbase servers and web-services
 
