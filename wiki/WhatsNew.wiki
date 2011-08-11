@@ -2,7 +2,6 @@
 
 Welcome to the What's New page for Project Tagbase. Here you'll find descriptions of our latest and exciting improvements.
 
-<wiki:toc max_depth="2" />
 
 = July 2011 =
 
