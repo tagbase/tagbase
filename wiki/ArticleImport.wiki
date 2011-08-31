@@ -80,6 +80,11 @@ You can fill in these fields for other tag types other than archival,
 Tagbase will use the information you enter here instead of the automated
 data lookup from your tag files. In this way, your manual entry will always
 take precedence over our automation.
+
+Also when you do provide your own information rather those from the automatic lookup,
+make sure you fill in ALL of the above 6 fields (`DateTime_Deploy`,
+`DateTime_Popoff` etc.) Leaving any field out will update your record in
+Tagbase as with a blank (null).
 }}}
 
 
