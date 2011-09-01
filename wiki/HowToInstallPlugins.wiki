@@ -28,8 +28,10 @@ Move/Copy to location - `C:\Windows\System32`
 Move/Copy to location - `C:\Windows`
 
 == 3. `MapWinGis ActiveX control` ==
-==== http://www.mapwindow.org/downloads/index.php?show_details=2 ====
+==== http://mapwingis.codeplex.com/releases/view/70023 ====
 ==== Purpose - Mapping functions ====
+
+  * Use the installer, or follow instructions below...
 
   * Step A: Unzip `MapWinGIS47SRa-x86.zip` into `C:\Program Files\MapWindow`
 
