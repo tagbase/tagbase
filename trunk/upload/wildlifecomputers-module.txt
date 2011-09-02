@@ -1,0 +1,232 @@
+Option Compare Database
+Option Explicit
+
+'*************************************************************************
+' Split multiple tags in a WC DAP file into individual files
+' Leaving out the comment lines by default
+' Also takes out the comment line about 1000/ 2000 m instrument
+' e.g. ?FileSplit("C:\Temp\mixed\dap-PDTs.csv")
+'*************************************************************************
+
+Function FileSplit(sFileName As String, _
+                   Optional blnSkipFirst As Boolean = True, _
+                   Optional blnSeparateFolder As Boolean = True, _
+                   Optional CommentChar As String = ";", _
+                   Optional blnShowInventory As Boolean = True, _
+                   Optional blnShortFileName As Boolean = True) As Integer
+    Dim iFileNum As Integer
+    Dim sBuf As String
+    Dim sComment As String
+    Dim sHeader As String
+    Dim fNow, fPrev As String
+    Dim fPath As String
+    Dim cnt As Integer
+    Dim intMulti As Integer
+    Dim strFileFolder As String
+    Dim strFolder As String
+    Dim cntPos As Integer
+    Dim intDeployID As Integer
+    Dim strDeployID As String
+
+On Error GoTo Err_FileSplit
+
+    If Len(Dir$(sFileName)) = 0 Then
+        Exit Function
+    End If
+    
+    cntPos = InStrRev(sFileName, "\")
+    strFileFolder = Left$(sFileName, cntPos - 1) & "\"
+
+    iFileNum = FreeFile()
+    Open sFileName For Input As iFileNum
+
+    Do While Not EOF(iFileNum)
+            cnt = cnt + 1
+            Line Input #iFileNum, sBuf
+            'Get first line, supposingly a comment line
+            If cnt = 1 Then
+                If Len(sBuf) > 2000 Then
+                   Call LogError(-999, "Can't find your find line breaks!", _
+                   "FileSplit()", True)
+                   Exit Function
+                End If
+                sComment = sBuf
+            'For the rest of the lines
+            End If
+            If InStr(1, sBuf, "DeployID") > 0 Then
+                   sHeader = sBuf
+                   strDeployID = Mid(sBuf, 1, InStr(1, sBuf, "DeployID"))
+                   intDeployID = Len(strDeployID) - Len(Replace(strDeployID, ",", "")) + 1
+            Else
+               If Len(sBuf) > 0 And (Left(Trim(sBuf), 1) <> CommentChar) Then
+                        If Len(sHeader) = 0 Then GoTo Exit_FileSplit 'For file that doesn't have multiple tags
+                        fNow = ParseWord(sBuf, intDeployID, ",")
+                        'Remove quotes in the ID field
+                        fNow = Replace(fNow, Chr(34), "")
+                        If blnSeparateFolder = True Then
+                            strFolder = strFileFolder & fNow & "\"
+                            Call CreateDir(strFolder)
+                        Else
+                            strFolder = strFileFolder
+                        End If
+                        fPath = strFolder & fNow & "-" & _
+                                IIf(blnShortFileName, Right(Dir(sFileName), Len(Dir(sFileName)) - InStrRev(Dir(sFileName), "-")), Dir(sFileName))
+                        If fPrev <> fNow Then
+                            If (sComment <> sHeader) And blnSkipFirst = False Then
+                                Call TxtWrite(fPath, sComment)
+                            End If
+                            Call TxtWrite(fPath, sHeader)
+                            'Write inventory text line
+                            'Call TxtWrite(strFileFolder & "WcDapInventory.csv", ",")
+                        End If
+                        Call TxtWrite(fPath, sBuf)
+                        fPrev = fNow
+               End If
+            End If
+    Loop
+    
+    FileSplit = 100
+        
+Exit_FileSplit:
+    Close iFileNum
+    Exit Function
+
+Err_FileSplit:
+    Call LogError(Err.Number, Err.Description, "FileSplit()", False)
+    FileSplit = -999
+    Resume Exit_FileSplit
+
+End Function
+
+
+'*************************************************************************
+' Wrapper for FileSplit to handle multiple tags in WC DAP output files
+' Go through each DAP .csv file in a directory and split files
+' Note the input is a file path - not a folder!
+' e.g. ?SplitWCdap("C:\Temp\mixed\dap-*.csv")
+'*************************************************************************
+
+Function SplitWCdap(strFilePath As String, _
+                    Optional blnSeparateFolder As Boolean) As Integer
+Dim cntPos As Integer
+Dim strFileFolder As String
+Dim strFile As String
+Dim strPrefix As String
+Dim intPrefix As Integer
+Dim colDirList As New Collection
+Dim varItem As Variant
+Dim RetVal As Variant
+Dim cnt As Integer
+
+On Error GoTo Err_SplitWCdap
+  
+    'Get the folder from a path name
+    strFileFolder = GetFolderPath(strFilePath)
+    'Get the filename too
+    strPrefix = GetFolderPath(strFilePath, , True)
+    intPrefix = InStrRev(strPrefix, "-")
+    intPrefix = IIf(intPrefix = 0, InStrRev(strPrefix, "*"), intPrefix)
+    intPrefix = IIf(intPrefix = 0, InStrRev(strPrefix, ".csv"), intPrefix)
+    strPrefix = Mid(strPrefix, 1, intPrefix - 1)
+
+    'Calling list files in module ImportFileList
+    Call FillDir(colDirList, strFileFolder, "*.csv", blnSeparateFolder)
+    'Looping through each file to split it up
+    DoCmd.Hourglass True
+    RetVal = SysCmd(acSysCmdInitMeter, "Processing WC DAP output files...", colDirList.Count)
+    For Each varItem In colDirList
+            strFile = varItem
+            If InStr(1, strFile, strPrefix) > 0 Then
+                Call FileSplit(strFile)
+            End If
+            cnt = cnt + 1
+            ' Show the progress meter
+            RetVal = SysCmd(acSysCmdUpdateMeter, cnt)
+    Next
+    SplitWCdap = 100
+        
+Exit_SplitWCdap:
+    DoCmd.Hourglass False
+    RetVal = SysCmd(acSysCmdRemoveMeter)
+    Exit Function
+
+Err_SplitWCdap:
+    Call LogError(Err.Number, Err.Description, "SplitWCdap()", False)
+    Resume Exit_SplitWCdap
+
+End Function
+
+
+'*********************************************************************************
+' Return all distinct tags (termed as DeployID s) from WC DAP outputs
+' as a comma-separated string can use ParseWord to get each of them out again
+' e.g. ?WcDAPdeployIDs("C:\Temp\mixed\dap-*.csv")
+'*********************************************************************************
+
+Function WcDAPdeployIDs(strFileName As String) As String
+Dim intStar As Integer
+Dim strDeployID As String
+Dim strTbl1 As String
+Dim strTbl2 As String
+Dim strfilenow As String
+
+On Error GoTo Err_WcDAPdeployIDs
+       
+    'Copied from PasteWCDAPdata in module ImportExportFiles
+    strTbl1 = "Tmp_WC_DAP1"
+    strTbl2 = "Tmp_WC_DAP2"
+    DoCmd.SetWarnings False
+    DoCmd.RunMacro "ClearTempTables"
+    'Delete temp table for import
+    If TableExists(strTbl1) Then
+        CurrentDb.TableDefs.Delete (strTbl1)
+    End If
+    
+    'Detect wildcard operator, *
+    intStar = InStr(1, strFileName, "*")
+    'Remove dash if present e.g. 19918-*.csv or 19918*-.csv or 19918*-*.csv
+    strFileName = Replace(strFileName, "-*.csv", "*.csv")
+    strFileName = Replace(strFileName, "*-.csv", "*.csv")
+    strFileName = Replace(strFileName, "*-*.csv", "*.csv")
+        
+    'Dump data into Input_WC tables
+    If intStar > 0 Then
+            '1. PDT file (for popup and archival tags)
+            strfilenow = Replace(strFileName, "*", "-PDTs")
+            If FileExists(strfilenow) Then
+                Call MapImport(strfilenow, , strTbl1)
+            End If
+            '2. Summary file (for transmitted tags)
+            strfilenow = Replace(strFileName, "*", "-Summary")
+            If FileExists(strfilenow) Then
+                Call MapImport(strfilenow, , strTbl2)
+            End If
+            'Store distinct DeployIDs as a string
+            strDeployID = "Select DISTINCT DeployID From Tmp_WC_DAP1 UNION Select DISTINCT DeployID From Tmp_WC_DAP2"
+            strDeployID = Join(FillOneDimArray(strDeployID), ",")
+    End If
+    
+    WcDAPdeployIDs = strDeployID
+        
+Exit_WcDAPdeployIDs:
+    If TableExists(strTbl1) Then
+        CurrentDb.TableDefs.Delete (strTbl1)
+    End If
+    If TableExists(strTbl2) Then
+        CurrentDb.TableDefs.Delete (strTbl2)
+    End If
+    If TableExists("FileHeader") Then
+        CurrentDb.TableDefs.Delete ("FileHeader")
+    End If
+    DoCmd.Hourglass False
+    Exit Function
+
+Err_WcDAPdeployIDs:
+    Call LogError(Err.Number, Err.Description, "WcDAPdeployIDs()", False)
+    Resume Exit_WcDAPdeployIDs
+
+End Function
+
+
+
+
