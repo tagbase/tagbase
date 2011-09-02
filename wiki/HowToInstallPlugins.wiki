@@ -39,9 +39,9 @@ Move/Copy to location - `C:\Windows`
 
    A "success" message should be returned.
    
-If Step B failed: install this file first, [http://www.microsoft.com/downloads/en/details.aspx?familyid=A5C84275-3B97-4AB7-A40D-3802B2AF5FC2&displaylang=en vcredist_x86_2008.exe] and repeat Step B.
+If Step B failed: install the Microsoft C++ 2008 runtime library first, [http://www.microsoft.com/downloads/en/details.aspx?familyid=A5C84275-3B97-4AB7-A40D-3802B2AF5FC2&displaylang=en vcredist_x86_2008.exe] and repeat Step B.
 
-For Windows 7 (64-bit) system, your steps are as follows:
+For a sWindows 7 (64-bit) system, your steps are as follows:
   * Step B: Go to "Start" menu and type "cmd" in the "Search programs and files" Instant Search Box.
   
   * Step C: Run command prompt as "Administrator" by clicking CTRL + SHIFT + ENTER (instead of just ENTER)
