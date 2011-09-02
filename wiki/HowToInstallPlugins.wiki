@@ -43,10 +43,15 @@ If Step B failed: install this file first, [http://www.microsoft.com/downloads/e
 
 For Windows 7 (64-bit) system, your steps are as follows:
   * Step B: Go to "Start" menu and type "cmd" in the "Search programs and files" Instant Search Box.
+  
   * Step C: Run command prompt as "Administrator" by clicking CTRL + SHIFT + ENTER (instead of just ENTER)
-  * Step D: Type the following in the command prompt
+  
+  * Step D: Change directory to the following folder, by typing
   
   {{{cd \windows\syswow64}}}
+  
+  * Step E: Register the control the same way as above
+  
   {{{regsvr32.exe "C:\MapWindow\MapWinGIS.ocx"}}}
 
 == 4. `MSINET.OCX` ==
