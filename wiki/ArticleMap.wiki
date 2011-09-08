@@ -4,7 +4,7 @@
 
 = Introduction =
 
-This is one of the most exciting integration in Tagbase, with diverse functionalities from shapefile generation, oceanographic data download to interactive data lookup. We are still gathering comments on what other capabilities we should add. So stay tuned for the release in Tagbase 4.5, due out in May 2011.
+This is one of the most exciting integration in Tagbase, with diverse functionalities from shapefile generation, oceanographic data download to interactive data lookup. We are still gathering comments on what other capabilities we should add. So check it out in the release of Tagbase 4.5, and help topics will soon be available.
 
 = Details =
 

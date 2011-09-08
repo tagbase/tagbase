@@ -42,10 +42,10 @@ For each tag you import, make sure you have the following Essential fields (Yell
 
   * `IndivID` - This number is a counter identifying how many individual fish (or animal) you are trying to import. If you have data for 10 fish, this `IndivID` should start from 1 for the first fish, then increment by one all the way to 10 for each of the remaining fish. The same `IndivID` number can be used for the same fish that carries multiple tags or has data from two or more output files.
 
-  * `Filename` - This is the filename of the file you are importing (e.g. `bluefin1.csv`). Include the file extension (.csv, .xls, or see below for a set of Wildlife Computers DAP output files). The exact file path i.e. with drive letter (e.g. <C:\Data\...>) is necessary if the batch job file does not sit in the same directory as your data files that you wish to import. Using only a relative path to the location of the batch job file is also supported. For example, if you put `tagging2008\bluefin1.csv`, it tells Tagbase that there is a folder (or directory), `tagging2008` sitting in the same location as the batch job file, and data file, `bluefin1.csv` resides inside this folder.
+  * `Filename` - This is the filename of the file you are importing (e.g. `bluefin1.csv`). Include the file extension (.csv, .xls, or see below for a set of Wildlife Computers DAP output files). The exact file path i.e. with drive letter (e.g. <C:\Data\...>) is necessary if the batch job file does not sit in the same directory as your data files that you wish to import.
 
 <wiki:comment>
-Using only a relative path to the location of the batch job file is also supported. For example, if you put `tagging2008\bluefin1.csv`, it tells Tagbase that there is a folder (or directory), `tagging2008` sitting in the same location as the batch job file, and data file, `bluefin1.csv` resides inside this folder.
+Using a relative path to the location of the batch job file is also supported. For example, if you put `tagging2008\bluefin1.csv`, it tells Tagbase that there is a folder (or directory), `tagging2008` sitting in the same location as the batch job file, and data file, `bluefin1.csv` resides inside this folder.
 </wiki:comment>  
 
 {{{ 
@@ -54,6 +54,11 @@ For a set of Wildlife Computer DAP (.csv) output files,
 you can use the wildcard character (star or asterisk or *) 
 in a single entry to denote all files beginning with the same prefix. See a screenshot below.
 }}}
+
+<wiki:comment>
+Also check here for more import tips on working with Wildlife Computers DAP and GPE software, 
+[ArticleWcDap Working with Wildlife Computers software].
+</wiki:comment>  
 
   * `TagCode` - This is the serial code of your tag and has to be a unique. Use the same `TagCode` for archival tags where there are two output files for each tag.
 
