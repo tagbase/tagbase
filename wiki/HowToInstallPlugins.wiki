@@ -48,6 +48,8 @@ For a Windows 7 (64-bit) system, your steps are as follows:
   
   * Step C: Run command prompt as "Administrator" by clicking CTRL + SHIFT + ENTER (instead of just ENTER)
   
+  http://tagbase.googlecode.com/svn/trunk/images/install-cmd-win7-64.jpg
+  
   * Step D: Change directory to the following folder, by typing
   
   {{{cd \windows\syswow64}}}
