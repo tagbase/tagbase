@@ -29,8 +29,7 @@ Move/Copy to location - `C:\Windows`
 ==== http://mapwingis.codeplex.com/releases/view/70023 ====
 ==== Purpose - Mapping functions ====
 
-We currently only support MapWinGis 4.7. The newer versions involve code changes to some of MapWinGis' fundamental functions, 
-and we do not plan to support in the recent future.
+We currently only support MapWinGis 4.7. The newer versions involve code changes to some of MapWinGis' fundamental functions, and we do not plan to support in the recent future.
 
   * Use the installer, or follow instructions below if you download our [http://tagbase.googlecode.com/svn/trunk/files/plugins.zip zip] file posted above
 
@@ -44,7 +43,7 @@ and we do not plan to support in the recent future.
    
 If Step B failed: install the Microsoft C++ 2008 runtime library first, [http://www.microsoft.com/downloads/en/details.aspx?familyid=A5C84275-3B97-4AB7-A40D-3802B2AF5FC2&displaylang=en vcredist_x86_2008.exe] and repeat Step B.
 
-For a sWindows 7 (64-bit) system, your steps are as follows:
+For a Windows 7 (64-bit) system, your steps are as follows:
   * Step B: Go to "Start" menu and type "cmd" in the "Search programs and files" Instant Search Box.
   
   * Step C: Run command prompt as "Administrator" by clicking CTRL + SHIFT + ENTER (instead of just ENTER)
