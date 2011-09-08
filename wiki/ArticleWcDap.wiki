@@ -1,0 +1,15 @@
+#summary Working with Wildlife Computer DAP and GPE software
+
+<wiki:toc max_depth="2" />
+
+= Introduction =
+
+This page shares some of our experiences in working with the software suite of [http://www.wildlifecomputers.com/downloads.aspx Wildlife Computers], and namely DAP and GPE. This only serves as an practical guide to using their software, so you should refer to their documentation or customer service for detailed operations. You should also understand that manufacturers like Wildlife Computers has a rapid update/ release cycle on their software, and it is likely we lag behind in catching up with all their changes. We encourage you leaving us wiki comments at this page to help improve our collective experience in working with the software. Lastly, we are not advocating for any tag manufacturers, but rather we have yet to explore the many other options/ software, most of which are not free or easily accessible over the web. 
+
+= Details =
+
+== Mixed processing of tags/ decoding of Argo messages ==
+
+== Obtaining manufacturer light-based geolocation estimates ==
+
+== Importing multiple tags from DAP into Tagbase ==
