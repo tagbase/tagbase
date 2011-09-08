@@ -29,6 +29,8 @@ Move/Copy to location - `C:\Windows`
 ==== http://mapwingis.codeplex.com/releases/view/70023 ====
 ==== Purpose - Mapping functions ====
 
+We currently only support MapWinGis 4.7. The newer versions involve code changes to some of MapWinGis' fundamental functions, and we do not plan to support in the recent future.
+
   * Use the installer, or follow instructions below if you download our [http://tagbase.googlecode.com/svn/trunk/files/plugins.zip zip] file posted above
 
   * Step A: Unzip `MapWinGIS47SRa-x86.zip` into `C:\MapWindow`
