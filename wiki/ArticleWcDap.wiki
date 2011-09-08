@@ -8,8 +8,18 @@ This page shares some of our experiences in working with the software suite of [
 
 = Details =
 
-== Mixed processing of tags/ decoding of Argo messages ==
+== Mixed processing of tags/ decoding of Argos messages ==
 
-== Obtaining manufacturer light-based geolocation estimates ==
+DAP allows simple drag-and-drop operation of any number of Argos messages (DS files in the form of .txt), Wildlife Computer binary files (.wch), and tag setup files (.htm) from Windows Explorer. One approach to data processing involves saving Argos messages into a folder, and dragging that entire folder to DAP. If you want to apply a filter, via specific PTT IDs (Argos platform transmitter IDs), you will need to click on "Filter" and fill out a form *before* you drag-and-drop. 
+
+http://tagbase.googlecode.com/svn/trunk/images/WcDap1.jpg
+
+"Export Decoded Data" in the "File" menu will allow you to export all the data from multiple tag into a single set of .csv files. This set will be used as inputs for import into Tagbase. Note at this stage, no geolocations are available. 
+
+http://tagbase.googlecode.com/svn/trunk/images/WcDap2.jpg
+
+If you open any one of the many .csv files, you will find "DeployID" ...
+
+== Obtaining manufacturer light-based geolocation estimates via GPE ==
 
 == Importing multiple tags from DAP into Tagbase ==
