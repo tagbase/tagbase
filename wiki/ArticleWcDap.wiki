@@ -22,11 +22,11 @@ If you open any one of the many .csv files, you will find "DeployID" and it is e
 
 == Obtaining manufacturer light-based geolocation estimates via GPE ==
 
-  * Start "Global Position Estimator" from your Start Menu (under Wildlife Computers), drag-and-drop a "LightLoc.csv" file or a previously processed GPE binary file (.wcg2).
+  * Start "Global Position Estimator" from your Windows Start menu (under Wildlife Computers), drag-and-drop a "LightLoc.csv" file or a previously processed GPE file (.wcg2).
   
 http://tagbase.googlecode.com/svn/trunk/images/WcGpe1.jpg  
   
-  * or invoke it through the menu bar of DAP Processor (Tag > Light Level Global Position Estimator).
+  * Or invoke it through the menu bar of DAP Processor (Tag > Light Level Global Position Estimator).
  
 http://tagbase.googlecode.com/svn/trunk/images/WcDap3.jpg
 
@@ -56,3 +56,8 @@ http://tagbase.googlecode.com/svn/trunk/images/WcGpe2.jpg
   * Therefore, as mentioned above, for an archival tag, you should enter the tag serial number in both `TagCode` and `TagPTTID`.
   
 http://tagbase.googlecode.com/svn/trunk/images/ImportJob4.jpg
+
+  * If you have run any geolocation analysis, make sure you add an entry for the "LightLoc.csv" file, with the corresponding metadata of the tag.
+  
+http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg  
+ 
