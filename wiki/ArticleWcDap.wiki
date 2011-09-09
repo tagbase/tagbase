@@ -1,4 +1,4 @@
-#summary Working with Wildlife Computer DAP and GPE software
+#summary Working with Wildlife Computers DAP and GPE software
 
 <wiki:toc max_depth="2" />
 
