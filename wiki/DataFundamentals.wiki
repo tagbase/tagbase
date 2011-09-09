@@ -51,8 +51,8 @@ _This list is not meant to be comprehensive. Please suggest more as comments_
 || [http://www.desertstar.com Desert Star] || - || _Yes_ || _Yes_ || - || Magnetic ||
 || [http://www.lotek.com Lotek] || _Yes_ || _Yes_ || _Yes_ || _Yes_ (limited choices) || Light, Radio ||
 || [http://www.microwavetelemetry.com Microwave Telemetry] || - || - || _Yes_ || _Yes_ (birds only) || Light ||
-|| [http://www.smru.st-and.ac.uk Sea Mammal Research Unit] || - || _Yes_ || - || Yes || Radio ||
-|| [http://www.sirtrack.com Sirtrack] || - || - || - || Yes || Radio ||
+|| [http://www.smru.st-and.ac.uk Sea Mammal Research Unit] || - || _Yes_ || - || _Yes_ || Radio ||
+|| [http://www.sirtrack.com Sirtrack] || - || - || - || _Yes_ || Radio ||
 || [http://www.sonotronics.com Sonotronics] || _Yes_ || _Yes_ || - || - || Acoustic ||
 || [http://www.star-oddi.com Star-Oddi] || - || _Yes_ || - || - || Magnetic ||
 || [http://www.vemco.com Vemco] || _Yes_ || _Yes_ || - || - || Acoustic ||
