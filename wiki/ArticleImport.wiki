@@ -77,7 +77,7 @@ Tips -
 }}}
 
 === Additional required fields ===
-====   for Archival tags (Turquoise) [optional for other tags, see Tips below] ====
+====   for Archival tags (Turquoise) (optional for other tags, see Tips below) ====
  * `DateTime_Deploy`
  * `DateTime_Popoff` 
  * `Lat_Deploy`
