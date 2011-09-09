@@ -2,6 +2,11 @@
 
 Welcome to the What's New page for Project Tagbase. Here you'll find descriptions of our latest and exciting improvements.
 
+= September 2011 =
+
+== Tagbase 4.6 will soon be released ==
+
+We try to keep up with some software updates of Wildlife Computers DAP and GPE. This release supports multiple tag import from one single set of Wildlife Computer output files.
 
 = July 2011 =
 
@@ -25,7 +30,7 @@ Hope you will like our graphics and materials
 
 == Tagbase 4.1 enters first public release ==
 
-This is our stable version. Mapping is not yet included by will be released during Tuna Conference.
+This is our stable version. Mapping is not yet included but will be released during Tuna Conference.
 
 ==== http://www.tunaconference.org/Home.htm ====
 
