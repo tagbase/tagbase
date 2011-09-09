@@ -42,14 +42,14 @@ For each tag you import, make sure you have the following Essential fields (Yell
 
   * `IndivID` - This number is a counter identifying how many individual fish (or animal) you are trying to import. If you have data for 10 fish, this `IndivID` should start from 1 for the first fish, then increment by one all the way to 10 for each of the remaining fish. The same `IndivID` number can be used for the same fish that carries multiple tags or has data from two or more output files.
 
-  * `Filename` - This is the filename of the file you are importing (e.g. `bluefin1.csv`). Include the file extension (.csv, .xls, or see below for a set of Wildlife Computers DAP output files). The exact file path i.e. with drive letter (e.g. <C:\Data\...>) is necessary if the batch job file does not sit in the same directory as your data files that you wish to import.
+  * `Filename` - This is the filename of the file you are importing (e.g. `bluefin1.csv`). Include the file extension (.csv, .xls, or a wildcard - see below for a set of Wildlife Computers DAP output files). 
 
 The following table summarizes the supported specifications in the `Filename` field, for an example data file (<C:\Data\2008\NAtl\tuna\bluefin1.csv>):
 || *Filename* || *What this means* || *Disk location of your batch job file, !TagbaseBatchJob.xls* ||
 || C:\Data\2008\NAtl\tuna\bluefin1.csv || A full file path is specified || The job file can reside in any folder in your computer ||
 || bluefin1.csv || Since only a file name is provided, it indicates the job file is found in the same folder || C:\Data\2008\NAtl\tuna\!TagbaseBatchJob.xls ||
-|| 2008\NAtl\tuna\bluefin1.csv || The data file location is relative to that of the job file || C:\Data\!TagbaseBatchJob.xls ||
 <wiki:comment>
+|| 2008\NAtl\tuna\bluefin1.csv || The data file location is relative to that of the job file || C:\Data\!TagbaseBatchJob.xls ||
 </wiki:comment>  
 
 {{{ 
