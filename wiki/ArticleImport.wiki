@@ -135,13 +135,7 @@ This should be very easy!
 
 You may have used multiple histogram binning schemes for the time-at-depth or time-at-temperature worksheets. Depending on the tag model as well, there can be 12 or 14 Bins. 
 
-{{{ 
-Tips -
-You can skip this step if you are providing the tag setup file (.htm) 
-as an entry in the batch job file (e.g _!TagbaseBatchJob.xls_), or 
-when you have included the setup file during processing with Wildlife 
-Computers DAP software (see [ArticleWcDap here] for details).
-}}}
+You can *skip* this step if you are providing the tag setup file (.htm) as an entry in the batch job file (e.g _!TagbaseBatchJob.xls_), or when you have included the setup file during processing with Wildlife Computers DAP software (see [ArticleWcDap here] for details). 
 
 All the binning schemes can be specified in *`WC_BinInfo`* table in the following way:
 
