@@ -111,7 +111,7 @@ Tagbase as with a blank (null).
 
 {{{ 
 Tips -
-When a setup/ configuration file is supplied (.htm), 
+When a tag setup/ configuration file is supplied (.htm), 
 Tagbase will try to gather information for these three fields. 
 Therefore you can leave these fields blank.
 }}}
@@ -125,7 +125,7 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg
 
 = Step 2 - Save your batch job file =
 
-Save your job file (e.g _!MyTagbaseJob1.xls_) into the folder where your data files are located or where appropriate.
+Save your job file (e.g _!TagbaseBatchJob.xls_) into the folder where your data files are located or where appropriate.
 
 = Step 3 - Start Tagbase =
 
@@ -135,7 +135,7 @@ This should be very easy!
 
 You may have used multiple histogram binning schemes for the time-at-depth or time-at-temperature worksheets. Depending on the tag model as well, there can be 12 or 14 Bins. 
 
-You can skip this step if you are providing the configuration file (.htm) as an entry in the job file (e.g _!MyTagbaseJob1.xls_).
+You can skip this step if you are providing the tag setup file (.htm) as an entry in the batch job file (e.g _!TagbaseBatchJob.xls_), or when you have included the setup file during processing with Wildlife Computers DAP software (see [ArticleWcDap here] for details). 
 
 All the binning schemes can be specified in *`WC_BinInfo`* table in the following way:
 
