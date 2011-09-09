@@ -151,7 +151,7 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportBins.jpg
 
 = Step 5 - Import via _!Batch_Import_TagData_ form =
 
-  # You can browse from the [ArticleNavigation Form Navigation Tool] > Import > Batch_Import_TagData or locate it under *`Forms`*
+  # You can browse from the [ArticleNavigation Form Navigation Tool] > Import > !Batch_Import_TagData or locate it under *`Forms`*
   # Follow the instructions on the form to import - which direct you to locate the job file and initiate import
 
 http://tagbase.googlecode.com/svn/trunk/images/ImportBatch.jpg
