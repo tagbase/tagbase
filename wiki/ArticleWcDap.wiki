@@ -36,9 +36,11 @@ http://tagbase.googlecode.com/svn/trunk/images/WcDap3.jpg
 
   * Export the results back to a "LightLoc.csv" via "File" > "Export results in CSV format"
 
-http://tagbase.googlecode.com/svn/trunk/images/WcGpe2.jpg    
+http://tagbase.googlecode.com/svn/trunk/images/WcGpe2.jpg
 
-  * If you decide to run any *Kalman filter/ Trackit analysis*, proceed to do so, and save & export after that. 
+== Utilizing Kalman filter/ Trackit interfaces in GPE ==    
+
+  * If you decide to run any *Kalman filter/ Trackit analysis*, proceed to do so via the "File" menu. Save & export after estimation is completed.
   
   * The Kalman filter/ Trackit analysis is powered by open-source libraries authored by Anders Nielsen, Chi Hin Lam and John Sibert, and provided by the [http://www.soest.hawaii.edu/PFRP/ Pelagic Fisheries Research Program]. 
   
@@ -59,9 +61,13 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportJob4.jpg
 
   * The Wildlife Computers DAP processing workflow has changed between different releases of DAP versions (2 & 3). At any point in time, you should keep only 1 most-updated copy of the "LightLoc.csv" file for each tag, especially when you perform any geolocation processing with GPE.
   
-  * Use the following table to guide you in setting up a [ArticleImport#Step_1_-_Setting_up_the_batch_job_file_from_the_Excel_template batch import job file] (e.g _!TagbaseBatchJob.xls_). Consider the following scenario: you are processing 5 tags, Tag 1 through 5. 
+  * Use the following table to guide you in setting up a [ArticleImport#Step_1_-_Setting_up_the_batch_job_file_from_the_Excel_template batch import job file] (e.g _!TagbaseBatchJob.xls_). Consider the following scenario: you are processing 3 tags, Tag 1 through 3. 
   
 || *Processing Workflow in DAP* || *Any Geolocation Processing with GPE?* || *File Organization* || *Batch import job file (e.g _!TagbaseBatchJob.xls_) entry* || *Example Screenshot* ||
-|| 1 tag at a time, with organized Argo messages e.g. `ArgosDS-Tag1.txt`... `ArgosDS-Tag5.txt` || Yes; with updated `Tag1-LightLoc.csv`... `Tag5-LightLoc.csv` || Each tag has its own folder, updated "LightLoc.csv" overwriting DAP original output || 5 entries from `Tag1*.csv` ... `Tag5*.csv` || Screenshot A ||
-|| All tags in 1 file with merged Argo messages e.g. `ArgosDS-AllTags.txt` || Yes; same as above || One set of DAP outputs  in a folder, along with 5 "LightLoc.csv" files || 1 entry for `AllTags*.csv` + 5 entries for `Tag1-LightLoc.csv`... `Tag5-LightLoc.csv` || Screenshot B ||
+|| 1 tag at a time, with organized Argo messages e.g. `ArgosDS-Tag1.txt`... `ArgosDS-Tag3.txt` || Yes; with updated `Tag1-LightLoc.csv`... `Tag3-LightLoc.csv` || Each tag has its own folder, and updated "LightLoc.csv" files overwrite original DAP output || 3 entries from `Tag1*.csv` ... `Tag3*.csv` || Screenshot A ||
+|| All tags in 1 file with merged Argo messages e.g. `ArgosDS-AllTags.txt` || Yes; same as above || One set of DAP outputs  in a folder, along with 3 "LightLoc.csv" files || 1 entry for `AllTags*.csv` + 3 entries for `Tag1-LightLoc.csv`... `Tag3-LightLoc.csv` || Screenshot B ||
+
+ * Screenshot A
+ 
+ * Screenshot B
  

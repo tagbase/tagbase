@@ -53,7 +53,13 @@ The following table summarizes the supported specifications in the `Filename` fi
 <wiki:comment>
 </wiki:comment>  
 
-  *Tips* - For a set of Wildlife Computer DAP (.csv) output files, you can use the wildcard character (star or asterisk or *) in a single entry to denote all files beginning with the same prefix. Refer to [ArticleWcDap Working with Wildlife Computers DAP/GPE] for details.
+{{{
+Tips - For a set of Wildlife Computer DAP (.csv) output files, 
+you can use the wildcard character (star or asterisk or *) in a single 
+entry to denote all files beginning with the same prefix. See a screenshot below
+}}}
+
+   Also refer to [ArticleWcDap Working with Wildlife Computers DAP/GPE] for details.
 
 <wiki:comment>
 Also check here for more import tips on working with Wildlife Computers DAP and GPE software, 
