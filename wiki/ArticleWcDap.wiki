@@ -18,8 +18,39 @@ http://tagbase.googlecode.com/svn/trunk/images/WcDap1.jpg
 
 http://tagbase.googlecode.com/svn/trunk/images/WcDap2.jpg
 
-If you open any one of the many .csv files, you will find "DeployID" ...
+If you open any one of the many .csv files, you will find "DeployID" and it is essentially the PTT IDs. In the absence of a PTT ID for an archival tag, the tag serial number is used for both "DeployID" and "PTT" data columns. 
 
 == Obtaining manufacturer light-based geolocation estimates via GPE ==
 
+  * Start "Global Position Estimator" from your Start Menu (under Wildlife Computers), drag-and-drop a "LightLoc.csv" file or a previously processed GPE binary file (.wcg2).
+  
+http://tagbase.googlecode.com/svn/trunk/images/WcGpe1.jpg  
+  
+  * or invoke it through the menu bar of DAP Processor (Tag > Light Level Global Position Estimator).
+ 
+http://tagbase.googlecode.com/svn/trunk/images/WcDap3.jpg
+
+  * Select a tag to process or wait until automated processing is completed. Make adjustments where appropriate (you will have to consult Wildlife Computers documentation/ customer service for assistance).
+  
+  * Save the results, "File" > "Save" as a .wcg2 file to your preferred location
+
+  * Export the results back to a "LightLoc.csv".
+
+http://tagbase.googlecode.com/svn/trunk/images/WcGpe2.jpg    
+
+  * If you decide to run any Kalman filter/ Trackit analysis, proceed to do so, and save & export after that. The Kalman filter/ Trackit analysis is powered by open-source libraries authored by Anders Nielsen, Chi Hin Lam and John Sibert, and provided by the [http://www.soest.hawaii.edu/PFRP/ Pelagic Fisheries Research Program]. We recommend the following papers and references therein for a more complete understanding of the methods and assumptions needed to best utilize this type of analysis.
+  
+  # Trackit - [http://www.int-res.com/abstracts/meps/v419/p71-84/ Lam, Chi H., Anders Nielsen, and John R. Sibert. Incorporating sea-surface temperature to the light-based geolocation model TrackIt. Marine Ecology Progress Series MEPS 419:71-84 (2010).]
+  
+  # Ukfsst - [http://www.soest.hawaii.edu/PFRP/reprints/lam_nielsen_sibert.pdf Lam, Chi H., Anders Nielsen, and John R. Sibert, 2008. Improving light and temperature based geolocation by unscented Kalman filtering. Fisheries Research, 91 (2008): 15-25.]
+  
+  # Kftrack - [http://www.soest.hawaii.edu/PFRP/reprints/sibert_horizontal.pdf Sibert, J.R., Musyl, M.K., Brill, R.W., 2003. Horizontal movements of bigeye tuna (Thunnus obesus) near Hawaii determined by Kalman filter analysis of archival tagging data. Fisheries Oceanography, 12:3, 141-151.]
+  
+  
 == Importing multiple tags from DAP into Tagbase ==
+
+  * "DeployID" in a DAP .csv file will match up with `TagPTTID` in a batch import job file (e.g _!TagbaseBatchJob.xls_) to establish a link between the data in a DAP .csv file and the information provided in the job file.
+  
+  * Therefore, as mentioned above, for an archival tag, you should enter the tag serial number in both `TagCode` and `TagPTTID`.
+  
+http://tagbase.googlecode.com/svn/trunk/images/ImportJob4.jpg

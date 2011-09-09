@@ -44,7 +44,7 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportDap.jpg
 
 Otherwise, any time series data won't be available in your output files
 
- * The default DAP processing does not provide any light-based geolocations, you will need to run the GPE software to get an update "-LightLoc.csv" file for each tag you process. Refer to [ArticleWcDap here] for more details.
+ * The default DAP processing does not provide any light-based geolocations, you will need to run the GPE software to get an updated "LightLoc.csv" file for each tag you process. Refer to [ArticleWcDap here] for more details.
 
  
 == Archival tag files ==
