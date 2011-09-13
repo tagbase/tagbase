@@ -53,6 +53,14 @@ http://tagbase.googlecode.com/svn/trunk/images/WcGpe2.jpg
   
 == Importing multiple tags from DAP into Tagbase ==
 
+{{{ 
+Bugs found -
+We notice a bug in Wildlife Computers DAP software (3.0.69, last tested) that when 
+you process 2 or more archival tags (.wch) together, the resultant DAP -Archive.csv output 
+will only contain data from 1 of the tags you are processing. Please stick with Strategy 1 
+for now if you are using DAP to process multiple archival tags. 
+}}}
+
   * "DeployID" in a DAP .csv file will match up with `TagPTTID` in a batch import job file (e.g _!TagbaseBatchJob.xls_) to establish a link between the data in a DAP .csv file and the information provided in the job file.
   
   * Therefore, as mentioned above, for an archival tag, you should enter the tag serial number in both `TagCode` and `TagPTTID`.
@@ -82,14 +90,6 @@ The reason is that you will have an easier time keeping track of your files for 
 rather than having to sort through the data-dump from DAP and figure out the missing data 
 pieces. A common case for missing data pieces is when a tag only partially reported its data. 
 If that happens, you are likely not getting the full suite of DAP .csv outputs. 
-}}}
-
-{{{ 
-Bugs found -
-We notice a bug in Wildlife Computers DAP software (3.0.69, last tested) that when 
-you process 2 or more archival tags (.wch) together, the resultant DAP -Archive.csv output 
-will only contain data from 1 of the tags you are processing. Please stick with Strategy 1 
-for now if you are using DAP to process multiple archival tags. 
 }}}
 
 {{{ 
