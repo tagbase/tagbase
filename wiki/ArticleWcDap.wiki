@@ -77,15 +77,27 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportJob4.jpg
  
 {{{ 
 Tips -
-We do recommend using Strategy 1 as your preferred workflow in processing DAP data. The reason is that you will have an easier time keeping track of your files for each tag, rather than having to sort through the data-dump from DAP and figure out the missing data pieces. A common case for missing data pieces is when a tag only partially reported its data. If that happens, you are likely not getting the full suite of DAP .csv outputs. 
+We do recommend using Strategy 1 as your preferred workflow in processing DAP data. 
+The reason is that you will have an easier time keeping track of your files for each tag, 
+rather than having to sort through the data-dump from DAP and figure out the missing data 
+pieces. A common case for missing data pieces is when a tag only partially reported its data. 
+If that happens, you are likely not getting the full suite of DAP .csv outputs. 
 }}}
 
 {{{ 
 Bugs found -
-We notice a bug in Wildlife Computers DAP software (3.0.69, last tested) that when you process 2 or more archival tags (.wch) together, the resultant DAP -Archive.csv output will only contain data from 1 of the tags you are processing. Please stick with Strategy 1 for now if you are using DAP to process multiple archival tags. 
+We notice a bug in Wildlife Computers DAP software (3.0.69, last tested) that when 
+you process 2 or more archival tags (.wch) together, the resultant DAP -Archive.csv output 
+will only contain data from 1 of the tags you are processing. Please stick with Strategy 1 
+for now if you are using DAP to process multiple archival tags. 
 }}}
 
 {{{ 
 Important!!! -
-Behind the scene of Strategy 2, Tagbase creates separate folders, according to the distinct DeployIDs found in WC DAP .csv output files. Tagbase then allocates the data pieces to the right files inside the folders, resulting in a set of DAP output files in each folder. Tagbase does not delete the contents of folders beforehand, so you will have to delete all contents or remove existing DAP files/ folder, as Tagbase will append to existing files during the import, leading to duplicating data records. 
+Behind the scene of Strategy 2, Tagbase creates separate folders, according to the 
+distinct DeployIDs found in WC DAP .csv output files. Tagbase then allocates the data pieces 
+to the right files inside the folders, resulting in a set of DAP output files in each folder. 
+Tagbase does not delete the contents of folders beforehand, so you will have to delete all 
+contents or remove existing DAP files/ folder, as Tagbase will append to existing files 
+during the import, leading to duplicating data records. 
 }}}
