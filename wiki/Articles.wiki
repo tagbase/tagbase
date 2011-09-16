@@ -15,22 +15,9 @@ Once you are able to bring the sample dataset, or better yet your own data, it i
 
 Have fun!
 
-= A Starter Guide to Using Tagbase =
+= A step-by-step tutorial =
 
-=== Step 1: Download the Starter Kit from our [http://code.google.com/p/tagbase/downloads/list Downloads] page ===
-
-Or use the link here -
-
-=== Step 2: Unzip the zip file into your disk drive, e.g. C:\ ===
-
-You should then have the following file structure in `C:\Tagbase`
-  * Images
-  * plugins
-  * Shapes
-  * tagfiles
-  * templates
-
-
+Check out how you can learn to use Tagbase with our starter kit [ArticleStarter here].
 
 = Topics =
 
@@ -48,7 +35,6 @@ You should then have the following file structure in `C:\Tagbase`
 A pdf documentation, which provides the basis for this online help is available [http://tagbase.googlecode.com/svn/trunk/docs/TagBase.pdf here].
 
 = Upcoming Case Studies =
-   * Processing track data from !TrackIt/ Ukfsst - the whole story from Tagbase and back
    * What can you do with Ocean Data View? Using goodies from Tagbase suite
    * Connecting Tagbase to your favourite package through Open Database Connectivity (ODBC) - an exmaple with R and Matlab
    * Advanced Form Series - 1. Flexible Histogram Generator

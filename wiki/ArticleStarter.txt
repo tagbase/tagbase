@@ -7,13 +7,20 @@
 
 === Step 1: Download the Starter Kit from our [http://code.google.com/p/tagbase/downloads/list Downloads] page ===
 
-Or use the link here -
+Or follow the link here -
 
-=== Step 2: Unzip the zip file into your disk drive, e.g. C:\ ===
+=== Step 2: Download also the latest Tagbase release from our [http://code.google.com/p/tagbase/downloads/list Downloads] page ===
 
-You should then have the following file structure in `C:\Tagbase`
+Or follow the link here - 
+
+=== Step 3: Unzip the files into your disk drive, e.g. C:\Tagbase ===
+
+Check to see if you have the following files
   * Images
   * plugins
   * Shapes
   * tagfiles
   * templates
+  * Tagbase.mdb
+  
+  
