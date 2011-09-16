@@ -5,7 +5,7 @@
 
 = Introduction =
 
-The easiest way to master Tagbase is learning-by-example. You can mimic the setup with our sample dataset, which can be *[http://tagbase.googlecode.com/svn/trunk/files/tagfiles.zip downloaded here]*.
+The easiest way to master Tagbase is learning-by-example. You can mimic the setup with our sample dataset, which can be *[http://tagbase.googlecode.com/files/tagfiles.zip downloaded here]*.
 
 We recommend having a dedicated folder for Tagbase in an easily accessible location, such as:
 
