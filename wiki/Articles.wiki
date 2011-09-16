@@ -17,7 +17,7 @@ Have fun!
 
 = A step-by-step tutorial =
 
-Check out how you can learn to use Tagbase with our starter kit [ArticleStarter here].
+Check out how you can learn to use Tagbase with our StarterKit.
 
 = Topics =
 
