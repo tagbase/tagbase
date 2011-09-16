@@ -15,6 +15,23 @@ Once you are able to bring the sample dataset, or better yet your own data, it i
 
 Have fun!
 
+= A Starter Guide to Using Tagbase =
+
+=== Step 1: Download the Starter Kit from our [http://code.google.com/p/tagbase/downloads/list Downloads] page ===
+
+Or use the link here -
+
+=== Step 2: Unzip the zip file into your disk drive, e.g. C:\ ===
+
+You should then have the following file structure in `C:\Tagbase`
+  * Images
+  * plugins
+  * Shapes
+  * tagfiles
+  * templates
+
+
+
 = Topics =
 
     * [ArticleTerms Abbreviations and Terminology]

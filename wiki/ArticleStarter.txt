@@ -1,0 +1,19 @@
+#summary A Starter Guide to Using Tagbase
+#labels Featured
+
+<wiki:toc max_depth="2" />
+
+= A Starter Guide to Using Tagbase =
+
+=== Step 1: Download the Starter Kit from our [http://code.google.com/p/tagbase/downloads/list Downloads] page ===
+
+Or use the link here -
+
+=== Step 2: Unzip the zip file into your disk drive, e.g. C:\ ===
+
+You should then have the following file structure in `C:\Tagbase`
+  * Images
+  * plugins
+  * Shapes
+  * tagfiles
+  * templates
