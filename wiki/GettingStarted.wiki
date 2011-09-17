@@ -30,7 +30,7 @@ http://tagbase.googlecode.com/svn/trunk/images/screenprint.png
 
   === Start using Tagbase right away with our StarterKit ===
 
-We have created a set of simulated data to illustrate how you can utilize Tagbase for your research. 
+  We have created a set of simulated data to illustrate how you can utilize Tagbase for your research. 
 
 = Understanding the workflow =
 
