@@ -28,6 +28,10 @@ http://tagbase.googlecode.com/svn/trunk/images/screenprint.png
     # [HowToInstallPlugins How to install plugins] to set up the additional plugins correctly
     # [ArticleMissingRefs Handling "Missing References" error] to ensure the correct libraries are referenced
 
+  === Start using Tagbase right away with our StarterKit ===
+
+We have created a set of simulated data to illustrate how you can utilize Tagbase for your research. 
+
 = Understanding the workflow =
 
 Tagbase is geared towards maintaining post-manufacturer processed data files for display and analysis. By default, most of the hardware status messages will not be assimilated. Examples of hardware messages include the `RawData` worksheet from Wildlife Computer PAT tag files (.xls), `Light too dim` data column for Lotek Wireless Archival tag files (.csv), or, `Wet/Dry State` for Wildlife Computers Archival tag files (.csv). 

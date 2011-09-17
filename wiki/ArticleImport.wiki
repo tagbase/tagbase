@@ -6,7 +6,7 @@
 
 == 5 steps to import tag data ==
 
-  # Set up a batch job file from the Excel template, _!TagBaseBatchJob.xlt_
+  # Set up a batch job file (.xls) from the Excel template, _!TagBaseBatchJob.xlt_
   # Put the batch job file into the folder where your tag data files are
   # Start *Tagbase*
   # Set up binning schemes (only for WC PAT tags)
@@ -22,12 +22,15 @@ Of course, we do love our birds, turtles, jellyfish, and yes, whales and dolphin
 
 http://tagbase.googlecode.com/svn/trunk/docs/TagBaseQuickImport.ppt
 
-= Step 1 - Setting up the batch job file from the Excel template =
+= Step 1 - Setting up the batch job file (.xls) from the Excel template =
 
 {{{ 
 Tips -
 You can modify a copy of the template from the sample dataset 
 or locate and click on the TagBaseBatchJob.xlt in the <templates> folder
+
+If you work with Office 2007 and above, make sure you save in the 
+Excel 97-2003 format (.xls).
 }}}
 
 http://tagbase.googlecode.com/svn/trunk/images/ImportJob1.jpg
@@ -66,7 +69,17 @@ Also check here for more import tips on working with Wildlife Computers DAP and 
 [ArticleWcDap Working with Wildlife Computers software].
 </wiki:comment>  
 
-  * `TagCode` - This is the serial code of your tag and has to be a unique. Use the same `TagCode` for archival tags where there are two output files for each tag.
+  * `TagCode` - This is the serial number of your tag and has to be a unique. Use the same `TagCode` for archival tags where there are two output files for each tag.
+
+{{{ 
+Tips -
+If you are importing a refurnished tag (i.e. an identical serial number 
+exists already in the database), make sure you distinguish these tags by
+giving a distinct TagCode. 
+
+We suggest a "Serial number - year" convention for identifying refurnished 
+tags, for example 04A1234 (original tag) and 04A1234-2005 (refurnished tag).
+}}}
 
   * `TagPTTID` - This can be the PTT code you use for Argos transmission, or a label of your own.
 
