@@ -5,6 +5,8 @@
 
 We have created a set of simulated data to illustrate how you can utilize Tagbase for your research. Remember the data provided here is NOT real, so don't use it for any research/ analysis. Contact us if you want us to assist you in setting up a customized starter kit using your own data.
 
+= A Starter Guide to Using Tagbase =
+
 === Step 1: Download the Starter Kit from our [http://code.google.com/p/tagbase/downloads/list Downloads] page ===
 
 Or follow the link [http://tagbase.googlecode.com/files/starterkit.zip here]
@@ -15,7 +17,7 @@ Or follow the link [http://tagbase.googlecode.com/files/Tagbase4-5.zip here]
 
 === Step 3: Unzip the files into your disk drive, e.g. C:\Tagbase ===
 
-Make sure you have the following folders and file
+Make sure you have the following folders and file:
   * Images
   * plugins
   * Shapes
@@ -23,6 +25,6 @@ Make sure you have the following folders and file
   * templates
   * Tagbase.mdb (with the version number in the file name
 
+=== Step 4: Know your data files - preparation for import ===
 
-  
-  
+This example includes 
