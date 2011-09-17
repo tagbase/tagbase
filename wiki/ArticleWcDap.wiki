@@ -80,9 +80,9 @@ If that happens, you are likely not getting the full suite of DAP .csv outputs.
   
   * Use the following table to guide you in setting up a [ArticleImport#Step_1_-_Setting_up_the_batch_job_file_from_the_Excel_template batch import job file] (e.g _!TagbaseBatchJob.xls_). Consider the following scenario: you are processing 3 tags, Tag 1 through 3. 
   
-||*Strategy*|| *Workflow in DAP* || *Any Geolocation Processing with GPE?* || *File Organization* || *Batch import job file (e.g _!TagbaseBatchJob.xls_) entry* || *Example Screenshot* ||
-||1.|| 1 tag at a time, with organized Argo messages e.g. `ArgosDS-Tag1.txt`... `ArgosDS-Tag3.txt`. Tag setup files (.htm) are also included || Yes; with updated `Tag1-LightLoc.csv`... `Tag3-LightLoc.csv` || Each tag has its own folder, and updated "LightLoc.csv" files overwrite original DAP output || 3 entries from `Tag1*.csv` ... `Tag3*.csv` || [http://tagbase.googlecode.com/svn/trunk/images/WcDapA.jpg Screenshot A] ||
-||2.|| All tags in 1 file with merged Argo messages e.g. `ArgosDS-AllTags.txt`. Tag setup files (.htm) are also included || Yes; same as above || One set of DAP outputs  in a folder, along with 3 "LightLoc.csv" files || 3 entries for `AllTags*.csv` + 3 entries for `Tag1-LightLoc.csv`... `Tag3-LightLoc.csv` || [http://tagbase.googlecode.com/svn/trunk/images/WcDapB.jpg Screenshot B] ||
+|| *Strategy* || *Workflow in DAP* || *Any Geolocation Processing with GPE?* || *File Organization* || *Batch import job file (e.g _!TagbaseBatchJob.xls_) entry* || *Example Screenshot* ||
+||1.|| 1 tag at a time, with organized Argo messages e.g. `ArgosDS-Tag1.txt`... `ArgosDS-Tag3.txt`. Tag setup files (.htm) are also included || Yes; with updated `Tag1-LightLoc.csv`... `Tag3-LightLoc.csv` || Each tag has its own folder, and updated `LightLoc.csv` files overwrite original DAP output || 3 entries from `Tag1*.csv` ... `Tag3*.csv` || [http://tagbase.googlecode.com/svn/trunk/images/WcDapA.jpg Screenshot A] ||
+||2.|| All tags in 1 file with merged Argo messages e.g. `ArgosDS-AllTags.txt`. Tag setup files (.htm) are also included || Yes; same as above || One set of DAP outputs  in a folder, along with 3 `LightLoc.csv` files || 3 entries for `AllTags*.csv` + 3 entries for `Tag1-LightLoc.csv`... `Tag3-LightLoc.csv` || [http://tagbase.googlecode.com/svn/trunk/images/WcDapB.jpg Screenshot B] ||
 
 {{{ 
 Important!!! -
