@@ -92,7 +92,7 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportForm.jpg
   * You can start asking "questions" about your data by setting up a query.
   * Query allows you to pull out specific information by filtering or aggregating (e.g. average/ min/ max)
   * You can interrogate data from a table and/ an existing query
-  * It is good time to familiarize yourself with the basic terminology of databases. Use *[ArticleTerms Abbreviations and Terminology] to guide you
+  * It is good time to familiarize yourself with the basic terminology of databases. Use *[ArticleTerms Abbreviations and Terminology]* to guide you
   * See *[ArticleTables Data tables and Relationships]* to understand the data architecture of Tagbase. This will help you find all the information you need to construct your queries
   * 
 
