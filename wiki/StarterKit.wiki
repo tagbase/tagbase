@@ -35,7 +35,7 @@ Make sure you have the following folders and file:
 
 * The other tag is pretty straightforward, it's a transmitted PAT tag with a serial number or `TagCode` ABC0719 (`mytag2.xls`).
 
-* You can refer to *[ArticlePrepareImport Preparing for import]* and *[ArticleWcDap Working with Wildlife Computers DAP/GPE]* for detailed descriptions on what tag output file formats are supported.
+* You can refer to [ArticlePrepareImport Preparing for import] and [ArticleWcDap Working with Wildlife Computers DAP/GPE] for detailed descriptions on what tag output file formats are supported.
 
 === Step 5: Understand the batch job file (.xls) which tells Tagbase what you want to import ===
 
@@ -43,7 +43,7 @@ Make sure you have the following folders and file:
 
 * Open it up and see if you can understand how each record is prepared. 
 
-* Use *[ArticleImport Importing data]* to help you. You can model your own batch job file using this as an example.
+* Use [ArticleImport Importing data] to help you. You can model your own batch job file using this as an example.
 
 http://tagbase.googlecode.com/svn/trunk/images/ImportJob1.jpg
 
