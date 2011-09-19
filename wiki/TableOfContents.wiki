@@ -2,7 +2,7 @@
   * [OurVision Learn About Our Vision!]
   * [DataFundamentals Fundamentals of tagging]
   * [GettingStarted Getting Started]
-	     * [StarterKit Start using Tagbase with our Starter Kit]
+  * [StarterKit Start using Tagbase with our Starter Kit]
   * [HowToInstallPlugins Plugins Installation]
   * [Articles Help Articles]
     * [ArticleTerms Abbreviations and Terminology]
