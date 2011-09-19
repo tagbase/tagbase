@@ -4,7 +4,7 @@
     * [DataFundamentals Fundamentals of tagging]
     * [HowToInstallPlugins Plugins Installation]  
     * [StarterKit Start using Tagbase with our Starter Kit]
-  * [Articles Help Articles]
+  * Help Articles
     * [ArticleTerms Abbreviations and Terminology]
     * [ArticleNavigation The Form Navigation Tool]
     * [ArticlePrepareImport Preparing for import]
