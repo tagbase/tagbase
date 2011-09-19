@@ -14,4 +14,4 @@ Access offers many export capabilities to Excel or as plain text files. You can 
  # Continue to select an export type (*`Save As type`* in older Access versions)
  # Make sure you specify the file name and location before you click *Save* or *Ok*
 
-http://tagbase.googlecode.com/svn/trunk/images/Export1.png
+http://tagbase.googlecode.com/svn/trunk/images/Export1.jpg
