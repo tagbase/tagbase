@@ -1,43 +1,10 @@
-#summary Help articles to get you using Tagbase with ease
+#summary Running a geolocation analysis and re-importing the results in Tagbase
 
 <wiki:toc max_depth="2" />
 
 = Introduction =
 
-The easiest way to master Tagbase is learning-by-example. You can mimic the setup with our sample dataset, which can be *[http://tagbase.googlecode.com/files/tagfiles.zip downloaded here]*.
 
-We recommend having a dedicated folder for Tagbase in an easily accessible location, such as:
 
-{{{ C:\Tagbase}}}
+= Details =
 
-Once you are able to bring the sample dataset, or better yet your own data, it is a matter of using queries to interrogate the data, and playing around with the various pre-configured forms and controls.
-
-Have fun!
-
-= A step-by-step tutorial =
-
-Check out how you can learn to use Tagbase with our StarterKit.
-
-= Topics =
-
-    * [ArticleTerms Abbreviations and Terminology]
-    * [ArticleNavigation The Form Navigation Tool]
-    * [ArticlePrepareImport Preparing for import]
-    * [ArticleImport Importing data]
-    * [ArticleTables Data tables and Relationships]
-    * [ArticleQuery Querying data]	
-    * [ArticleDisplay Display and Graphs]
-    * [ArticleMap Integrated Mapping]
-    * [ArticleExport Exporting data]
-    * [ArticleExportNative Native export capabilities of Access]	
-    * [ArticleSqlServer Setting up SQL Server]
-    * [ArticleMissingRefs Handling "Missing References" error]
-
-A pdf documentation, which provides the basis for this online help is available [http://tagbase.googlecode.com/svn/trunk/docs/TagBase.pdf here].
-
-= Upcoming Case Studies =
-   * What can you do with Ocean Data View? Using goodies from Tagbase suite
-   * Connecting Tagbase to your favourite package through Open Database Connectivity (ODBC) - an exmaple with R and Matlab
-   * Advanced Form Series - 1. Flexible Histogram Generator
-   * Advanced Form Series - 2. Sharing tracks with GPS Visualizer
-   * Advanced Form Series - 3. Interpolating sunrise/ sunset times
