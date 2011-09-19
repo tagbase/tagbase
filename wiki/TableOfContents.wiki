@@ -15,7 +15,7 @@
     * [ArticleDisplay Display and Graphs]
     * [ArticleMap Integrated Mapping]
     * [ArticleExport Exporting data]
-	     * [ArticleExport Native export capabilities of Access]	
+	* [ArticleExport Native export capabilities of Access]	
   * [ArticleSqlServer Setting up SQL Server]
   * [ArticleMissingRefs Handling "Missing References" error]
   * [GeneralRef General References]
