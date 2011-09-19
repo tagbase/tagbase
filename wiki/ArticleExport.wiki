@@ -8,7 +8,7 @@ Tagbase supports export to selected [WebResources#State-space_models_for_geoloca
 
 To export:
 
- # From the [ArticleNavigation The Form Navigation Tool], select *Export* from Operations, and then *!Export_TagData*
+ # From the [ArticleNavigation Form Navigation Tool], select *Export* from Operations, and then *!Export_TagData*
  # Follow the instructions to export data.
  # The *required* fields are `TagID` and `Export Type`
  # and the optional fields are `File Name`, `Folder Path` and `Depth Filter (WC PAT only)`

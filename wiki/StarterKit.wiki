@@ -88,3 +88,13 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportForm.jpg
   * Select a tag to plot, use *[ArticleDisplay Display and Graphs]* to assist you using the form more effectively. 
 
 === Step 10: Interrogate the data using a simple query ===
+=== Step 11: Export data from Tagbase ===
+There are two ways to export
+   * Using the *[ArticleExport Export Form]*
+   * Using native export capabilities of MS Access
+
+=== Step 12: Import geolocation analysis results back into Tagbase ===
+   * Refer to here for details conducting geolocation analysis with Trackit
+   * Macro
+
+=== Step 13: Interact with track and tag data on a map ===
