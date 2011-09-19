@@ -3,9 +3,9 @@
 
 <wiki:toc max_depth="3" />
 
-We have created a set of simulated data to illustrate how you can utilize Tagbase for your research. Remember the data provided here is NOT real, so don't use it for any research/ analysis. Contact us if you want us to assist you in setting up a customized starter kit using your own data.
-
 = A Starter Guide to Using Tagbase =
+
+We have created a set of simulated data to illustrate how you can utilize Tagbase for your research. Remember the data provided here is *NOT* real, so don't use it for any research/ analysis. Contact us if you want us to assist you in setting up a customized starter kit using your own data.
 
 === Step 1: Download the Starter Kit from our [http://code.google.com/p/tagbase/downloads/list Downloads] page ===
 
@@ -67,10 +67,12 @@ http://tagbase.googlecode.com/svn/trunk/images/FormNavigate.jpg
 
 === Step 8: Follow the 3-step instructions on the `Batch_Import_TagData` to guide your import. ===
 
-  1. Locate the batch job file using the standard Windows Browse-To dialog:
+1. Locate the batch job file using the standard Windows Browse-To dialog:
      `C:\Tagbase\tagfiles\simulated\TagBaseBatchJob.xls`
-  2. Inspect the records that are loaded
-  3. Click on a *Fish* button to import
+
+2. Inspect the records that are loaded
+
+3. Click on a *Fish* button to import
 
 When completed, a message like this will appear.
 
@@ -80,6 +82,9 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportForm.jpg
 
   * Bring to the foreground, the `Form Navigation Tool` (reopen from `Forms > NavigateForms` if you have closed it)
   * Select `Plot` from the *Operation* pull-down list, then
-  * Select `Batch_Import_TagData` from the *Form* pull-down list
+  * Select `Plot_WC_BubbleFreqPDT` from the *Form* pull-down list
   * Read the *Form Description*
   * Hit the *Go* button
+  * Select a tag to plot, use *[ArticleDisplay Display and Graphs]* to assist you using the form more effectively. 
+
+=== Step 10: Interrogate the data using a simple query ===
