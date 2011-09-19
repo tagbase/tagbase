@@ -119,3 +119,7 @@ There are two ways to export:
    * With *[ArticleMap Integrated Mapping]* in Tagbase, you can extract and visualize data based on 1 or multiple positions.
    
    * Satellite imagery snapshots can also be downloaded across the web, on the fly to be viewed along with your data
+   
+=== Step 14: Working with Ocean Data View to visualize data export from Tagbase === 
+
+=== Step 15: Delete data from a tag in Tagbase ===
