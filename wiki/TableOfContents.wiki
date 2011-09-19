@@ -4,7 +4,7 @@
     * [DataFundamentals Fundamentals of tagging]
     * [HowToInstallPlugins Plugins Installation]  
     * [StarterKit Start using Tagbase with our Starter Kit]
-  * Help Articles
+  * [Articles Help Articles]
     * [ArticleTerms Abbreviations and Terminology]
     * [ArticleNavigation The Form Navigation Tool]
     * [ArticlePrepareImport Preparing for import]
@@ -15,7 +15,7 @@
     * [ArticleMap Integrated Mapping]
     * [ArticleExport Exporting data]	
   * [ArticleSqlServer Setting up SQL Server]
-    * [ArticleExportNative Native export capabilities of Access]
+  * [ArticleExportNative Native export capabilities of Access]
   * [ArticleMissingRefs Handling "Missing References" error]
   * [GeneralRef General References]
   * [WebResources Web Resources]
