@@ -39,7 +39,7 @@ Make sure you have the following folders and file:
 
 === Step 5: Understand the batch job file (.xls) which tells Tagbase what you want to import ===
 
-  * Browse to the following folder: Tagbase > tagfiles > simulated, and open our pre-prepared batch job file, `TagBaseBatchJob.xls`. 
+  * Browse to the following folder: *Tagbase* > *tagfiles* > *simulated*, and open our pre-prepared batch job file, `TagBaseBatchJob.xls`. 
 
   * Open it up and see if you can understand how each record is prepared. 
 
@@ -55,3 +55,31 @@ If you experience errors on startup, make sure you have installed all the plugin
 
   * [HowToInstallPlugins Plugins Installation]
   * [ArticleMissingRefs Handling "Missing References" error]
+
+=== Step 7: Open the batch import form via the `Form Navigation Tool` ===
+
+  * Select `Import` from the *Operation* pull-down list, then
+  * Select `Batch_Import_TagData` from the *Form* pull-down list
+  * Hit the *Go* button
+  * See also [ArticleNavigation The Form Navigation Tool]
+
+http://tagbase.googlecode.com/svn/trunk/images/FormNavigate.jpg
+
+=== Step 8: Follow the 3-step instructions on the `Batch_Import_TagData` to guide your import. ===
+
+  1. Locate the batch job file using the standard Windows Browse-To dialog:
+     `C:\Tagbase\tagfiles\simulated\TagBaseBatchJob.xls`
+  2. Inspect the records that are loaded
+  3. Click on a *Fish* button to import
+
+When completed, a message like this will appear.
+
+http://tagbase.googlecode.com/svn/trunk/images/ImportForm.jpg
+
+=== Step 9: Visualize the data using a plot form ===
+
+  * Bring to the foreground, the `Form Navigation Tool` (reopen from `Forms > NavigateForms` if you have closed it)
+  * Select `Plot` from the *Operation* pull-down list, then
+  * Select `Batch_Import_TagData` from the *Form* pull-down list
+  * Read the *Form Description*
+  * Hit the *Go* button
