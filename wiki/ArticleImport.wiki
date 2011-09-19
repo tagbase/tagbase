@@ -62,7 +62,7 @@ you can use the wildcard character (star or asterisk or *) in a single
 entry to denote all files beginning with the same prefix. See a screenshot below
 }}}
 
-   *Also refer to [ArticleWcDap Working with Wildlife Computers DAP/GPE] for details.*
+   Also refer to *[ArticleWcDap Working with Wildlife Computers DAP/GPE]* for details.
 
 <wiki:comment>
 Also check here for more import tips on working with Wildlife Computers DAP and GPE software, 
