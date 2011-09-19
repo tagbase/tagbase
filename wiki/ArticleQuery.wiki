@@ -1,0 +1,33 @@
+#summary How to construct your query
+
+<wiki:toc max_depth="2" />
+
+= Introduction =
+
+Query is a powerful way to interact with your data in any databases. Query utilizes a standard coding language known as structured query language (*[http://www.w3schools.com/sql/default.asp SQL]*) that are universal across platforms. The beauty about query is that you don't have to know any SQL syntax at all to construct your own query. Many software, like MS Access which Tagbase uses, provide a graphical interface (e.g. [http://www.eraserve.com/tutorials/MSACCESS_Queries.asp Query Builder]) for you to create query without typing a single line of code. What's more is that in Tagbase, you can do formulae or use [http://www.databasedev.co.uk/datepart-function.html functions] just like you do in MS Excel. You can even do an Excel-style [http://www.databasedev.co.uk/crosstab_queries.html pivot table query] in Access.
+
+We will run through a set of queries to illustrate how you can 
+
+= Examples = 
+
+== Query 1 - Extract time series of a fish during a specific month  ==
+
+This example demonstrates how to you can filter your data. 
+
+== Query 2 - Summarize the daily maximum depth of a fish  ==
+
+We build upon the previous example and summarize your data as aggregated values (average, min or max).
+
+== Query 3 - Extract the temperature experienced when a fish reached its daily maximum depth ==
+
+We again use the previous example and apply the query as a constraint to extract data
+
+== Query 4 - Associated our extract fish data with metadata ==
+
+Our final example shows how you can add metadata to your extract data for an informative presentation
+
+== Further examples ==
+
+It is worthwhile to visit the link below or search over the web to check out more general examples. You will appreciate the power of databases and queries as you learn more about queries.
+
+http://www.databasedev.co.uk/queries.html

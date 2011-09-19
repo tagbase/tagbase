@@ -31,9 +31,9 @@ Make sure you have the following folders and file:
 
   * The recovered PAT tag has two data streams - a) low resolution, transmitted data (`mytag1.xls`); b) high-resolution archival time series (`mytag1.csv` & `mytag1Archiv.xls`). 
   * Since we want to get data from both data streams (to compare what's lost in the satellite transmission), we will treat this recovered tag as 2 distinct tags belonging to the same fish. 
-  * We do this by giving different serial number, or `TagCode` in Tagbase's terminology. Therefore, for the archival data stream, we give 06A9999 as the `TagCode`, and PAT06A9999 for the transmitted data stream.
+  * We do this by giving different serial number, or `TagCode` in Tagbase's terminology. Therefore, for the archival data stream, we give 06A9999 as the `TagCode`, and PAT06A9999 for that of the transmitted data stream.
 
-  * The other tag is pretty straightforward, it's a transmitted PAT tag with a serial number or `TagCode` ABC0719 (`mytag2.xls`).
+  * The other tag is pretty straightforward, it's a transmitted PAT tag with a serial number or `TagCode` - ABC0719 (`mytag2.xls`).
 
   * You can refer to *[ArticlePrepareImport Preparing for import]* and *[ArticleWcDap Working with Wildlife Computers DAP/GPE]* for detailed descriptions on what tag output file formats are supported.
 
@@ -47,21 +47,21 @@ Make sure you have the following folders and file:
 
 http://tagbase.googlecode.com/svn/trunk/images/ImportJob1.jpg
 
-=== Step 6: Start up Tagbase ===
+=== Step 6: Start Tagbase ===
 
 Simply double-click on the `Tagbase.mdb` in `C:\Tagbase`
 
 If you experience errors on startup, make sure you have installed all the plugins and have all the necessary references. See these topics for help:
 
-  * [HowToInstallPlugins Plugins Installation]
-  * [ArticleMissingRefs Handling "Missing References" error]
+  * *[HowToInstallPlugins Plugins Installation]*
+  * *[ArticleMissingRefs Handling "Missing References" error]*
 
 === Step 7: Open the batch import form via the `Form Navigation Tool` ===
 
   * Select `Import` from the *Operation* pull-down list, then
   * Select `Batch_Import_TagData` from the *Form* pull-down list
   * Hit the *Go* button
-  * See also [ArticleNavigation The Form Navigation Tool]
+  * See also *[ArticleNavigation The Form Navigation Tool]*
 
 http://tagbase.googlecode.com/svn/trunk/images/FormNavigate.jpg
 
@@ -88,10 +88,18 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportForm.jpg
   * Select a tag to plot, use *[ArticleDisplay Display and Graphs]* to assist you using the form more effectively. 
 
 === Step 10: Interrogate the data using a simple query ===
+
+  * You can start asking "questions" about your data by setting up a query.
+  * Query allows you to pull out specific information by filtering or aggregating (e.g. average/ min/ max)
+  * You can interrogate data from a table and/ an existing query
+  * It is good time to familiarize yourself with the basic terminology of databases. Use *[ArticleTerms Abbreviations and Terminology] to guide you
+  * See *[ArticleTables Data tables and Relationships]* to understand the data architecture of Tagbase. This will help you find all the information you need to construct your queries
+  * 
+
 === Step 11: Export data from Tagbase ===
 There are two ways to export
    * Using the *[ArticleExport Export Form]*
-   * Using native export capabilities of MS Access
+   * Using [ArticleExportNative native export capabilities of MS Access]
 
 === Step 12: Import geolocation analysis results back into Tagbase ===
    * Refer to here for details conducting geolocation analysis with Trackit

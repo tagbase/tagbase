@@ -33,3 +33,6 @@ And follow the instructions here to set up your SQL server:
  * Set "_False_" to the option `Database Read-Only`
  * For more information on SQL Server Management Studio, find out [http://msdn.microsoft.com/en-us/library/ms174173.aspx here]
  
+ = Useful links = 
+ 
+ * http://www.ehow.com/video_4982928_using-query-builder-sql-server.html
