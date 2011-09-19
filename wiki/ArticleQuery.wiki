@@ -6,7 +6,15 @@
 
 Query is a powerful way to interact with your data in any databases. Query utilizes a standard coding language known as structured query language (*[http://www.w3schools.com/sql/default.asp SQL]*) that are universal across platforms. The beauty about query is that you don't have to know any SQL syntax at all to construct your own query. Many software, like MS Access which Tagbase uses, provide a graphical interface (e.g. [http://www.eraserve.com/tutorials/MSACCESS_Queries.asp Query Builder]) for you to create query without typing a single line of code. What's more is that in Tagbase, you can do formulae or use [http://www.databasedev.co.uk/datepart-function.html functions] just like you do in MS Excel. You can even do an Excel-style [http://www.databasedev.co.uk/crosstab_queries.html pivot table query] in Access.
 
-We will run through a set of queries to illustrate how you can 
+We will run through a set of queries to illustrate how you can interrogate your data
+
+= Accessing the Query Builder/ Query Designer = 
+ 
+  * For Access 2003 and below, go to *Queries* under *Objects*. Click on the *Design* button.
+  
+  * For Access 2007 or above, go to the *Create* tab. Click *Query Design* to start the builder.
+  
+http://tagbase.googlecode.com/svn/trunk/images/Query2007a.jpg
 
 = Examples = 
 
