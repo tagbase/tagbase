@@ -27,7 +27,7 @@ Make sure you have the following folders and file:
 
 === Step 4: Know your data files - preparation for import ===
 
-* This example includes 1 recovered PAT tags and 1 transmitted PAT tags. 
+  * This example includes 1 recovered PAT tags and 1 transmitted PAT tags. 
 
 * The recovered PAT tag has two data streams - a) low resolution, transmitted data (`mytag1.xls`); b) high-resolution archival time series (`mytag1.csv` & `mytag1Archiv.xls`). 
 * Since we want to get data from both data streams (to compare what's lost in the satellite transmission), we will treat this recovered tag as 2 distinct tags belonging to the same fish. 
