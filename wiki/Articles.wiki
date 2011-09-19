@@ -1,5 +1,4 @@
 #summary Help articles to get you using Tagbase with ease
-#labels Featured
 
 <wiki:toc max_depth="2" />
 
