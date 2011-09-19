@@ -23,8 +23,20 @@ Make sure you have the following folders and file:
   * Shapes
   * tagfiles
   * templates
-  * Tagbase.mdb (with the version number in the file name
+  * Tagbase.mdb (with the version number in the file name)
 
 === Step 4: Know your data files - preparation for import ===
 
-This example includes 
+This example includes 1 recovered PAT tags and 1 transmitted PAT tags. 
+
+The recovered PAT tag has two data streams - a) low resolution, transmitted data (`mytag1.xls`); b) high-resolution archival time series (`mytag1.csv` & `mytag1Archiv.xls`). Since we want to get data from both data streams (to compare what's lost in the satellite transmission), we will treat this recovered tag as 2 distinct tags belonging to the same fish. We do this by giving different serial number, or `TagCode` in Tagbase's terminology. Therefore, for the archival data stream, we give 06A9999 as the `TagCode`, and PAT06A9999 for the transmitted data stream.
+
+The other tag is pretty straightforward, it's a transmitted PAT tag with a serial number or `TagCode` ABC0719 (`mytag2.xls`).
+
+You can refer to [ArticlePrepareImport Preparing for import] and [ArticleWcDap Working with Wildlife Computers DAP/GPE] for detailed descriptions on what tag output file formats are supported.
+
+=== Step 5: Understand the batch job file (.xls) which tells Tagbase what you want to import ===
+
+Browse to the following folder: Tagbase > tagfiles > simulated, and open our pre-prepared batch job file, `TagBaseBatchJob.xls`. Open it up and see if you can understand how each record is prepared. Use [ArticleImport Importing data] to help you. You can model your own batch job file using this as an example.
+
+http://tagbase.googlecode.com/svn/trunk/images/ImportJob1.jpg
