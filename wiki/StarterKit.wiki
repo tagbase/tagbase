@@ -94,15 +94,26 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportForm.jpg
   * You can interrogate data from a table and/ an existing query
   * It is good time to familiarize yourself with the basic terminology of databases. Use *[ArticleTerms Abbreviations and Terminology]* to guide you
   * See *[ArticleTables Data tables and Relationships]* to understand the data architecture of Tagbase. This will help you find all the information you need to construct your queries
-  * See [ArticleQuery examples] of how you can construct your query
+  * See [ArticleQuery Querying data] to start mastering your query techniques
 
 === Step 11: Export data from Tagbase ===
-There are two ways to export
+There are two ways to export:
    * Using the *[ArticleExport Export Form]*
    * Using [ArticleExportNative native export capabilities of MS Access]
 
 === Step 12: Import geolocation analysis results back into Tagbase ===
-   * Refer to here for details conducting geolocation analysis with Trackit
-   * Macro
-
+   * Tagging often requires geo-correction of estimated positions of a fish, this is usually done with anlaysis routines in software like *[http://www.r-project.org/ R]*, Matlab etc. One set of popular routines is the Kalman filtering packages in R of [http://www.soest.hawaii.edu/PFRP/reprints/lam_nielsen_sibert.pdf Ukfsst] and [http://www.int-res.com/abstracts/meps/v419/p71-84/ Trackit], developed by Anders Nielsen, Chi Hin Lam and John Sibert. 
+   
+   * Wildlife Computers software can also run Ukfsst and Trackit via the GPE2 software (even though the packages are not acknowledged to their original source). Tagbase will import any results that are saved back to a `-LightLoc.csv` file. However, we recommend using the *R* implementation where possible, since it is more flexible in terms of getting diagnostics of results and extracting data streams.
+   
+   * We also recommend you obtain a good understanding of any geolocation routines, since each of them does have assumptions and caution is needed to correctly intrepret the results. While being able to run geolocation correction with manufactuer software confers convenience, we may become careless in regarding geolocation routines as a push-button operation that requires no evaluation. 
+   
+   * Refer to *[ArticleGeolocate Running and importing a geolocation analysis]* for a simplified run conducting geolocation analysis with Trackit and importing the results back to Tagbase.
+ 
 === Step 13: Interact with track and tag data on a map ===
+
+   * You can interact with your tag data whenever you have track data.
+   
+   * With *[ArticleMap Integrated Mapping]* in Tagbase, you can extract and visualize data based on 1 or multiple positions.
+   
+   * Satellite imagery snapshots can also be downloaded across the web, on the fly to be viewed along with your data
