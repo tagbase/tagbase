@@ -116,12 +116,19 @@ fit2csv(tag3)
 http://tagbase.googlecode.com/svn/trunk/images/TrackMacro0.jpg   
    
 		* `AnalysisID` - a unique numerical identifier for a particular analysis. The numbering/ naming convention depends on your own organization. Our example shows all tags belong to the same analysis, `AnalysisID` = 1. Tagbase will ingest any integers you assign here as `AnalysisID`
+		
 		* `TagID` - make sure you match up your track data files with the corresponding `TagID` specified in the `TagInfo` table
+		
 		* `InputsID` - this numerical identifier allows you to specify whether a same set of input parameters is used to run a particular analysis. If you are unsure what you have used as inputs, just assign a different `InputsID` (in the ascending order) for each tag.
+		
 		* `ImportFile` - filename of the output file. Use separate records for multiple output files belonging to a tag. 
+		
 		* `AnalysisType` - specify the type of analysis you are imported the results for. Tagbase recognizes a keyword specified here, e.g. *geolocation* as a flag for a track that can be used in other parts of Tagbase's operations.
+		
 		* `AnalysisMethod` - specify the method used. For geolocation, *trackit*, *ukfsst* or *kftrack* can provide useful descriptions here
+		
 		* `LastModified` - specify a date stamp of when you conduct your analysis
+		
 		* `Notes` - add notes where necessary
 
 = Importing in Tagbase = 		
@@ -138,7 +145,7 @@ http://tagbase.googlecode.com/svn/trunk/images/TrackMacro0.jpg
 	
 	`C:\Tagbase\tagfiles\simulated\outputs\TagBaseImportAnalysis1.xls`
 	
-	* Click *Open* to import, wait until it finishes i.e. hourglass disappears
+	* Click *Open* to import, wait until it finishes and the hourglass disappears
 	
 	
 	
