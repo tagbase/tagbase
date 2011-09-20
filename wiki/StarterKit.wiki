@@ -120,7 +120,36 @@ There are two ways to export:
    
    * Satellite imagery snapshots can also be downloaded across the web, on the fly to be viewed along with your data
    
-=== Step 14: Working with Ocean Data View to visualize data export from Tagbase === 
+=== Step 14: Working with Ocean Data View (ODV) to visualize data export from Tagbase === 
+
+   * Tagbase *[ArticleExport exports]* data as a plain text file (`OdvArc.txt` and `OdvWC.txt`) that can be read directly by [http://odv.awi.de Ocean Data View].
+   
+   * You can find an example exported file here:
+   `C:\Tagbase\tagfiles\simulated\export\`
+   
+   * You can download Ocean Data View [http://odv.awi.de/en/software/download/ here]. We prefer ODV3 over the newer version for its simpler and more logical interface, although Tagbase's export can be utilized by all versions.
+
+   * From Windows Explorer, you can drag-n-drop a `OdvArc.txt` into an opened ODV window, or simply onto its desktop icon.
+   
+   * Data will be automatically imported. You can start using ODV right away. Refer to documentation [http://odv.awi.de/en/documentation/ here] for details.
+   
+   * We also provide you with a sample configuration for your ODV project. Browse to *templates* folder and look for this file:
+   
+   `C:\Tagbase\templates\std.cfg` for ODV3, 
+   
+   or
+   
+   `C:\Tagbase\templates\DefaultView.xview` for ODV4
+   
+   * Load these configuration files from ODV via the menu bar:
+   
+   `Configuration` > `Load Configuration` > Browse to `std.cfg` to load
+   
+   or
+   
+   `View` > `Load View` > Browse to `DefaultView.xview` to load
+   
+http://tagbase.googlecode.com/svn/trunk/images/Odv.png   
 
 === Step 15: Delete data from a tag in Tagbase ===
 
@@ -135,7 +164,9 @@ There are two ways to export:
 http://tagbase.googlecode.com/svn/trunk/images/DeleteForm.jpg
    
  {{{
-Tips - this Delete form only removes tag data. If you wish to delete also the metadata and data of an individual fish, you will need to manually (or via a query) delete them in the FishInfo table.
+Tips - this Delete form only removes tag data. If you wish to delete 
+also the metadata and data of an individual fish, you will need to 
+manually (or via a query) delete them in the FishInfo table.
  }}}
    
    
