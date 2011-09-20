@@ -4,7 +4,7 @@
 
 = Introduction =
 
-Query is a powerful way to interact with your data in any databases. Query utilizes a standard coding language known as structured query language (*[http://www.w3schools.com/sql/default.asp SQL]*) that are universal across platforms. The beauty about query is that you don't have to know any SQL syntax at all to construct your own query. Many software, like MS Access which Tagbase uses, provide a graphical interface (e.g. [http://www.eraserve.com/tutorials/MSACCESS_Queries.asp Query Builder]) for you to create query without typing a single line of code. What's more is that in Tagbase, you can do formulae or use [http://www.databasedev.co.uk/datepart-function.html functions] just like you do in MS Excel. You can even do an Excel-style [http://www.databasedev.co.uk/crosstab_queries.html pivot table query] in Access.
+Query is a powerful way to interact with your data in any databases. Query utilizes a standard coding language known as structured query language (*[http://www.w3schools.com/sql/default.asp SQL]*) that are universal across platforms. The beauty about query is that you don't have to know any SQL syntax at all to construct your own query. Many software, like MS Access which Tagbase uses, provide a graphical interface (e.g. [http://www.eraserve.com/tutorials/MSACCESS_Queries.asp Query Builder]) for you to create query without typing a single line of code. What's more is that in Tagbase, you can do formulae or use functions just like you do in MS Excel. You can even do an Excel-style [http://www.databasedev.co.uk/crosstab_queries.html pivot table query] in Access.
 
 We will run through a set of queries to illustrate how you can interrogate your data
 
@@ -18,11 +18,11 @@ http://tagbase.googlecode.com/svn/trunk/images/Query2007a.jpg
 
 = To follow along... =
 
-  # Make sure you have imported the sample dataset. Refer to the *StarterKit* to help you achieve that.
+  * Make sure you have imported the sample dataset. Refer to the *StarterKit* to help you achieve that.
 
-  # To keep it simple, our example only has 1 fish with time series data in the database. 
+  * To keep it simple, our example only has 1 fish with time series data in the database. 
   
-  # You may also want to revisit the data model in Tagbase to facilitate you locating all the information you need. See *[ArticleTables Data tables and Relationships] for details.
+  * You may also want to revisit the data model in Tagbase to facilitate you locating all the information you need. See *[ArticleTables Data tables and Relationships] for details.
 
 = Examples = 
 
@@ -36,7 +36,19 @@ This example demonstrates how to you can filter your data.
  * The fields of the `Proc_Archival_TempLight` table are exposed in the Query Designer, scroll or resize the mini-window to see them
  * Click/ double-click on the asterick `*` at the top to add all fields to your query. The asterick is a wildcard operator that means "Select All"
  * Next, click/ double-click on the `DateTime` field to add it to the query. We will use this as our filter
- * Apply a function, `Month` such that we only extract the month part of `DateTime`
+ * Apply a function, `Month` such that we only extract the month part of `DateTime`. To apply this function, type the following:
+ `Month([DateTime])`
+ 
+  {{{ 
+Tips -
+Use a set of square brackets [ ] to denote a field name in functions or queries. 
+This is particularly useful when a field name has spaces or special characters,
+even though such naming convention is not recommended.
+ }}}
+ 
+ * You can nickname (use an alias) your field, for example, since we will filter data out for the month of July, we write out our function as follows:
+ `July: Month([DateTime])`
+ 
 
 == Query 2 - Summarize the daily maximum depth of a fish  ==
 
