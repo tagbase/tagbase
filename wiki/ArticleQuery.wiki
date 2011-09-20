@@ -68,7 +68,7 @@ even though such naming convention is not recommended.
  
 http://tagbase.googlecode.com/svn/trunk/images/Query2000b2.jpg 
  
- * Hit the exclamation mark ! button (*Run*) to see the results
+ * Hit the exclamation mark *!* button (*Run*) to see the results
 
  * Close the query, and answer "Yes" when prompted to save the query.
  
@@ -107,7 +107,7 @@ http://tagbase.googlecode.com/svn/trunk/images/Query2000c2.jpg
 
 http://tagbase.googlecode.com/svn/trunk/images/Query2000c3.jpg
  
- * Hit the exclamation mark ! button (*Run*) to see the results
+ * Hit the exclamation mark *!* button (*Run*) to see the results
  
 http://tagbase.googlecode.com/svn/trunk/images/Query2000c4.jpg 
 
@@ -141,7 +141,7 @@ http://tagbase.googlecode.com/svn/trunk/images/Query2000d1.jpg
  
  * Add to *Criteria* >=100 for `Depth` to show only results deeper than or equal to 100 m
  
- * Hit the exclamation mark ! button (*Run*) to see the results
+ * Hit the exclamation mark *!* button (*Run*) to see the results
  
 http://tagbase.googlecode.com/svn/trunk/images/Query2000d2.jpg 
 
@@ -155,13 +155,13 @@ Our final example shows how you can add metadata to your extract data for an inf
  
   * Start a new query, from the *Show Table* dialog, double-click/ click to add query `Query3`, and tables `TagInfo`, `FishInfo` and `SpeciesInfo`
   
-  * Some joins are established automatically (as part of Tagbase's design)
+  * Some joins are established automatically as part of Tagbase's design
   
   * Join up `Query3` and `TagInfo` via the field, `TagID`
   
 http://tagbase.googlecode.com/svn/trunk/images/Query2000e1.jpg  
   
- * Hit the exclamation mark ! button (*Run*) to see the results
+ * Hit the exclamation mark *!* button (*Run*) to see the results
  
 http://tagbase.googlecode.com/svn/trunk/images/Query2000e2.jpg 
 
