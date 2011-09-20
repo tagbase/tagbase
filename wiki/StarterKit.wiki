@@ -13,7 +13,7 @@ Or follow the link [http://tagbase.googlecode.com/files/starterkit.zip here]
 
 === Step 2: Download also the latest Tagbase release from our [http://code.google.com/p/tagbase/downloads/list Downloads] page ===
 
-Or follow the link [http://tagbase.googlecode.com/files/Tagbase4-5.zip here]
+Or follow the link [http://tagbase.googlecode.com/files/Tagbase4-6.zip here]
 
 === Step 3: Unzip the files into your disk drive, e.g. C:\Tagbase ===
 
