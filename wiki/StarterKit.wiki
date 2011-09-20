@@ -104,13 +104,13 @@ There are two ways to export:
 === Step 12: Import geolocation analysis results back into Tagbase ===
    * Tagging often requires geo-correction of estimated positions of a fish, this is usually done with anlaysis routines in software like *[http://www.r-project.org/ R]*, Matlab etc. One set of popular routines is the Kalman filtering packages in R of [http://www.soest.hawaii.edu/PFRP/reprints/lam_nielsen_sibert.pdf Ukfsst] and [http://www.int-res.com/abstracts/meps/v419/p71-84/ Trackit], developed by Anders Nielsen, Chi Hin Lam and John Sibert. 
    
-   * Wildlife Computers software can also run Ukfsst and Trackit via the GPE2 software (even though the packages are not acknowledged to their original source). See *[ArticleWcDap Working with Wildlife Computers DAP/GPE]* for details. Tagbase will import any results that are saved back to a `-LightLoc.csv` file. 
+   * Wildlife Computers software can also run Ukfsst and Trackit via the GPE2 software (even though the packages are not acknowledged to their original source). See *[ArticleWcDap Working with Wildlife Computers DAP/GPE]* for details. Tagbase will import any results that are saved back to a `LightLoc.csv` file. 
    
-   * We recommend using the *R* implementation where possible, since it is more flexible in terms of getting diagnostics of results and extracting data streams. 
+   * We recommend using the *[http://www.r-project.org/ R]* implementation where possible, since it is more flexible in terms of getting diagnostics of results and extracting data streams. 
    
    * We also recommend you obtain a good understanding of any geolocation routines, since each of them does have assumptions and caution is needed to correctly intrepret the results. While being able to run geolocation correction with manufactuer software confers convenience, we may become careless in regarding geolocation routines as a push-button operation that requires no evaluation. 
    
-   * Refer to *[ArticleGeolocate Running and importing a geolocation analysis]* for a simplified run conducting geolocation analysis with Trackit and importing the results back to Tagbase.
+   * Refer to *[ArticleGeolocate Running and importing a geolocation analysis]* for a simplified run conducting geolocation analysis with [http://www.int-res.com/abstracts/meps/v419/p71-84/ Trackit] and importing the results back to Tagbase.
  
 === Step 13: Interact with track and tag data on a map ===
 
@@ -123,3 +123,19 @@ There are two ways to export:
 === Step 14: Working with Ocean Data View to visualize data export from Tagbase === 
 
 === Step 15: Delete data from a tag in Tagbase ===
+
+   * Via *[ArticleNavigation The Form Navigation Tool]* (`Forms` > `NavigateForms`), select `Delete` from the *Operation* pull-down list
+   * Select `Delete_TagData` from the *Form* pull-down list.  Hit *Go*.
+   * As always, read the on-screen *Instructions*
+   * Show records through selecting through items in the list boxes
+   * Click to highlight a particular tag in *Dataset Summary Information* for deletion
+   * Use Ctrl- or Shift- click to select multiple tags
+   * Hit the garbage can button to delete
+
+http://tagbase.googlecode.com/svn/trunk/images/Delete.jpg
+   
+ {{{
+Tips - this Delete form only removes tag data. If you wish to delete also the metadata and data of an individual fish, you will need to manually (or via a query) delete them in the FishInfo table.
+ }}}
+   
+   
