@@ -54,7 +54,7 @@ even though such naming convention is not recommended.
  
  * Use *[http://office.microsoft.com/en-us/access-help/examples-of-query-criteria-HA010066611.aspx these examples of query criteria]* provided by Microsoft to help you master filtering by criteria. For example, filtering by dates will need to bound a date with hash signs #, and take the form of 
  
- `Between #12/1/2007# And #12/31/2007#
+ `Between #12/1/2007# And #12/31/2007#`
  
 
 == Query 2 - Summarize the daily maximum depth of a fish  ==
