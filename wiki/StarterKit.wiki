@@ -131,7 +131,7 @@ There are two ways to export:
 
    * From Windows Explorer, you can drag-n-drop a `OdvArc.txt` into an opened ODV window, or simply onto its desktop icon.
    
-   * Data will be automatically imported. You can start using ODV right away. Refer to documentation [http://odv.awi.de/en/documentation/ here] for details.
+   * Data will be automatically imported. You can start using ODV right away. Refer to  [http://odv.awi.de/en/documentation/ documentation] for details.
    
    * We also provide you with a sample configuration for your ODV project. Browse to *templates* folder and look for this file:
    
