@@ -153,13 +153,15 @@ http://tagbase.googlecode.com/svn/trunk/images/Query2000d2.jpg
 Our final example shows how you can add metadata to your extract data for an informative presentation
  }}}
  
-  * Start a new query, from the *Show Table* dialog, double-click/ click to add query `Query3`, and tables `TagInfo`, `FishInfo` and `SpeciesInfo`
+ * Start a new query, from the *Show Table* dialog, double-click/ click to add query `Query3`, and tables `TagInfo`, `FishInfo` and `SpeciesInfo`
   
-  * Some joins are established automatically as part of Tagbase's design
+ * Some joins are established automatically as part of Tagbase's design
   
-  * Join up `Query3` and `TagInfo` via the field, `TagID`
+ * Join up `Query3` and `TagInfo` via the field, `TagID`
   
 http://tagbase.googlecode.com/svn/trunk/images/Query2000e1.jpg  
+
+ * Add 2 fields: `TagCode` from `TagInfo` table and `ScientificName` from `SpeciesInfo` table, apart from the fields of `Query3`
   
  * Hit the exclamation mark *!* button (*Run*) to see the results
  
