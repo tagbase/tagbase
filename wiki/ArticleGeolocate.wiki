@@ -4,7 +4,7 @@
 
 = Installation of R and geolocation packages =
 
-*[http://www.r-project.org/ R]* is being very rapidly developed and geolocation package may sometimes lag in catching up with fundamental changes made in *[http://www.r-project.org/ R]* that renders some older routines non-functional. To take a conservative approach, we recommend the following installation:
+*[http://www.r-project.org/ R]* is being very rapidly developed and geolocation packages may sometimes lag in catching up with fundamental changes made in *[http://www.r-project.org/ R]* that renders some older routines non-functional. To take a conservative approach, we recommend the following installation:
 
   * R-2.8.1
 	
@@ -22,13 +22,16 @@ And look for something like this:
 
 	`"Packages in library 'C:/R/R-2.8.1/library':`
 
-= To follow along... =
+= What you need is to... =
 
-  * Make sure you have imported the sample dataset. Refer to the *StarterKit* to help you achieve that.
+  * Make sure you have the *StarterKit* files.
   
   * Inform yourself with an overview of the geolocation methods:
 
 		http://www.soest.hawaii.edu/PFRP/nov07mtg/nielsen.pdf
+		
+  * Refer to *[http://docs.google.com/leaf?id=0BwcYza_M2AiqZmVjNDBhYzgtMzBlZi00OTQ1LWE3NDAtNzRiYjhmYmJiOTEw&hl=en PFRP Trackit Workshop materials]* for more detailed tutorials
+  
 
 = Conducting a sample run of Trackit=
 
