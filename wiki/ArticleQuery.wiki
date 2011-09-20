@@ -30,17 +30,22 @@ http://tagbase.googlecode.com/svn/trunk/images/Query2007a.jpg
 
 == Query 1 - Extract time series data during a specific month  ==
 
-This example demonstrates how to you can filter your data. 
+{{{This example demonstrates how to you can filter your data.}}}
 
  * Create a new query by clicking the *Design* button (or *New* > *Design View* > *Ok* in older versions)
+
  * A *Show Table* dialog appears, stay in the default *Tables* tab
 
 http://tagbase.googlecode.com/svn/trunk/images/Query2000b1.jpg 
  
  * Scroll down the list to click and highlight the table, `Proc_Archival_TempLight`. Click *Add*
+
  * The fields of the `Proc_Archival_TempLight` table are exposed in the Query Designer, scroll or resize the mini-window to see them 
+
  * Click/ double-click on the asterick `*` at the top to add all fields to your query. The asterick is a wildcard operator that means "Select All"
+
  * Next, click/ double-click on the `DateTime` field to add it to the query. We will use this as our filter
+
  * Apply a function, `Month` such that we only extract the month part of `DateTime`. To apply this function, type in *Field* the following:
  `Month([DateTime])`
  
@@ -62,6 +67,7 @@ even though such naming convention is not recommended.
 http://tagbase.googlecode.com/svn/trunk/images/Query2000b2.jpg 
  
  * Hit the exclamation mark ! button (*Run*) to see the results
+
  * Close the query, and answer "Yes" when prompted to save the query.
  
 http://tagbase.googlecode.com/svn/trunk/images/Query2000b3.jpg
@@ -79,18 +85,20 @@ http://tagbase.googlecode.com/svn/trunk/images/QueryEx2.jpg
  
 == Query 2 - Summarize the daily maximum depth of a fish  ==
 
-We build upon the previous example and summarize your data as aggregated values (average, min or max).
+{{{We build upon the previous example and summarize your data as aggregated values (average, min or max).}}}
  
  * Start a new query, go to the tab, *Queries* when the *Show Table* dialog appears
  
 http://tagbase.googlecode.com/svn/trunk/images/Query2000c1.jpg
  
  * Since we have only constructed one query, click/ double-click to add `Query1`
+
  * From the toolbar/ ribbon, click on the summation sign, which is labeled *Totals*
  
 http://tagbase.googlecode.com/svn/trunk/images/Query2000c2.jpg
 
  * Add `TagID`, `Daily` and `Depth` from the field list of `Query1`
+
  * In the `Depth` field, click on the right-hand side downward arrow button to expand the options. Pick *Max* as the aggregating function.
 
 http://tagbase.googlecode.com/svn/trunk/images/Query2000c3.jpg
@@ -101,13 +109,36 @@ http://tagbase.googlecode.com/svn/trunk/images/Query2000c4.jpg
 
 == Query 3 - Extract the temperature experienced when a fish reached its daily maximum depth ==
 
- * Start a new query, from *Queries* tab of *Show Table* dialog, double-click/ click to add `Query1` and `Query2`
+{{{We again use the previous example and apply the query as a constraint to extract data}}}
 
-We again use the previous example and apply the query as a constraint to extract data
+ * Start a new query, from *Queries* tab of *Show Table* dialog, double-click/ click to add `Query1` and `Query2`
+ 
+ * We will use a powerful feature of databases called *[http://support.microsoft.com/kb/136699 "Join"]*. 
+ 
+ *Our joining fields are straightforward here. Between `Query1` and `Query2`, we will join up the following common fields:
+ 
+ 1. `TagID` <-> `TagID`
+ 2. `Daily` <-> `Daily`
+ 
+ and constraint `Depth` by `MaxOfDepth`
+ 
+ 3. `Depth` <-> `MaxOfDepth`
+ 
+ * To establish a join, click-and-drag on a field and release your click at the other end, at the field you wish to join. A line will connect the joined fields
+ 
+http://tagbase.googlecode.com/svn/trunk/images/Query2000d1.jpg 
+
+ * From `Query1`, select the fields, `TagID`, `DateTime`, `Depth` and `Temperature`
+ 
+ * Add to *Criteria* >=100 for `Depth` to show only results deeper than or equal to 100 m
+ 
+ * Hit the exclamation mark ! button (*Run*) to see the results
+ 
+http://tagbase.googlecode.com/svn/trunk/images/Query2000d2.jpg 
 
 == Query 4 - Associated our extract fish data with metadata ==
 
-Our final example shows how you can add metadata to your extract data for an informative presentation
+{{{Our final example shows how you can add metadata to your extract data for an informative presentation}}}
 
 == Further examples ==
 
