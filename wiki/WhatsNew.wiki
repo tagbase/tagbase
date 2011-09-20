@@ -10,7 +10,7 @@ We try to keep up with some software updates of Wildlife Computers DAP and GPE. 
 
 == Give our Starter kit a try ==
 
-We try to get you test-drive Tagbase by providing a StartKit going over key functionalities that you can utilize.
+We try to get you test-drive Tagbase by providing a StarterKit going over key functionalities that you can utilize.
 
 = July 2011 =
 
