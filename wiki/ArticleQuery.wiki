@@ -11,6 +11,8 @@ We will run through a set of queries to illustrate how you can interrogate your 
 = Accessing the Query Builder/ Query Designer = 
  
   * For Access 2003 and below, go to *Queries* under *Objects*. Click on the *Design* button.
+
+http://tagbase.googlecode.com/svn/trunk/images/Query2000a.jpg  
   
   * For Access 2007 or above, go to the *Create* tab. Click *Query Design* to start the builder.
   
@@ -22,7 +24,7 @@ http://tagbase.googlecode.com/svn/trunk/images/Query2007a.jpg
 
   * To keep it simple, our example only has 1 fish with time series data in the database. 
   
-  * You may also want to revisit the data model in Tagbase to facilitate you locating all the information you need. See *[ArticleTables Data tables and Relationships] for details.
+  * You may also want to revisit the data model in Tagbase to facilitate you locating all the information you need. See *[ArticleTables Data tables and Relationships]* for details.
 
 = Examples = 
 
@@ -32,8 +34,11 @@ This example demonstrates how to you can filter your data.
 
  * Create a new query by clicking the *Design* button (or *New* > *Design View* > *Ok* in older versions)
  * A *Show Table* dialog appears, stay in the default *Tables* tab
+
+http://tagbase.googlecode.com/svn/trunk/images/Query2000b1.jpg 
+ 
  * Scroll down the list to click and highlight the table, `Proc_Archival_TempLight`. Click *Add*
- * The fields of the `Proc_Archival_TempLight` table are exposed in the Query Designer, scroll or resize the mini-window to see them
+ * The fields of the `Proc_Archival_TempLight` table are exposed in the Query Designer, scroll or resize the mini-window to see them 
  * Click/ double-click on the asterick `*` at the top to add all fields to your query. The asterick is a wildcard operator that means "Select All"
  * Next, click/ double-click on the `DateTime` field to add it to the query. We will use this as our filter
  * Apply a function, `Month` such that we only extract the month part of `DateTime`. To apply this function, type the following:
@@ -46,17 +51,31 @@ This is particularly useful when a field name has spaces or special characters,
 even though such naming convention is not recommended.
  }}}
  
- * You can nickname (use an alias) your field, for example, since we will filter data out for the month of July, we write out our function as follows:
+ * You can nickname (use an alias) your field, for example, since we will filter data out for the month of July, we type out our function in *Field* as follows:
  `July: Month([DateTime])`
  
  * Type in the *Criteria*, 7, as our filter to get data from July
+ * Let's practice the use of another function, `DateValue`. This function is useful in returning only the date part of a date time stamp. Type 
+ `Daily: DateValue([DateTime])`
+ 
+http://tagbase.googlecode.com/svn/trunk/images/Query2000b2.jpg 
+ 
  * Hit the exclamation mark ! button (*Run*) to see the results
+ * Close the query, and answer "Yes" when prompted to save the query.
  
- * Use *[http://office.microsoft.com/en-us/access-help/examples-of-query-criteria-HA010066611.aspx these examples of query criteria]* provided by Microsoft to help you master filtering by criteria. For example, filtering by dates will need to bound a date with hash signs #, and take the form of 
+http://tagbase.googlecode.com/svn/trunk/images/Query2000b3.jpg
  
- `Between #12/1/2007# And #12/31/2007#`
+ * Accept the default query name, "Query1" and click *Ok* 
  
-
+http://tagbase.googlecode.com/svn/trunk/images/Query2000b4.jpg
+ 
+ * Useful Note 1 - use *[http://office.microsoft.com/en-us/access-help/examples-of-query-criteria-HA010066611.aspx these examples of query criteria]* provided by Microsoft to help you master filtering by criteria. For example, filtering by dates will need to bound a date with hash signs #, and take the form of  `Between #12/1/2007# And #12/31/2007#`.
+ 
+ * Useful Note 2 - unsure about what functions are available? Try the Expression Builder. Right-click on any *Field*, click on *Build*. Expand the *Functions* folder, and go to *Built-In Functions*. A list of the function categories and specific functions will then be listed in the other two boxes.
+ 
+http://tagbase.googlecode.com/svn/trunk/images/QueryEx1.jpg 
+http://tagbase.googlecode.com/svn/trunk/images/QueryEx2.jpg
+ 
 == Query 2 - Summarize the daily maximum depth of a fish  ==
 
 We build upon the previous example and summarize your data as aggregated values (average, min or max).
