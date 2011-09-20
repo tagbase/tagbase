@@ -30,7 +30,9 @@ http://tagbase.googlecode.com/svn/trunk/images/Query2007a.jpg
 
 == Query 1 - Extract time series data during a specific month  ==
 
-{{{This example demonstrates how to you can filter your data.}}}
+ {{{
+This example demonstrates how to you can filter your data.
+ }}}
 
  * Create a new query by clicking the *Design* button (or *New* > *Design View* > *Ok* in older versions)
 
@@ -85,7 +87,9 @@ http://tagbase.googlecode.com/svn/trunk/images/QueryEx2.jpg
  
 == Query 2 - Summarize the daily maximum depth of a fish  ==
 
-{{{We build upon the previous example and summarize your data as aggregated values (average, min or max).}}}
+ {{{
+We build upon the previous example and summarize your data as aggregated values (average, min or max).
+ }}}
  
  * Start a new query, go to the tab, *Queries* when the *Show Table* dialog appears
  
@@ -107,22 +111,27 @@ http://tagbase.googlecode.com/svn/trunk/images/Query2000c3.jpg
  
 http://tagbase.googlecode.com/svn/trunk/images/Query2000c4.jpg 
 
+ * Save query as `Query2`
+
 == Query 3 - Extract the temperature experienced when a fish reached its daily maximum depth ==
 
-{{{We again use the previous example and apply the query as a constraint to extract data}}}
+ {{{
+We again use the previous example and apply the query as a constraint to extract data
+ }}}
 
  * Start a new query, from *Queries* tab of *Show Table* dialog, double-click/ click to add `Query1` and `Query2`
  
  * We will use a powerful feature of databases called *[http://support.microsoft.com/kb/136699 "Join"]*. 
  
- *Our joining fields are straightforward here. Between `Query1` and `Query2`, we will join up the following common fields:
+ * Our joining fields are straightforward here. Between `Query1` and `Query2`, we will join up the following common fields:
  
- 1. `TagID` <-> `TagID`
- 2. `Daily` <-> `Daily`
+ `TagID` <-> `TagID`
+ 
+ `Daily` <-> `Daily`
  
  and constraint `Depth` by `MaxOfDepth`
  
- 3. `Depth` <-> `MaxOfDepth`
+ `Depth` <-> `MaxOfDepth`
  
  * To establish a join, click-and-drag on a field and release your click at the other end, at the field you wish to join. A line will connect the joined fields
  
@@ -136,9 +145,28 @@ http://tagbase.googlecode.com/svn/trunk/images/Query2000d1.jpg
  
 http://tagbase.googlecode.com/svn/trunk/images/Query2000d2.jpg 
 
+ * Save query as `Query3`
+
 == Query 4 - Associated our extract fish data with metadata ==
 
-{{{Our final example shows how you can add metadata to your extract data for an informative presentation}}}
+ {{{
+Our final example shows how you can add metadata to your extract data for an informative presentation
+ }}}
+ 
+  * Start a new query, from the *Show Table* dialog, double-click/ click to add query `Query3`, and tables `TagInfo`, `FishInfo` and `SpeciesInfo`
+  
+  * Some joins are established automatically (as part of Tagbase's design)
+  
+  * Join up `Query3` and `TagInfo` via the field, `TagID`
+  
+http://tagbase.googlecode.com/svn/trunk/images/Query2000e1.jpg  
+  
+ * Hit the exclamation mark ! button (*Run*) to see the results
+ 
+http://tagbase.googlecode.com/svn/trunk/images/Query2000e2.jpg 
+
+ * Save query as `Query4`
+  
 
 == Further examples ==
 
