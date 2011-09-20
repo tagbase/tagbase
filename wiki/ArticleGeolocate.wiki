@@ -28,7 +28,7 @@ And look for something like this:
   
   * Inform yourself with an overview of the geolocation methods:
 
-    * http://www.soest.hawaii.edu/PFRP/nov07mtg/nielsen.pdf *
+		http://www.soest.hawaii.edu/PFRP/nov07mtg/nielsen.pdf
 
 = Conducting a sample run of Trackit=
 
