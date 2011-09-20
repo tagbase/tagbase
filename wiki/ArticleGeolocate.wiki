@@ -41,10 +41,10 @@ And look for something like this:
   
   `C:\Tagbase\tagfiles\simulated\export\script.R`
   
-  Right-click to *Open with* a Notepad or any text file editor to see the code
+  * Right-click to *Open with* a Notepad or any text file editor to see the code
   
   {{{
-  # Note: delete the hash sign (#) to uncomment a line
+# Note: delete the hash sign (#) to uncomment a line
 
 # Preparation; define working directory
 setwd("C:/Tagbase/tagfiles/simulated/export")
@@ -69,3 +69,34 @@ save(tag2,tag3,file=savefile)
   }}}
   
   * Start up R, copy-and-paste lines or block of code to run the commands
+  
+http://tagbase.googlecode.com/svn/trunk/images/R1.jpg
+  
+= Exporting results from R Trackit for Tagbase=
+
+Assume we have run our tracks successfully, and everything is saved up in a R native format file (`simtracks.Rdata`), we can load everything up again and output the tracks for re-importing back to Tagbase.
+
+   * Locate your copy of R script (`exportTagbase.R`) that does everything for you here:
+   
+   `C:\Tagbase\tagfiles\simulated\outputs\exportTagbase.R`
+   
+   * Right-click to *Open with* a Notepad or any text file editor to see the code
+   
+   {{{
+# Note: delete the hash sign (#) to uncomment a line
+
+# Preparation; define working directory:
+setwd("C:/Tagbase/tagfiles/simulated/outputs")
+
+# Main code:
+
+source("fit2csv.R")
+load("simtracks.Rdata")
+fit2csv(tag2)
+fit2csv(tag3)
+   }}}   
+
+   * Start up R, copy-and-paste lines or block of code to run the commands
+   * A set of files (`a.csv`, `b.csv`, `c.csv`) will be generated for each tag
+   
+   
