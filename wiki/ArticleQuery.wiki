@@ -16,11 +16,27 @@ We will run through a set of queries to illustrate how you can interrogate your 
   
 http://tagbase.googlecode.com/svn/trunk/images/Query2007a.jpg
 
+= To follow along... =
+
+  # Make sure you have imported the sample dataset. Refer to the *StarterKit* to help you achieve that.
+
+  # To keep it simple, our example only has 1 fish with time series data in the database. 
+  
+  # You may also want to revisit the data model in Tagbase to facilitate you locating all the information you need. See *[ArticleTables Data tables and Relationships] for details.
+
 = Examples = 
 
-== Query 1 - Extract time series of a fish during a specific month  ==
+== Query 1 - Extract time series data during a specific month  ==
 
 This example demonstrates how to you can filter your data. 
+
+ * Create a new query by clicking the *Design* button (or *New* > *Design View* > *Ok* in older versions)
+ * A *Show Table* dialog appears, stay in the default *Tables* tab
+ * Scroll down the list to click and highlight the table, `Proc_Archival_TempLight`. Click *Add*
+ * The fields of the `Proc_Archival_TempLight` table are exposed in the Query Designer, scroll or resize the mini-window to see them
+ * Click/ double-click on the asterick `*` at the top to add all fields to your query. The asterick is a wildcard operator that means "Select All"
+ * Next, click/ double-click on the `DateTime` field to add it to the query. We will use this as our filter
+ * Apply a function, `Month` such that we only extract the month part of `DateTime`
 
 == Query 2 - Summarize the daily maximum depth of a fish  ==
 
