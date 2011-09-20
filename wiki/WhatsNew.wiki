@@ -10,13 +10,13 @@ We try to keep up with some software updates of Wildlife Computers DAP and GPE. 
 
 == Give our Starter kit a try ==
 
-We try to get you test-drive Tagbase by providing a StarterKit going over key functionalities that you can utilize.
+We try to get you test-drive Tagbase by providing a *StarterKit* going over key functionalities that you can utilize.
 
 = July 2011 =
 
 == Tagbase is published in PLOS One ==
 
-Check it out here: *http://dx.plos.org/10.1371/journal.pone.0021810*
+Check it out here: * http://dx.plos.org/10.1371/journal.pone.0021810 *
 
 = May 2011 =
 
