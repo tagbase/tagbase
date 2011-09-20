@@ -41,7 +41,7 @@ http://tagbase.googlecode.com/svn/trunk/images/Query2000b1.jpg
  * The fields of the `Proc_Archival_TempLight` table are exposed in the Query Designer, scroll or resize the mini-window to see them 
  * Click/ double-click on the asterick `*` at the top to add all fields to your query. The asterick is a wildcard operator that means "Select All"
  * Next, click/ double-click on the `DateTime` field to add it to the query. We will use this as our filter
- * Apply a function, `Month` such that we only extract the month part of `DateTime`. To apply this function, type the following:
+ * Apply a function, `Month` such that we only extract the month part of `DateTime`. To apply this function, type in *Field* the following:
  `Month([DateTime])`
  
   {{{ 
@@ -55,6 +55,7 @@ even though such naming convention is not recommended.
  `July: Month([DateTime])`
  
  * Type in the *Criteria*, 7, as our filter to get data from July
+ 
  * Let's practice the use of another function, `DateValue`. This function is useful in returning only the date part of a date time stamp. Type 
  `Daily: DateValue([DateTime])`
  
@@ -79,8 +80,28 @@ http://tagbase.googlecode.com/svn/trunk/images/QueryEx2.jpg
 == Query 2 - Summarize the daily maximum depth of a fish  ==
 
 We build upon the previous example and summarize your data as aggregated values (average, min or max).
+ 
+ * Start a new query, go to the tab, *Queries* when the *Show Table* dialog appears
+ 
+http://tagbase.googlecode.com/svn/trunk/images/Query2000c1.jpg
+ 
+ * Since we have only constructed one query, click/ double-click to add `Query1`
+ * From the toolbar/ ribbon, click on the summation sign, which is labeled *Totals*
+ 
+http://tagbase.googlecode.com/svn/trunk/images/Query2000c2.jpg
+
+ * Add `TagID`, `Daily` and `Depth` from the field list of `Query1`
+ * In the `Depth` field, click on the right-hand side downward arrow button to expand the options. Pick *Max* as the aggregating function.
+
+http://tagbase.googlecode.com/svn/trunk/images/Query2000c3.jpg
+ 
+ * Hit the exclamation mark ! button (*Run*) to see the results
+ 
+http://tagbase.googlecode.com/svn/trunk/images/Query2000c4.jpg 
 
 == Query 3 - Extract the temperature experienced when a fish reached its daily maximum depth ==
+
+ * Start a new query, from *Queries* tab of *Show Table* dialog, double-click/ click to add `Query1` and `Query2`
 
 We again use the previous example and apply the query as a constraint to extract data
 
