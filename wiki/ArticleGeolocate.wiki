@@ -6,17 +6,21 @@
 
 *[http://www.r-project.org/ R]* is being very rapidly developed and geolocation package may sometimes lag in catching up with fundamental changes made in *[http://www.r-project.org/ R]* that renders some older routines non-functional. To take a conservative approach, we recommend the following installation:
 
-  * R-2.8.1 from http://cran.r-project.org/bin/windows/base/old/2.8.1/
+  * R-2.8.1
+	
+		http://cran.r-project.org/bin/windows/base/old/2.8.1/
   
-  * Geolocation packages from [http://tagbase.googlecode.com/files/library.zip here]
+  * Geolocation packages
+  
+		http://tagbase.googlecode.com/files/library.zip
   
 Move the extracted package folders into the R library folder. To find out where your R library folder is located, type in R:
 
-`library()`
+	`library()`
 
 And look for something like this:
 
-`"Packages in library 'C:/R/R-2.8.1/library':`
+	`"Packages in library 'C:/R/R-2.8.1/library':`
 
 = To follow along... =
 
@@ -24,7 +28,7 @@ And look for something like this:
   
   * Inform yourself with an overview of the geolocation methods:
 
-    *http://www.soest.hawaii.edu/PFRP/nov07mtg/nielsen.pdf*
+    * http://www.soest.hawaii.edu/PFRP/nov07mtg/nielsen.pdf *
 
 = Conducting a sample run of Trackit=
 
@@ -60,3 +64,5 @@ tag3 <- trackit(pt, ss3.ph=4)
 
 save(tag2,tag3,file=savefile) 
   }}}
+  
+  * Start up R, copy-and-paste lines or block of code to run the commands
