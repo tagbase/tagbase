@@ -42,6 +42,10 @@ http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 === [ArticleMap#6._Requesting_and_visualizing_satellite_imagery_across_the_Internet 6. Requesting and visualizing satellite imagery across the Internet]===
 === [ArticleMap#7._Showing_track_data_within_a_temporal_window_of_a_satellite_image 7. Showing track data within a temporal window of a satellite image]===
 
+=== ===
+
+=== ===
+
 == 1. Shapefile generation ==
  *
  *
