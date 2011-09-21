@@ -24,6 +24,14 @@ This is one of the most exciting integration in Tagbase, with diverse functional
 
 = Major functionalities =
 
+  {{{
+
+  Hint - The MapWindow form has tool tips and status bar messages. 
+         Hoover your mouse over a button and hold for a second to show the tip.
+         It will tell you what that button does
+
+  }}}
+
 http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 
 ==== 1. Shapefile generation ====
