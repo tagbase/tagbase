@@ -26,17 +26,17 @@ http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 
 = Major functionalities =
 
-==== Shapefile generation ====
+==== 1. Shapefile generation ====
 
-==== Basic zooming, browsing and layering ====
+==== 2. Basic zooming, browsing and layering ====
 
-==== Coloring or labeling shapefile points by their attributes ====
+==== 3. Coloring or labeling shapefile points by their attributes ====
 
-==== Highlighting shapefile points with filters ====
+==== 4. Highlighting shapefile points with filters ====
 
-==== Dynamic interaction of shapefile points and tag data via the Identify button ====
+==== 5. Dynamic interaction of shapefile points and tag data via the Identify button ====
 
-==== Requesting and visualizing satellite imagery across the Internet ====
+==== 6. Requesting and visualizing satellite imagery across the Internet ====
 
-==== Showing track data within a temporal window of a satellite image ====
+==== 7. Showing track data within a temporal window of a satellite image ====
 
