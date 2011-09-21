@@ -1,6 +1,6 @@
 #summary Mapping with MapWinGis in Tagbase
 
-<wiki:toc max_depth="3" />
+<wiki:toc max_depth="4" />
 
 = Introduction =
 
@@ -22,19 +22,19 @@ http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 
 = Starting Map Window =
 
-* From *Forms*, double-click to open the form, *MapWindow*
+* From *Forms*, double-click to open the form, *`MapWindow`*
 
 = Major functionalities =
 
-=== Shapefile generation ===
+==== Shapefile generation ====
 
-=== Basic zooming, browsing and layering ===
+==== Basic zooming, browsing and layering ====
 
-=== Coloring or labeling shapefile points by their attributes ===
+==== Coloring or labeling shapefile points by their attributes ====
 
-=== Highlighting shapefile points with filters ===
+==== Highlighting shapefile points with filters ====
 
-=== Dynamic interaction of shapefile points and tag data via Identify Feature function ===
+==== Dynamic interaction of shapefile points and tag data via Identify Feature function ====
 
 === Requesting and visualizing satellite imagery across the Internet ===
 
