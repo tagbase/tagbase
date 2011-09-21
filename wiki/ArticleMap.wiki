@@ -33,7 +33,7 @@ http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 === [ArticleMap#3._Coloring_or_labeling_shapefile_points_by_their_attributes 3. Coloring or labeling shapefile points by their attributes]===
 === [ArticleMap#4._Highlighting_shapefile_points_with_filters 4. Highlighting shapefile points with filters]===
 === [ArticleMap#5._Dynamic_interaction_of_shapefile_points_and_tag_data_via_the_Identify_button 5. Dynamic interaction of shapefile points and tag data via the Identify button]===
-=== [ArticleMap#6._Requesting_and_visualizing_satellite_imagery_across_the_Internet 6. Requesting and visualizing satellite imagery across the Internet]===
+=== [ArticleMap#6._Obtaining_satellite_imagery_across_the_Internet 6. Obtaining satellite imagery across the Internet]===
 === [ArticleMap#7._Showing_track_data_within_a_temporal_window_of_a_satellite_image 7. Showing track data within a temporal window of a satellite image]===
 
   {{{
@@ -67,7 +67,7 @@ http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
  *
  *
 
-== 6. Requesting and visualizing satellite imagery across the Internet ==
+== 6. Obtaining satellite imagery across the Internet ==
  *
  *
  *
