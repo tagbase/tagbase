@@ -4,7 +4,19 @@
 
 = Introduction =
 
-This is one of the most exciting integration in Tagbase, with diverse functionalities from shapefile generation, oceanographic data download to interactive data lookup. We are still gathering comments on what other capabilities we should add. So check it out in the release of Tagbase 4.5, and help topics will soon be available.
+This is one of the most exciting integration in Tagbase, with diverse functionalities from shapefile generation, oceanographic data download to interactive data lookup. We are actively gathering comments on what other capabilities we should add or expand.
+
+= Requirements =
+
+ * Make sure you have installed all the necessary plugins. See   *[HowToInstallPlugins Plugins Installation]* for details.
+
+ * We only support [http://mapwingis.codeplex.com/releases/view/70023 MapWinGis 4.7] right now. More recent versions involve frequent updates to their basic functions, so we are sticking to an older, stable version for now.
+
+= Limitations = 
+
+ * Tagbase implements an ActiveX control of MapWinGis and only intends to offer some basic GIS visualization. We can't create publication-quality maps, although we have plans to integrate Tagbase and GMT plotting routine in the future for static map production.
+
+ * If you plan to conduct more sophisticated GIS operations, we recommend using Tagbase to help you generate the shapefiles you need. You can build a shapefile from tracks or any queries with two required fields, `longitude` and `latitude`
 
 = Details =
 
