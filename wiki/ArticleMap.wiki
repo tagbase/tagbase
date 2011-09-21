@@ -22,7 +22,7 @@ http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 
 = Starting Map Window =
 
-* From *Forms*, double-click to open the form, *`MapWindow`*
+ * From *Forms*, double-click to open the form, *`MapWindow`*
 
 = Major functionalities =
 
