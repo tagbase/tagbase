@@ -32,7 +32,7 @@ http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 === [ArticleMap#2._Basic_zooming,_browsing_and_layering 2. Basic zooming, browsing and layering]===
 === [ArticleMap#3._Coloring_or_labeling_shapefile_points_by_their_attributes 3. Coloring or labeling shapefile points by their attributes]===
 === [ArticleMap#4._Highlighting_shapefile_points_with_filters 4. Highlighting shapefile points with filters]===
-=== [ArticleMap#5._Using_track_positions_to_query_tag_data_via_the_Identify_button 5. Using track positions to query tag data via the Identify button]===
+=== [ArticleMap#5._Using_track_positions_to_query_tag_data 5. Using track positions to query tag data (the Identify Feature button)]===
 === [ArticleMap#6._Obtaining_satellite_imagery_across_the_Internet 6. Obtaining satellite imagery across the Internet]===
 === [ArticleMap#7._Showing_data_within_a_temporal_window_of_a_satellite_image 7. Showing data within a temporal window of a satellite image]===
 
@@ -62,7 +62,7 @@ http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
  *
  *
 
-== 5. Using track positions to query tag data via the Identify button ==
+== 5. Using track positions to query tag data ==
  *
  *
  *
