@@ -34,9 +34,9 @@ http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 
 ==== Highlighting shapefile points with filters ====
 
-==== Dynamic interaction of shapefile points and tag data via Identify Feature function ====
+==== Dynamic interaction of shapefile points and tag data via the Identify button ====
 
-=== Requesting and visualizing satellite imagery across the Internet ===
+==== Requesting and visualizing satellite imagery across the Internet ====
 
-=== Showing track data within a temporal window of a satellite image ===
+==== Showing track data within a temporal window of a satellite image ====
 
