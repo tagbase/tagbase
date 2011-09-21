@@ -1,10 +1,12 @@
 #summary Mapping with MapWinGis in Tagbase
 
-<wiki:toc max_depth="2" />
+<wiki:toc max_depth="3" />
 
 = Introduction =
 
 This is one of the most exciting integration in Tagbase, with diverse functionalities from shapefile generation, oceanographic data download to interactive data lookup. We are actively gathering comments on what other capabilities we should add or expand.
+
+http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 
 = Requirements =
 
@@ -14,12 +16,27 @@ This is one of the most exciting integration in Tagbase, with diverse functional
 
 = Limitations = 
 
- * Tagbase implements an ActiveX control of MapWinGis and only intends to offer some basic GIS visualization. We can't create publication-quality maps, although we have plans to integrate Tagbase and GMT plotting routine in the future for static map production.
+ * Tagbase implements an ActiveX control of !MapWinGis and only intends to offer some basic GIS visualization. We can't create publication-quality maps, although we have plans to integrate Tagbase and GMT plotting routine in the future for static map production.
 
- * If you plan to conduct more sophisticated GIS operations, we recommend using Tagbase to help you generate the shapefiles you need. You can build a shapefile from tracks or any queries with two required fields, `longitude` and `latitude`
+ * If you plan to conduct more sophisticated GIS operations, we recommend using Tagbase to help you generate the shapefiles you need. You can build a shapefile from tracks or any queries with two required fields, *`longitude`* and *`latitude`*.
 
-= Details =
+= Starting Map Window =
 
-Check back later for help topics 
+* From *Forms*, double-click to open the form, *MapWindow*
 
-http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
+= Major functionalities =
+
+=== Shapefile generation ===
+
+=== Basic zooming, browsing and layering ===
+
+=== Coloring or labeling shapefile points by their attributes ===
+
+=== Highlighting shapefile points with filters ===
+
+=== Dynamic interaction of shapefile points and tag data via Identify Feature function ===
+
+=== Requesting and visualizing satellite imagery across the Internet ===
+
+=== Showing track data within a temporal window of a satellite image ===
+
