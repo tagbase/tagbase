@@ -20,17 +20,11 @@ This is one of the most exciting integration in Tagbase, with diverse functional
 
 = Starting Map Window =
 
- * From *Forms*, double-click to open the form, *`MapWindow`*
+ * From *Forms*, double-click to open the form, `MapWindow`
+
+ * You also need to have tracking data imported in Tagbase. They can be raw geolocation positions, Argos/GPS positions or analysed tracks.
 
 = Major functionalities =
-
-  {{{
-
-  Hint - The MapWindow form has tool tips and status bar messages. 
-         Hoover your mouse over a button and hold for a second to show the tip.
-         It will tell you what that button does
-
-  }}}
 
 http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 
@@ -42,9 +36,13 @@ http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 === [ArticleMap#6._Requesting_and_visualizing_satellite_imagery_across_the_Internet 6. Requesting and visualizing satellite imagery across the Internet]===
 === [ArticleMap#7._Showing_track_data_within_a_temporal_window_of_a_satellite_image 7. Showing track data within a temporal window of a satellite image]===
 
-=== ===
+  {{{
 
-=== ===
+  Hint - The MapWindow form has tool tips and status bar messages. 
+         Hoover your mouse over a button and hold for a second to show the tip.
+         It will tell you what that button does
+
+  }}}
 
 == 1. Shapefile generation ==
  *
