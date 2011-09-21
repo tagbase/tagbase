@@ -8,6 +8,6 @@ This is one of the most exciting integration in Tagbase, with diverse functional
 
 = Details =
 
-Check back later for tutorial videos :) 
+Check back later for help topics 
 
 http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
