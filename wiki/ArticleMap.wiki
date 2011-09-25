@@ -62,12 +62,12 @@ _You make the necessary selections from left to right:_
 _Zooming and browsing operations can be carried out via the vertical button bar on the right_
 
  The zooming buttons from top to bottom are:
- * *Zoom In*
- * *Zoom Out*
- * *Pan*
- * *Zoom to Full Extent*
- * *Previous Zoom*
- * *Zoom to Layer Extent*
+ * Zoom In
+ * Zoom Out
+ * Pan
+ * Zoom to Full Extent
+ * Previous Zoom
+ * Zoom to Layer Extent
 
 _Layering can be done using the *Layers* panel on the left-handed side of the form _ 
 
