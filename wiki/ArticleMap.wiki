@@ -103,9 +103,19 @@ _You make the necessary selections from left to right:_
  * *Clear colors* - click on it to revert to the default color for all shapes, which is the *Color Square* to the left. Double-click on the *Color Square* to change and pick your own default color.
 
 == 4. Highlighting shapefile shapes with filters ==
- * 
- *
- *
+_You make the necessary selections from left to right:_
+ * Make sure you have selected a shapefile and an attribute from the listboxes
+ * *Parameter* - shows the field you have selected from the *Fields* list. This box will be activated once you finish making all the selections and having clicked *Apply*.
+ * *Color* - select one of the colors from the list, or choose your own by selecting the `Custom` option from the pull-down list.
+ * *Keep existing colors* - your previous highlighted shapes will retain their coloring. New colors will be updated for the shapes that meet your current criteria
+ * *>=* or *<=* - used for defining criteria for a numerical attribute in *Fields*
+ * *=* - used for defining criteria for a string attribute in *Fields*
+ * *Filter by value* - enter a number as the filtering (i.e. highlighting) criteria
+ * *or string* - enter a string here as the filtering (i.e. highlighting) criteria
+ * *Display all points* - retain all shapes while coloring those that match your criteria
+ * *Hide < or > limit* - show only shapes that meet your criteria
+ * *Hide = zero* - hide shapes with a zero value (only for numerical attributes)
+ * *Apply* - click to apply your highlighting selections
 
 == 5. Using track positions to query tag data ==
  *
