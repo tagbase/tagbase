@@ -107,9 +107,9 @@ _You make the necessary selections from left to right:_
  * Make sure you have selected a shapefile and an attribute from the listboxes
  * *Parameter* - shows the field you have selected from the *Fields* list. This box will be activated once you finish making all the selections and having clicked *Apply*.
  * *Color* - select one of the colors from the list, or choose your own by selecting the `Custom` option from the pull-down list.
- * *Keep existing colors* - your previous highlighted shapes will retain their coloring. New colors will be updated for the shapes that meet your current criteria
- * *>=* or *<=* - used for defining criteria for a numerical attribute in *Fields*
- * *=* - used for defining criteria for a string attribute in *Fields*
+ * *Keep existing colors* - your previously highlighted shapes will retain their coloring. New colors will be updated for the shapes that meet your current criteria
+ * *>=* or *<=* used for defining criteria for a numerical attribute in *Fields*
+ * *=* used for defining criteria for a string attribute in *Fields*
  * *Filter by value* - enter a number as the filtering (i.e. highlighting) criteria
  * *or string* - enter a string here as the filtering (i.e. highlighting) criteria
  * *Display all points* - retain all shapes while coloring those that match your criteria
