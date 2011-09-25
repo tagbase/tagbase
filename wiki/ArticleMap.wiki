@@ -38,7 +38,7 @@ http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 
   {{{
   Hint - The MapWindow form has tool tips and status bar messages. 
-         Hoover your mouse over a button and hold for a second to show the tip.
+         Hover your mouse over a button and hold for a second to show the tip.
          It will tell you what that button does
   }}}
 
@@ -54,15 +54,36 @@ _You make the necessary selections from left to right:_
  * *Estimate sunrise/ sunset* - checking this box will approximate sunrise/sunset times based on date, latitude & longitude information and [http://www.srrb.noaa.gov/highlights/sunrise/sunrise.html NOAA computational routines]. This option is only available when `Interpolate missing days` is turned on.
 
 == 2. Basic zooming, browsing and layering ==
+
+ * Make sure you click on the name of a shapefile to highlight a layer before you perform an operation on the layer
+
+ * The order in which the shapefiles appear will remain in the order you have added them i.e. a persistent ordering. This constraint is present due to the need to ensure compatibility with older MS Access versions.
+
 _Zooming and browsing operations can be carried out via the vertical button bar on the right_
 
-
+ The zooming buttons from top to bottom are:
+ * *Zoom In*
+ * *Zoom Out*
+ * *Pan*
+ * *Zoom to Full Extent*
+ * *Previous Zoom*
+ * *Zoom to Layer Extent*
 
 _Layering can be done using the *Layers* panel on the left-handed side of the form _ 
- * Make sure you click on the name of a shapefile to highlight a layer before you perform an operation on the layer
- * The order in which the shapefiles appear will remain in the order you have added them i.e. a persistent ordering. This constraint is present due to the need to ensure compatibility with older Access versions.
 
+ The layering buttons from left to right and top to bottom are:
+ * Pin to Top 
 
+ * Add Shapefile
+ * Add Image (previously downloaded images)
+ * Remove All Layers
+ * Remove Selected Layer
+
+ * Visible/ Invisible
+ * Move to Top
+ * Move Up
+ * Move Down
+ * Move to Bottom
 
 == 3. Coloring or labeling shapefile points by their attributes ==
  *
