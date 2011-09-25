@@ -30,7 +30,7 @@ http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 
 === [ArticleMap#1._Shapefile_generation 1. Shapefile generation] ===
 === [ArticleMap#2._Basic_zooming,_browsing_and_layering 2. Basic zooming, browsing and layering]===
-=== [ArticleMap#3._Coloring_or_labeling_shapefile_points_by_their_attributes 3. Coloring or labeling shapefile points by their attributes]===
+=== [ArticleMap#3._Labeling_or_coloring_shapefile_points_by_their_attributes 3. Labeling or coloring shapefile points by their attributes]===
 === [ArticleMap#4._Highlighting_shapefile_points_with_filters 4. Highlighting shapefile points with filters]===
 === [ArticleMap#5._Using_track_positions_to_query_tag_data 5. Using track positions to query tag data (the Identify Feature button)]===
 === [ArticleMap#6._Obtaining_satellite_imagery_across_the_Internet 6. Obtaining satellite imagery across the Internet]===
@@ -59,7 +59,7 @@ _You make the necessary selections from left to right:_
 
  * The order in which the shapefiles appear will remain in the order you have added them i.e. a persistent ordering. This constraint is present due to the need to ensure compatibility with older MS Access versions.
 
-_Zooming and browsing operations can be carried out via the vertical button bar on the right_
+ _Zooming and browsing operations can be carried out via the vertical button bar on the right_
 
  The zooming buttons from top to bottom are:
  * Zoom In
@@ -69,9 +69,9 @@ _Zooming and browsing operations can be carried out via the vertical button bar 
  * Previous Zoom
  * Zoom to Layer Extent
 
-_Layering can be done using the *Layers* panel on the left-handed side of the form _ 
+ _Layering can be done using the *Layers* panel on the left-handed side of the form _ 
 
- The layering buttons from left to right and top to bottom are:
+ The layering buttons from left to right, then top to bottom are:
  * Pin to Top 
 
  * Add Shapefile
@@ -79,19 +79,31 @@ _Layering can be done using the *Layers* panel on the left-handed side of the fo
  * Remove All Layers
  * Remove Selected Layer
 
- * Visible/ Invisible
+ * Turn Visible/ Invisible
  * Move to Top
  * Move Up
  * Move Down
  * Move to Bottom
 
-== 3. Coloring or labeling shapefile points by their attributes ==
- *
- *
- *
+== 3. Labeling or coloring shapefile points by their attributes ==
+
+ * Make sure you have selected a shapefile and an attribute from the listboxes in order to perform any labeling or coloring
+ * Coloring by attribute only works for a numerical attribute field (i.e. you can't color by a string/ text attribute field). Use the next topic to achieve [ArticleMap#4._Highlighting_shapefile_points_with_filters coloring by a string attribute field] instead
+
+ The labeling/coloring buttons from left to right, then top to bottom are:
+ * Show All Shapes (the _Spectacles_ icon)
+
+ * Add Labels
+ * Remove Labels
+ * Remove All Screen Labels
+ * Color Shapes by Attribute
+
+ * When you click on the *Color Shapes by Attribute* button, shapes (track positions) will be automatically colored using the palette right beneath the _*Fields*_ listbox, using the minimum and maximum values of your selected field. 
+ * *Auto* or *User* - You can specify the range of colored values by switching from *Auto* to *User* from the adjacent pull-down menu, then enter the values for `min` and `max` on both sides of the palette bar.
+ * *Clear colors* - click on it to revert to the default color for all shapes, which is the *Color Square* to the left. Double-click on the *Color Square* to change and pick your own default color.
 
 == 4. Highlighting shapefile points with filters ==
- *
+ * 
  *
  *
 
