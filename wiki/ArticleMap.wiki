@@ -44,7 +44,7 @@ http://tagbase.googlecode.com/svn/trunk/images/mapwindow.jpg
 
 == 1. Shapefile generation ==
 _You make the necessary selections from left to right:_
- * *Create shapefile in folder* - type out the directory where you want to save the generated shapefile. You can also double-click to start the Browse-To dialog.
+ * *Create shapefile in folder* - type out the directory where you want to save the generated shapefile. You can also double-click to start the Browse-To dialog. Make sure this directory path is not empty, and that the directory exists in your computer.
  * *Analysed positions* - track data are obtained from `Analysis_Outputs` table. You need to have imported track data through procedures described in [ArticleGeolocate Running and importing a geolocation analysis]; or when you import a `LightLoc.csv` with saved results from the [ArticleWcDap#Utilizing_Kalman_filter/_Trackit_interfaces_in_GPE Kalman filter interface] of Wildlife Computers GPE software
  * *Raw positions* - track data from standard manufacturer processing in the following tables: `Proc_WC_Locations`, `Proc_SPOT_Locations`, `Proc_LTD_DayLog`, `Proc_Archival_Location`, `Proc_MT_Location`.
  * *User-defined query* - you can make a shapefile from a query or table, as long as you have 2 required fields: `longitude` and `latitude`. Other fields in your query/table will be saved to the shapefile as attributes. Note however, there is a 10-character limit to the names of attributes (`MapWinGis` limitation). Try use the [ArticleQuery#Query_1_-_Extract_time_series_data_during_a_specific_month alias technique] of a query to get around this problem.
@@ -118,14 +118,41 @@ _You make the necessary selections from left to right:_
  * *Apply* - click to apply your highlighting selections
 
 == 5. Using track positions to query tag data ==
- *
- *
- *
+ _When you display a track as a shapefile with the following fields/ attributes (`TagID`, `DateTime`), Tagbase is able to look up the tag data that accompanies the waypoint of a track. To do so, _
+ * Click on the *Identify Feature* button 
+ * Click on a point or do a click-and-drag to window a selection of points
+ * A plot form will appear according to your selection of a point/ points
+ * If you want to expand your selection by specifying how many days before and after the datetime stamp(s) of point(s), enter the number of days in *Show more (days)* before you make your selection.
+ * We only support certain plot forms (*Pre-set defaults*) according to the tag type of your selection. Other plot forms will be supported in the near future via the pull-down menu *Plotting form*. Feel free to make a request using the wiki commenting.
+ * The `Identify Feature` button will also function when you select a image on the `Layers` list. You can click on any pixel of an image to get the physical value displayed on the image as a label. The latitude-longitude-physical value will also be displayed on the *Info bar*.
 
 == 6. Obtaining satellite imagery across the Internet ==
- *
- *
- *
+_You make the necessary selections from left to right:_
+ * *Pick a Data Product* - from the pull-down menu, choose one of the default products or use `Choose your own` or `Last One used`. When you `Choose your own`, a new form will appear that takes you to a [http://coastwatch.pfeg.noaa.gov/erddap/index.html NOAA ERDDAP] catalog. Click on any link of a data product (*data*, *graph* or *M*) to make a selection. When the page is loaded completely, click on *Use this* and *Confirm & Close* to inform Tagbase of your satellite product of choice. 
+
+http://tagbase.googlecode.com/svn/trunk/images/Erddap.jpg
+
+  {{{
+  Note - Not all products on the NOAA ERDDAP catalog are supported. Only the "griddap" products will display properly in the MapWindow form. This is because only "griddap" products are formatted correctly as a raster X-Y 2-dimensional image.
+  }}}
+
+ * *Variable* - once you have selected a data product, the available variable(s) for plotting will be updated. Pick from the list one of the variables when more than one variables are available.
+ * *Extents* - choose `User` when you want to specific the lat-lon box for which data will be obtained. Select `Map` when you want Tagbase to approximate the correct lat-lon box using your current zoom-level on the displayed map.
+ * *Lon Min*, *Lat Min*, *Lon Max*, *Lat Max* - allow you to define the boundaries of the lat-lon box where data are downloaded. Notice that when you have first selected the product, these boxes are updated with the extents of the data product. For example, if you have chosen a regional product, you will not be able to request data outside the boundaries as specified by the filled-in values here. Also, data products may use different longitude conventions, i.e from 0-360 or -180 to 180 degrees. Our filled-in values will likely to tell you which longitude convention is used by that particular data product.
+ * *Start Date* - the earliest available date for the data product of your choice will be displayed here. Enter a different (later) start date in the form of year/month/day when appropriate.
+ * *Download 1 only*- check on by default, which means only 1 image is downloaded. Uncheck to download more than one image, where you will see the *End Date* being activated.
+ * *End Date* - the last available date for the data product of your choice will be displayed here. Enter a different (earlier) end date in the form of year/month/day when appropriate. This option will only be available when *Download 1 only* is unchecked
+ * *Resolution* - choose the resolution of the downloaded image. So data product offers very high-resolution images and will take a long time to download. Choose a low-resolution to speed up the transfer. 
+
+  {{{
+  Note - Tagbase overlays a downloaded image as a static .PNG file onto the MapWindow. Alignment can be off slightly as a function of the resolution, i.e. an image may not align completely with the world map shapefile (continent.shp) when the resolution of the image is coarse. Please excuse us for this approximation, as we are not trying to become a full-blown GIS system. 
+  }}}
+
+ * *For every 1 timestep* - your selected data product might be offered on a very frequent (daily) basis. If you prefer to shorten the download and obtain images every other day or every 5 days, enter the number of (every ?) timesteps you want to download.
+ * *Image folder* - type out the directory where you want to save the downloaded images. You can also double-click to start the Browse-To dialog. Make sure this directory path is not empty, and that the directory exists in your computer.
+ * *Download* - click the *Download* to initiate download. A window will pop-up in the background to show the progress of every downloading image. 
+ * *Color bar* and *min*/*max* specification - an image is downloaded with the default *min*/*max* specification of your selected data product. You can change this range by switching from *Auto* to *User* here, and then enter the values in the boxes on the both sides of the color bar. A different palette (default is *Rainbow*) can also be selected through the pull-down menu. When you change the range or palette, you will need to re-download the image by clicking the *Reload* button.
+ * *Reload* - click on this button to re-download an image when you have changed the range or palette.
 
 == 7. Showing data within a temporal window of a satellite image ==
  *
