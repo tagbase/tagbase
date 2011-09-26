@@ -4,6 +4,10 @@ Welcome to the What's New page for Project Tagbase. Here you'll find description
 
 = September 2011 =
 
+== All-new Help articles ==
+
+We have largely expanded our help topics. Hopefully you will find them useful and make your usage experience of Tagbase better. Suggest topics that you want to see us cover too. 
+
 == Tagbase 4.6 is released ==
 
 We try to keep up with some software updates of Wildlife Computers DAP and GPE. This release supports multiple tag import from one single set of Wildlife Computer output files.
@@ -11,6 +15,10 @@ We try to keep up with some software updates of Wildlife Computers DAP and GPE. 
 == Give our Starter kit a try ==
 
 We try to get you test-drive Tagbase by providing a *StarterKit* going over key functionalities that you can utilize.
+
+== New contributors ==
+
+We warmly welcome our colleagues, Ben Galaurdi of Large Pelagics Research Center (UMass Amherst) and Tim Sippel of Pelagics Fisheries Research Program (U Hawaii)/ NOAA Southwest Fisheries Science Center as contributors to our project.
 
 = July 2011 =
 
