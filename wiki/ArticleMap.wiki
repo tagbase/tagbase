@@ -133,7 +133,10 @@ _You make the necessary selections from left to right:_
 http://tagbase.googlecode.com/svn/trunk/images/Erddap.jpg
 
   {{{
-  Note - Not all products on the NOAA ERDDAP catalog are supported. Only the "griddap" products will display properly in the MapWindow form. This is because only "griddap" products are formatted correctly as a raster X-Y 2-dimensional image.
+  Note - Not all products on the NOAA ERDDAP catalog are supported. 
+Only the "griddap" products will display properly in the MapWindow form. 
+This is because only "griddap" products are formatted correctly as a 
+raster X-Y 2-dimensional image.
   }}}
 
  * *Variable* - once you have selected a data product, the available variable(s) for plotting will be updated. Pick from the list one of the variables when more than one variables are available.
@@ -145,7 +148,12 @@ http://tagbase.googlecode.com/svn/trunk/images/Erddap.jpg
  * *Resolution* - choose the resolution of the downloaded image. So data product offers very high-resolution images and will take a long time to download. Choose a low-resolution to speed up the transfer. 
 
   {{{
-  Note - Tagbase overlays a downloaded image as a static .PNG file onto the MapWindow. Alignment can be off slightly as a function of the resolution, i.e. an image may not align completely with the world map shapefile (continent.shp) when the resolution of the image is coarse. Please excuse us for this approximation, as we are not trying to become a full-blown GIS system. 
+  Note - Tagbase overlays a downloaded image as a static .PNG file 
+onto the MapWindow. Alignment can be off slightly as a function of 
+the resolution, i.e. an image may not align completely with the world 
+map shapefile (continent.shp) when the resolution of the image is coarse. 
+Please excuse us for this approximation, as we are not trying to become a 
+full-blown GIS system. 
   }}}
 
  * *For every 1 timestep* - your selected data product might be offered on a very frequent (daily) basis. If you prefer to shorten the download and obtain images every other day or every 5 days, enter the number of (every ?) timesteps you want to download.
