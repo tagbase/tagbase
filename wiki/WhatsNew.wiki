@@ -18,7 +18,7 @@ We try to get you test-drive Tagbase by providing a *StarterKit* going over key 
 
 == New contributors ==
 
-We warmly welcome our colleagues, Ben Galaurdi of Large Pelagics Research Center (UMass Amherst) and Tim Sippel of Pelagics Fisheries Research Program (U Hawaii)/ NOAA Southwest Fisheries Science Center as contributors to our project.
+We warmly welcome our colleagues, Ben Galaurdi of [http://www.tunalab.org/Large Pelagics Research Center (UMass Amherst)] and Tim Sippel of Pelagics Fisheries Research Program (U Hawaii)/ NOAA Southwest Fisheries Science Center as contributors to our project.
 
 = July 2011 =
 
