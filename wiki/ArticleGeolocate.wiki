@@ -98,6 +98,10 @@ fit2csv(tag3)
 
    * Start up R, copy-and-paste lines or block of code to run the commands
    * A set of output files (e.g `tag2a.csv`, `tag2b.csv`, `tag2c.csv`) will be generated for each tag
+   The output files are:
+   * `-a.csv` - track points
+   * `-b.csv` - model parameters
+   * `-c.csv` - initialization values to model
 
 = Setting up an analysis import file for Tagbase = 
 
