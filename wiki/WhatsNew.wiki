@@ -2,6 +2,14 @@
 
 Welcome to the What's New page for Project Tagbase. Here you'll find descriptions of our latest and exciting improvements.
 
+= November 2011 =
+
+== Tagbase 4.7 is released ==
+
+We put in quite a bit of work to improve import support for Microwave Telemetry (MT) tags. Plus, this version features a new plotting form for MT data, which includes coloring of depth time series by corresponding temperature values. 
+
+MapWindow now also supports display of polygons, which can be constructed based on your start/end and preliminary track positions. You can use these polygons to subset and access your tag data!
+
 = September 2011 =
 
 == All-new Help articles ==
