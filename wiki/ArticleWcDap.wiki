@@ -67,7 +67,7 @@ for now if you are using DAP to process multiple archival tags.
   
 http://tagbase.googlecode.com/svn/trunk/images/ImportJob4.jpg
 
-  * The Wildlife Computers DAP processing workflow has changed between different releases of DAP versions (2 & 3). At any point in time, you *should keep only 1 most-updated copy* of the "LightLoc.csv" file for each tag, especially when you perform any geolocation processing with GPE.
+  * The Wildlife Computers DAP processing workflow has changed between different releases of DAP versions (2 & 3). At any point in time, you *should keep only 1 most-updated copy* of the "`LightLoc.csv`" file for each tag, especially when you perform any geolocation processing with GPE.
  
 {{{ 
 Tips -
