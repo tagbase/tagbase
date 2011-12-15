@@ -34,7 +34,7 @@ http://tagbase.googlecode.com/svn/trunk/images/WcDap3.jpg
   
   * Save the results, "File" > "Save" as a .wcg2 file to your preferred location for later use
 
-  * Export the results back to a "LightLoc.csv" via "File" > "Export results in CSV format"
+  * Export the results back to a "`LightLoc.csv`" via "File" > "Export results in CSV format"
 
 http://tagbase.googlecode.com/svn/trunk/images/WcGpe2.jpg
 
@@ -101,4 +101,3 @@ during the import, leading to duplicating data records.
  * Screenshot B
  
  http://tagbase.googlecode.com/svn/trunk/images/WcDapB.jpg
-
