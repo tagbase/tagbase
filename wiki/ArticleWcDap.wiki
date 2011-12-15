@@ -102,4 +102,4 @@ during the import, leading to duplicating data records.
  
  http://tagbase.googlecode.com/svn/trunk/images/WcDapB.jpg
 
- * Remember, for the time-at-depth or time-at-temperature data to display properly, you will need to supply all your setup .htm files as well. Or you specify the `BinSampleInterval`, `BinID_Depth` and `BinID_Temperature` for each new tag to import. See *[ArticleImport#for_Wildlife_Computers_PAT_tags_(Orange) here]* for details.
+ * *Remember*, for the time-at-depth or time-at-temperature data to display properly, you will need to supply all your setup .htm files as well. Or you specify the `BinSampleInterval`, `BinID_Depth` and `BinID_Temperature` for each new tag to import. See *[ArticleImport#for_Wildlife_Computers_PAT_tags_(Orange) here]* for details.
