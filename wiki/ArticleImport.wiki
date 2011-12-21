@@ -135,7 +135,10 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportJob2.jpg
 
 {{{ 
 Tips -
-Alternatively - when you supply setup files (.htm) during WC DAP processing, these information will be embedded in your output .csv files. In that case, Tagbase will gather the required information from there.
+Alternatively - when you supply setup files (.htm) during WC DAP 
+processing, these information will be embedded in your output .csv 
+files. In that case, Tagbase will gather the required information 
+from there.
 }}}
 
 ====  Optional fields ====
