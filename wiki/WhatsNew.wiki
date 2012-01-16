@@ -2,13 +2,6 @@
 
 Welcome to the What's New page for Project Tagbase. Here you'll find descriptions of our latest and exciting improvements.
 
-= January 2012 =
-
-== Chasing the Red Queen ==
-
-Well, we often found ourselves chasing after manufacturer updates in their software, none more so than Wildlife Computers! Thanks to one of our collaborators in alerting us, the DAP and GPE software maintained their version numbers, while underneath the hood, data are outputted very differently in their files. While we understand they are making changes and upgrades, we would appreciate a change in version numbers, otherwise it is just a sad and pointless chase and troubleshooting.
-
-Anyhow, please be patient with us as we will update our code and wiki pages to reflect their unannounced changes.
 
 = December 2011 =
 
