@@ -10,7 +10,11 @@ This page shares some of our experiences in working with the software suite of [
 
 == Mixed processing of tags/ decoding of Argos messages ==
 
-  * DAP allows simple drag-and-drop operation of any number of Argos messages (DS files in the form of .txt), Wildlife Computer binary files (.wch), and tag setup files (.htm) from Windows Explorer. One approach to data processing involves saving all available Argos messages and setup files into 1 folder, and dragging that entire folder to DAP. If you want to apply a filter, via specific PTT IDs (Argos platform transmitter IDs), you will need to click on "Filter" and fill out a form *before* you drag-and-drop. 
+  * DAP allows simple drag-and-drop operation of any number of Argos messages (DS files in the form of .txt), Wildlife Computer binary files (.wch), and tag setup files (.htm) from Windows Explorer. 
+
+  * One approach to data processing involves saving all available Argos messages and setup files into 1 folder, and dragging that entire folder to DAP. 
+
+  * If you want to apply a filter, via specific PTT IDs (Argos platform transmitter IDs), you will need to click on "Filter" and fill out a form *before* you drag-and-drop. 
 
 http://tagbase.googlecode.com/svn/trunk/images/WcDap1.jpg
 
@@ -24,7 +28,15 @@ http://tagbase.googlecode.com/svn/trunk/images/WcDap2.jpg
 
   * There are 2 ways to invoke GPE: 
 
-  1. *Standalone*: Start "Global Position Estimator" from your Windows Start menu (under Wildlife Computers), drag-and-drop a "LightLoc.csv" file (that you have generated from DAP) or a previously processed GPE file (.wcg2).
+  1. *Within DAP*: through the menu bar of DAP Processor (Tag > Light Level Global Position Estimator).
+ 
+http://tagbase.googlecode.com/svn/trunk/images/WcDap3.jpg
+
+  * Select a tag to process or wait until automated processing is completed. Make adjustments where appropriate (you will have to consult Wildlife Computers documentation/ customer service for assistance).
+
+  * In order to save your estimated positions, you should save the entire workspace via "File" > "Save Workspace", a file with the extension ".wcdap" will be generated.
+
+  2. *Standalone*: Start "Global Position Estimator" from your Windows Start menu (under Wildlife Computers), drag-and-drop a "LightLoc.csv" file (that you have generated from DAP) or a previously processed GPE file (.wcg2).
   
 http://tagbase.googlecode.com/svn/trunk/images/WcGpe1.jpg  
 
@@ -34,13 +46,6 @@ http://tagbase.googlecode.com/svn/trunk/images/WcGpe1.jpg
 
 http://tagbase.googlecode.com/svn/trunk/images/WcGpe2.jpg
   
-  2. *Within DAP*: through the menu bar of DAP Processor (Tag > Light Level Global Position Estimator).
- 
-http://tagbase.googlecode.com/svn/trunk/images/WcDap3.jpg
-
-  * Select a tag to process or wait until automated processing is completed. Make adjustments where appropriate (you will have to consult Wildlife Computers documentation/ customer service for assistance).
-
-  * In order to save your estimated positions, you should save the entire workspace via "File > Save Workspace", a file with the extension ".wcdap" will be generated.
 
 == Utilizing Kalman filter/ Trackit interfaces in GPE ==    
 
