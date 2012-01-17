@@ -113,11 +113,11 @@ contents or remove existing DAP files/ folder, as Tagbase will append to existin
 during the import, leading to duplicating data records. 
 }}}
 
- * Screenshot A
+ * Screenshot A - Keeping things simple, processing 1 tag at a time
  
  http://tagbase.googlecode.com/svn/trunk/images/WcDapA.jpg
  
- * Screenshot B
+ * Screenshot B - Mixed processing, with additional files for GPE positions
  
  http://tagbase.googlecode.com/svn/trunk/images/WcDapB.jpg
 
