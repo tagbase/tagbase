@@ -38,7 +38,9 @@ http://tagbase.googlecode.com/svn/trunk/images/WcDap3.jpg
 
 http://tagbase.googlecode.com/svn/trunk/images/WcGpe1.jpg  
 
-  * In order to save your estimated positions, you should save the entire workspace via "File" > "Save Workspace", a file with the extension ".wcdap" will be generated.
+  * Return to DAP by saving the results of GPE via "File" > "Save Changes and Close" 
+
+  * In order to keep your estimated positions, you should save the entire workspace in DAP via "File" > "Save Workspace", a file with the extension ".wcdap" will be generated.
 
 ==== 2. *Standalone* ====
 
