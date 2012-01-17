@@ -22,21 +22,24 @@ If you open any one of the many .csv files, you will find "DeployID" and it is e
 
 == Obtaining manufacturer light-based geolocation estimates via GPE ==
 
-  * Start "Global Position Estimator" from your Windows Start menu (under Wildlife Computers), drag-and-drop a "LightLoc.csv" file or a previously processed GPE file (.wcg2).
+  * There are two ways to invoke GPE: 
+
+  1. Standalone: Start "Global Position Estimator" from your Windows Start menu (under Wildlife Computers), drag-and-drop a "LightLoc.csv" file (that you have generated from DAP) or a previously processed GPE file (.wcg2).
   
 http://tagbase.googlecode.com/svn/trunk/images/WcGpe1.jpg  
-  
-  * Or invoke it through the menu bar of DAP Processor (Tag > Light Level Global Position Estimator).
- 
-http://tagbase.googlecode.com/svn/trunk/images/WcDap3.jpg
 
-  * Select a tag to process or wait until automated processing is completed. Make adjustments where appropriate (you will have to consult Wildlife Computers documentation/ customer service for assistance).
-  
   * Save the results, "File" > "Save" as a .wcg2 file to your preferred location for later use
 
   * Export the results back to a "`LightLoc.csv`" via "File" > "Export results in CSV format"
 
 http://tagbase.googlecode.com/svn/trunk/images/WcGpe2.jpg
+  
+  2. Within DAP: through the menu bar of DAP Processor (Tag > Light Level Global Position Estimator).
+ 
+http://tagbase.googlecode.com/svn/trunk/images/WcDap3.jpg
+
+  * Select a tag to process or wait until automated processing is completed. Make adjustments where appropriate (you will have to consult Wildlife Computers documentation/ customer service for assistance).
+  
 
 == Utilizing Kalman filter/ Trackit interfaces in GPE ==    
 
