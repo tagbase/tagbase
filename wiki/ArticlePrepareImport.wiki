@@ -24,13 +24,13 @@ Before you import any files, make sure you have the following
 || [http://www.microwavetelemetry.com Microwave Telemetry]|| Popup archival / recovered popup || None || MT ||
 || [http://www.wildlifecomputers.com/downloads.aspx Wildlife Computers] || Archival, popup archival, SPOT, Argos Fast-GPS || WC-AMP, !HexDecode, WC-DAP 2.0 & 3.0, GPE version 1 & 2 || WC ||
 
-==== Not supported yet (updated Dec 2011) ====
+=== Not supported yet (updated Dec 2011) ===
 
  * Wildlife Computers MK-10 with dive duration/ depth sampling features. We are working on getting that squared away.
 
  * Specialized, high-frequency sampling sensors for accelerometry, magnetometry, and velocity etc.
 
-We try our best to cover most tag file formats, but it is likely we can miss some of them. You would be amazed how many variations are possible even with a single tag model and a specific manufacturer software version. If you find specific formats that you would like to include or have troubles importing, leave us a comment or file an issue.
+ _ We try our best to cover most tag file formats, but it is likely we can miss some of them. You would be amazed how many variations are possible even with a single tag model and a specific manufacturer software version. If you find specific formats that you would like to include or have troubles importing, leave us a comment or file an issue. _
 
 
 = Formatting your tag files =
