@@ -28,7 +28,7 @@ http://tagbase.googlecode.com/svn/trunk/images/WcDap2.jpg
 
   * There are 2 ways to invoke GPE: 
 
-    1. *Within DAP*: through the menu bar of DAP Processor (Tag > Light Level Global Position Estimator).
+    1. *Within DAP*: through the menu bar of DAP Processor ("Tag" > "Light Level Global Position Estimator").
  
 http://tagbase.googlecode.com/svn/trunk/images/WcDap3.jpg
 
@@ -36,7 +36,7 @@ http://tagbase.googlecode.com/svn/trunk/images/WcDap3.jpg
 
   * In order to save your estimated positions, you should save the entire workspace via "File" > "Save Workspace", a file with the extension ".wcdap" will be generated.
 
-    2. *Standalone*: Start "Global Position Estimator" from your Windows Start menu (under Wildlife Computers), drag-and-drop a "`LightLoc.csv`" file (that you have generated from DAP) or a previously processed GPE file (.wcg2).
+2. *Standalone*: Start "Global Position Estimator" from your Windows Start menu (under Wildlife Computers), drag-and-drop a "`LightLoc.csv`" file (that you have generated from DAP) or a previously processed GPE file (.wcg2).
   
 http://tagbase.googlecode.com/svn/trunk/images/WcGpe1.jpg  
 
