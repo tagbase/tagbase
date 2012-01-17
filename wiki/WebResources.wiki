@@ -6,7 +6,8 @@ A list of resources that we are aware of for tagging applications. Feel free to 
 
 == State-space models for geolocation - Kalman filter suite ==
 === (`TrackIt`, `Ukfsst`, `Kfsst`, `Kftrack`) ===
-==== https://www.soest.hawaii.edu/tag-data/software/ ====
+==== http://www.nielsensweb.org/trackit/ ====
+==== http://www.nielsensweb.org/ukfsst/ ====
 
 A suite of statistical models to estimate position errors, movement model parameters, and most probable positions from tracking data. Refer to:
 
@@ -66,7 +67,7 @@ The Environmental Data Connector (EDC) is a tool that allows users to connect to
 == Electronic Tagging Data Repository ==
 ==== https://www.soest.hawaii.edu/tag-data/ ====
 
-https://www.soest.hawaii.edu/tag-data/image/banner.gif
+https://www.soest.hawaii.edu/tag-data/banner.gif
 
 A facility for exchange of data derived from electronic tags developed by John Sibert and Johnoel Ancheta of [http://www.soest.hawaii.edu/PFRP/pfrp1.html Pelagic Fisheries Research Program] at University of Hawaii at Manoa. It is a part of the developing new culture of science where more is gained by sharing information than by locking it away in dark filing cabinets.
 
