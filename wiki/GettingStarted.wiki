@@ -41,3 +41,5 @@ It is highly recommended that you always adopt the practice of archiving raw fil
 = Present limitations =
 
 When you need to deal a large number of archival tags, it will be more efficient to implement Tagbase in a high-end database management system, see ArticleSqlServer for instructions, rather than using the standard Microsoft Access release of Tagbase. Nonetheless, it is a good exercise to familiarize yourself with Tagbase in MS Access first, before setting it up in other systems.
+
+Also check [ArticlePrepareImport here] to see if your data file/ type is supported.
