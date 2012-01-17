@@ -51,8 +51,8 @@ http://tagbase.googlecode.com/svn/trunk/images/WcGpe2.jpg
   # [http://www.soest.hawaii.edu/PFRP/reprints/sibert_horizontal.pdf Kftrack] Sibert, J.R., Musyl, M.K., Brill, R.W., 2003. Horizontal movements of bigeye tuna (Thunnus obesus) near Hawaii determined by Kalman filter analysis of archival tagging data. Fisheries Oceanography, 12(3):141-151.
 
   * Download the packages here:
-  http://www.nielsensweb.org/trackit/
-  http://www.nielsensweb.org/ukfsst/
+  ==== http://www.nielsensweb.org/trackit/ ====
+  ====http://www.nielsensweb.org/ukfsst/====
   
   
 == Importing multiple tags from DAP into Tagbase ==
