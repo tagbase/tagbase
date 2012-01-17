@@ -36,14 +36,14 @@ http://tagbase.googlecode.com/svn/trunk/images/WcDap3.jpg
 
   * Select a tag to process or wait until automated processing is completed. Make adjustments where appropriate (you will have to consult Wildlife Computers documentation/ customer service for assistance).
 
+http://tagbase.googlecode.com/svn/trunk/images/WcGpe1.jpg  
+
   * In order to save your estimated positions, you should save the entire workspace via "File" > "Save Workspace", a file with the extension ".wcdap" will be generated.
 
 ==== 2. *Standalone* ====
 
-  * Start "Global Position Estimator" from your Windows Start menu (under Wildlife Computers), drag-and-drop a "`LightLoc.csv`" file (that you have generated from DAP) or a previously processed GPE file (.wcg2).
+  * Start "Global Position Estimator" from your Windows Start menu (under Wildlife Computers), drag-and-drop a "`LightLoc.csv`" file (that you have generated from DAP) or a previously processed GPE file (.wcg2) from your file explorer/ browser.
   
-http://tagbase.googlecode.com/svn/trunk/images/WcGpe1.jpg  
-
   * Save the results, "File" > "Save" as a .wcg2 file to your preferred location for later use
 
   * Export the results back to a "`LightLoc.csv`" via "File" > "Export results in CSV format". This will overwrite your existing "`LightLoc.csv`"
