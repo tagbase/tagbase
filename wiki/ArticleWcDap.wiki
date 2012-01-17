@@ -26,7 +26,7 @@ http://tagbase.googlecode.com/svn/trunk/images/WcDap2.jpg
 
 == Obtaining manufacturer light-based geolocation estimates via GPE ==
 
-  * There are 2 ways to invoke GPE: 
+There are 2 ways to invoke GPE: 
 
 ==== 1. *Within DAP* ====
 
