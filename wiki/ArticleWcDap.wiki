@@ -24,6 +24,16 @@ http://tagbase.googlecode.com/svn/trunk/images/WcDap2.jpg
 
    * If you open any one of the many .csv files, you will find "DeployID" and it is essentially the PTT IDs. In the absence of a PTT ID for an archival tag, the tag serial number is used for both "DeployID" and "PTT" data columns. 
 
+<<<<<<< .mine
+{{{ 
+Tips -
+For MiniPATs, make sure you output the setup file in the format of .wch,
+so that you can drag-and-drop into DAP when you process the Argos messages.
+Tagbase currently does not support the .rtf (rich text format) setup output
+from the host software, MiniPAThost.
+}}}
+
+=======
 {{{ 
 Tips -
 For MiniPATs, make sure you output your setup file 
@@ -31,6 +41,7 @@ in the file format of .wch so that you can drag-and-drop in DAP.
 Tagbase presently does not support the setup file in .rtf (rich text format) of MiniPAThost.
 }}}
 
+>>>>>>> .r481
 == Obtaining manufacturer light-based geolocation estimates via GPE ==
 
 There are 2 ways to invoke GPE: 
