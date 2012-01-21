@@ -50,7 +50,8 @@ Here are the main groups of table that your data and metadata reside. This is us
 {{{ 
 Tips -
 WC DAP software output many pieces of information that may not be routinely
-used by most users. They are stored by Tagbase in the table, `Proc_WC_Observations`. Refer to the table, `WC_ObservationTypes` to see what
+used by most users. They are stored by Tagbase in the table, `Proc_WC_Observations`. 
+Refer to the table, `WC_ObservationTypes` to see what
 are being stored.
 }}}
 
