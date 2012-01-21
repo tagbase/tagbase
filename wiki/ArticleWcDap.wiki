@@ -120,7 +120,7 @@ distinct DeployIDs found in WC DAP .csv output files. Tagbase then allocates the
 to the right files inside the folders, resulting in a set of DAP output files in each folder. 
 Tagbase does not delete the contents of folders beforehand, so you will have to delete all 
 contents or remove existing DAP files/ folder, as Tagbase will append to existing files 
-during the import, leading to duplicating data records. 
+during the import, leading to duplicating data records if prior contents are present.
 }}}
 
 ==== Screenshot A - Keeping things simple, processing 1 tag at a time ====
