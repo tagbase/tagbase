@@ -2,6 +2,13 @@
 
 Welcome to the What's New page for Project Tagbase. Here you'll find descriptions of our latest and exciting improvements.
 
+= January 2012 =
+
+== Tagbase 4.8 is released ==
+
+In the festive spirit of the Chinese New Year, we are happy to release Tagbase 4.8. We have extended support to Wildlife Computer DAP/GPE software, which offers a multitude of ways to get a single task done. We try our best to cover all possible workflow, but it is likely we will miss some. So if you find out something is not going right, send us a message.
+
+Happy Year of Dragon!
 
 = December 2011 =
 
