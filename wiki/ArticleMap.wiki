@@ -119,7 +119,7 @@ _You make the necessary selections from left to right:_
  * *Hide < or > limit* - show only shapes that meet your criterion
  * *Hide nulls* - hide shapes with no data (null/ blank)
  * *Apply* - click to apply your highlighting selections
- * *Show All Shapes* (the _Spectacles_ icon) - make all shapes in a shapefile visible
+ * *Show All Shapes (the _Spectacles_ icon)* - make all shapes in a shapefile visible
 
 == 5. Using track positions to query tag data ==
  _When you display a track as a shapefile with the following fields/ attributes (`TagID`, `DateTime`), Tagbase is able to look up the tag data that accompanies the waypoint of a track. To do so, _
