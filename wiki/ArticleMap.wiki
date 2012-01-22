@@ -50,7 +50,7 @@ _You make the necessary selections from left to right:_
  * *User-defined query* - you can make a shapefile from a query or table, as long as you have 2 required fields: `longitude` and `latitude`. Other fields in your query/table will be saved to the shapefile as attributes. Note however, there is a 10-character limit to the names of attributes (`MapWinGis` limitation). Try use the [ArticleQuery#Query_1_-_Extract_time_series_data_during_a_specific_month alias technique] of a query to get around this problem.
  * *Start/end points* - you can make a point shapefile using deploy-popoff (or recovery) points info. the table `TagInfo`.
  * *Start/end lines* - you can make a polyline shapefile using deploy-popoff (or recovery) info. stored the table `TagInfo`.
- * *Start/end polygons* - you can make a polygon shapefile using deploy-popoff (or recovery) info. stored the table `TagInfo`, and raw geolocations stored in the manufacturer-specific location data tables (e.g. `Proc_WC_Locations`). Each polygon is for a single tag, which consists of 4 vertices - start & end points, and two vertices representing the average of all available geolocations in the entire tagging period + and - 1 standard deviation (i.e. avg. position +/- 1 sd). The goal here is to provide a very rough idea of the range of movement within the tagging period for a tag. This shapefile will also allow you use the *[ArticleMap#5._Using_track_positions_to_query_tag_data Identify Feature]* button to call up the corresponding tag data. 
+ * *Start/end polygons* - you can make a polygon shapefile using deploy-popoff (or recovery) info. stored the table `TagInfo`, and raw geolocations stored in the manufacturer-specific location data tables (e.g. `Proc_WC_Locations`). Each polygon is for a single tag, which consists of 4 vertices - start & end points, and two vertices representing the average of all available geolocations in the entire tagging period + and - 1 standard deviation (i.e. avg. position +/- 1 sd). The goal here is to provide a very rough idea of the range of movement within the tagging period for a tag. This shapefile will also allow you use the [ArticleMap#5._Using_track_positions_to_query_tag_data Identify Feature] button to call up the corresponding tag data. 
  * *Any* or other names of geolocation methods (e.g. trackit)- this is only applicable to `Analysed positions`. This control is populated with the records of the `AnalysisMethod` field in the `AnalysisInfo` table, where the `AnalysisType` field is `geolocation`.
  * *Add* - click this button to generate your shapefile. You will be prompted to enter a filename, click OK when you have done so. 
  * *Interpolate missing days* - checking this box will interpolate positions for timestamps in your tag data that have no associated latitude & longitude information. An attribute field `FlagGap` will be added to the shapefile, where original track positions are assigned a value of 0 and interpolated positions are assigned a value greater than 0. 
@@ -88,14 +88,14 @@ _You make the necessary selections from left to right:_
  * Move Down
  * Move to Bottom
 
+ * Transparent - click this button to turn all polygons in a shapefile transparent
+
 == 3. Labeling or coloring shapefile shapes by their attributes ==
 
  * Make sure you have selected a shapefile and an attribute from the listboxes in order to perform any labeling or coloring
  * Coloring by attribute only works for a numerical attribute field (i.e. you can't color by a string/ text attribute field). Use the next topic to achieve [ArticleMap#4._Highlighting_shapefile_shapes_with_filters coloring by a string attribute field] instead
 
  The labeling/coloring buttons from left to right, then top to bottom are:
- * Show All Shapes (the _Spectacles_ icon)
-
  * Add Labels
  * Remove Labels
  * Remove All Screen Labels
@@ -109,16 +109,17 @@ _You make the necessary selections from left to right:_
 _You make the necessary selections from left to right:_
  * Make sure you have selected a shapefile and an attribute from the listboxes
  * *Parameter* - shows the field you have selected from the *Fields* list. This box will be activated once you finish making all the selections and having clicked *Apply*.
- * *Color* - select one of the colors from the list, or choose your own by selecting the `Custom` option from the pull-down list.
- * *Keep existing colors* - your previously highlighted shapes will retain their coloring. New colors will be updated for the shapes that meet your current criteria
- * *>=* or *<=* used for defining criteria for a numerical attribute in *Fields*
- * *=* used for defining criteria for a string attribute in *Fields*
- * *Filter by value* - enter a number as the filtering (i.e. highlighting) criteria
- * *or string* - enter a string here as the filtering (i.e. highlighting) criteria
+ * *Color* - select one of the colors from the list, or choose your own by selecting the `Custom` option from the pull-down list. You can also use the `Just Filter` option to show shapes that satisfying your criterion without applying any coloring.
+ * *Keep existing colors* - your previously highlighted shapes will retain their coloring. New colors will be updated for the shapes that meet your current criterion
+ * *Visible objects only* - when clicked (button will stay depressed), your highlight/ filtering criteria will be remembered (i.e. stacked filters). Only shapes that satisfy all criteria you have applied will be displayed. 
+ * Comparison options: *>=* or *<=* or *=* or *Between* - these can be used for defining your criteria
+ * *Limit/ Lower Limit* - enter a value as your criterion. 
+ * *Upper Limit* - enter the upper criterion here. This is only available when *Between* is used as the comparison option.
  * *Display all points* - retain all shapes while coloring those that match your criteria
- * *Hide < or > limit* - show only shapes that meet your criteria
- * *Hide = zero* - hide shapes with a zero value (only for numerical attributes)
+ * *Hide < or > limit* - show only shapes that meet your criterion
+ * *Hide nulls* - hide shapes with no data (null/ blank)
  * *Apply* - click to apply your highlighting selections
+ * *Show All Shapes* (the _Spectacles_ icon) - make all shapes in a shapefile visible
 
 == 5. Using track positions to query tag data ==
  _When you display a track as a shapefile with the following fields/ attributes (`TagID`, `DateTime`), Tagbase is able to look up the tag data that accompanies the waypoint of a track. To do so, _
