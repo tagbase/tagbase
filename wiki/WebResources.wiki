@@ -17,6 +17,7 @@ A suite of statistical models to estimate position errors, movement model parame
 
 == Webpage and R libaries of Ben Galuardi ==
 ==== http://code.google.com/p/analyzepsat/ ====
+==== http://people.umass.edu/galuardi/ ====
 
 http://tagbase.googlecode.com/svn/trunk/images/Tag04233-2005UD_small.jpg 
 Full-sized image [http://tagbase.googlecode.com/svn/trunk/images/Tag04233-2005UD.png here]
