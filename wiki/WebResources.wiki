@@ -15,7 +15,7 @@ A suite of statistical models to estimate position errors, movement model parame
    [http://www.int-res.com/abstracts/meps/v419/p71-84/ Open Access] available!
 
 
-== Webpage and R libaries of Ben Galaurdi ==
+== Webpage and R libaries of Ben Galuardi ==
 ==== http://code.google.com/p/analyzepsat/ ====
 
 http://tagbase.googlecode.com/svn/trunk/images/Tag04233-2005UD_small.jpg 
