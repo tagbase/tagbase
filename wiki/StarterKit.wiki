@@ -25,7 +25,11 @@ Make sure you have the following folders and file:
   * templates
   * Tagbase.mdb (with the version number in the file name)
 
-=== Step 4: Know your data files - preparation for import ===
+=== Step 4: Install the plugins by following our [HowToInstallPlugins Plugins Installation] page ===
+
+Plugins are recommended for Tagbase's full functionality for visualization and data analysis. They do not impact at all the core database features.
+
+=== Step 5: Know your data files - preparation for import ===
 
   * This example includes 1 recovered PAT tags and 1 transmitted PAT tags. 
 
@@ -37,7 +41,7 @@ Make sure you have the following folders and file:
 
   * You can refer to *[ArticlePrepareImport Preparing for import]* and *[ArticleWcDap Working with Wildlife Computers DAP/GPE]* for detailed descriptions on what tag output file formats are supported.
 
-=== Step 5: Understand the batch job file (.xls) which tells Tagbase what you want to import ===
+=== Step 6: Understand the batch job file (.xls) which tells Tagbase what you want to import ===
 
   * Browse to the following folder: *Tagbase* > *tagfiles* > *simulated*, and open our pre-prepared batch job file, `TagBaseBatchJob.xls`. 
 
@@ -47,7 +51,7 @@ Make sure you have the following folders and file:
 
 http://tagbase.googlecode.com/svn/trunk/images/ImportJob1.jpg
 
-=== Step 6: Start Tagbase ===
+=== Step 7: Start Tagbase ===
 
 Simply double-click on the `Tagbase.mdb` in `C:\Tagbase`
 
@@ -56,7 +60,7 @@ If you experience errors on startup, make sure you have installed all the plugin
   * *[HowToInstallPlugins Plugins Installation]*
   * *[ArticleMissingRefs Handling "Missing References" error]*
 
-=== Step 7: Open the batch import form via the `Form Navigation Tool` ===
+=== Step 8: Open the batch import form via the `Form Navigation Tool` ===
 
   * Select `Import` from the *Operation* pull-down list, then
   * Select `Batch_Import_TagData` from the *Form* pull-down list
@@ -65,7 +69,7 @@ If you experience errors on startup, make sure you have installed all the plugin
 
 http://tagbase.googlecode.com/svn/trunk/images/FormNavigate.jpg
 
-=== Step 8: Follow the 3-step instructions on the `Batch_Import_TagData` to guide your import. ===
+=== Step 9: Follow the 3-step instructions on the `Batch_Import_TagData` to guide your import. ===
 
 1. Locate the batch job file using the standard Windows Browse-To dialog:
      `C:\Tagbase\tagfiles\simulated\TagBaseBatchJob.xls`
@@ -78,7 +82,7 @@ When completed, a message like this will appear.
 
 http://tagbase.googlecode.com/svn/trunk/images/ImportForm.jpg
 
-=== Step 9: Visualize the data using a plot form ===
+=== Step 10: Visualize the data using a plot form ===
 
   * Bring to the foreground, the `Form Navigation Tool` (reopen from `Forms > NavigateForms` if you have closed it)
   * Select `Plot` from the *Operation* pull-down list, then
@@ -87,7 +91,7 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportForm.jpg
   * Hit the *Go* button
   * Select a tag to plot, use *[ArticleDisplay Display and Graphs]* to assist you using the form more effectively. 
 
-=== Step 10: Interrogate the data using a simple query ===
+=== Step 11: Interrogate the data using a simple query ===
 
   * You can start asking "questions" about your data by setting up a query.
   * Query allows you to pull out specific information by filtering or aggregating (e.g. average/ min/ max)
@@ -96,12 +100,12 @@ http://tagbase.googlecode.com/svn/trunk/images/ImportForm.jpg
   * See *[ArticleTables Data tables and Relationships]* to understand the data architecture of Tagbase. This will help you find all the information you need to construct your queries
   * See *[ArticleQuery Querying data]* to start mastering your query techniques
 
-=== Step 11: Export data from Tagbase ===
+=== Step 12: Export data from Tagbase ===
 There are two ways to export:
    * Using the *[ArticleExport Export Form]*
    * Using *[ArticleExportNative native export capabilities of MS Access]*
 
-=== Step 12: Import geolocation analysis results back into Tagbase ===
+=== Step 13: Import geolocation analysis results back into Tagbase ===
    * Tagging often requires geo-correction of estimated positions of a fish, this is usually done with anlaysis routines in software like *[http://www.r-project.org/ R]*, Matlab etc. One set of popular routines is the Kalman filtering packages in R of [http://www.soest.hawaii.edu/PFRP/reprints/lam_nielsen_sibert.pdf Ukfsst] and [http://www.int-res.com/abstracts/meps/v419/p71-84/ Trackit], developed by Anders Nielsen, Chi Hin Lam and John Sibert. 
    
    * Wildlife Computers software can also run Ukfsst and Trackit via the GPE2 software (even though the packages are not acknowledged to their original source). See *[ArticleWcDap Working with Wildlife Computers DAP/GPE]* for details. Tagbase will import any results that are saved back to a `LightLoc.csv` file. 
@@ -112,7 +116,7 @@ There are two ways to export:
    
    * Refer to *[ArticleGeolocate Running and importing a geolocation analysis]* for a simplified run conducting geolocation analysis with [http://www.int-res.com/abstracts/meps/v419/p71-84/ Trackit] and importing the results back to Tagbase.
  
-=== Step 13: Interact with track and tag data on a map ===
+=== Step 14: Interact with track and tag data on a map ===
 
    * You can interact with your tag data whenever you have track data.
    
@@ -120,7 +124,7 @@ There are two ways to export:
    
    * Satellite imagery snapshots can also be downloaded across the web, on the fly to be viewed along with your data
    
-=== Step 14: Working with Ocean Data View (ODV) to visualize data export from Tagbase === 
+=== Step 15: Working with Ocean Data View (ODV) to visualize data export from Tagbase === 
 
    * Tagbase *[ArticleExport exports]* data as a plain text file (`OdvArc.txt` and `OdvWC.txt`) that can be read directly by [http://odv.awi.de Ocean Data View].
    
@@ -151,7 +155,7 @@ There are two ways to export:
    
 http://tagbase.googlecode.com/svn/trunk/images/odv.png   
 
-=== Step 15: Delete data from a tag in Tagbase ===
+=== Step 16: Delete data from a tag in Tagbase ===
 
    * Via *[ArticleNavigation The Form Navigation Tool]* (`Forms` > `NavigateForms`), select `Delete` from the *Operation* pull-down list
    * Select `Delete_TagData` from the *Form* pull-down list.  Hit *Go*.
