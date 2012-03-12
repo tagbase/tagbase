@@ -34,6 +34,9 @@ Make sure you have the following folders and file:
 
 === Step 4: Install the plugins by following instructions on the [HowToInstallPlugins Plugins Installation] page ===
 
+  * *[HowToInstallPlugins Plugins Installation]*
+  * *[ArticleMissingRefs Handling "Missing References" error]*
+
 Plugins are recommended for Tagbase's full functionality for visualization and data analysis. They do not impact at all the core database features.
 
 === Step 5: Know your data files - preparation for import ===
