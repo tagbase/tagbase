@@ -1,9 +1,9 @@
-#summary A Starter Kit to Using Tagbase
+#summary A Starter Kit to using Tagbase
 #labels Featured
 
 <wiki:toc max_depth="3" />
 
-= A Starter Kit to Using Tagbase =
+= A Starter Kit to using Tagbase =
 
 We have created a set of simulated data to illustrate how you can utilize Tagbase for your research. Remember the data provided here is *NOT* real, so don't use it for any research/ analysis. Contact us if you want us to assist you in setting up a customized starter kit using your own data.
 
