@@ -25,7 +25,7 @@ Make sure you have the following folders and file:
   * templates
   * Tagbase.mdb (with the version number in the file name)
 
-=== Step 4: Install the plugins by following our [HowToInstallPlugins Plugins Installation] page ===
+=== Step 4: Install the plugins by following instructions on the [HowToInstallPlugins Plugins Installation] page ===
 
 Plugins are recommended for Tagbase's full functionality for visualization and data analysis. They do not impact at all the core database features.
 
