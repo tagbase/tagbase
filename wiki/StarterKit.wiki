@@ -7,6 +7,13 @@
 
 We have created a set of simulated data to illustrate how you can utilize Tagbase for your research. Remember the data provided here is *NOT* real, so don't use it for any research/ analysis. Contact us if you want us to assist you in setting up a customized starter kit using your own data.
 
+{{{
+Requirements -
+  * Microsoft Access 2000 or above (Sorry, we are not supporting Mac/Linux yet)
+  * Microsoft Office 2000 or above
+  * Any zip-supported compression utility, e.g. http://www.7-zip.org/download.html
+}}}
+
 === Step 1: Download the Starter Kit from our [http://code.google.com/p/tagbase/downloads/list Downloads] page ===
 
 Or follow the link [http://tagbase.googlecode.com/files/starterkit.zip here]
