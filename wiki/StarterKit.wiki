@@ -10,7 +10,7 @@ We have created a set of simulated data to illustrate how you can utilize Tagbas
 {{{
 System Requirements -
   * Microsoft Access 2000 or above (sorry, we are not supporting Mac/Linux yet)
-  * Microsoft Office 2000 or above
+  * Microsoft Office 2000 or above (32-bit)
   * Any zip-supported compression utility, e.g. http://www.7-zip.org/download.html
 }}}
 
