@@ -2,6 +2,12 @@
 
 Welcome to the What's New page for Project Tagbase. Here you'll find descriptions of our latest and exciting improvements.
 
+= March 2012 =
+
+== Bug found: Office 2010 64-bit ==
+
+It came to our attention that 64-bit Office with VBA 7.0 will require recoding of some functions in Tagbase. We are working on that to support that. This should not be a cause of concern for most of you out there - Office is installed as 32-bit by default (you have to dig out the 64-bit installer when you really want it)
+
 = January 2012 =
 
 == Tagbase 4.8 is released ==
