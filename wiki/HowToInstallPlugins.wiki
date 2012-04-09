@@ -28,7 +28,7 @@ We currently only support `MapWinGis 4.7`. The newer versions involve code chang
 
 There are two ways you can install:
 
-  * *1. Use the installer*
+  * *1. [http://mapwingis.codeplex.com/releases/view/70023 Use the installer]*
 
 {{{ 
 Which installer to use?
