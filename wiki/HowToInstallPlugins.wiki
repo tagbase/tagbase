@@ -38,7 +38,7 @@ Which installer to use?
   * MapWinGIS447SRa-x64-Setup.exe - For Microsoft Office 2010 (64-bit) only
 }}}
 
-  * 2. Follow instructions below if you download our [http://tagbase.googlecode.com/svn/trunk/files/plugins.zip zip] file posted above
+  * 2. Or, follow instructions below if you download our [http://tagbase.googlecode.com/svn/trunk/files/plugins.zip zip] file posted above
 
   * Step A: Unzip `MapWinGIS47SRa-x86.zip` into `C:\MapWindow`
 
