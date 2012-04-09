@@ -61,10 +61,16 @@ Move/Copy to location - `C:\Windows\System32`
 
 {{{ 
 Bug -
-If you have a Office 2010 64-bit installed  (the default installation of Office 2010 is a 32-bit), this DLL will not work. But this will only affect interpolation features used in the forms, Plot_WC_SolarTimesInterpolated and MapWindow (when "Interpolate missing days" box is checked). We are trying to look for an alternative.
+If you have a Office 2010 64-bit installed  (the default installation 
+of Office 2010 is a 32-bit), this DLL will not work. But this will only 
+affect interpolation features used in the forms, 
+Plot_WC_SolarTimesInterpolated and 
+MapWindow (when "Interpolate missing days" box is checked). 
+We are trying to look for an alternative.
 }}}
 
-== 4. `MSINET.OCX` (No longer needed in Tagbase 4.9 or later) ==
+== 4. `MSINET.OCX` ==
+=== _(No longer needed in Tagbase 4.9 or later)_ ===
 ==== http://tagbase.googlecode.com/svn/trunk/files/MSINET.zip ====
 ==== Purpose - Microsoft Internet transfer protocol and ActiveX control ====
 
