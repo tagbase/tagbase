@@ -12,24 +12,19 @@ If you decide to bypass the plugins, refer to [ArticleMissingRefs here] to remov
 
 === A zip file containing all required plugins is available [http://tagbase.googlecode.com/svn/trunk/files/plugins.zip here]. ===
 
-== 1. `XtrFun.dll` == 
-==== http://www.xlxtrfun.com/XlXtrFun/XlXtrFun.htm ====
-==== Purpose - Curve-fitting, interpolation of 2-dimensional and 3-dimensional data ====
 
-Move/Copy to location - `C:\Windows\System32`
-
-== 2. `wget.exe` == 
+== 1. `wget.exe` == 
 ==== http://www.gnu.org/software/wget ====
 ==== http://users.ugent.be/~bpuype/wget ====
 ==== Purpose - Download files across the Internet ====
 
 Move/Copy to location - `C:\Windows`
 
-== 3. `MapWinGis ActiveX control` ==
+== 2. `MapWinGis ActiveX control` ==
 ==== http://mapwingis.codeplex.com/releases/view/70023 ====
 ==== Purpose - Mapping functions ====
 
-We currently only support MapWinGis 4.7. The newer versions involve code changes to some of MapWinGis' fundamental functions, and we do not plan to support in the recent future.
+We currently only support `MapWinGis 4.7`. The newer versions involve code changes to some of MapWinGis' fundamental functions, and we do not plan to support in the recent future.
 
   * Use the installer, or follow instructions below if you download our [http://tagbase.googlecode.com/svn/trunk/files/plugins.zip zip] file posted above
 
@@ -58,7 +53,18 @@ For a Windows 7 (64-bit) system, your steps are as follows:
   
   {{{regsvr32.exe "C:\MapWindow\MapWinGIS.ocx"}}}
 
-== 4. `MSINET.OCX` ==
+== 3. `XtrFun.dll` == 
+==== http://www.xlxtrfun.com/XlXtrFun/XlXtrFun.htm ====
+==== Purpose - Curve-fitting, interpolation of 2-dimensional and 3-dimensional data ====
+
+Move/Copy to location - `C:\Windows\System32`
+
+{{{ 
+Bug -
+If you have a Office 2010 64-bit installed  (the default installation of Office 2010 is a 32-bit), this DLL will not work. But this will only affect interpolation features used in the forms, Plot_WC_SolarTimesInterpolated and MapWindow (when "Interpolate missing days" box is checked). We are trying to look for an alternative.
+}}}
+
+== 4. `MSINET.OCX` (No longer needed in Tagbase 4.9 or later) ==
 ==== http://tagbase.googlecode.com/svn/trunk/files/MSINET.zip ====
 ==== Purpose - Microsoft Internet transfer protocol and ActiveX control ====
 
