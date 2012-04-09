@@ -1,6 +1,8 @@
 #summary Notes for Plugins Installation
 #labels Featured
 
+<wiki:toc max_depth="1" />
+
 = Tagbase Plugins =
 
 == Plugins are _OPTIONAL_. The core functions of Tagbase will work without any of them ==
