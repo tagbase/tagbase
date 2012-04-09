@@ -4,7 +4,7 @@ Welcome to the What's New page for Project Tagbase. Here you'll find description
 
 = April 2012 =
 
-== Supporting Office 2010 64-bit ==
+== Tagbase 4.9 - supporting Office 2010 64-bit ==
 
 It came to our attention (thanks to Steve Teo) that 64-bit Office with VBA 7.0 required recoding of some functions in Tagbase. This wasn't a cause of concern for most of you out there - Office is installed as 32-bit by default (you have to dig out the 64-bit installer when you really want it). But we worked hard, prevailed and now have updated Tagbase to fully support the latest and greatest from Microsoft Office!
 
