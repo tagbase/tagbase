@@ -143,7 +143,7 @@ http://tagbase.googlecode.com/svn/trunk/images/TrackMacro0.jpg
 	
 	http://tagbase.googlecode.com/svn/trunk/images/TrackMacro1.jpg
 	
-	* Double-click on *AddTrackingData*
+	* Double-click on *`AddTrackingData`*
 	
 	* Browse to the analysis import file:
 	
