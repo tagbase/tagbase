@@ -2,6 +2,12 @@
 
 Welcome to the What's New page for Project Tagbase. Here you'll find descriptions of our latest and exciting improvements.
 
+= December 2013 =
+
+== Tagbase 4.9.2 supports Desert Star SeaTag-MOD ==
+
+We have added support for Desert Star SeaTag-MOD files (limited, as test files may not cover all scenarios), and minor change for import of MT recovered tag files. Google is phasing the download page on Jan 15, 2014, so we will offer new future downloads in other ways, but existing files, including this update will remain available through the page. 
+
 = April 2012 =
 
 == Tagbase 4.9 is supporting Office 2010 64-bit ==
