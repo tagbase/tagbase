@@ -25,7 +25,7 @@ Before you import any files, make sure you have the following
 || [http://www.wildlifecomputers.com/downloads.aspx Wildlife Computers] || Archival, popup archival, SPOT, Argos Fast-GPS || WC-AMP, !HexDecode, WC-DAP 2.0 & 3.0, GPE version 1 & 2 || WC ||
 || [http://www.desertstar.com/Products_category.aspx?intProductCategoryID=22 Desert Star Systems] || `SeaTag-MOD` || `SeaDock`, `SeaTrack` || DS ||
 
-Support for importing Desert Star tags is limited, since we have not seen enough a variety of outputs from various users. Please contact us if you are interested.
+ * Support for importing Desert Star tags is limited, since we have not seen enough a variety of outputs from various users. Please contact us if you are interested.
 
 === Not supported yet: ===
 
