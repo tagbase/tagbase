@@ -89,6 +89,7 @@ tags, for example 04A1234 (original tag) and 04A1234-2005 (refurnished tag).
 Tips -
 1. Recovered WC PAT should be denoted as "Archival"
 2. Recovered MT PAT should remain as "Microwave Telemetry"
+3. Recovered Desert Star tags should remain as "Desert Star"
 }}}
 
 === Additional required fields ===
