@@ -82,8 +82,10 @@ Otherwise, any time series data won't be available in your output files
   * File #2 is the output file (.xls) with location data, obtained from WC-TSP or GPE software
   * For DAP, make sure you are running GPE2 to get File #2
 
-== Desert Star `SeaTag-MOD` supported files ==
+== Desert Star `SeaTag-MOD` files ==
 
-  * Data logged file (.csv) downloaded by `SeaWatch` and `SeaDock`
+The following files can be imported for each `SeaTag`:
+
+  * Data logged file (.csv) downloaded by `SeaWatch` and processed by `SeaDock` (archival data share the same file format)
   * Setup log (.txt) from `SeaDock`
   * Geolocation data file (.txt) from `SeaTrack`
