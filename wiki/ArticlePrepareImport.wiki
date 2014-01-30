@@ -20,7 +20,7 @@ Before you import any files, make sure you have the following
 = Supported formats =
 
 || *Tag manufacturer* || *Tag types* || *Supported processed files from software* || *Abbreviation* ||
-|| [http://www.lotek.com/downloads.htm Lotek Wireless] || Archival || Viewer2000, LAT TagTalk, LAT Viewer Studio || Lotek ||
+|| [http://www.lotek.com/downloads.htm Lotek Wireless] || Archival || Viewer2000, LAT `TagTalk`, LAT Viewer Studio || Lotek ||
 || [http://www.microwavetelemetry.com Microwave Telemetry]|| Popup archival / recovered popup || Reports (.xls) generated and delivered by manufacturer || MT ||
 || [http://www.wildlifecomputers.com/downloads.aspx Wildlife Computers] || Archival, popup archival, SPOT, Argos Fast-GPS || WC-AMP, !HexDecode, WC-DAP 2.0 & 3.0, GPE version 1 & 2 || WC ||
 || [http://www.desertstar.com/Products_category.aspx?intProductCategoryID=22 Desert Star Systems] || `SeaTag-MOD` || `SeaDock`, `SeaTrack` || DS ||
