@@ -4,7 +4,7 @@
 
 = Installation of R and geolocation packages =
 
-You can find out how to install the geolocation packages here: *http://code.google.com/p/geolocation/wiki/ArticleQuickStart*
+You can find out how to install the geolocation packages here: *[http://code.google.com/p/geolocation/wiki/ArticleQuickStart http://code.google.com/p/geolocation/wiki/ArticleQuickStart]*
 
 = What you need is to... =
 
