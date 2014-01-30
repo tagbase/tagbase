@@ -2,6 +2,12 @@
 
 Welcome to the What's New page for Project Tagbase. Here you'll find descriptions of our latest and exciting improvements.
 
+= February 2014 =
+
+== Happy Year of Horse! Galloping along with Lotek LAT series support ==
+
+With the Chinese New Year, we now support LAT Series output files from `TagTalk` and Viewer Studio. We also modify the [Downloads Downloads] page to support changes in the Google code site. Let us know if you have any issues with the new setup.
+
 = December 2013 =
 
 == Tagbase 4.9.2 supports Desert Star `SeaTag-MOD` ==
