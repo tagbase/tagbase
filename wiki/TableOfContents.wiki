@@ -1,6 +1,7 @@
   * [WhatsNew What's New?]
   * [OurVision Learn About Our Vision!]
   * [HowToInstallPlugins Plugins Installation]  
+  * [Downloads Downloads]   
   * [GettingStarted Getting Started]
     * [DataFundamentals Fundamentals of tagging]
     * [ArticleTerms Abbreviations and Terminology]
