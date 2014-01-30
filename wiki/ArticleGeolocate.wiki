@@ -2,25 +2,9 @@
 
 <wiki:toc max_depth="2" />
 
-= Installation of R and geolocation packages =
+= [http://code.google.com/p/geolocation/wiki/ArticleQuickStart Installation of R and geolocation packages]=
 
-*[http://www.r-project.org/ R]* is being very rapidly developed and geolocation packages may sometimes lag in catching up with fundamental changes made in *[http://www.r-project.org/ R]* that renders some older routines non-functional. To take a conservative approach, we recommend the following installation:
-
-  * R-2.8.1
-	
-		http://cran.r-project.org/bin/windows/base/old/2.8.1/
-  
-  * Geolocation packages
-  
-		http://tagbase.googlecode.com/files/library.zip
-  
-Move the extracted package folders into the R library folder. To find out where your R library folder is located, type in R:
-
-	`library()`
-
-And look for something like this:
-
-	`Packages in library 'C:/R/R-2.8.1/library':`
+You can find out how to install the geolocation packages here: http://code.google.com/p/geolocation/wiki/ArticleQuickStart
 
 = What you need is to... =
 
