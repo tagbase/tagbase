@@ -76,6 +76,15 @@ Otherwise, any time series data won't be available in your output files
 
 http://tagbase.googlecode.com/svn/trunk/images/LatTagTalkDateFormat.jpg
 
+   * To obtain necessary files, click on `View Log`
+
+http://tagbase.googlecode.com/svn/trunk/images/LatTagTalkViewLog.jpg
+
+  * The screen below will appear once data is loaded.  Make sure to change `Record Time Adjustment` to `Greenwich Mean Time`, also set `Display of Scalable Measurements` to `Scaled Tag Measurements`. Then, click `Save all Logs` and wait while files are written!
+
+http://tagbase.googlecode.com/svn/trunk/images/LatTagTalkMeasurements.jpg
+
+
 ==== For Wildlife Computers: ====
   * File #1 is the time series file (.csv), obtained from !HexDecode, Instrument Helper or DAP software 
   * What to turn OFF (uncheck) in !HexDecode:
