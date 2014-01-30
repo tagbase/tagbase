@@ -2,7 +2,7 @@
 
 You can download the latest Tagbase on this page. This page is created as Google has phased out the Downloads page, which was much easier than this. But oh well, they have reasons we don't understand.
 
-= [http://tagbase.googlecode.com/svn/trunk/files/TagBase4-9.zip Download the latest version] =
+= [http://tagbase.googlecode.com/svn/trunk/files/Tagbase4-9.zip Download the latest version] =
 
 {{{ 
 
