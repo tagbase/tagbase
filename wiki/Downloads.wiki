@@ -1,9 +1,5 @@
 #summary Download the latest Tagbase
 
-<wiki:toc max_depth="2" />
-
-= Introduction =
-
 You can download the latest Tagbase on this page. This page is created as Google has phased out the Downloads page, which was much easier than this. But oh well, they have reasons we don't understand.
 
 = Download the latest version =
@@ -17,8 +13,8 @@ Release date: Jan 31, 2014
 }}}
 
 
-= To get sample files, other support stuff and the older versions =
+=== To get sample files, other support stuff and the older versions ===
 
 Check out - http://code.google.com/p/tagbase/downloads/list
 
-= What's next =
+=== What's next ===
