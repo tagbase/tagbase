@@ -2,7 +2,7 @@
 
 <wiki:toc max_depth="2" />
 
-= [http://code.google.com/p/geolocation/wiki/ArticleQuickStart Installation of R and geolocation packages]=
+= Installation of R and geolocation packages =
 
 You can find out how to install the geolocation packages here: http://code.google.com/p/geolocation/wiki/ArticleQuickStart
 
