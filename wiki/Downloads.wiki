@@ -6,7 +6,9 @@ You can download the latest Tagbase on this page. This page is created as Google
 
 {{{ 
 
-Tagbase 4.9.3
+Tagbase 
+
+Version: 4.9.3
 
 Release date: Jan 31, 2014
 
@@ -15,7 +17,7 @@ Release notes: Added supported for Lotek LAT series, with outputs from TagTalk a
 }}}
 
 
-=== [http://code.google.com/p/tagbase/downloads/list To get sample files, other support stuff and the older versions] ===
+=== [http://code.google.com/p/tagbase/downloads/list To get sample files, other support stuff and older versions] ===
 
 This is where you want to be: http://code.google.com/p/tagbase/downloads/list
 
