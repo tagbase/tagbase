@@ -10,9 +10,9 @@ Tagbase
 
 Version: 4.9.3
 
-Release date: Jan 31, 2014
+Release date: May 2, 2014
 
-Release notes: Added supported for Lotek LAT series, with outputs from TagTalk and Viewer Studio software
+Release notes: Fixed slow speed in generating shapefiles via MapWindow for large datasets.
 
 }}}
 
