@@ -14,7 +14,7 @@ System Requirements -
   * Any zip-supported compression utility, e.g. http://www.7-zip.org/download.html
 }}}
 
-=== Step 1: Download the Starter Kit from our [http://code.google.com/p/tagbase/downloads/list Downloads] page ===
+=== Step 1: Download the Starter Kit from  [http://code.google.com/p/tagbase/downloads/list here] ===
 
 Or follow the link [http://tagbase.googlecode.com/files/starterkit.zip here]
 
