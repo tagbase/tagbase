@@ -2,6 +2,10 @@
 
 Welcome to the What's New page for Project Tagbase. Here you'll find descriptions of our latest and exciting improvements.
 
+= August 2014 =
+
+So sad we are approaching the end of summer! The good news is, we just tested Tagbase on Office 2013 Access, and everything is working nicely!
+
 = February 2014 =
 
 == Happy Year of Horse! Galloping along with Lotek LAT series support ==
