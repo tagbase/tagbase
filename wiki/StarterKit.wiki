@@ -69,6 +69,10 @@ If you experience errors on startup, make sure you have installed all the plugin
   * *[HowToInstallPlugins Plugins Installation]*
   * *[ArticleMissingRefs Handling "Missing References" error]*
 
+We recommend a simplified Trust Center/ Security settings in Office 2007-2013 to enable all macros and plugins . Of course, you can keep the high security features and enable/ disable things every time. Here's a reference to how to change the security options:
+ 
+  * *[http://office.microsoft.com/en-us/excel-help/enable-or-disable-macros-in-office-files-HA010354316.aspx Office Trust Center settings]*
+
 === Step 8: Open the batch import form via the `Form Navigation Tool` ===
 
   * Select `Import` from the *Operation* pull-down list, then
