@@ -36,4 +36,4 @@ And follow the instructions here to set up your SQL server:
  = Useful links = 
  
  * http://www.ehow.com/video_4982928_using-query-builder-sql-server.html
- * http://www.microsoft.com/en-us/download/details.aspx?id=42656
+ * http://www.microsoft.com/en-us/download/details.aspx?id=43690
