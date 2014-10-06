@@ -8,11 +8,11 @@ You can download the latest Tagbase on this page. This page is created as Google
 
 Tagbase 
 
-Version: 4.9.3
+Version: 4.9.4
 
-Release date: May 2, 2014
+Release date: Oct 6, 2014
 
-Release notes: Fixed slow speed in generating shapefiles via MapWindow for large datasets.
+Release notes: Enhanced compatibility with Erddap products in MapWindow.
 
 }}}
 
