@@ -19,6 +19,10 @@
 18,OxySat,common,Percent,fractional_saturation_of_oxygen_in_sea_water,1,Oxygen saturation in percent,
 19,longitudeError,common,degree,,,Confidence interval is bound by +/- this number,
 20,latitudeError,common,degree,,,Confidence interval is bound by +/- this number,
+xxxx,argosLC,common,unitless,,,Location class to determine quality of Argos position.	Argos User's Manual at http://www.argos-system.org/ 
+xxxx,argosErrMaj,common,meter,,,length in meters of position error along semi-major elliptical axis (one half of the major axis),McClintock BT London JM Cameron MF Boveng PL (2015) Modelling animal movement using the Argos satellite telemetry location error ellipse. Methods Ecol Evol 6:266–277,
+xxxx,argosErrMin,common,meter,,,length in meters of position error along semi-minor elliptical axis (one half of the minor axis),McClintock BT London JM Cameron MF Boveng PL (2015) Modelling animal movement using the Argos satellite telemetry location error ellipse. Methods Ecol Evol 6:266–277,
+xxxx,argosErrOrient,common,degree,,,The angle in degrees of the ellipse from true north, proceeding north to east (clockwise) from 0 to 180,McClintock BT London JM Cameron MF Boveng PL (2015) Modelling animal movement using the Argos satellite telemetry location error ellipse. Methods Ecol Evol 6:266–277,
 21,salinity,common,PSU,,,"Salinity expressed as Practical Salinity Unit, which is  is equivalent to per thousand or (o/00) or to  g/kg",
 22,conductivity,common,S m-1,,,"Conductivity expresed as Siemens (S) per meter, which is equivalent to mS/cm",
 23,sst,common,Celsius,sea_surface_temperature,K,Sea surface temperature,
@@ -203,4 +207,4 @@ xxxx,tempRes,aggregation,Celsius,,,Resolution of temperature measurements (e.g. 
 394,TimeAtTempBin14,Wildlife Computers,frequency,,,"Time spent at bin during a sampling period (e.g., 1-24 hours), expressed as a value between 0 and 1 in Histos.csv",https://wildlifecomputers.com/wp-content/uploads/manuals/Spreadsheet-File-Descriptions.pdf
 395,TimeAtTempBin15,Wildlife Computers,frequency,,,"Time spent at bin during a sampling period (e.g., 1-24 hours), expressed as a value between 0 and 1 in Histos.csv",https://wildlifecomputers.com/wp-content/uploads/manuals/Spreadsheet-File-Descriptions.pdf
 396,TimeAtTempBin16,Wildlife Computers,frequency,,,"Time spent at bin during a sampling period (e.g., 1-24 hours), expressed as a value between 0 and 1 in Histos.csv",https://wildlifecomputers.com/wp-content/uploads/manuals/Spreadsheet-File-Descriptions.pdf
-xxxx,summaryPeriod,aggregation,hours,,,Period over which a given aggregation or summary takes place. Should be expressed as period in hours beginning at the associated time stamp.
+xxxx,summaryPeriod,aggregation,hours,,,Period over which a given aggregation or summary takes place. Should be expressed as period in hours beginning at the associated time stamp,
