@@ -40,6 +40,7 @@
 1006,depthMean,aggregation,meter,,,Minimum depth in a series of measurements,
 1007,depthMedian,aggregation,meter,,,Median depth in a series of measurements,
 1008,depthStDev,aggregation,meter,,,Standard deviation of depth measurements,
+xxxx,depthRes,aggregation,meter,,,Resolution of depth measurements (e.g. +/- 1 m),
 1009,depthSunrise,Microwave Telemetry,meter,,,Depth occupied at sunset.  Light levels are analyzed onboard the tag with manufacturer algorithm to determine the time of sunrise and sunset each day.,
 1010,depthSunset,Microwave Telemetry,meter,,,Depth occupied at sunrise.  Light levels are analyzed onboard the tag with manufacturer algorithm to determine the time of sunrise and sunset each day.,
 1011,depthDelta,Microwave Telemetry,meter,,,Delta value represents the resolution of a transmitted depth measurement after applying data compression. See manufacturer's website for details.,http://www.microwavetelemetry.com/fish/understanding_data_xtag.cfm
@@ -51,6 +52,7 @@
 1017,tempMean,aggregation,Celsius,,,Mean temperature in a series of measurements,
 1018,tempMedian,aggregation,Celsius,,,Median temperature in a series of measurements,
 1019,tempStDev,aggregation,Celsius,,,Standard deviation of temperature measurements,
+xxxx,tempRes,aggregation,Celsius,,,Resolution of temperature measurements (e.g. +/- 1 degree C),
 1020,sstMin,aggregation,Celsius,,,Mean sea surface temperature in a series of measurements,
 1021,sstMax,aggregation,Celsius,,,Maximumsea surface  temperature in a series of measurements,
 1022,sstMean,aggregation,Celsius,,,Mean sea surface temperature in a series of measurements,
