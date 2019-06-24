@@ -19,10 +19,10 @@
 18,OxySat,common,Percent,fractional_saturation_of_oxygen_in_sea_water,1,Oxygen saturation in percent,
 19,longitudeError,common,degree,,,Confidence interval is bound by +/- this number,
 20,latitudeError,common,degree,,,Confidence interval is bound by +/- this number,
-xxxx,argosLC,common,unitless,,,Location class to determine quality of Argos position.,Argos User's Manual at http://www.argos-system.org/ 
-xxxx,argosErrMaj,common,meter,,,length in meters of position error along semi-major elliptical axis (one half of the major axis),McClintock BT London JM Cameron MF Boveng PL (2015) Modelling animal movement using the Argos satellite telemetry location error ellipse. Methods Ecol Evol 6:266–277
-xxxx,argosErrMin,common,meter,,,length in meters of position error along semi-minor elliptical axis (one half of the minor axis),McClintock BT London JM Cameron MF Boveng PL (2015) Modelling animal movement using the Argos satellite telemetry location error ellipse. Methods Ecol Evol 6:266–277
-xxxx,argosErrOrient,common,degree,,,The angle in degrees of the ellipse from true north proceeding north to east (clockwise) from 0 to 180,McClintock BT London JM Cameron MF Boveng PL (2015) Modelling animal movement using the Argos satellite telemetry location error ellipse. Methods Ecol Evol 6:266–277
+34,argosLC,common,unitless,,,Location class to determine quality of Argos position.,Argos User's Manual at http://www.argos-system.org/ 
+35,argosErrMaj,common,meter,,,length in meters of position error along semi-major elliptical axis (one half of the major axis),McClintock BT London JM Cameron MF Boveng PL (2015) Modelling animal movement using the Argos satellite telemetry location error ellipse. Methods Ecol Evol 6:266–277
+36,argosErrMin,common,meter,,,length in meters of position error along semi-minor elliptical axis (one half of the minor axis),McClintock BT London JM Cameron MF Boveng PL (2015) Modelling animal movement using the Argos satellite telemetry location error ellipse. Methods Ecol Evol 6:266–277
+37,argosErrOrient,common,degree,,,The angle in degrees of the ellipse from true north proceeding north to east (clockwise) from 0 to 180,McClintock BT London JM Cameron MF Boveng PL (2015) Modelling animal movement using the Argos satellite telemetry location error ellipse. Methods Ecol Evol 6:266–277
 21,salinity,common,PSU,,,"Salinity expressed as Practical Salinity Unit, which is  is equivalent to per thousand or (o/00) or to  g/kg",
 22,conductivity,common,S m-1,,,"Conductivity expresed as Siemens (S) per meter, which is equivalent to mS/cm",
 23,sst,common,Celsius,sea_surface_temperature,K,Sea surface temperature,
@@ -44,7 +44,7 @@ xxxx,argosErrOrient,common,degree,,,The angle in degrees of the ellipse from tru
 1006,depthMean,aggregation,meter,,,Minimum depth in a series of measurements,
 1007,depthMedian,aggregation,meter,,,Median depth in a series of measurements,
 1008,depthStDev,aggregation,meter,,,Standard deviation of depth measurements,
-xxxx,depthRes,aggregation,meter,,,Resolution of depth measurements (e.g. +/- 1 m),
+1026,depthRes,aggregation,meter,,,Resolution of depth measurements (e.g. +/- 1 m),
 1009,depthSunrise,Microwave Telemetry,meter,,,Depth occupied at sunset.  Light levels are analyzed onboard the tag with manufacturer algorithm to determine the time of sunrise and sunset each day.,
 1010,depthSunset,Microwave Telemetry,meter,,,Depth occupied at sunrise.  Light levels are analyzed onboard the tag with manufacturer algorithm to determine the time of sunrise and sunset each day.,
 1011,depthDelta,Microwave Telemetry,meter,,,Delta value represents the resolution of a transmitted depth measurement after applying data compression. See manufacturer's website for details.,http://www.microwavetelemetry.com/fish/understanding_data_xtag.cfm
@@ -56,7 +56,7 @@ xxxx,depthRes,aggregation,meter,,,Resolution of depth measurements (e.g. +/- 1 m
 1017,tempMean,aggregation,Celsius,,,Mean temperature in a series of measurements,
 1018,tempMedian,aggregation,Celsius,,,Median temperature in a series of measurements,
 1019,tempStDev,aggregation,Celsius,,,Standard deviation of temperature measurements,
-xxxx,tempRes,aggregation,Celsius,,,Resolution of temperature measurements (e.g. +/- 1 degree C),
+1027,tempRes,aggregation,Celsius,,,Resolution of temperature measurements (e.g. +/- 1 degree C),
 1020,sstMin,aggregation,Celsius,,,Mean sea surface temperature in a series of measurements,
 1021,sstMax,aggregation,Celsius,,,Maximumsea surface  temperature in a series of measurements,
 1022,sstMean,aggregation,Celsius,,,Mean sea surface temperature in a series of measurements,
@@ -207,4 +207,4 @@ xxxx,tempRes,aggregation,Celsius,,,Resolution of temperature measurements (e.g. 
 394,TimeAtTempBin14,Wildlife Computers,frequency,,,"Time spent at bin during a sampling period (e.g., 1-24 hours), expressed as a value between 0 and 1 in Histos.csv",https://wildlifecomputers.com/wp-content/uploads/manuals/Spreadsheet-File-Descriptions.pdf
 395,TimeAtTempBin15,Wildlife Computers,frequency,,,"Time spent at bin during a sampling period (e.g., 1-24 hours), expressed as a value between 0 and 1 in Histos.csv",https://wildlifecomputers.com/wp-content/uploads/manuals/Spreadsheet-File-Descriptions.pdf
 396,TimeAtTempBin16,Wildlife Computers,frequency,,,"Time spent at bin during a sampling period (e.g., 1-24 hours), expressed as a value between 0 and 1 in Histos.csv",https://wildlifecomputers.com/wp-content/uploads/manuals/Spreadsheet-File-Descriptions.pdf
-xxxx,summaryPeriod,aggregation,hours,,,Period over which a given aggregation or summary takes place. Should be expressed as period in hours beginning at the associated time stamp,
+397,summaryPeriod,aggregation,hours,,,Period over which a given aggregation or summary takes place. Should be expressed as period in hours beginning at the associated time stamp,
