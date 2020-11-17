@@ -62,7 +62,7 @@
 1022,sstMean,aggregation,Celsius,,,Mean sea surface temperature in a series of measurements,
 1023,sstMedian,aggregation,Celsius,,,Median sea surface temperature in a series of measurements,
 1024,sstStDev,aggregation,Celsius,,,Standard deviation of sea surface temperature measurements,
-1025,sstDepth,Wildlife Computers,meter,,,"Depth, in meters, when the sea surface temperature was sampled. This value needs to be doubled for a 2000 meter instrument.",https://wildlifecomputers.com/wp-content/uploads/manuals/Spreadsheet-File-Descriptions.pdf
+1025,sstDepth,common,meter,,,"Depth, in meters, when the sea surface temperature was sampled. This value needs to be doubled for a 2000 meter instrument.",https://wildlifecomputers.com/wp-content/uploads/manuals/Spreadsheet-File-Descriptions.pdf
 101,PdtDepth01,Wildlife Computers,meter,,,"For Wildlife Computers tags, profile-depth-temperature (PDT) output in PDTs.csv",https://wildlifecomputers.com/wp-content/uploads/manuals/Spreadsheet-File-Descriptions.pdf
 102,PdtTempMin01,Wildlife Computers,Celsius,,,"For Wildlife Computers tags, profile-depth-temperature (PDT) output in PDTs.csv",https://wildlifecomputers.com/wp-content/uploads/manuals/Spreadsheet-File-Descriptions.pdf
 103,PdtTempMax01,Wildlife Computers,Celsius,,,"For Wildlife Computers tags, profile-depth-temperature (PDT) output in PDTs.csv",https://wildlifecomputers.com/wp-content/uploads/manuals/Spreadsheet-File-Descriptions.pdf
