@@ -5,7 +5,7 @@
 4,pressure,common,psi,sea_water_pressure,dbar,Pressure expressed as pound-force per square inch,
 5,depth,common,meter,depth,meter,"Depth in meter, usually converted from pressure measurements",
 6,temperature,common,Celsius,sea_water_temperature,K,"External sensor temperature, usually water temperature in Celsius",
-7,internal temperature,common,Celsius,,,"Internal sesnor temperature, usually body cavity temperature in Celsius",
+7,internalTemperature,common,Celsius,,,"Internal sesnor temperature, usually body cavity temperature in Celsius",
 8,light,common,unitless,,,"Measured blue or green light on a logarithmic scale. Usually expressed as unitless by Wildlife Computers (light sensor in W cm-2), Lotek and Microwave Telemetry (light sensor in Lux) tags. Also termed as relative light levels.",https://wildlifecomputers.com/wp-content/uploads/product-pages/SPLASH-Product-Sheet.pdf
 9,accelX,common,G,,,Acceleration in the X-axis expressed as gravitational force (1 G ~ 9.8 ms-2),
 10,accelY,common,G,,,Acceleration in the Y-axis expressed as gravitational force (1 G ~ 9.8 ms-2),
@@ -35,7 +35,7 @@
 30,roll,Wildlife Computers,degree,,,Counterclockwise rotation of the tag about its X axis. This value is given in degrees from -180 to +180 (where a tag flat on its base reads 0 degrees).,https://wildlifecomputers.com/our-tags/daily-diary 
 31,heading,Wildlife Computers,degree,,,Direction in which the nose of the tag is pointing. The value is expressed in degrees on a scale from 0 to 360. Magnetic North corresponds to a reading of 0 with a clockwise rotation increasing the value (consistent with navigational headings).,https://wildlifecomputers.com/our-tags/daily-diary 
 32,magDip,Wildlife Computers,degree,,,"angle at which the earth’s magnetic flux lines enter the earth’s surface. This value is given in degrees, from -90 to +90 with 0 being completely horizontal to the earth’s surface. +90 corresponds to the tag resting directly over the magnetic north pole while a -90 reading means the tag is over the magnetic south pole.",https://wildlifecomputers.com/our-tags/daily-diary 
-33,stomach temperature,Wildlife Computers,Celsius,,,"Stomach temperature, usually measured by an ingested logger",
+33,stomachTemperature,Wildlife Computers,Celsius,,,"Stomach temperature, usually measured by an ingested logger",
 1001,frequency,aggregation,unitless,,,Frequency takes only a value between 0 and 1,
 1002,percentage,aggregation,percent,,,Takes a value between 0 and 100,
 1003,count,aggregation,number,,,"Total number of times this particular data item was received, verified, or successfully decoded.",
