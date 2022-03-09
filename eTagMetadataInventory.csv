@@ -1,145 +1,146 @@
-Category,AttributeID,AttributeName,Description,Example,Comments,Necessity,fish & shark,turtle,mammal,bird,Proposed by,Other notes,CF 1.6 globals Mapping,ACCD 1.3 Mapping
-instrument,1,instrument_name,Append an identifer that is unique within your organization. This is essential if a device is recycled.,16P0100-Refurb2,"Devices might be reused, so the serial number will be the same. The only way to distinguish is by providing a unique name for the recycled product. ",required,1,1,1,1,Tim Lam,,,
-instrument,2,instrument_type,Type of instrument,"archival, popup, satellite, acoustic tag, or acoustic receiver",Should be restricted to the examples provided.,required,1,1,1,1,Tim Lam,"If any of the metadata can be populated by manufacter, we need to provide a ""map"" to connect the manufacturer names to our names here.  We should consider maping to possible device specification metadata record in http://cor.esipfed.org/ont#/  system (Vardis to investigate with MMI/COR -XDOMES project)",,instrument (Suggested)  +  instrument_vocabulary (Suggested)
-instrument,3,firmware,Version number of the firmware used to build the device,,,required,1,1,1,1,Tim Lam,,,instrument (Suggested)  +  instrument_vocabulary (Suggested)
-instrument,4,manufacturer,Name of manufacturer,"Wildlife Computers, Microwave Telemetry, Lotek Wireless, Desert Star Systems, CEFAS, StarOddi, Sea Mammal Research Unit, Vemco, Loggerhead Instruments, Biologging Solutions, Little Leonardo, Teleonics etc.",,required,1,1,1,1,Tim Lam,Some edits to the example list made by IATTC,,instrument (Suggested)  +  instrument_vocabulary (Suggested)
-instrument,5,model,Model name,MiniPAT,,required,1,1,1,1,Tim Lam,,,instrument (Suggested)  +  instrument_vocabulary (Suggested)
-instrument,6,owner_contact,Contact email/ telephone/ address,,,required,1,1,1,1,Tim Lam,Comma separated,,
-instrument,7,person_owner,Researcher/ organization owning the device,,PI/scientist/organization is used interchargably here. But best to have a first-last name specified here.,required,1,1,1,1,Tim Lam,Comma separated,,
-instrument,8,serial_number,Serial number,16P0100,,required,1,1,1,1,Tim Lam,,,instrument (Suggested)  +  instrument_vocabulary (Suggested)
-instrument,9,date_shipment,Date (yyyy-mm-dd) of receiving the device from manufacturer,2017-07-11T18:24:23+00:00,The device can be fresh off the production line or refurnished with some parts replaced.,recommended,1,1,1,1,Tim Lam,,,
-instrument,10,project,Name or identifer for project/ grant number,,,recommended,1,1,1,1,Tim Lam,Comma separated,,project (Recommended)  + program (Suggested)
-instrument,11,ptt,Platform Transmitting Terminal (PTT) number for Argos transmission.,,,recommended,1,1,1,1,Tim Lam,,,
-instrument,12,ptt_hex,PTT in hexadecimal,,,recommended,1,1,1,1,Tim Lam,,,
-instrument,13,specs,"Specification document name/ URL/ file (e.g., in xml)",,Need input from manufacturer. May allow attachment or upload. Or grab it from an online archive.,recommended,1,1,1,1,Tim Lam,Possible device specification metadata record in http://cor.esipfed.org/ont#/  system,,instrument (Suggested)  +  instrument_vocabulary (Suggested)
-instrument,14,code_map,Placeholder for acoustic tags,,Refer to ATN spec.,no,1,1,1,-1,Tim Lam,,,
-instrument,15,ping_code,Placeholder for acoustic tags,,Refer to ATN spec.,no,1,1,1,-1,Tim Lam,,,
-programming,100,programming_report,File/ URL to a report listing the details of programming,,Need input from manufacturer. May allow attachment or upload. Or grab it from an online archive.,required,1,1,1,1,Tim Lam,,,
-programming,101,programming_software,Programming software with version number,,,required,1,1,1,1,Tim Lam,,,
-programming,102,days_constantdepth,Days at a constant depth before release is initiated ,1,This represents a time lag in days after the tag is  floating/ detached/ sunk before the release procedure will be initiated. ,recommended,1,0,0,-1,Tim Lam,,,
-programming,103,days_mission,Programmed mission length in days,365,,recommended,1,1,1,1,Tim Lam,,,
-programming,104,minutes_summary,Interval in minutes during when data are summarized for that period,1440,Data are summarized because of Argos transmission constraint.,recommended,1,1,1,1,Tim Lam,,,
-programming,105,person_programmer,Person responsible for the programming,,,recommended,1,1,1,1,Tim Lam,,,
-programming,106,seconds_sampling,Sampling rate (seconds) for sensor sampling,15,"For basic sensors,  e.g., pressure, temperature, light",recommended,1,1,1,1,Tim Lam,,,time_coverage_resolution (Recommended)
-programming,107,seconds_writingdata,Time interval in seconds when sampled data are written to onboard storage memory,300,"This specifies how frequent data will be stored, and subsequently available for download or summarizing.",recommended,1,1,1,1,Tim Lam,,,
-programming,108,seconds_sampling_highfreq,Sampling rate (seconds) for sensor sampling at a higher frequency,,"For sensors that sample in Hertz (Hz),  e.g., accelerometer, magnetometer",optional,1,1,1,1,Tim Lam,,,time_coverage_resolution (Recommended)
-attachment,200,attachment_method,Method used to put the tag on/ in the animal,"tow, glue, suction, anchor, mount, implant, harness, backpack","Should be restricted to the examples provided. Tow includes tethered for popup or towed for satellite tags . Glue is using adhensive or epoxy. Mount is using screw, bolt, button, sleeve or backpack. Anchor is equivalent to applying a conventional tag or using a gun (air, spear etc.). Implant implies surgery, ingestion or insertion.",required,1,1,1,1,Tim Lam,,,
-attachment,201,anchor_depth_cm,How deep (centimeter) should the anchor be in the animal?,8,May be used for cetacean tagging.,recommended,1,-1,0,-1,Tim Lam,,,
-attachment,202,anchor_dimensions_mm,"Dimensions (millimeter) as length, width, thichkness or diameter.",20 L x 14 W,"Can be used loosely as size: small, medium and large.",recommended,1,-1,0,-1,Tim Lam,,,
-attachment,203,anchor_material,Material of anchor,"nylon, urethane, stainless steel, titanium",,recommended,1,-1,0,-1,Tim Lam,,,
-attachment,204,anchor_type,Type of anchor,"Domeier, Wilton, Titanium",,recommended,1,-1,0,-1,Tim Lam,,,
-attachment,205,attachment_product,Brand name and/ product for attachment materials used,"VetBond, Peel Ply, tesa®","Brand and product name of suture, stainless steel wire, monofilament, bolt, tape, adhesive, epoxy, suction cup, air gun, speargun, pole, applicator and tip.",recommended,1,1,1,1,Tim Lam,Comma separated. Some edits/additions to the example list made by IATTC,,
-attachment,206,mount_type,Type of mount,"Fin, tail, carapacial ridge",,recommended,1,1,1,1,Tim Lam,,,
-attachment,207,release_method,Method to get a tag detached from the animal/ anchor,"corrosive burn wire, oxidative/ explosive, galavanizing metal, acoustic release",,recommended,1,1,1,0,Tim Lam,,,
-attachment,208,tether_assembly,Materials and methods in constructing a tether,heat-shrink or silicon tubing,Use brand name and/ product when possible.,recommended,1,1,0,-1,Tim Lam,,,
-attachment,209,tether_length_cm,End to end length (centimeter) of a tether,,,recommended,1,1,0,-1,Tim Lam,,,
-attachment,210,tether_material,Tether material for a towed tag,"stainless steel wire, monofilament",Use brand name and/ product when possible.,recommended,1,1,0,-1,Tim Lam,,,
-attachment,211,anesthetic_product,Brand name and/ product of anesthesia used during the attachment,"metomidate, Aqua-S",,optional,1,1,1,1,Tim Lam,,,
-attachment,212,antifouling_product,Brand name and/ product of antifoluling paint or coating applied ,PropSpeed,,optional,1,1,1,1,Tim Lam,,,
-attachment,213,antiseptic_product,Brand name and/ product of antiseptic or sterilizing agent used during the attachment,"Iodine, Cicatrin",,optional,1,1,1,1,Tim Lam,,,
-attachment,214,float_additional,Specify any additional floation used,,Float might be added to archival tags for external use.,optional,1,1,0,-1,Tim Lam,,,
-attachment,215,release_forced,"If a mechanical release is engaged at depth (too avoid crushing the tag), specify the mechanism and depth at which the release is engaged.",Wildlife Computers RD1800,,optional,1,-1,-1,-1,Tim Lam,,,
-deployment,300,geospatial_lat_start,Latitude (decimal degree) of release/ deployment,,,required,1,1,1,1,Tim Lam,,,N/A:  geospatial_lat_min (Recommended)
-deployment,301,geospatial_lon_start,Longitude (decimal degree) of release/ deployment,,,required,1,1,1,1,Tim Lam,,,N/A:  geospatial_lon_min (Recommended)
-deployment,302,person_tagger_capture,Person responsible for tagging or surgery,,"Can be the name of vet, observer, crew, spear fisherman or scientist",required,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from  Recommended to Required),,
-deployment,303,time_coverage_start,Local date time (yyyy-mm-dd hh:mm:ss) of release/ deployment,2017-07-11T18:24:23+00:00,http://en.wikipedia.org/wiki/ISO_8601,required,1,1,1,1,Tim Lam,,,time_coverage_start (Recommended)
-deployment,304,location_capture,Name or standard identifer of location,,,recommended,1,1,1,1,Tim Lam,,,
+Category,AttributeID,AttributeName,Description,Example,Comments,Necessity,fish & shark,turtle,mammal,bird,Proposed by,Other notes,CF 1.6 globals Mapping,ACCD 1.3 Mapping,class
+instrument,1,instrument_name,Append an identifer that is unique within your organization. This is essential if a device is recycled.,16P0100-Refurb2,"Devices might be reused, so the serial number will be the same. The only way to distinguish is by providing a unique name for the recycled product. ",required,1,1,1,1,Tim Lam,,,,character
+instrument,2,instrument_type,Type of instrument,"archival, popup, satellite, acoustic tag, or acoustic receiver",Should be restricted to the examples provided.,required,1,1,1,1,Tim Lam,"If any of the metadata can be populated by manufacter, we need to provide a ""map"" to connect the manufacturer names to our names here.  We should consider maping to possible device specification metadata record in http://cor.esipfed.org/ont#/  system (Vardis to investigate with MMI/COR -XDOMES project)",,instrument (Suggested)  +  instrument_vocabulary (Suggested),character
+instrument,3,firmware,Version number of the firmware used to build the device,,,required,1,1,1,1,Tim Lam,,,instrument (Suggested)  +  instrument_vocabulary (Suggested),character
+instrument,4,manufacturer,Name of manufacturer,"Wildlife Computers, Microwave Telemetry, Lotek Wireless, Desert Star Systems, CEFAS, StarOddi, Sea Mammal Research Unit, Vemco, Loggerhead Instruments, Biologging Solutions, Little Leonardo, Teleonics etc.",,required,1,1,1,1,Tim Lam,Some edits to the example list made by IATTC,,instrument (Suggested)  +  instrument_vocabulary (Suggested),character
+instrument,5,model,Model name,MiniPAT,,required,1,1,1,1,Tim Lam,,,instrument (Suggested)  +  instrument_vocabulary (Suggested),character
+instrument,6,owner_contact,Contact email/ telephone/ address,,,required,1,1,1,1,Tim Lam,Comma separated,,,character
+instrument,7,person_owner,Researcher/ organization owning the device,,PI/scientist/organization is used interchargably here. But best to have a first-last name specified here.,required,1,1,1,1,Tim Lam,Comma separated,,,character
+instrument,8,serial_number,Serial number,16P0100,,required,1,1,1,1,Tim Lam,,,instrument (Suggested)  +  instrument_vocabulary (Suggested),character
+instrument,9,date_shipment,Date (yyyy-mm-dd) of receiving the device from manufacturer,2017-07-11T18:24:23+00:00,The device can be fresh off the production line or refurnished with some parts replaced.,recommended,1,1,1,1,Tim Lam,,,,POSIXct
+instrument,10,project,Name or identifer for project/ grant number,,,recommended,1,1,1,1,Tim Lam,Comma separated,,project (Recommended)  + program (Suggested),character
+instrument,11,ptt,Platform Transmitting Terminal (PTT) number for Argos transmission.,,,recommended,1,1,1,1,Tim Lam,,,,numeric
+instrument,12,ptt_hex,PTT in hexadecimal,,,recommended,1,1,1,1,Tim Lam,,,,character
+instrument,13,specs,"Specification document name/ URL/ file (e.g., in xml)",,Need input from manufacturer. May allow attachment or upload. Or grab it from an online archive.,recommended,1,1,1,1,Tim Lam,Possible device specification metadata record in http://cor.esipfed.org/ont#/  system,,instrument (Suggested)  +  instrument_vocabulary (Suggested),character
+instrument,14,code_map,Placeholder for acoustic tags,,Refer to ATN spec.,no,1,1,1,-1,Tim Lam,,,,
+instrument,15,ping_code,Placeholder for acoustic tags,,Refer to ATN spec.,no,1,1,1,-1,Tim Lam,,,,
+programming,100,programming_report,File/ URL to a report listing the details of programming,,Need input from manufacturer. May allow attachment or upload. Or grab it from an online archive.,required,1,1,1,1,Tim Lam,,,,
+programming,101,programming_software,Programming software with version number,,,required,1,1,1,1,Tim Lam,,,,
+programming,102,days_constantdepth,Days at a constant depth before release is initiated ,1,This represents a time lag in days after the tag is  floating/ detached/ sunk before the release procedure will be initiated. ,recommended,1,0,0,-1,Tim Lam,,,,numeric
+programming,103,days_mission,Programmed mission length in days,365,,recommended,1,1,1,1,Tim Lam,,,,numeric
+programming,104,minutes_summary,Interval in minutes during when data are summarized for that period,1440,Data are summarized because of Argos transmission constraint.,recommended,1,1,1,1,Tim Lam,,,,numeric
+programming,105,person_programmer,Person responsible for the programming,,,recommended,1,1,1,1,Tim Lam,,,,character
+programming,106,seconds_sampling,Sampling rate (seconds) for sensor sampling,15,"For basic sensors,  e.g., pressure, temperature, light",recommended,1,1,1,1,Tim Lam,,,time_coverage_resolution (Recommended),numeric
+programming,107,seconds_writingdata,Time interval in seconds when sampled data are written to onboard storage memory,300,"This specifies how frequent data will be stored, and subsequently available for download or summarizing.",recommended,1,1,1,1,Tim Lam,,,,numeric
+programming,108,seconds_sampling_highfreq,Sampling rate (seconds) for sensor sampling at a higher frequency,,"For sensors that sample in Hertz (Hz),  e.g., accelerometer, magnetometer",optional,1,1,1,1,Tim Lam,,,time_coverage_resolution (Recommended),
+attachment,200,attachment_method,Method used to put the tag on/ in the animal,"tow, glue, suction, anchor, mount, implant, harness, backpack","Should be restricted to the examples provided. Tow includes tethered for popup or towed for satellite tags . Glue is using adhensive or epoxy. Mount is using screw, bolt, button, sleeve or backpack. Anchor is equivalent to applying a conventional tag or using a gun (air, spear etc.). Implant implies surgery, ingestion or insertion.",required,1,1,1,1,Tim Lam,,,,character
+attachment,201,anchor_depth_cm,How deep (centimeter) should the anchor be in the animal?,8,May be used for cetacean tagging.,recommended,1,-1,0,-1,Tim Lam,,,,numeric
+attachment,202,anchor_dimensions_mm,"Dimensions (millimeter) as length, width, thichkness or diameter.",20 L x 14 W,"Can be used loosely as size: small, medium and large.",recommended,1,-1,0,-1,Tim Lam,,,,character
+attachment,203,anchor_material,Material of anchor,"nylon, urethane, stainless steel, titanium",,recommended,1,-1,0,-1,Tim Lam,,,,character
+attachment,204,anchor_type,Type of anchor,"Domeier, Wilton, Titanium",,recommended,1,-1,0,-1,Tim Lam,,,,character
+attachment,205,attachment_product,Brand name and/ product for attachment materials used,"VetBond, Peel Ply, tesa®","Brand and product name of suture, stainless steel wire, monofilament, bolt, tape, adhesive, epoxy, suction cup, air gun, speargun, pole, applicator and tip.",recommended,1,1,1,1,Tim Lam,Comma separated. Some edits/additions to the example list made by IATTC,,,character
+attachment,206,mount_type,Type of mount,"Fin, tail, carapacial ridge",,recommended,1,1,1,1,Tim Lam,,,,character
+attachment,207,release_method,Method to get a tag detached from the animal/ anchor,"corrosive burn wire, oxidative/ explosive, galavanizing metal, acoustic release",,recommended,1,1,1,0,Tim Lam,,,,character
+attachment,208,tether_assembly,Materials and methods in constructing a tether,heat-shrink or silicon tubing,Use brand name and/ product when possible.,recommended,1,1,0,-1,Tim Lam,,,,character
+attachment,209,tether_length_cm,End to end length (centimeter) of a tether,,,recommended,1,1,0,-1,Tim Lam,,,,numeric
+attachment,210,tether_material,Tether material for a towed tag,"stainless steel wire, monofilament",Use brand name and/ product when possible.,recommended,1,1,0,-1,Tim Lam,,,,character
+attachment,211,anesthetic_product,Brand name and/ product of anesthesia used during the attachment,"metomidate, Aqua-S",,optional,1,1,1,1,Tim Lam,,,,character
+attachment,212,antifouling_product,Brand name and/ product of antifoluling paint or coating applied ,PropSpeed,,optional,1,1,1,1,Tim Lam,,,,character
+attachment,213,antiseptic_product,Brand name and/ product of antiseptic or sterilizing agent used during the attachment,"Iodine, Cicatrin",,optional,1,1,1,1,Tim Lam,,,,character
+attachment,214,float_additional,Specify any additional floation used,,Float might be added to archival tags for external use.,optional,1,1,0,-1,Tim Lam,,,,
+attachment,215,release_forced,"If a mechanical release is engaged at depth (too avoid crushing the tag), specify the mechanism and depth at which the release is engaged.",Wildlife Computers RD1800,,optional,1,-1,-1,-1,Tim Lam,,,,character
+deployment,300,geospatial_lat_start,Latitude (decimal degree) of release/ deployment,,,required,1,1,1,1,Tim Lam,,,N/A:  geospatial_lat_min (Recommended),numeric
+deployment,301,geospatial_lon_start,Longitude (decimal degree) of release/ deployment,,,required,1,1,1,1,Tim Lam,,,N/A:  geospatial_lon_min (Recommended),numeric
+deployment,302,person_tagger_capture,Person responsible for tagging or surgery,,"Can be the name of vet, observer, crew, spear fisherman or scientist",required,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from  Recommended to Required),,,character
+deployment,303,time_coverage_start,Local date time (yyyy-mm-dd hh:mm:ss) of release/ deployment,2017-07-11T18:24:23+00:00,http://en.wikipedia.org/wiki/ISO_8601,required,1,1,1,1,Tim Lam,,,time_coverage_start (Recommended),POSIXct
+deployment,304,location_capture,Name or standard identifer of location,,,recommended,1,1,1,1,Tim Lam,,,,character
 deployment,305,method_capture,Type of gear used to catch the animal,"Longline, purse seine, troll, trawl, rod and reel, handline, set net, trap, gillnet, harpoon, hoop net, anesthesia, tangle net, dip net, vertical line entanglement (commercial fisheries, aquaculture, mooring), dredge, pound net/weir (for turtles)",,recommended,1,1,1,1,Tim Lam,"http://www.spc.int/oceanfish/en/data-collection/241-data-collection-forms
 https://www.iccat.int/en/ICCATManual.asp
-",,
-deployment,306,baitlure_capture,"Bait, chum, lure or decoy used",sardine,Use brand name and/ product when possible.,optional,1,0,-1,-1,Tim Lam,,,
-deployment,307,cruise_capture,Name or standard identifer of cruise,,,optional,1,1,1,1,Tim Lam,,,
-deployment,308,depth_m_capture,Depth (meters) at which the animal was caught,,Can use estimated depth from hook number on longline,optional,1,0,-1,-1,Tim Lam,,,
-deployment,309,flag_capture,The vessel’s country of registration,,,optional,1,1,1,1,,,,
-deployment,310,hook_capture,Type of hook used,18/0 circle,Use brand name and/ product when possible.,optional,1,0,-1,-1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Optional to Recommended),,
-deployment,311,method_aboard,how was animal put aboard the vessel,"net, sling, lifted",,optional,1,1,1,-1,Dan Fuller,,,
-deployment,312,othertags_capture,"List tag IDs for conventional, acoustic, PIT, band or satellite tags for multi-tagged situation, photoID, photo/video footage file names",Hallprint PAR007007,,optional,1,1,1,1,Tim Lam,Comma separated.,,
-deployment,313,person_angler_capture,Person responsible for angling,,,optional,1,-1,-1,-1,Tim Lam,,,
-deployment,314,school_capture,Type of school in which the animal was caught,"Free school, log, anchored FAD, drifting FAD",Include FAD number if possible.,optional,1,-1,-1,-1,Tim Lam,,,
-deployment,315,seastate_capture,World Meteorological Organization sea state code (0-9),,Similar to Douglas Sea Scale ,optional,1,1,1,1,Tim Lam,,,
-deployment,316,set_float_capture,"If caught on longline, include set number and float number",,"It's very unlikely to tag turtle, bird/ mammal off longline.",optional,1,0,-1,-1,Tim Lam,,,
-deployment,317,station_capture,Name or standard identifer of station,,,optional,1,1,1,1,Tim Lam,,,
-deployment,318,temp_degC_capture,Air or sea surface temperature (Celcius) when the animal was caught,,,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Optional to Recommended),,
-deployment,319,vessel_capture,Name or standard identifer of vessel,,,optional,1,1,1,1,Tim Lam,,,
-deployment,320,wind_knots_capture,Wind speed (knots) when the animal was caught,,,optional,1,1,1,1,Tim Lam,,,
-animal,400,condition_capture,Description of condition/ injury. Or specify scoring system and a score.,good,"Can be generic: good, bad, gut hooked, eye hooked, bleeding. Scoring system fof fish/ shark:  reflex action mortality predictor (RAMP), Kerstetter's lab ACES.  Measurement: Bioelectrical Impedance Analysis (BIA) gives phase angle and composition index. Fat: Distell Fatmeter",required,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,
-animal,401,length_capture,Length of the animal,300,,required,1,1,1,1,Tim Lam,,,
-animal,402,length_method_capture,Method used to obtain the measurement,"measured caliper, measured tape,  estimated, calculated",Calculated means it's calculated from length-weight relationships or other conversions.,required,1,1,1,1,Tim Lam,Is this good enough? Or have to specify how the measurement is made: tape/ estimated etc.  Some edits/additions to the example list made by IATTC.  Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,
-animal,403,length_type_capture,Type of length measurement," Curved fork length, Straight fork length, total length.  for turtle the standard measurements are Curved Carapace Length (CCL), Straight Carapace Length (SCL), Curved Carapace Width (CCW) and Straight Carapace Width (SCW), and researchers occasionally measure girth as well. ",May need to compile a list of types and abbreviations,required,1,1,1,1,Tim Lam,Some edits/additions to the example list made by IATTC. Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,
-animal,404,length_unit_capture,Unit of length measurement,centimeter,May need to compile a list of types and abbreviations,required,1,1,1,1,Tim Lam,,,
-animal,405,platform,Common name(s) or FAO code for species name,,Refer to www.itis.gov or FAO species list,required,1,1,1,1,Tim Lam,,,platform (Suggested) + platform_vocabulary (Suggested)
-animal,406,taxonomic_serial_number,Taxononomic Serial Number (TSN) from Integrated Taxonomic Information System,,https://www.itis.gov,required,1,1,1,1,Tim Lam,,,platform (Suggested) + platform_vocabulary (Suggested)
-animal,500,condition_recapture,Description of condition/ injury. Or specify scoring system and a score.,,"Can be generic: good, bad, gut hooked, eye hooked, bleeding. Scoring system fof fish/ shark:  reflex action mortality predictor (RAMP), Kerstetter's lab ACES.  Measurement: Bioelectrical Impedance Analysis (BIA) gives phase angle and composition index. Fat: Distell Fatmeter",recommended,1,1,1,1,Tim Lam,,,
-animal,501,fate_recapture,Fate of the animal upon recapture,"harvested, released, tag and release, missing, unknown; observed/ photo ID",,recommended,1,1,1,1,Tim Lam,,,
-animal,502,length_method_recapture,Method used to obtain the measurement,"measured Caliper, measured tape, estimated, calculated",Calculated means it's calculated from length-weight relationships or other conversions,recommended,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,
-animal,503,length_recapture,Length of the animal,,,recommended,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,
-animal,504,length_type_recapture,Type of length measurement,"SFL, CFL, TL, etc…",May need to compile a list of types and abbreviations,recommended,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,
-animal,505,length_unit_recapture,Unit of length measurement,,May need to compile a list of types and abbreviations,recommended,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,
-animal,407,lifestage_capture,Life stage of the animal,"adult, juvenile, subadult, weaner",,recommended,1,1,1,1,Tim Lam,,,
-animal,506,lifestage_recapture,Life stage of the animal,,,recommended,1,1,1,1,Tim Lam,,,
-animal,408,tag_placement,Description of where the tag was placed.,second dorsal fin,,recommended,1,1,1,1,Tim Lam,,,
-animal,507,age_recapture,Age from direct aging methods if available,"year-of-young, 3 y.o. etc.",Can be used to back calculate age of the individual at capture,optional,1,1,1,1,Tim Lam,,,
-animal,409,hours_soaktime_capture,"If caught on longline, specify soak time In hours",,,optional,1,0,-1,-1,Tim Lam,,,
-animal,508,hours_soaktime_recapture,"If caught on longline, specify soak time In hours",,,optional,1,0,-1,-1,Tim Lam,,,
-animal,410,implant_numsuture,Number of suture used to close the wound,,Internal archival only,optional,1,-1,-1,1,Tim Lam,,,
-animal,411,minutes_fighttime_capture,"If caught on rod and wheel or handline, specify fight time",,,optional,1,-1,-1,-1,Tim Lam,,,
-animal,509,minutes_fighttime_recapture,"If caught on rod and wheel or handline, specify fight time",,,optional,1,-1,-1,-1,Tim Lam,,,
-animal,412,minutes_operation,Time used (minutes) in carrying out the attachment or surgical procedure.,,,optional,1,1,1,1,Tim Lam,,,
-animal,413,minutes_revival,"If the animal is revived, specify revival time in minutes",,Can be time used in swimming the animal before release,optional,1,1,1,1,Tim Lam,,,
-animal,414,mount_numbolts,Number of bolts used for mounting,,,optional,1,0,0,-1,Tim Lam,,,
-animal,415,sex,Sex of the animal,"male, female, unknown",Likely only applicable to sharks upon visual confirmation,optional,1,1,1,1,Tim Lam,,,
-animal,416,stock,Stock origin if known,"East, West, unknown etc.",,optional,1,1,1,1,Tim Lam,,,
-animal,417,tissue_sample_capture,List other sample types and sample IDs if collected,Blood-ID02101,"Tissue can be any issue: fin clip, blood, scale, biopsy etc.",optional,1,1,1,1,Tim Lam,Comma separated,,
-animal,510,tissue_sample_recapture,List other sample types and sample IDs if collected,,"Tissue can be any issue: fin clip, blood, scale, hard parts, stomach, muscle, biopsy etc.",optional,1,1,1,1,Tim Lam,Comma separated,,
-animal,418,weight_capture,Weight of the animal,1200,,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,
-animal,419,weight_method_capture,Method used to obtain the measurement,"measured, estimated, calculated",Calculated means it's calculated from length-weight relationships or other conversions,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,
-animal,511,weight_method_recapture,Method used to obtain the measurement,"measured, estimated, calculated",Calculated means it's calculated from length-weight relationships or other conversions,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,
-animal,512,weight_recapture,Weight of the animal,,,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,
-animal,420,weight_type_capture,Type of weight measurement,whole,"May need to compile a list of types and abbreviations: whole, dressed, gilled & gutted",optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,
-animal,513,weight_type_recapture,Type of weight measurement,,"May need to compile a list of types and abbreviations: whole, dressed, gilled & gutted",optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,
-animal,421,weight_unit_capture,Unit of weight measurement,pound,,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,
-animal,514,weight_unit_recapture,Unit of weight measurement,,,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,
-end_of_mission,600,time_coverage_end,End date time (yyyy-mm-dd hh:mm:ss) or date range (BETWEEN yyyy-mm-dd AND yyyy-mm-dd) if estimated/ guessed.,2017-07-11T18:24:23+00:00,http://en.wikipedia.org/wiki/ISO_8601,required,1,1,1,1,Tim Lam,,,time_coverage_end (Recommended)
-end_of_mission,601,end_details,,"GPS, Argos, estimated, calculated, modeled, recovered on animal, floater at sea, animal died and sank, recovered on land, recovered by fishing fleet, recovered in port, transfer in transshipment, found in well number X, recovered in processing plant",,required,1,1,1,1,Tim Lam,http://www.spc.int/TAGGING/en/publications/tagging-publications/viewcategory/13,,
-end_of_mission,602,end_type,Description of how the end point is derived for the device.,"first reported, recaptured, last transmission, recovered",,required,1,1,1,1,Tim Lam,,,
-end_of_mission,603,geospatial_lat_end,End latitude,,,required,1,1,1,1,Tim Lam,,,N/A:  geospatial_lat_max (Recommended)
-end_of_mission,604,geospatial_lon_end,End longitude,,,required,1,1,1,1,Tim Lam,,,N/A:  geospatial_lon_max (Recommended)
-end_of_mission,605,locationclass_end,Argos location class for popup location or satellite transmission,,,recommended,1,1,1,1,Tim Lam,,,
-end_of_mission,606,datetime_death,"If mortality occurs before end datetime, specify date time (yyyy-mm-dd hh:mm:ss)",2017-07-11T18:24:23+00:00,http://en.wikipedia.org/wiki/ISO_8601,optional,1,1,1,1,Tim Lam,,,
-recovery,700,location_recapture,Name or standard identifer of location,,,recommended,1,1,1,1,Tim Lam,,,
-recovery,701,method_recapture,Type of gear used to catch the animal,"Longline, purse seine, troll, trawl, rod and reel, handline, set net, trap, gillnet, harpoon, hoop net, anesthesia, tangle net, dip net, vertical line entanglement (commercial fisheries, aquaculture, mooring), dredge, pound net/weir (for turtles)",,recommended,1,1,1,1,Tim Lam,,,
-recovery,702,person_recapture,Person responsible for the recapture,,"Name of angler, observer, scientist, fisher, beach comber etc.",recommended,1,1,1,1,Tim Lam,,,
-recovery,703,baitlure_recapture,"Bait, chum, lure or decoy used",,Use brand name and/ product when possible,optional,1,0,-1,-1,Tim Lam,,,
-recovery,704,cruise_recapture,Name or standard identifer of cruise,,,optional,1,1,1,1,Tim Lam,,,
-recovery,705,depth_m_recapture,Depth (meters) at which the animal was caught,,Can use estimated depth from hook number on longline,optional,1,0,-1,-1,Tim Lam,,,
-recovery,706,flag_capture,The vessel’s country of registration,,,optional,1,1,1,1,,,,
-recovery,707,hook_recapture,Type of hook used,,Use brand name and/ product when possible.,optional,1,0,-1,-1,Tim Lam,,,
-recovery,708,person_tagger_recapture,Person responsible for tag-and-release,,Very unlikely to re-tag turtle or mammal,optional,1,0,-1,1,Tim Lam,,,
-recovery,709,retagged_recapture,"List tag IDs for conventional, acoustic, PIT, band or satellite tags for multi-tagged situation, photoID, photo/video footage file names",,,optional,1,1,1,1,Tim Lam,Comma separated,,
-recovery,710,school_recapture,Type of school in which the animal was caught,"Free school, log, anchored FAD, drifting FAD",Include FAD number if possible,optional,1,-1,-1,-1,Tim Lam,,,
-recovery,711,seastate_recapture,World Meteorological Organization sea state code (0-9),,Similar to Douglas Sea Scale ,optional,1,1,1,1,Tim Lam,,,
-recovery,712,set_float_recapture,"If caught on longline, include set number and float number",,,optional,1,0,-1,-1,Tim Lam,,,
-recovery,713,station_recapture,Name or standard identifer of station,,,optional,1,1,1,1,Tim Lam,,,
-recovery,714,temp_degC_recapture,Air or sea surface temperature (Celcius) when the animal was caught,,,optional,1,1,1,1,Tim Lam,,,
-recovery,715,vessel_recapture,Name or standard identifer of vessel,,,optional,1,1,1,1,Tim Lam,,,
-recovery,716,wind_knots_recapture,Wind speed (knots) when the animal was caught,,,optional,1,1,1,1,Tim Lam,,,
-waypoints,1000,waypoints_source,State the source for waypoints,"Argos, GPS, acoustic detections, manufacturer, modeled","Waypoints are ""points"" along the trajectory of the tagged animal between the start and end dates.",required,1,1,1,1,Vardis Tsontos,,,
-waypoints,1001,geolocation_parameters,"List of Geocorrection Parameters and associated values implemented. Comma seperated list in format 'parameter1:value', 'parameter2:value',..","eg. 'diffusion_coefficien:0.3', 'satellite_sst': https://podaac.jpl.nasa.gov/dataset/NCDC-L4LRblend-GLOB-AVHRR_OI', ...",Assuming only 1 set of waypoints per tag data file.,recommended,1,1,1,1,Vardis Tsontos,,,
-waypoints,1002,interpolation_method,"None if no interpolation. Otherwise, specify method/ software used.","None, crawl, Bézier curves, Hermite splines and cubic splines",,recommended,1,1,1,1,Vardis Tsontos,,,
-waypoints,1003,interpolation_time,Specify the time interval for interpolation,"0, 1 hour, gap filling",Use 0 for no interpolation or gap filling for data points without any coordinates.,recommended,1,1,1,1,Vardis Tsontos,,,
-waypoints,1004,waypoints_method,"If ""waypoints_source"" = ""modeled"", specify the method used to estimate the positions. Include citation/ reference/ url if available","kftrack, ukfsst, trackit, tripEstimation, SSM, GPE3, Track & Loc, GeoLight, BASTrack, IKNOS",,recommended,1,1,1,1,Vardis Tsontos,,,
-waypoints,1005,waypoints_software,Software packages used with version number,,,recommended,1,1,1,1,Vardis Tsontos,,"source, history (?)",
-waypoints,1006,geolocation_output,URL/URI to any relevant geocorrection output file(s) produced,eg. ftp://myserver/myfiles.zip,,optional,1,1,1,1,Vardis Tsontos,,,
-ancillary_positions,1100,ancillary_position_source,List available source(s) for other known position(s),Acoustic detections,"If an animal is tagged and then released again, this can be included here as well",optional,1,1,1,1,Tim Lam,,,
-ancillary_positions,1101,ancillary_position_instrumentid,List chronologically the instruments collecting the ancillary position(s),"receiverID1003, receiverID1008, receiverID1121",,optional,1,1,1,1,Tim Lam,Comma separated,,
-ancillary_positions,1102,datetime_ancillary_position,List chronologically the datetime (yyyy-mm-dd hh:mm:ss) for ancillary position(s),"2016-01-04 22:32:21, 2016-02-01 02:41:11, 2016-03-29 09:15:31",http://en.wikipedia.org/wiki/ISO_8601,optional,1,1,1,1,Tim Lam,Comma separated,,
-ancillary_positions,1103,ancillary_position_lon,List chronologically the longitude for ancillary position(s),"-153.42,-152.42,-152.49",,optional,1,1,1,1,,Comma separated,,
-ancillary_positions,1104,ancillary_position_lat,List chronologically the latitude for ancillary position(s),"42.131,41.135,42.422",,optional,1,1,1,1,Tim Lam,Comma separated,,
-ancillary_positions,1105,ancillary_position_quality,List chronologically the quality (location class/ accuracy/ range etc.) for ancillary position(s). Can be qualitative.,"LC0,LC1,LCA",Can be Argos location class or general descriptions,optional,1,1,1,1,Tim Lam,Comma separated,,
-quality,1200,found_problem,"Is there any problem found in this dataset? One of 3 responses: yes, no, unexamined.",yes,,required,1,1,1,1,Tim Lam,,,
-quality,1201,person_qc,Person responsible for quality control,,,required,1,1,1,1,Tim Lam,,,
-quality,1202,problem_affecteddates,Date range (BETWEEN yyyy-mm-dd AND yyyy-mm-dd) in which data quality is in doubt,,,recommended,1,1,1,1,Tim Lam,,,
-quality,1203,problem_details,Provide details for the problem(s),Daily drift after sunset by 1.5 degC,,recommended,1,1,1,1,Tim Lam,,,
-quality,1204,problem_numof,Number of problems found,1,"Hard to cover all problems here, e.g., date of post-release mortality/ predation, broken light stalk, broken hardware, tag failure modes",recommended,1,1,1,1,,,,
-quality,1205,problem_summary,List short description(s) for the problem(s),Temperature sensor drift,,recommended,1,1,1,1,,,,
-quality,1206,calibration_file, Files/ URLs used for calibration of sensors,,,optional,1,1,1,1,Tim Lam,,,
+",,,character
+deployment,306,baitlure_capture,"Bait, chum, lure or decoy used",sardine,Use brand name and/ product when possible.,optional,1,0,-1,-1,Tim Lam,,,,character
+deployment,307,cruise_capture,Name or standard identifer of cruise,,,optional,1,1,1,1,Tim Lam,,,,character
+deployment,308,depth_m_capture,Depth (meters) at which the animal was caught,,Can use estimated depth from hook number on longline,optional,1,0,-1,-1,Tim Lam,,,,numeric
+deployment,309,flag_capture,The vessel’s country of registration,,,optional,1,1,1,1,,,,,character
+deployment,310,hook_capture,Type of hook used,18/0 circle,Use brand name and/ product when possible.,optional,1,0,-1,-1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Optional to Recommended),,,character
+deployment,311,method_aboard,how was animal put aboard the vessel,"net, sling, lifted",,optional,1,1,1,-1,Dan Fuller,,,,character
+deployment,312,othertags_capture,"List tag IDs for conventional, acoustic, PIT, band or satellite tags for multi-tagged situation, photoID, photo/video footage file names",Hallprint PAR007007,,optional,1,1,1,1,Tim Lam,Comma separated.,,,character
+deployment,313,person_angler_capture,Person responsible for angling,,,optional,1,-1,-1,-1,Tim Lam,,,,character
+deployment,314,school_capture,Type of school in which the animal was caught,"Free school, log, anchored FAD, drifting FAD",Include FAD number if possible.,optional,1,-1,-1,-1,Tim Lam,,,,character
+deployment,315,seastate_capture,World Meteorological Organization sea state code (0-9),,Similar to Douglas Sea Scale ,optional,1,1,1,1,Tim Lam,,,,
+deployment,316,set_float_capture,"If caught on longline, include set number and float number",,"It's very unlikely to tag turtle, bird/ mammal off longline.",optional,1,0,-1,-1,Tim Lam,,,,
+deployment,317,station_capture,Name or standard identifer of station,,,optional,1,1,1,1,Tim Lam,,,,character
+deployment,318,temp_degC_capture,Air or sea surface temperature (Celcius) when the animal was caught,,,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Optional to Recommended),,,numeric
+deployment,319,vessel_capture,Name or standard identifer of vessel,,,optional,1,1,1,1,Tim Lam,,,,character
+deployment,320,wind_knots_capture,Wind speed (knots) when the animal was caught,,,optional,1,1,1,1,Tim Lam,,,,
+animal,400,condition_capture,Description of condition/ injury. Or specify scoring system and a score.,good,"Can be generic: good, bad, gut hooked, eye hooked, bleeding. Scoring system fof fish/ shark:  reflex action mortality predictor (RAMP), Kerstetter's lab ACES.  Measurement: Bioelectrical Impedance Analysis (BIA) gives phase angle and composition index. Fat: Distell Fatmeter",required,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,,character
+animal,401,length_capture,Length of the animal,300,,required,1,1,1,1,Tim Lam,,,,numeric
+animal,402,length_method_capture,Method used to obtain the measurement,"measured caliper, measured tape,  estimated, calculated",Calculated means it's calculated from length-weight relationships or other conversions.,required,1,1,1,1,Tim Lam,Is this good enough? Or have to specify how the measurement is made: tape/ estimated etc.  Some edits/additions to the example list made by IATTC.  Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,,character
+animal,403,length_type_capture,Type of length measurement," Curved fork length, Straight fork length, total length.  for turtle the standard measurements are Curved Carapace Length (CCL), Straight Carapace Length (SCL), Curved Carapace Width (CCW) and Straight Carapace Width (SCW), and researchers occasionally measure girth as well. ",May need to compile a list of types and abbreviations,required,1,1,1,1,Tim Lam,Some edits/additions to the example list made by IATTC. Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,,character
+animal,404,length_unit_capture,Unit of length measurement,centimeter,May need to compile a list of types and abbreviations,required,1,1,1,1,Tim Lam,,,,character
+animal,405,platform,Common name(s) or FAO code for species name,,Refer to www.itis.gov or FAO species list,required,1,1,1,1,Tim Lam,,,platform (Suggested) + platform_vocabulary (Suggested),character
+animal,406,taxonomic_serial_number,Taxononomic Serial Number (TSN) from Integrated Taxonomic Information System,,https://www.itis.gov,required,1,1,1,1,Tim Lam,,,platform (Suggested) + platform_vocabulary (Suggested),character
+animal,500,condition_recapture,Description of condition/ injury. Or specify scoring system and a score.,,"Can be generic: good, bad, gut hooked, eye hooked, bleeding. Scoring system fof fish/ shark:  reflex action mortality predictor (RAMP), Kerstetter's lab ACES.  Measurement: Bioelectrical Impedance Analysis (BIA) gives phase angle and composition index. Fat: Distell Fatmeter",recommended,1,1,1,1,Tim Lam,,,,character
+animal,501,fate_recapture,Fate of the animal upon recapture,"harvested, released, tag and release, missing, unknown; observed/ photo ID",,recommended,1,1,1,1,Tim Lam,,,,character
+animal,502,length_method_recapture,Method used to obtain the measurement,"measured Caliper, measured tape, estimated, calculated",Calculated means it's calculated from length-weight relationships or other conversions,recommended,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,,character
+animal,503,length_recapture,Length of the animal,,,recommended,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,,numeric
+animal,504,length_type_recapture,Type of length measurement,"SFL, CFL, TL, etc…",May need to compile a list of types and abbreviations,recommended,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,,character
+animal,505,length_unit_recapture,Unit of length measurement,,May need to compile a list of types and abbreviations,recommended,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Required),,,character
+animal,407,lifestage_capture,Life stage of the animal,"adult, juvenile, subadult, weaner",,recommended,1,1,1,1,Tim Lam,,,,character
+animal,506,lifestage_recapture,Life stage of the animal,,,recommended,1,1,1,1,Tim Lam,,,,character
+animal,408,tag_placement,Description of where the tag was placed.,second dorsal fin,,recommended,1,1,1,1,Tim Lam,,,,character
+animal,507,age_recapture,Age from direct aging methods if available,"year-of-young, 3 y.o. etc.",Can be used to back calculate age of the individual at capture,optional,1,1,1,1,Tim Lam,,,,character
+animal,409,hours_soaktime_capture,"If caught on longline, specify soak time In hours",,,optional,1,0,-1,-1,Tim Lam,,,,numeric
+animal,508,hours_soaktime_recapture,"If caught on longline, specify soak time In hours",,,optional,1,0,-1,-1,Tim Lam,,,,numeric
+animal,410,implant_numsuture,Number of suture used to close the wound,,Internal archival only,optional,1,-1,-1,1,Tim Lam,,,,numeric
+animal,411,minutes_fighttime_capture,"If caught on rod and wheel or handline, specify fight time",,,optional,1,-1,-1,-1,Tim Lam,,,,numeric
+animal,509,minutes_fighttime_recapture,"If caught on rod and wheel or handline, specify fight time",,,optional,1,-1,-1,-1,Tim Lam,,,,numeric
+animal,412,minutes_operation,Time used (minutes) in carrying out the attachment or surgical procedure.,,,optional,1,1,1,1,Tim Lam,,,,numeric
+animal,413,minutes_revival,"If the animal is revived, specify revival time in minutes",,Can be time used in swimming the animal before release,optional,1,1,1,1,Tim Lam,,,,numeric
+animal,414,mount_numbolts,Number of bolts used for mounting,,,optional,1,0,0,-1,Tim Lam,,,,numeric
+animal,415,sex,Sex of the animal,"male, female, unknown",Likely only applicable to sharks upon visual confirmation,optional,1,1,1,1,Tim Lam,,,,character
+animal,416,stock,Stock origin if known,"East, West, unknown etc.",,optional,1,1,1,1,Tim Lam,,,,character
+animal,417,tissue_sample_capture,List other sample types and sample IDs if collected,Blood-ID02101,"Tissue can be any issue: fin clip, blood, scale, biopsy etc.",optional,1,1,1,1,Tim Lam,Comma separated,,,character
+animal,510,tissue_sample_recapture,List other sample types and sample IDs if collected,,"Tissue can be any issue: fin clip, blood, scale, hard parts, stomach, muscle, biopsy etc.",optional,1,1,1,1,Tim Lam,Comma separated,,,character
+animal,418,weight_capture,Weight of the animal,1200,,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,,numeric
+animal,419,weight_method_capture,Method used to obtain the measurement,"measured, estimated, calculated",Calculated means it's calculated from length-weight relationships or other conversions,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,,character
+animal,511,weight_method_recapture,Method used to obtain the measurement,"measured, estimated, calculated",Calculated means it's calculated from length-weight relationships or other conversions,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,,character
+animal,512,weight_recapture,Weight of the animal,,,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,,numeric
+animal,420,weight_type_capture,Type of weight measurement,whole,"May need to compile a list of types and abbreviations: whole, dressed, gilled & gutted",optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,,character
+animal,513,weight_type_recapture,Type of weight measurement,,"May need to compile a list of types and abbreviations: whole, dressed, gilled & gutted",optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,,character
+animal,421,weight_unit_capture,Unit of weight measurement,pound,,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,,character
+animal,422,friendly_name,Friendly or public-facing name given to an individual tagged animal,Lydia,,optional,1,1,1,1,Camrin Braun,,,,character
+animal,514,weight_unit_recapture,Unit of weight measurement,,,optional,1,1,1,1,Tim Lam,Some edits/additions to the Necessity made by IATTC (from Recommended to Optional),,,character
+end_of_mission,600,time_coverage_end,End date time (yyyy-mm-dd hh:mm:ss) or date range (BETWEEN yyyy-mm-dd AND yyyy-mm-dd) if estimated/ guessed.,2017-07-11T18:24:23+00:00,http://en.wikipedia.org/wiki/ISO_8601,required,1,1,1,1,Tim Lam,,,time_coverage_end (Recommended),POSIXct
+end_of_mission,601,end_details,,"GPS, Argos, estimated, calculated, modeled, recovered on animal, floater at sea, animal died and sank, recovered on land, recovered by fishing fleet, recovered in port, transfer in transshipment, found in well number X, recovered in processing plant",,required,1,1,1,1,Tim Lam,http://www.spc.int/TAGGING/en/publications/tagging-publications/viewcategory/13,,,character
+end_of_mission,602,end_type,Description of how the end point is derived for the device.,"first reported, recaptured, last transmission, recovered",,required,1,1,1,1,Tim Lam,,,,character
+end_of_mission,603,geospatial_lat_end,End latitude,,,required,1,1,1,1,Tim Lam,,,N/A:  geospatial_lat_max (Recommended),numeric
+end_of_mission,604,geospatial_lon_end,End longitude,,,required,1,1,1,1,Tim Lam,,,N/A:  geospatial_lon_max (Recommended),numeric
+end_of_mission,605,locationclass_end,Argos location class for popup location or satellite transmission,,,recommended,1,1,1,1,Tim Lam,,,,factor
+end_of_mission,606,datetime_death,"If mortality occurs before end datetime, specify date time (yyyy-mm-dd hh:mm:ss)",2017-07-11T18:24:23+00:00,http://en.wikipedia.org/wiki/ISO_8601,optional,1,1,1,1,Tim Lam,,,,POSIXct
+recovery,700,location_recapture,Name or standard identifer of location,,,recommended,1,1,1,1,Tim Lam,,,,character
+recovery,701,method_recapture,Type of gear used to catch the animal,"Longline, purse seine, troll, trawl, rod and reel, handline, set net, trap, gillnet, harpoon, hoop net, anesthesia, tangle net, dip net, vertical line entanglement (commercial fisheries, aquaculture, mooring), dredge, pound net/weir (for turtles)",,recommended,1,1,1,1,Tim Lam,,,,character
+recovery,702,person_recapture,Person responsible for the recapture,,"Name of angler, observer, scientist, fisher, beach comber etc.",recommended,1,1,1,1,Tim Lam,,,,character
+recovery,703,baitlure_recapture,"Bait, chum, lure or decoy used",,Use brand name and/ product when possible,optional,1,0,-1,-1,Tim Lam,,,,character
+recovery,704,cruise_recapture,Name or standard identifer of cruise,,,optional,1,1,1,1,Tim Lam,,,,character
+recovery,705,depth_m_recapture,Depth (meters) at which the animal was caught,,Can use estimated depth from hook number on longline,optional,1,0,-1,-1,Tim Lam,,,,numeric
+recovery,706,flag_capture,The vessel’s country of registration,,,optional,1,1,1,1,,,,,character
+recovery,707,hook_recapture,Type of hook used,,Use brand name and/ product when possible.,optional,1,0,-1,-1,Tim Lam,,,,character
+recovery,708,person_tagger_recapture,Person responsible for tag-and-release,,Very unlikely to re-tag turtle or mammal,optional,1,0,-1,1,Tim Lam,,,,character
+recovery,709,retagged_recapture,"List tag IDs for conventional, acoustic, PIT, band or satellite tags for multi-tagged situation, photoID, photo/video footage file names",,,optional,1,1,1,1,Tim Lam,Comma separated,,,character
+recovery,710,school_recapture,Type of school in which the animal was caught,"Free school, log, anchored FAD, drifting FAD",Include FAD number if possible,optional,1,-1,-1,-1,Tim Lam,,,,character
+recovery,711,seastate_recapture,World Meteorological Organization sea state code (0-9),,Similar to Douglas Sea Scale ,optional,1,1,1,1,Tim Lam,,,,character
+recovery,712,set_float_recapture,"If caught on longline, include set number and float number",,,optional,1,0,-1,-1,Tim Lam,,,,character
+recovery,713,station_recapture,Name or standard identifer of station,,,optional,1,1,1,1,Tim Lam,,,,character
+recovery,714,temp_degC_recapture,Air or sea surface temperature (Celcius) when the animal was caught,,,optional,1,1,1,1,Tim Lam,,,,numeric
+recovery,715,vessel_recapture,Name or standard identifer of vessel,,,optional,1,1,1,1,Tim Lam,,,,character
+recovery,716,wind_knots_recapture,Wind speed (knots) when the animal was caught,,,optional,1,1,1,1,Tim Lam,,,,
+waypoints,1000,waypoints_source,State the source for waypoints,"Argos, GPS, acoustic detections, manufacturer, modeled","Waypoints are ""points"" along the trajectory of the tagged animal between the start and end dates.",required,1,1,1,1,Vardis Tsontos,,,,character
+waypoints,1001,geolocation_parameters,"List of Geocorrection Parameters and associated values implemented. Comma seperated list in format 'parameter1:value', 'parameter2:value',..","eg. 'diffusion_coefficien:0.3', 'satellite_sst': https://podaac.jpl.nasa.gov/dataset/NCDC-L4LRblend-GLOB-AVHRR_OI', ...",Assuming only 1 set of waypoints per tag data file.,recommended,1,1,1,1,Vardis Tsontos,,,,character
+waypoints,1002,interpolation_method,"None if no interpolation. Otherwise, specify method/ software used.","None, crawl, Bézier curves, Hermite splines and cubic splines",,recommended,1,1,1,1,Vardis Tsontos,,,,character
+waypoints,1003,interpolation_time,Specify the time interval for interpolation,"0, 1 hour, gap filling",Use 0 for no interpolation or gap filling for data points without any coordinates.,recommended,1,1,1,1,Vardis Tsontos,,,,character
+waypoints,1004,waypoints_method,"If ""waypoints_source"" = ""modeled"", specify the method used to estimate the positions. Include citation/ reference/ url if available","kftrack, ukfsst, trackit, tripEstimation, SSM, GPE3, Track & Loc, GeoLight, BASTrack, IKNOS",,recommended,1,1,1,1,Vardis Tsontos,,,,character
+waypoints,1005,waypoints_software,Software packages used with version number,,,recommended,1,1,1,1,Vardis Tsontos,,"source, history (?)",,character
+waypoints,1006,geolocation_output,URL/URI to any relevant geocorrection output file(s) produced,eg. ftp://myserver/myfiles.zip,,optional,1,1,1,1,Vardis Tsontos,,,,character
+ancillary_positions,1100,ancillary_position_source,List available source(s) for other known position(s),Acoustic detections,"If an animal is tagged and then released again, this can be included here as well",optional,1,1,1,1,Tim Lam,,,,character
+ancillary_positions,1101,ancillary_position_instrumentid,List chronologically the instruments collecting the ancillary position(s),"receiverID1003, receiverID1008, receiverID1121",,optional,1,1,1,1,Tim Lam,Comma separated,,,character
+ancillary_positions,1102,datetime_ancillary_position,List chronologically the datetime (yyyy-mm-dd hh:mm:ss) for ancillary position(s),"2016-01-04 22:32:21, 2016-02-01 02:41:11, 2016-03-29 09:15:31",http://en.wikipedia.org/wiki/ISO_8601,optional,1,1,1,1,Tim Lam,Comma separated,,,POSIXct
+ancillary_positions,1103,ancillary_position_lon,List chronologically the longitude for ancillary position(s),"-153.42,-152.42,-152.49",,optional,1,1,1,1,,Comma separated,,,numeric
+ancillary_positions,1104,ancillary_position_lat,List chronologically the latitude for ancillary position(s),"42.131,41.135,42.422",,optional,1,1,1,1,Tim Lam,Comma separated,,,numeric
+ancillary_positions,1105,ancillary_position_quality,List chronologically the quality (location class/ accuracy/ range etc.) for ancillary position(s). Can be qualitative.,"LC0,LC1,LCA",Can be Argos location class or general descriptions,optional,1,1,1,1,Tim Lam,Comma separated,,,factor
+quality,1200,found_problem,"Is there any problem found in this dataset? One of 3 responses: yes, no, unexamined.",yes,,required,1,1,1,1,Tim Lam,,,,logical
+quality,1201,person_qc,Person responsible for quality control,,,required,1,1,1,1,Tim Lam,,,,character
+quality,1202,problem_affecteddates,Date range (BETWEEN yyyy-mm-dd AND yyyy-mm-dd) in which data quality is in doubt,,,recommended,1,1,1,1,Tim Lam,,,,
+quality,1203,problem_details,Provide details for the problem(s),Daily drift after sunset by 1.5 degC,,recommended,1,1,1,1,Tim Lam,,,,character
+quality,1204,problem_numof,Number of problems found,1,"Hard to cover all problems here, e.g., date of post-release mortality/ predation, broken light stalk, broken hardware, tag failure modes",recommended,1,1,1,1,,,,,character
+quality,1205,problem_summary,List short description(s) for the problem(s),Temperature sensor drift,,recommended,1,1,1,1,,,,,character
+quality,1206,calibration_file, Files/ URLs used for calibration of sensors,,,optional,1,1,1,1,Tim Lam,,,,character
