@@ -43,13 +43,11 @@ read.wc <- function (filename, tag, pop, type = "sst", dateFormat = NULL,
 	    ### --- End of Tim's edits --- ###
         data <- utils::read.table(filename, sep = ",", header = T, 
             blank.lines.skip = F, skip = 0)	
-        if (length(grep("Discont16", names(data))) == 0 & ncol(data) > 
-            89) 
-            names(data)[90:94] <- c("Depth16", "MinTemp16", "MaxTemp16", 
-                "X.Ox16", "Discont16")
+        if (length(grep("Discont16", names(data))) == 0 & ncol(data) > 89) 
+            names(data)[90:94] <- c("Depth16", "MinTemp16", "MaxTemp16", "X.Ox16", "Discont16")
         if (verbose) 
             print(paste("If read.wc() fails for type=pdt, check the number of column headers in the PDTs.csv file."))
-        data <- extract.pdt(data)
+        data <- extract.pdt(data)		
         if (is.null(dateFormat)) {
             dts <- as.POSIXct(data$Date, format = findDateFormat(data$Date))
         }
