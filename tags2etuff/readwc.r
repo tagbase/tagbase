@@ -1,9 +1,48 @@
+### --- Tim's edits: modify WC csv spreadsheet header --- ###
+### 2022-03-14
+txtfileop <- function(filename, skip = 1, header = NULL){
+  # Explicitly create and and open a connection.
+  myCon = file(description = filename, open="r", blocking = TRUE)
+  # The position in the connection advances to the next line on each iteration.
+  # Loop till the line is the empty vector, character(0).
+  cnt = 0
+  tmpfile = file.path(tempdir(),basename(filename))
+  if (!is.null(header)) write(header,file=tmpfile)
+  repeat{
+    pl = readLines(myCon, n = 1) # Read one line from the connection.
+    if(identical(pl, character(0))){break} # If the line is empty, exit.
+	cnt = cnt + 1
+	if (cnt > skip) write(pl,file=tmpfile,append=T) # Otherwise, print and repeat next iteration.
+  }
+  # Explicitly opened connection needs to be explicitly closed.
+  close(myCon)
+  rm(myCon) # Removes the connection object from memory.
+  if (cnt > 1) return(tmpfile)
+}
+
+modify.wchead <- function(ofname, fsuffix, mylink=NULL){
+    if (is.null(mylink)) mylink <- url(tagbase.url(3))
+    headers <- read.csv(mylink)
+  	cnames <- subset(headers, csv_suffix == fsuffix)$column_name
+	icn <- length(cnames)
+	cnames = c(paste0(cnames[1:icn-1],","),cnames[icn])
+	hdrln <- do.call(paste0, c(as.list(cnames, sep = ",")))
+	filename <- txtfileop(ofname, header = hdrln)
+	return(filename)
+}
+###
+### --- End of Tim's edits --- ###
+
 read.wc <- function (filename, tag, pop, type = "sst", dateFormat = NULL, 
     verbose = FALSE) 
 {
     if (type == "pdt") {
+        ### --- Tim's edits: modify WC csv spreadsheet header --- ###
+	    fsuffix = "PDTs"
+        filename <- modify.wchead(filename,fsuffix)
+	    ### --- End of Tim's edits --- ###
         data <- utils::read.table(filename, sep = ",", header = T, 
-            blank.lines.skip = F, skip = 0)
+            blank.lines.skip = F, skip = 0)	
         if (length(grep("Discont16", names(data))) == 0 & ncol(data) > 
             89) 
             names(data)[90:94] <- c("Depth16", "MinTemp16", "MaxTemp16", 
