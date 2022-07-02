@@ -28,7 +28,10 @@ extract.pdt <- function(pdt){
   pdt <- pdt[,c(keepNames)]
   row.names(pdt) <- NULL
   # date conversion then sort
-  pdt$Date <- as.POSIXct(pdt$Date, format = findDateFormat(pdt$Date))
+  
+  print(findDateFormat(pdt$Date[1]))
+  
+  pdt$Date <- as.POSIXct(pdt$Date, format = findDateFormat(pdt$Date)) 
   pdt <- pdt[order(pdt$Date, pdt$Depth),]               
   #pdt <- pdt[which(!is.na(pdt$Depth)),]
   pdt <- pdt[!is.na(pdt$Depth),]

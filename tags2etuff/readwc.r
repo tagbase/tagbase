@@ -1,4 +1,34 @@
 ### --- Tim's edits: modify WC csv spreadsheet header --- ###
+### 2022-07-02
+header.rownum <- function(filename, searchfor = "DeployID"){
+  # Explicitly create and and open a connection.
+  myCon = file(description = filename, open="r", blocking = TRUE)
+  # The position in the connection advances to the next line on each iteration.
+  # Loop till the line is the empty vector, character(0).
+  cnt = 0; test = FALSE
+  repeat{
+    pl = readLines(myCon, n = 1) # Read one line from the connection.
+	cnt = cnt + 1
+	if(identical(pl, character(0))){break} # If the line is empty, exit.
+	test = grepl(searchfor, pl, fixed = TRUE)
+    if(test){break} 
+  }
+  close(myCon) # Explicitly opened connection needs to be explicitly closed.
+  rm(myCon) # Removes the connection object from memory.
+  return(ifelse(test, cnt, -999))
+}
+
+check.line1 <- function(filename, searchfor=";"){
+  # Explicitly create and and open a connection.
+  myCon = file(description = filename, open="r", blocking = TRUE)
+  pl = readLines(myCon, n = 1) # Read one line from the connection.
+  if(identical(pl, character(0))){break} # If the line is empty, exit.
+  test = grepl(searchfor, pl, fixed = TRUE)
+  close(myCon) # Explicitly opened connection needs to be explicitly closed.
+  rm(myCon) # Removes the connection object from memory.
+  return(test)
+}
+
 ### 2022-03-14
 txtfileop <- function(filename, skip = 1, header = NULL){
   # Explicitly create and and open a connection.
@@ -14,40 +44,53 @@ txtfileop <- function(filename, skip = 1, header = NULL){
 	cnt = cnt + 1
 	if (cnt > skip) write(pl,file=tmpfile,append=T) # Otherwise, print and repeat next iteration.
   }
-  # Explicitly opened connection needs to be explicitly closed.
-  close(myCon)
+  close(myCon) # Explicitly opened connection needs to be explicitly closed.
   rm(myCon) # Removes the connection object from memory.
   if (cnt > 1) return(tmpfile)
 }
 
 modify.wchead <- function(ofname, fsuffix, mylink=NULL){
+    ### Get header names of WC
     if (is.null(mylink)) mylink <- url(tagbase.url(3))
     headers <- read.csv(mylink)
   	cnames <- subset(headers, csv_suffix == fsuffix)$column_name
 	icn <- length(cnames)
 	cnames = c(paste0(cnames[1:icn-1],","),cnames[icn])
 	hdrln <- do.call(paste0, c(as.list(cnames, sep = ",")))
-	filename <- txtfileop(ofname, header = hdrln)
+	### Get row number of the header line
+	k <- header.rownum(ofname)
+	if (k > 1){
+      ### Handle older DAP desktop output featuring comment lines
+	  filename <- txtfileop(ofname, skip = k - 1)	
+	} else {
+	  ### Check if %Ox is present or not
+	  j = header.rownum(ofname, searchfor = "Ox")
+	  ### Write new file with modified header because of strange, missing column names
+	  if (j > 0) {
+	    filename <- txtfileop(ofname, skip = k, header = hdrln)
+	  } else {
+	    filename <- txtfileop(ofname, skip = k - 1)	
+	  }
+	}
 	return(filename)
 }
+
 ###
 ### --- End of Tim's edits --- ###
 
 read.wc <- function (filename, tag, pop, type = "sst", dateFormat = NULL, 
-    verbose = FALSE) 
-{
+    verbose = FALSE) {
     if (type == "pdt") {
         ### --- Tim's edits: modify WC csv spreadsheet header --- ###
 	    fsuffix = "PDTs"
         filename <- modify.wchead(filename,fsuffix)
-	    ### --- End of Tim's edits --- ###
-        data <- utils::read.table(filename, sep = ",", header = T, 
-            blank.lines.skip = F, skip = 0)	
+		### --- End of Tim's edits --- ###
+		data <- utils::read.table(filename, sep = ",", header = T,  blank.lines.skip = F, skip = 0)
         if (length(grep("Discont16", names(data))) == 0 & ncol(data) > 89) 
             names(data)[90:94] <- c("Depth16", "MinTemp16", "MaxTemp16", "X.Ox16", "Discont16")
         if (verbose) 
-            print(paste("If read.wc() fails for type=pdt, check the number of column headers in the PDTs.csv file."))
-        data <- extract.pdt(data)		
+            print(paste("If read.wc() fails for type=pdt, check the number of column headers in the PDTs.csv file."))			
+        data <- extract.pdt(data)	
         if (is.null(dateFormat)) {
             dts <- as.POSIXct(data$Date, format = findDateFormat(data$Date))
         }
@@ -57,7 +100,7 @@ read.wc <- function (filename, tag, pop, type = "sst", dateFormat = NULL,
         data$Date <- dts
         d1 <- as.POSIXct("1900-01-02") - as.POSIXct("1900-01-01")
         didx <- dts >= (tag + d1) & dts <= (pop - d1)
-        data <- data[didx, ]
+        data <- data[didx, ]			
         dts <- dts[didx]	
         data1 <- data
         data1$dts <- as.Date(dts)

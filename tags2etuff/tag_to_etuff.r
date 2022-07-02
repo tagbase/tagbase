@@ -1,13 +1,24 @@
+### --- Begin Tim's edit history  --- ###
+### 2022-06-29
+### a) Need to manually handle date format that is not guess-able by findDateFormat with the function "format.datetime"
+### b) PDT has some NA in BinNum, need to be filtered out
+### c) Add preview of read in data after each "Getting..."
+### 2022-03-10
+### a) remove the need to trim to be within start & end dates 
+### b) update the function call to building an etuff header using local metadata listing
+### c) slightly modify verbose messages
+### d) add time elapsed
+### --- End of Tim's edit history --- ###
+
+format.datetime <- function(dframe, orders = "%m/%d/%Y %I:%M:%S"){
+  ### Default format is for "08/08/2011 00:00:00"
+  dframe <- lubridate::parse_date_time2(dframe, orders = orders, tz = "UTC")
+  return(dframe)
+}
+
 tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins = NULL, 
     obsTypes = NULL, check_meta = TRUE, metaTypes = NULL, returndata = FALSE , gpe.scaling=1, ...) 
 {
-    ### --- Begin Tim's edit history  --- ###
-	### 2022-03-10
-	### a) remove the need to trim to be within start & end dates 
-	### b) update the function call to building an etuff header using local metadata listing
-	### c) slightly modify verbose messages
-	### d) add time elapsed
-	### --- End of Tim's edit history --- ###
 	defaultW <- getOption("warn") 
     options(warn = -1) 
 	print("------------------------------------------------")
@@ -591,6 +602,9 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             pdt.new <- reshape2::melt(pdt.new, id.vars = c("Date", 
                 "BinNum"), measure.vars = c("Depth", "TempMin", 
                 "TempMax", "summaryPeriod"))
+			### Tim's edits - 2022-06-29 some NAs in BinNum 
+            pdt.new <- na.omit(pdt.new)
+            ### --- End of Tim's edits --- ###			
             binchar <- pdt.new$BinNum
             for (i in 1:length(binchar)) if (nchar(binchar[i]) < 
                 2) 
@@ -611,8 +625,9 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             pdt.new$DateTime <- as.POSIXct(pdt.new$DateTime, 
                 tz = "UTC")
             pdt.new$DateTime <- format(pdt.new$DateTime, "%Y-%m-%d %H:%M:%S")
-            pdt.new <- pdt.new[which(!is.na(pdt.new$VariableID)), 
-                ]
+            pdt.new <- pdt.new[which(!is.na(pdt.new$VariableID)), ]
+			### Tim's edits
+			print(head(pdt.new))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, pdt.new)
             }
@@ -658,8 +673,9 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
                 "VariableName", "VariableUnits")
             locs.new$DateTime <- testDates(locs.new$DateTime)
             locs.new$DateTime <- format(locs.new$DateTime, "%Y-%m-%d %H:%M:%S")
-            locs.new <- locs.new[which(!is.na(locs.new$VariableID)), 
-                ]
+            locs.new <- locs.new[which(!is.na(locs.new$VariableID)), ]
+			### Tim's edits
+			print(head(locs.new))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, locs.new)
             }
@@ -740,6 +756,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
                   orders = x, tz = "UTC")
             }
             arch.new$DateTime <- format(arch.new$DateTime, "%Y-%m-%d %H:%M:%S")
+			### Tim's edits
+			print(head(arch.new))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, arch.new)
             }
@@ -766,12 +784,22 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         }
         if (fe & !exists("arch.new")) {
             print("Getting Series data...")
-            series <- utils::read.table(fList[fidx], sep = ",", 
-                header = T, blank.lines.skip = F)
-            series$dt <- lubridate::parse_date_time(paste(series$Day, 
-                series$Time), orders = "dby HMS", tz = "UTC") 	
+			### --- Tim's edits: modify WC csv spreadsheet header --- ###
+			filename = fList[fidx]
+			fsuffix = "Series"
+			if (check.line1(filename)) filename <- modify.wchead(filename,fsuffix)
+			series <- utils::read.table(filename, sep = ",", header = T, blank.lines.skip = F)
+            ncheck <- grepl("DepthSensor", paste(names(series),collapse=" "), fixed=T)
+            #series <- utils::read.table(fList[fidx], sep = ",", header = T, blank.lines.skip = F)
+			series$dt <- lubridate::parse_date_time(paste(series$Day, series$Time), orders = "dby HMS", tz = "UTC") 	
             series <- series[which(series$dt >= dates[1] & series$dt <= dates[2]), ]
-            series.new <- subset(series, select = -c(DepthSensor))
+			# Don't quite know why we have to subset but anyways...
+            if (ncheck) {
+			  series.new <- subset(series, select = -c(DepthSensor))
+			} else {
+			  series.new = series
+			}
+			### --- End of Tim's edits --- ###
             nms <- names(series.new)
             nms[grep("Depth", nms)] <- "depth"
             nms[grep("DRange", nms)] <- "depthDelta"
@@ -797,6 +825,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
                 tz = "UTC")
             series.new$DateTime <- format(series.new$DateTime, 
                 "%Y-%m-%d %H:%M:%S")
+			### Tim's edits
+			print(head(series.new))	
             if (exists("returnData")) {
                 returnData <- rbind(returnData, series.new)
             }
@@ -869,6 +899,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
                 "%Y-%m-%d %H:%M:%S")
             light.new <- light.new %>% distinct(DateTime, VariableID, 
                 .keep_all = TRUE)
+			### Tim's edits
+			print(head(light.new))	
             if (exists("returnData")) {
                 returnData <- rbind(returnData, light.new)
             }
@@ -881,8 +913,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         fList <- list.files(dir, full.names = T)
         fidx <- grep("-MinMaxDepth.csv", fList)
         if (length(fidx) == 0) {
-            print(paste("No Wildlife MinMaxDepth data to gather.", 
-                sep = ""))
+            print(paste("No Wildlife MinMaxDepth data to gather.", sep = ""))
             fe <- FALSE
         }
         else if (length(fidx) > 1) {
@@ -893,9 +924,15 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         }
         if (fe) {
             print("Getting min/max depth data...")
-            mmd <- utils::read.table(fList[fidx], sep = ",", 
-                header = T, blank.lines.skip = F)
-            mmd$dt <- lubridate::parse_date_time(mmd$Date, orders = findDateFormat(mmd$Date), tz = "UTC") 	
+			### --- Tim's edits: modify WC csv spreadsheet header --- ###
+			filename = fList[fidx]
+			fsuffix = "MinMaxDepth"
+			if (check.line1(filename)) filename <- modify.wchead(filename,fsuffix)
+			mmd <- utils::read.table(filename, sep = ",", header = T, blank.lines.skip = F)	
+			#mmd <- utils::read.table(fList[fidx], sep = ",", header = T, blank.lines.skip = F)
+            mmd$dt <- lubridate::parse_date_time(mmd$Date, orders = findDateFormat(mmd$Date), tz = "UTC")
+			if (is.na(mmd$dt[1])) mmd$dt <- format.datetime(mmd$Date)
+            ### --- End of Tim's edits --- ###			
             mmd <- mmd[which(mmd$dt >= dates[1] & mmd$dt <= dates[2]), ]
             mmd.new <- mmd
             nms <- names(mmd.new)
@@ -917,6 +954,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             mmd.new$DateTime <- as.POSIXct(mmd.new$DateTime, 
                 tz = "UTC")
             mmd.new$DateTime <- format(mmd.new$DateTime, "%Y-%m-%d %H:%M:%S")
+			### Tim's edits
+			print(head(mmd.new))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, mmd.new)
             }
@@ -940,12 +979,20 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         }
         if (fe) {
             print("Getting SST data...")
-            sst <- utils::read.table(fList[fidx], sep = ",", 
-                header = T, blank.lines.skip = F)
-            sst$dt <- lubridate::parse_date_time(sst$Date, orders = findDateFormat(sst$Date), 
-                tz = "UTC")	
-            sst <- sst[which(sst$dt >= dates[1] & sst$dt <= dates[2]), ]
+		    ### --- Tim's edits: modify WC csv spreadsheet header --- ###
+			filename = fList[fidx]
+			fsuffix = "SST"
+			if (check.line1(filename)) filename <- modify.wchead(filename,fsuffix)
+			sst <- utils::read.table(filename, sep = ",", header = T, blank.lines.skip = F)
+			#sst <- utils::read.table(fList[fidx], sep = ",", header = T, blank.lines.skip = F)
+            ### --- End of Tim's edits --- ###
+            sst$dt <- lubridate::parse_date_time(sst$Date, orders = findDateFormat(sst$Date), tz = "UTC")	
+			### --- Tim's edits 2022-03-10: remove the need to trim to be within start & end dates --- ###			
+            #sst <- sst[which(sst$dt >= dates[1] & sst$dt <= dates[2]), ]
+			### --- End of Tim's edits --- ###	
             sst.new <- parse_sst(sst, obsTypes)
+			### Tim's edits
+			print(head(sst.new))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, sst.new)
             }
@@ -970,10 +1017,20 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         }
         if (fe) {
             print("Getting MixedLayer data...")
-            ml <- utils::read.table(fList[fidx], sep = ",", header = T, 
-                blank.lines.skip = F)
-            ml$Date <- lubridate::parse_date_time(ml$Date, orders = findDateFormat(ml$Date), 
-                tz = "UTC")
+			### --- Tim's edits: modify WC csv spreadsheet header --- ###
+			filename = fList[fidx]
+			fsuffix = "MixedLayer"
+			if (check.line1(filename)) filename <- modify.wchead(filename,fsuffix)
+			ml <- utils::read.table(filename, sep = ",", header = T, blank.lines.skip = F)
+			ml$dt <- lubridate::parse_date_time(ml$Date, orders = findDateFormat(ml$Date), tz = "UTC")
+			if (is.na(ml$dt[1])) {
+			   ml$Date <- format.datetime(ml$Date)
+			} else {
+			   ml$Date <- ml$dt
+			}
+			#ml <- utils::read.table(fList[fidx], sep = ",", header = T, blank.lines.skip = F)
+            #ml$Date <- lubridate::parse_date_time(ml$Date, orders = findDateFormat(ml$Date), tz = "UTC")
+			### --- End of Tim's edits --- ###
             ml <- ml[which(ml$Date >= dates[1] & ml$Date <= dates[2]), ]
             ml.new <- ml
             nms <- names(ml.new)
@@ -1002,6 +1059,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
                 ]
             ml.new$DateTime <- as.POSIXct(ml.new$DateTime, tz = "UTC")
             ml.new$DateTime <- format(ml.new$DateTime, "%Y-%m-%d %H:%M:%S")
+			### Tim's edits
+			print(head(ml.new))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, ml.new)
             }
@@ -1026,8 +1085,13 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         }
         if (fe) {
             print("Getting Histos data...")
-            histo <- utils::read.table(fList[fidx], sep = ",", 
-                header = T, blank.lines.skip = F)
+			### --- Tim's edits: modify WC csv spreadsheet header --- ###
+			filename = fList[fidx]
+			fsuffix = "Histos"
+			if (check.line1(filename)) filename <- modify.wchead(filename,fsuffix)
+			histo <- utils::read.table(filename, sep = ",", header = T, blank.lines.skip = F)			
+            #histo <- utils::read.table(fList[fidx], sep = ",", header = T, blank.lines.skip = F)
+			### --- End of Tim's edits --- ###
             tat.lim <- histo[which(histo$HistType == "TATLIMITS"), 
                 grep("Bin", names(histo))]
             tat.lim <- Filter(function(x) !all(is.na(x)), tat.lim)
@@ -1047,8 +1111,10 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
                 stop("TAD bins could not be read from file and were not specified in function call. Please specify them and try again.")
             }
             histo <- histo[which(!is.na(histo$Sum)), ]
-            histo$dt <- lubridate::parse_date_time(histo$Date, 
-                orders = findDateFormat(histo$Date), tz = "UTC")
+            histo$dt <- lubridate::parse_date_time(histo$Date, orders = findDateFormat(histo$Date), tz = "UTC")
+			### --- Tim's edits 2022-06-29: need to specify date format for desktop DAP generated files, at least for ICCAT's Stasa examples --- ###	
+			if (is.na(histo$dt[1])) histo$dt <- format.datetime(histo$Date)
+			### --- End of Tim's edits --- ###	
             histo <- histo[which(histo$dt >= dates[1] & histo$dt <=  dates[2]), ]
             histo <- subset(histo, select = -c(NumBins))
             tat <- histo[which(histo$HistType == "TAT"), ]
@@ -1156,6 +1222,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
                 tz = "UTC")
             histo.new$DateTime <- format(histo.new$DateTime, 
                 "%Y-%m-%d %H:%M:%S")
+			### Tim's edits
+			print(head(histo.new))	
             if (exists("returnData")) {
                 returnData <- rbind(returnData, histo.new)
             }
@@ -1211,6 +1279,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             gpe <- gpe[which(!is.na(gpe$VariableValue)), ]
             gpe$DateTime <- as.POSIXct(gpe$DateTime, tz = "UTC")
             gpe$DateTime <- format(gpe$DateTime, "%Y-%m-%d %H:%M:%S")
+			### Tim's edits
+			print(head(gpe))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, gpe)
             }
