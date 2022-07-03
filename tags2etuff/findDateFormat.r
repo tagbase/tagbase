@@ -27,7 +27,7 @@ findDateFormat <- function(dateVec){
       ddates = as.POSIXct(strptime(as.character(dateVec), format = dateformat)) #reads dates as dates
       
 	  if (is.na(ddates[1])){
-		  dateformat = '%m/%d/%Y %I:%M:%S' ### Tim's edits: format for "08/08/2011 00:00:00"
+		  dateformat = '%m/%d/%Y %H:%M:%S' ### Tim's edits: format for "08/08/2011 18:00:00"
 		  ddates = as.POSIXct(strptime(as.character(dateVec), format = dateformat)) #reads dates as dates  
 	  
        if (is.na(ddates[1])){

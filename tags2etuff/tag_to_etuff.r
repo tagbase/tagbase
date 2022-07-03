@@ -10,8 +10,8 @@
 ### d) add time elapsed
 ### --- End of Tim's edit history --- ###
 
-format.datetime <- function(dframe, orders = "%m/%d/%Y %I:%M:%S"){
-  ### Default format is for "08/08/2011 00:00:00"
+format.datetime <- function(dframe, orders = "%m/%d/%Y %H:%M:%S"){
+  ### Default format is for "08/08/2011 18:00:00"
   dframe <- lubridate::parse_date_time2(dframe, orders = orders, tz = "UTC")
   return(dframe)
 }
@@ -931,7 +931,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
 			mmd <- utils::read.table(filename, sep = ",", header = T, blank.lines.skip = F)	
 			#mmd <- utils::read.table(fList[fidx], sep = ",", header = T, blank.lines.skip = F)
             mmd$dt <- lubridate::parse_date_time(mmd$Date, orders = findDateFormat(mmd$Date), tz = "UTC")
-			if (is.na(mmd$dt[1])) mmd$dt <- format.datetime(mmd$Date)
+			if (sum(is.na(mmd$dt))>0) mmd$dt <- format.datetime(mmd$Date)
             ### --- End of Tim's edits --- ###			
             mmd <- mmd[which(mmd$dt >= dates[1] & mmd$dt <= dates[2]), ]
             mmd.new <- mmd
@@ -985,8 +985,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
 			if (check.line1(filename)) filename <- modify.wchead(filename,fsuffix)
 			sst <- utils::read.table(filename, sep = ",", header = T, blank.lines.skip = F)
 			#sst <- utils::read.table(fList[fidx], sep = ",", header = T, blank.lines.skip = F)
-            ### --- End of Tim's edits --- ###
-            sst$dt <- lubridate::parse_date_time(sst$Date, orders = findDateFormat(sst$Date), tz = "UTC")	
+            sst$dt <- lubridate::parse_date_time(sst$Date, orders = findDateFormat(sst$Date), tz = "UTC")
+			if (sum(is.na(sst$dt))>0) sst$dt <- format.datetime(sst$Date)		
 			### --- Tim's edits 2022-03-10: remove the need to trim to be within start & end dates --- ###			
             #sst <- sst[which(sst$dt >= dates[1] & sst$dt <= dates[2]), ]
 			### --- End of Tim's edits --- ###	
@@ -1023,7 +1023,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
 			if (check.line1(filename)) filename <- modify.wchead(filename,fsuffix)
 			ml <- utils::read.table(filename, sep = ",", header = T, blank.lines.skip = F)
 			ml$dt <- lubridate::parse_date_time(ml$Date, orders = findDateFormat(ml$Date), tz = "UTC")
-			if (is.na(ml$dt[1])) {
+			if (sum(is.na(ml$dt))>0) {
 			   ml$Date <- format.datetime(ml$Date)
 			} else {
 			   ml$Date <- ml$dt
@@ -1113,7 +1113,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             histo <- histo[which(!is.na(histo$Sum)), ]
             histo$dt <- lubridate::parse_date_time(histo$Date, orders = findDateFormat(histo$Date), tz = "UTC")
 			### --- Tim's edits 2022-06-29: need to specify date format for desktop DAP generated files, at least for ICCAT's Stasa examples --- ###	
-			if (is.na(histo$dt[1])) histo$dt <- format.datetime(histo$Date)
+			if (sum(is.na(histo$dt))>0) histo$dt <- format.datetime(histo$Date)
 			### --- End of Tim's edits --- ###	
             histo <- histo[which(histo$dt >= dates[1] & histo$dt <=  dates[2]), ]
             histo <- subset(histo, select = -c(NumBins))
