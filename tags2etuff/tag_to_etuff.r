@@ -948,20 +948,21 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
                 measure.vars = c("depthMin", "depthMax"))
             mmd.new$VariableName <- mmd.new$variable
             mmd.new <- merge(x = mmd.new, y = obsTypes[, c("VariableID", 
-                "VariableName", "VariableUnits")], by = "VariableName", 
-                all.x = TRUE)
+                "VariableName", "VariableUnits")], by = "VariableName", all.x = TRUE)
             mmd.new <- mmd.new[, c("dt", "VariableID", "value", 
                 "VariableName", "VariableUnits")]
             names(mmd.new) <- c("DateTime", "VariableID", "VariableValue", 
                 "VariableName", "VariableUnits")
-            mmd.new <- mmd.new[order(mmd.new$DateTime, mmd.new$VariableID), 
-                ]
-            mmd.new$DateTime <- as.POSIXct(mmd.new$DateTime, 
-                tz = "UTC")
+            mmd.new <- mmd.new[order(mmd.new$DateTime, mmd.new$VariableID), ]
+            mmd.new$DateTime <- as.POSIXct(mmd.new$DateTime, tz = "UTC")
             mmd.new$DateTime <- format(mmd.new$DateTime, "%Y-%m-%d %H:%M:%S")
-			### Tim's edits
+			### Tim's edits - it's safe to remove NA values here because it's when the tag has already detached
+			ix <- which(is.na(mmd.new$VariableValue)==T)
+			mmd.new <- mmd.new[-ix,]
+			### --- End of Tim's edits --- ###	
 			print(head(mmd.new))
 			print(paste("--- Missing variable values found: ", sum(is.na(mmd.new$VariableValue)), "---"))
+			
             if (exists("returnData")) {
                 returnData <- rbind(returnData, mmd.new)
             }
