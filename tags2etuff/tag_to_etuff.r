@@ -628,6 +628,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             pdt.new <- pdt.new[which(!is.na(pdt.new$VariableID)), ]
 			### Tim's edits
 			print(head(pdt.new))
+			print(paste("--- Missing variable values found: ", sum(is.na(pdt.new$VariableValue)), "---"))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, pdt.new)
             }
@@ -676,6 +677,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             locs.new <- locs.new[which(!is.na(locs.new$VariableID)), ]
 			### Tim's edits
 			print(head(locs.new))
+			print(paste("--- Missing variable values found: ", sum(is.na(locs.new$VariableValue)), "---"))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, locs.new)
             }
@@ -758,6 +760,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             arch.new$DateTime <- format(arch.new$DateTime, "%Y-%m-%d %H:%M:%S")
 			### Tim's edits
 			print(head(arch.new))
+			print(paste("--- Missing variable values found: ", sum(is.na(arch.new$VariableValue)), "---"))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, arch.new)
             }
@@ -827,6 +830,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
                 "%Y-%m-%d %H:%M:%S")
 			### Tim's edits
 			print(head(series.new))	
+			print(paste("--- Missing variable values found: ", sum(is.na(series.new$VariableValue)), "---"))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, series.new)
             }
@@ -900,7 +904,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             light.new <- light.new %>% distinct(DateTime, VariableID, 
                 .keep_all = TRUE)
 			### Tim's edits
-			print(head(light.new))	
+			print(head(light.new))
+			print(paste("--- Missing variable values found: ", sum(is.na(light.new$VariableValue)), "---"))			
             if (exists("returnData")) {
                 returnData <- rbind(returnData, light.new)
             }
@@ -956,6 +961,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             mmd.new$DateTime <- format(mmd.new$DateTime, "%Y-%m-%d %H:%M:%S")
 			### Tim's edits
 			print(head(mmd.new))
+			print(paste("--- Missing variable values found: ", sum(is.na(mmd.new$VariableValue)), "---"))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, mmd.new)
             }
@@ -993,6 +999,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             sst.new <- parse_sst(sst, obsTypes)
 			### Tim's edits
 			print(head(sst.new))
+			print(paste("--- Missing variable values found: ", sum(is.na(sst.new$VariableValue)), "---"))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, sst.new)
             }
@@ -1061,6 +1068,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             ml.new$DateTime <- format(ml.new$DateTime, "%Y-%m-%d %H:%M:%S")
 			### Tim's edits
 			print(head(ml.new))
+			print(paste("--- Missing variable values found: ", sum(is.na(ml.new$VariableValue)), "---"))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, ml.new)
             }
@@ -1224,6 +1232,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
                 "%Y-%m-%d %H:%M:%S")
 			### Tim's edits
 			print(head(histo.new))	
+			print(paste("--- Missing variable values found: ", sum(is.na(histo.new$VariableValue)), "---"))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, histo.new)
             }
@@ -1281,6 +1290,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             gpe$DateTime <- format(gpe$DateTime, "%Y-%m-%d %H:%M:%S")
 			### Tim's edits
 			print(head(gpe))
+			print(paste("--- Missing variable values found: ", sum(is.na(gpe$VariableValue)), "---"))
             if (exists("returnData")) {
                 returnData <- rbind(returnData, gpe)
             }
