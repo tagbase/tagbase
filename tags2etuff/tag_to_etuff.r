@@ -1,7 +1,9 @@
 ### --- Begin Tim's edit history  --- ###
+### 2022-07-04
+### a) Datetime is required so that Tagbase import routine won't skip the line, therefore a dummy date of 1970-01-01 00:00:01 is added to the WC histogram bins 
 ### 2022-06-29
 ### a) Need to manually handle date format that is not guess-able by findDateFormat with the function "format.datetime"
-### b) PDT has some NA in BinNum, need to be filtered out
+### b) WC PDT has some NA in BinNum, need to be filtered out
 ### c) Add preview of read in data after each "Getting..."
 ### 2022-03-10
 ### a) remove the need to trim to be within start & end dates 
@@ -1217,12 +1219,16 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             htb <- htb[which(!is.na(htb$Value)), ]
             if (htb$Value[1] > htb$Value[2]) 
                 htb$Value[1] <- -10
-            histo.new <- rbind(histo.new, data.frame(DateTime = NA, 
+			### --- Tim's edits 2022-07-04: Tagbase requires a primary key DateTime for indexing --- ###
+			### https://dev.mysql.com/doc/refman/8.0/en/datetime.html
+			dummydate = as.POSIXct(strptime("1970-01-01 00:00:01", "%Y-%m-%d %H:%M:%S"), tz="UTC")			
+            histo.new <- rbind(histo.new, data.frame(DateTime = dummydate, 
                 VariableID = htb$VariableID, VariableValue = htb$Value, 
                 VariableName = htb$VariableName, VariableUnits = "Celsius"))
-            histo.new <- rbind(histo.new, data.frame(DateTime = NA, 
+            histo.new <- rbind(histo.new, data.frame(DateTime = dummydate, 
                 VariableID = hdb$VariableID, VariableValue = hdb$Value, 
                 VariableName = hdb$VariableName, VariableUnits = "meter"))
+			### --- End of Tim's edits --- ###	
             histo.new <- histo.new[order(histo.new$DateTime, 
                 histo.new$VariableID), ]
             histo.new <- histo.new[which(!is.na(histo.new$VariableValue)), 
