@@ -1,4 +1,7 @@
 ### --- Begin Tim's edit history  --- ###
+### 2023-06-15
+### a) Add flag to choose whether to trim data to start/end dates as specified by metadata
+### b) For Lotek archival tag, skip daylog for now until import routine for LatViewer Studio output is configured
 ### 2022-07-04
 ### a) Datetime is required so that Tagbase import routine won't skip the line, therefore a dummy date of 1970-01-01 00:00:01 is added to the WC histogram bins 
 ### 2022-06-29
@@ -6,7 +9,7 @@
 ### b) WC PDT has some NA in BinNum, need to be filtered out
 ### c) Add preview of read in data after each "Getting..."
 ### 2022-03-10
-### a) remove the need to trim to be within start & end dates 
+### a) added modifications to remove trimming to within start & end dates
 ### b) update the function call to building an etuff header using local metadata listing
 ### c) slightly modify verbose messages
 ### d) add time elapsed
@@ -19,8 +22,9 @@ format.datetime <- function(dframe, orders = "%m/%d/%Y %H:%M:%S"){
 }
 
 tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins = NULL, 
-    obsTypes = NULL, check_meta = TRUE, metaTypes = NULL, returndata = FALSE , gpe.scaling=1, ...) 
+    obsTypes = NULL, check_meta = TRUE, metaTypes = NULL, returndata = FALSE , gpe.scaling=1, trim_data = FALSE, ...) 
 {
+	### --- Begin Tim's edit 2022-03-10  --- ###
 	defaultW <- getOption("warn") 
     options(warn = -1) 
 	print("------------------------------------------------")
@@ -28,6 +32,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
     print("Processing...")
 	print(dir)
 	print("------------------------------------------------")
+	### --- End of Tim's edit history --- ###
+	
     args <- list(...)
     if ("fName" %in% names(args)) 
         fName <- args$fName
@@ -49,6 +55,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
     else {
         tagtype <- meta_row$model
     }
+    
+    ## start and end dates
     if ("dates" %in% names(args)) {
         dates <- args$dates
     }
@@ -58,10 +66,14 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             stop("Start and end times specified by meta_row must be of class POSIXct.")
         dates <- c(meta_row$time_coverage_start, meta_row$time_coverage_end)
     }
-	### --- Tim's edits 2022-03-10: remove the need to trim to be within start & end dates --- ###
-	dates <- c(as.POSIXct("1970-01-01", format = "%Y-%m-%d", tz="GMT"), 
-	           as.POSIXct("2970-01-01", format = "%Y-%m-%d", tz="GMT"))
-	### --- End of Tim's edits --- ###	
+	
+### --- Tim's edits 2022-03-10: remove the need to trim to be within start & end dates --- ###
+	if (trim_data == FALSE){
+	  dates <- c(as.POSIXct("1970-01-01", format = "%Y-%m-%d", tz="GMT"), as.POSIXct("2970-01-01", format = "%Y-%m-%d", tz="GMT"))
+	}
+### --- End of Tim's edits --- ###	
+
+	## get gpe3 logical
     if ("gpe3" %in% names(args)) {
         gpe3 <- args$gpe3
     }
@@ -72,17 +84,20 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
     else {
         gpe3 <- FALSE
     }
+    
+    ## checking before we start
     if (is.null(obsTypes)) {
         print("Getting obsTypes...")
         url <- "https://raw.githubusercontent.com/camrinbraun/tagbase/master/eTUFF-ObservationTypes.csv"
-        obsTypes <- try(read.csv(text = RCurl::getURL(url)), 
-            TRUE)
-        if (class(obsTypes) == "try-error") 
+        obsTypes <- try(read.csv(text = RCurl::getURL(url)), TRUE)
+    # if that doesnt work, kill the funciton    
+    if (class(obsTypes) == "try-error") 
             stop(paste("obsTypes not specified in function call and unable to automatically download it from github at", 
                 url, sep = " "))
     }
-    if (names(obsTypes)[1] != "VariableID") 
-        names(obsTypes)[1] <- "VariableID"
+    if (names(obsTypes)[1] != "VariableID") names(obsTypes)[1] <- "VariableID"
+        
+    # check the specific manufacturer is actually supported    
     if (manufacturer == "unknown") {
         if (!exists("customCols")) 
             stop("if manufacturer is unknown, customCols must be specified.")
@@ -110,6 +125,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
     }
     if (class(dates)[1] != "POSIXct") 
         stop("input to dates must be of class POSIXct")
+    
+    ## given a custom input
     if (exists("customCols")) {
         print("Using the custom columns specified in customCols argument. This is an experimental feature and is not well tested.")
         warning("Defining column names using customCols as specified. These MUST exactly match observation types from the obsTypes set!")
@@ -141,7 +158,12 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         else {
             returnData <- dat
         }
+        print("Showing custom data ...")
+        print(head(returnData))
+        print(tail(returnData))
     }
+    
+    ## given a SPOT directory:
     if (tagtype == "satellite" & manufacturer == "Wildlife") {
         fList <- list.files(dir, full.names = T)
         fidx <- grep("-Locations.csv", fList)
@@ -1310,25 +1332,38 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
     }
     if ((tagtype == "archival" | tagtype == "popup") & manufacturer == 
         "Lotek") {
-        print("Reading Lotek archival or pop up archival tag...")
+     ### --- Tim's edits 2023-06-15: break down components for Lotek tags --- ###	    
+        print("Reading a Lotek tag...")
+        ### Read in everything related to Lotek
         lotek <- read_lotek(dir)
-        dl <- lotek_format_dl(lotek$daylog, dates, obsTypes, 
-            meta_row)
-        ts <- lotek_format_ts(lotek$timeseries, dates, obsTypes, 
-            meta_row)
-        if (exists("returnData")) {
-            returnData <- rbind(returnData, ts, dl)
+        ### Parse Lotek components
+        if (!is.null(lotek$timeseries)) {
+        	ts <- lotek_format_ts(lotek$timeseries, dates, obsTypes, meta_row)
+        	### Merge with returnData
+            if (exists("returnData")) {returnData <- rbind(returnData, ts)
+            	} else {returnData <- rbind(ts)}        	
         }
-        else {
-            returnData <- rbind(ts, dl)
+        if (!is.null(lotek$daylog)) {
+        	dl <- lotek_format_dl(lotek$daylog, dates, obsTypes, meta_row)
+         	### Merge with returnData
+            if (exists("returnData")) {returnData <- rbind(returnData, dl)
+            	} else {returnData <- rbind(dl)}
         }
+        ### What if there is no data and no track
+        if (!exists("returnData")){
+        	lflag2 = is.null(out$daylog) + is.null(out$timeseries)
+        	if (lflag2 == 2) print(" !!! WARNING: no Lotek files were read, and there is no customCols input as well !!! ")
+        }        
+    ### --- End of Tim's edits --- ###	   
+     
     }
-    returnData <- distinct(returnData, DateTime, VariableName, 
-        .keep_all = TRUE)
-    returnData <- returnData[order(returnData$DateTime, returnData$VariableID), 
-        ]
+    ## cleaning step to ensure no timestamp has multiple entries for the same variableid
+    returnData <- distinct(returnData, DateTime, VariableName, .keep_all = TRUE)
+    returnData <- returnData[order(returnData$DateTime, returnData$VariableID),]
     returnData$DateTime <- as.character(returnData$DateTime)
+     ## convert to char and fill NAs with blanks for dealing with TAD/TAT bins
     returnData$DateTime[which(is.na(returnData$DateTime))] <- ""
+    
     if (exists("write_direct")) {
         if (write_direct == TRUE & exists("etuff_file")) {
 		    ### --- Tim's edits 2022-03-10 ###
@@ -1351,7 +1386,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         tidyfast::dt_pivot_wider(names_from = VariableName, values_from = VariableValue) %>% 
         as.data.frame()
     names(df)[1] <- "DateTime"
-    print("Appending bins...")
+    if (manufacturer == "Wildlife" | tagtype == "Wildlife Computers") print("Appending bins...")
     if (any(df$DateTime == "")) {
         bins <- df[which(df$DateTime == ""), ]
         drop_idx <- which(apply(bins, 2, FUN = function(x) all(is.na(x) | 
