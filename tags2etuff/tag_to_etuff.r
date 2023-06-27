@@ -32,13 +32,17 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
     print("Processing...")
 	print(dir)
 	print("------------------------------------------------")
+    # Add a flag for customCols
+    flag.customCols = FALSE
 	### --- End of Tim's edit history --- ###
 	
     args <- list(...)
     if ("fName" %in% names(args)) 
         fName <- args$fName
-    if ("customCols" %in% names(args)) 
+    if ("customCols" %in% names(args)){ 
         customCols <- args$customCols
+        flag.customCols = TRUE
+    }
     if ("write_direct" %in% names(args)) 
         write_direct <- args$write_direct
     if ("etuff_file" %in% names(args)) 
@@ -1336,14 +1340,15 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         print("Reading a Lotek tag...")
         ### Read in everything related to Lotek
         lotek <- read_lotek(dir)
-        ### Parse Lotek components
+        ### Lotek basic log - always on
         if (!is.null(lotek$timeseries)) {
         	ts <- lotek_format_ts(lotek$timeseries, dates, obsTypes, meta_row)
         	### Merge with returnData
             if (exists("returnData")) {returnData <- rbind(returnData, ts)
             	} else {returnData <- rbind(ts)}        	
         }
-        if (!is.null(lotek$daylog)) {
+        ### Lotek day log - processed only when customCols is NOT used
+        if (!is.null(lotek$daylog) & !flag.customCols) {
         	dl <- lotek_format_dl(lotek$daylog, dates, obsTypes, meta_row)
          	### Merge with returnData
             if (exists("returnData")) {returnData <- rbind(returnData, dl)
@@ -1370,6 +1375,9 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             # build_meta_head(meta_row = meta_row, filename = etuff_file, write_hdr = T)
 			build_meta_head(meta_row = meta_row, metaTypes = metaTypes, filename=etuff_file, write_hdr = TRUE)
 			### --- Tim's edits end ###
+			print("________________________________________________")
+			print("                  File preview                  ")
+			print("________________________________________________")
             print(utils::head(returnData))
             data.table::fwrite(returnData, file = etuff_file, 
                 sep = ",", col.names = F, row.names = F, quote = F, 
