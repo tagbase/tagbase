@@ -1,6 +1,7 @@
 ### --- Begin Tim's edit history  --- ###
 ### 2023-06-15
 ### a) Return nothing when only customCols is used to provide a track
+### b) Improve search for log files based on keywords "dive" and "day"
 ### --- End of Tim's edit history --- ###
 
 #' Read Lotek archival tag data
@@ -22,15 +23,17 @@ read_lotek <- function(dir){
   #=======================
   print('Reading time series...')
   print('Lotek time series files need _00.csv or Dive Log.csv in the file name.')
-
-  if (length(grep('_00.csv', fList)) == 1 | length(grep('Dive Log.csv', fList)) == 1){
+    ### --- Tim's edits 2023-06-15: new generic search condition
+  if (length(grep('_00.csv', fList)) == 1 | length(grep('Dive Log.csv', fList)) == 1 | length(grep('Dive', fList, ignore.case = T)) == 1){
+  	
     if(length(grep('_00.csv', fList)) == 1) series_file <- fList[grep('_00.csv', fList)]
-    if(length(grep('Dive Log.csv', fList)) == 1) series_file <- fList[grep('Dive Log.csv', fList)]
+    #if(length(grep('Dive Log.csv', fList)) == 1) series_file <- fList[grep('Dive Log.csv', fList)]
+    if(length(grep('Dive', fList, ignore.case = T)) == 1) series_file <- fList[grep('Dive', fList, ignore.case = T)]
 
     ts <- data.table::fread(series_file, sep = ',', header = T)
-	### --- Begin Tim's edit 2022-06-15  --- ###    
-    print(head(ts))
-    print(tail(ts))
+    ### --- Begin Tim's edit 2022-06-15  --- ###    
+      print(head(ts))
+      print(tail(ts))
 	### --- End of Tim's edit history --- ###
 
     if(length(grep('Dive Log.csv', fList)) == 1){
@@ -70,17 +73,14 @@ read_lotek <- function(dir){
   print('Reading daily log...')
   print('Lotek daily files need _01.csv or Day Log.csv in the file name.')
 
-  if (length(grep('_01.csv', fList)) == 1 | length(grep('Day Log.csv', fList)) == 1){
+	### --- Tim's edits 2023-06-15: new search condition
+  if (length(grep('_01.csv', fList)) == 1 | length(grep('Day Log.csv', fList)) == 1 | length(grep('Day', fList, ignore.case = T)) == 1){
 
     if(length(grep('_01.csv', fList)) == 1) daylog_file <- fList[grep('_01.csv', fList)]
-    if(length(grep('Day Log.csv', fList)) == 1) daylog_file <- fList[grep('Day Log.csv', fList)]
+    #if(length(grep('Day Log.csv', fList)) == 1) daylog_file <- fList[grep('Day Log.csv', fList)]
+    if(length(grep('Day', fList, ignore.case = T)) == 1) daylog_file <- fList[grep('Day', fList, ignore.case = T)]
 
     dl <- data.table::fread(daylog_file, sep = ',', skip = 1)#, header = F, nrows = 10, blank.lines.skip = F, stringsAsFactors = F)
-
-	### --- Begin Tim's edit 2022-06-15  --- ###    
-    print(head(dl))
-    print(tail(dl))
-	### --- End of Tim's edit history --- ###
 
     ## read header separate in case there are non-UTF chars
     x <- scan(daylog_file, what = character(), sep=',', nmax = 100)
@@ -185,8 +185,6 @@ read_lotek <- function(dir){
   if (!is.null(ts)) out$timeseries = data.frame(ts)
   if (!is.null(dl)) out$daylog = data.frame(dl)
   ### --- End of Tim's edit history --- ###  
-  
-  print("--- Finished trying to locate Lotek files! ---")
   return(out)
   
 }
