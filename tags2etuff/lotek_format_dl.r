@@ -24,9 +24,13 @@ lotek_format_dl <- function(dl, dates, obsTypes, meta_row, hemisphere='N'){
  hh <- unlist(strsplit(names(dl), "_"))
  jj <- grep("TF",hh)
  ignore.sun = !identical(jj, integer(0))
- names(dl) <- hh[-grep("TF",hh)]
+ if (ignore.sun) names(dl) <- hh[-grep("TF",hh)]
  dl[,1] <- format(as.POSIXct(dl[,1], format = "%d/%m/%y", tz="GMT"),"%Y-%m-%d")
  names(dl)[1] <- 'DateTime'
+ # Add one more condition for ignore.sun 
+ jj <- grep("depthSunrise",names(dl))
+ if (identical(jj, integer(0))) ignore.sun = TRUE
+ # Show a preview
  print(head(dl))
 ### --- End of Tim's edit --- ###
 
