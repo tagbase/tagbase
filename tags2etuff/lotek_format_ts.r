@@ -20,14 +20,22 @@ lotek_format_ts <- function(ts, dates, obsTypes, meta_row){
 
   ### --- Begin Tim's edit 2023-06-15 --- ###
   ### Check if TimeS is present in the header, which means it is from LatVS
-  jj <- grep("TimeS",names(ts))
-  flag.latvs = !identical(jj, integer(0))
+  flag.latvs = !identical(grep("TimeS",names(ts)), integer(0))
   if (flag.latvs) {
-  	ts[,1] <- format(as.POSIXct(ts[,1], format = "%H:%M:%S %d/%m/%y", tz="GMT"), "%Y-%m-%d %H:%M:%S")
+  	# Do another check to see if TimeS is in seconds since 2000-01-01
+  	flag.TimeS = identical(grep("/",ts[1,1]), integer(0))
+  	if (flag.TimeS){
+  		ts[,1] <-  as.POSIXct(ts[,1], origin="2000-01-01", tz="GMT")
+  	} else { 
+  	    ts[,1] <- as.POSIXct(ts[,1], format = "%H:%M:%S %d/%m/%y", tz="GMT")
+  	}
+  	ts[,1] <- format(ts[,1], "%Y-%m-%d %H:%M:%S")
   	names(ts)[1] <- 'DateTime'
-  }	
+  	print(head(ts))
+  }
+  ### Add ExtTemp, IntTemp, Pressure, DateTime to below	
   ### --- End of Tim's edit --- ###
-
+  
   measure.vars <- c()
 
   ## rename to standard names
@@ -57,7 +65,7 @@ lotek_format_ts <- function(ts, dates, obsTypes, meta_row){
   }
 
   ## deal with dates
-  dt_idx <- which(names(ts) %in% c('Date/Time', 'Timestamp','Date.Time'))
+  dt_idx <- which(names(ts) %in% c('Date/Time', 'Timestamp','Date.Time', 'DateTime'))
   if ('Date' %in% names(ts) & 'Time' %in% names(ts)){
     ts <- ts[which(ts$Date != '' & !is.na(ts$Date)),]
     ts$DateTime <- testDates(paste(ts$Date, ts$Time))
@@ -70,7 +78,7 @@ lotek_format_ts <- function(ts, dates, obsTypes, meta_row){
     ts <- ts[which(ts$DateTime != '' & !is.na(ts$DateTime)),]
     ts$DateTime <- testDates(ts$DateTime)
   }
-
+  
   if (all(ts$DateTime < dates[1]) | all(ts$DateTime > dates[2])){
     stop('Error parsing time series dates.')
   }
