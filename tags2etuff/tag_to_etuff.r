@@ -2,6 +2,7 @@
 ### 2023-06-15
 ### a) Add flag to choose whether to trim data to start/end dates as specified by metadata
 ### b) For Lotek archival tag, skip daylog for now until import routine for LatViewer Studio output is configured
+### c) Allow metadata manufacturer attribute to take "Wildlife Computers" instead of "Wildlife"
 ### 2022-07-04
 ### a) Datetime is required so that Tagbase import routine won't skip the line, therefore a dummy date of 1970-01-01 00:00:01 is added to the WC histogram bins 
 ### 2022-06-29
@@ -101,24 +102,28 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
     }
     if (names(obsTypes)[1] != "VariableID") names(obsTypes)[1] <- "VariableID"
         
-    # check the specific manufacturer is actually supported    
+    # check the specific manufacturer is actually supported
+    ### --- Tim's edits 2023-06-15: break up the manufacturer names; change to lower case if needed ---
+    mf1 = c("Wildlife", "Wildlife Computers")
+    mf2 = c("Microwave", "Microwave Telemetry")
+    mf3 = c("Lotek", "Lotek Wireless")
+    mfs = c(mf1, mf2, mf3)       
     if (manufacturer == "unknown") {
         if (!exists("customCols")) 
             stop("if manufacturer is unknown, customCols must be specified.")
-    }
-    else if (!(manufacturer %in% c("Microwave", "Wildlife", "Wildlife Computers", 
-        "Lotek"))) {
+    } else if (!(tolower(manufacturer) %in% tolower(mfs))) {
         stop("the specified manufacturer is not supported.")
     }
-    if (tagtype %in% c("spot", "SPOT", "SPOT-F", "mrPATspot", 
-        "spot380", "spot258", "towed SPOT")) {
+    tm1 = c("spot", "SPOT", "SPOT-F", "mrPATspot", "spot380", "spot258", "towed SPOT")
+    tm2 = c("miniPAT", "PAT", "MK10", "MK10AF", "psat", "Xtag")
+    tm3 = c("LAT-2810", "LTD2310", "Mk9", "LAT231")
+    if (tolower(tagtype) %in% tolower(tm1)) {
         tagtype <- "satellite"
     }
-    else if (tagtype %in% c("miniPAT", "PAT", "MK10", "MK10AF", 
-        "psat", "Xtag")) {
+    else if (tolower(tagtype) %in% tolower(tm2)) {
         tagtype <- "popup"
     }
-    else if (tagtype %in% c("LAT-2810", "LTD2310", "Mk9", "LAT231")) {
+    else if (tolower(tagtype) %in% tolower(tm3)) {
         tagtype <- "archival"
     }
     else if (!(tagtype %in% c("satellite", "popup", "archival"))) {
@@ -127,6 +132,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             stop("specified model needs to match an accepted tag model or instrument_type needs to be satellite, popup or archival.")
         }
     }
+    ### --- End of Tim's edits --- ###	
+        
     if (class(dates)[1] != "POSIXct") 
         stop("input to dates must be of class POSIXct")
     
@@ -167,7 +174,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         print(tail(returnData))
     }
     
-    ## given a SPOT directory:
+    ### Wildlife Computers - given a SPOT directory:
     if (tagtype == "satellite" & manufacturer == "Wildlife") {
         fList <- list.files(dir, full.names = T)
         fidx <- grep("-Locations.csv", fList)
@@ -229,10 +236,11 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         if (exists("fe")) 
             rm(fe)
     }
+    ### Microwave Telemetry
     if (tagtype == "popup" & manufacturer == "Microwave") {
         print("Reading Microwave PSAT for vertical data...")
         if (is.null(fName)) 
-            stop("fName of target XLS file must be specified if manufacturer is Microwave.")
+            stop("fName of target Excel file must be specified if manufacturer is Microwave.")
         fList <- list.files(dir, full.names = T)
         fidx <- grep(fName, fList)
         if (length(fidx) == 0) {
@@ -321,7 +329,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         rm(fe)
     if (tagtype == "popup" & manufacturer == "Microwave") {
         if (is.null(fName)) 
-            stop("fName of target XLS file must be specified if manufacturer is Microwave.")
+            stop("fName of target Excel file must be specified if manufacturer is Microwave.")
         fList <- list.files(dir, full.names = T)
         fidx <- grep(fName, fList)
         if (length(fidx) == 0) {
@@ -404,7 +412,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         rm(fe)
     if (tagtype == "popup" & manufacturer == "Microwave") {
         if (is.null(fName)) 
-            stop("fName of target XLS file must be specified if manufacturer is Microwave.")
+            stop("fName of target Excel file must be specified if manufacturer is Microwave.")
         fList <- list.files(dir, full.names = T)
         fidx <- grep(fName, fList)
         if (length(fidx) == 0) {
@@ -598,8 +606,9 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
             }
         }
     }
-    if (exists("fe")) 
-        rm(fe)
+    if (exists("fe")) rm(fe)
+    
+    ### Wildlife Computers - popup tags
     if ((tagtype == "popup" | tagtype == "archival") & (manufacturer == 
         "Wildlife" | manufacturer == "Wildlife Computers")) {
         print("Reading Wildlife Computers popup or archival tag")
@@ -1331,9 +1340,10 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
                 returnData <- gpe
             }
         }
-        if (exists("fe")) 
-            rm(fe)
+        if (exists("fe")) rm(fe)
     }
+    
+    ### Lotek Wireless
     if ((tagtype == "archival" | tagtype == "popup") & manufacturer == 
         "Lotek") {
      ### --- Tim's edits 2023-06-15: break down components for Lotek tags --- ###	    

@@ -1,3 +1,8 @@
+### --- Begin Tim's edit history  --- ###
+### 2023-06-15
+### a) Extend limited support for LAT Viewer Studio basic log output
+### --- End of Tim's edit history --- ###
+
 #' Format Lotek time series
 #'
 #' Format Lotek time series data from archival tag
@@ -13,22 +18,32 @@
 
 lotek_format_ts <- function(ts, dates, obsTypes, meta_row){
 
+  ### --- Begin Tim's edit 2023-06-15 --- ###
+  ### Check if TimeS is present in the header, which means it is from LatVS
+  jj <- grep("TimeS",names(ts))
+  flag.latvs = !identical(jj, integer(0))
+  if (flag.latvs) {
+  	ts[,1] <- format(as.POSIXct(ts[,1], format = "%H:%M:%S %d/%m/%y", tz="GMT"), "%Y-%m-%d %H:%M:%S")
+  	names(ts)[1] <- 'DateTime'
+  }	
+  ### --- End of Tim's edit --- ###
+
   measure.vars <- c()
 
   ## rename to standard names
-  ext_idx <- which(names(ts) %in% c('ExtTemp[C]', 'ExtTempdegC', 'ExtTemp.C.','External_Temp_.C.'))
+  ext_idx <- which(names(ts) %in% c('ExtTemp[C]', 'ExtTempdegC', 'ExtTemp.C.','External_Temp_.C.','ExtTemp'))
   names(ts)[ext_idx] <- 'temperature'
   if (any(names(ts) %in% 'temperature')){
     measure.vars[length(measure.vars) + 1] <- 'temperature'
   }
 
-  int_idx <- which(names(ts) %in% c('IntTemp[C]', 'IntTempdegC', 'IntTemp.C.'))
+  int_idx <- which(names(ts) %in% c('IntTemp[C]', 'IntTempdegC', 'IntTemp.C.','IntTemp'))
   names(ts)[int_idx] <- 'internalTemperature'
   if (any(names(ts) %in% 'internalTemperature')){
     measure.vars[length(measure.vars) + 1] <- 'internalTemperature'
   }
 
-  dep_idx <- which(names(ts) %in% c('Depth-dBar', 'Depth.dBar', 'Pressure[dBars]', 'Pressure.dBars.','Pressure_.dBar.'))
+  dep_idx <- which(names(ts) %in% c('Depth-dBar', 'Depth.dBar', 'Pressure[dBars]', 'Pressure.dBars.','Pressure_.dBar.','Pressure'))
   names(ts)[dep_idx] <- 'depth'
   if (any(names(ts) %in% 'depth')){
     ts$depth <- oce::swDepth(ts$depth, as.numeric(meta_row$geospatial_lat_start))
