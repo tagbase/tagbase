@@ -1,6 +1,6 @@
 ### --- Begin Tim's edit history  --- ###
 ### 2023-06-15
-### a) Add flag to choose whether to trim data to start/end dates as specified by metadata
+### a) Add flag to choose whether to trim data to start/end dates as specified by metadata. Also added code at the very end to trim before writing eTUFF
 ### b) For Lotek archival tag, skip daylog for now until import routine for LatViewer Studio output is configured
 ### c) Allow metadata manufacturer attribute to take "Wildlife Computers" instead of "Wildlife"
 ### 2022-07-04
@@ -142,8 +142,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         print("Using the custom columns specified in customCols argument. This is an experimental feature and is not well tested.")
         warning("Defining column names using customCols as specified. These MUST exactly match observation types from the obsTypes set!")
         dat <- customCols
-        dt.idx <- which(dat$DateTime < dates[1] | dat$DateTime > 
-            dates[2])
+        dt.idx <- which(dat$DateTime < dates[1] | dat$DateTime > dates[2])
         if (length(dt.idx) > 0) {
             warning("data in input dataset that is outside the bounds of specified start/end dates.")
             dat <- dat[-dt.idx, ]
@@ -236,6 +235,7 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
         if (exists("fe")) 
             rm(fe)
     }
+    
     ### Microwave Telemetry
     if (tagtype == "popup" & manufacturer == "Microwave") {
         print("Reading Microwave PSAT for vertical data...")
@@ -1375,6 +1375,15 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
     ## cleaning step to ensure no timestamp has multiple entries for the same variableid
     returnData <- distinct(returnData, DateTime, VariableName, .keep_all = TRUE)
     returnData <- returnData[order(returnData$DateTime, returnData$VariableID),]
+    ### --- Tim's edit: Add one extra DateTime filtering within start/end dates ---
+    if (trim_data){
+     print ("... Data trimmed to the following dates ....")
+     print(dates)
+     print ("... Trimming completed ....")
+     dt.idx <- which(returnData$DateTime < dates[1] | returnData$DateTime > dates[2])
+     if (length(dt.idx) > 0) returnData <- returnData[-dt.idx, ]
+    }
+    ### --- End of Tim's edits --- ###
     returnData$DateTime <- as.character(returnData$DateTime)
      ## convert to char and fill NAs with blanks for dealing with TAD/TAT bins
     returnData$DateTime[which(is.na(returnData$DateTime))] <- ""
