@@ -1,3 +1,8 @@
+### --- Begin Tim's edit history  --- ###
+### 2023-08-04
+### a) older WC DAP files that don't have Discont columns and txtfileop in readwc.r would duplicate data, so it needs trimming here
+### --- End of Tim's edit history --- ###
+
 #' Extract PDT from Wildlife Computers tag data
 #' 
 #' \code{extract.pdt} is a simple formatting function that parses PDT data and
@@ -15,6 +20,15 @@ extract.pdt <- function(pdt){
     dropidx <- c(grep('Ox', names(pdt)), grep('Disc', names(pdt)))
     pdt <- pdt[,-dropidx]
   }
+  
+  ### Tim's edit: older WC DAP files that don't have Discont columns
+  ### txtfileop in readwc.r would duplicate data, so it's easier to fix it here
+  ### 2023-08-04 
+  if(any(pdt[,2] != pdt[1,2])){  
+    dropidx = which(pdt[,2] != pdt[1,2])[1] - 1
+    pdt <- pdt[1:dropidx,]
+  }
+  ### --- End of Tim's edits --- ###
   
   if(any(pdt[,2] != pdt[1,2])){
     stop('Formatting error in input data. Open csv file elsewhere and try adding header names after the "Discont15" column name. There is likely more data stored here that was not assigned a column header.')

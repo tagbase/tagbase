@@ -1,4 +1,6 @@
 ### --- Begin Tim's edit history  --- ###
+### 2023-08-04
+### a) SST.csv: older DAP outputs have no DepthSensor column. I suspect same problem will be presented for Series.csv but not doing anything yet until a use case is found
 ### 2023-06-15
 ### a) Add flag to choose whether to trim data to start/end dates as specified by metadata. Also added code at the very end to trim before writing eTUFF
 ### b) For Lotek archival tag, skip daylog for now until import routine for LatViewer Studio output is configured
@@ -1028,6 +1030,11 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
 			fsuffix = "SST"
 			if (check.line1(filename)) filename <- modify.wchead(filename,fsuffix)
 			sst <- utils::read.table(filename, sep = ",", header = T, blank.lines.skip = F)
+			### --- Tim's edits 2023-08-04: older DAP outputs have no DepthSensor column --- ###		
+			if (any(names(sst) != "DepthSensor")){
+				sst$DepthSensor = 0
+			}
+			
 			#sst <- utils::read.table(fList[fidx], sep = ",", header = T, blank.lines.skip = F)
             sst$dt <- lubridate::parse_date_time(sst$Date, orders = findDateFormat(sst$Date), tz = "UTC")
 			if (sum(is.na(sst$dt))>0) sst$dt <- format.datetime(sst$Date)		
@@ -1429,6 +1436,8 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
     print("eTUFF generation completed! Time elapsed:")
 	print(Sys.time() - stopwatch)
 	print("------------------------------------------------")
+	### Remove temp files
+	file.remove(list.files(tempdir(), full.names = T))
     options(warn = defaultW)
 	if (returndata){
       etuff <- list(etuff = df, meta = meta_row, bins = bins)
