@@ -75,30 +75,49 @@ modify.wchead <- function(ofname, fsuffix, mylink=NULL){
 	return(filename)
 }
 
+### 2025-03-18
+remove.blanks <- function(data){
+	idx <- which(is.na(data$Ptt))
+	if (length(idx) > 0){
+		data <- data[-idx,]
+	}
+	return(data)
+}
 ###
 ### --- End of Tim's edits --- ###
 
 read.wc <- function (filename, tag, pop, type = "sst", dateFormat = NULL, 
     verbose = FALSE) {
     if (type == "pdt") {
+    	
         ### --- Tim's edits: modify WC csv spreadsheet header --- ###
-	    fsuffix = "PDTs"
-        filename <- modify.wchead(filename,fsuffix)
-		### --- End of Tim's edits --- ###
 		data <- utils::read.table(filename, sep = ",", header = T,  blank.lines.skip = F, skip = 0)
-        if (length(grep("Discont16", names(data))) == 0 & ncol(data) > 89) 
-            names(data)[90:94] <- c("Depth16", "MinTemp16", "MaxTemp16", "X.Ox16", "Discont16")
-        if (verbose) 
-            print(paste("If read.wc() fails for type=pdt, check the number of column headers in the PDTs.csv file."))			
-        data <- extract.pdt(data)	
+		hnames = names(data)
+		hxtra1 = grep("Error",hnames)
+		hxtra2 = grep("Duration",hnames)
+		### Tim's edits on 2025-03-17: original setup, no strange Depth1Error (1 to 15)      
+        if (length(hxtra1) == 0) {
+	      fsuffix = "PDTs"
+          filename <- modify.wchead(filename,fsuffix)
+		  data <- utils::read.table(filename, sep = ",", header = T,  blank.lines.skip = F, skip = 0)          
+        } else {
+        	  ### Tim's edits on 2025-03-18: Remove Duration, DepthError columns in PDT
+        	  data = data[, -c(hxtra1,hxtra2)]
+        }
+		### --- End of Tim's edits --- ###
+		            
+        if (verbose) print(paste("If read.wc() fails for type=pdt, check the number of column headers in the PDTs.csv file."))	
+        		
+        data <- extract.pdt(data)
+        ### Tim added back tz = "GMT" into as.POSIXct
         if (is.null(dateFormat)) {
-            dts <- as.POSIXct(data$Date, format = findDateFormat(data$Date))
+            dts <- as.POSIXct(data$Date, format = findDateFormat(data$Date), tz = "GMT")
         }
         else {
-            dts <- as.POSIXct(data$Date, format = dateFormat)
+            dts <- as.POSIXct(data$Date, format = dateFormat, tz = "GMT")
         }
         data$Date <- dts
-        d1 <- as.POSIXct("1900-01-02") - as.POSIXct("1900-01-01")
+        d1 <- as.POSIXct("1900-01-02",tz = "GMT") - as.POSIXct("1900-01-01",tz = "GMT")
         didx <- dts >= (tag + d1) & dts <= (pop - d1)
         data <- data[didx, ]			
         dts <- dts[didx]	
@@ -189,5 +208,8 @@ read.wc <- function (filename, tag, pop, type = "sst", dateFormat = NULL,
                 collapse = ", "), " days..."))
         }
     }
+    ### --- Tim's edit on 2025-03-18: Empty lines in WC portal files --- ###
+    data <- remove.blanks(data)
+    ### --- End of Tim's edits --- ###
     return(data)
 }
