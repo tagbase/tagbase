@@ -1,7 +1,7 @@
 ### Easier listing for loading modified scripts
 modscript <- function(txt=""){
   ### Must have	
-  mss = c('url_tagbase.r', 'tag_to_etuff.r', 'build_meta_head.r')
+  mss = c('url_tagbase.r', 'metadata_support.r', 'tag_to_etuff.r', 'build_meta_head.r')
   ### Wildlife Computers
   if (txt == "wc"){
   	mss <- c(mss, c('getCtr_gpe3.r','findDateFormat.r','readwc.r', 'extract.pdt.r', 'extract.light.r'))
