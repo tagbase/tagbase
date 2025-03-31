@@ -1,4 +1,6 @@
 ### --- Begin Tim's edit history  --- ###
+### 2025-03-30
+### a) Histos.csv: TATLIMITS and TADLIMITS missing the last bin (Bin12), which requires hard-coded filling in with 45 degC and 2000 m, respectively
 ### 2023-08-04
 ### a) SST.csv: older DAP outputs have no DepthSensor column. I suspect same problem will be presented for Series.csv but not doing anything yet until a use case is found
 ### 2023-06-15
@@ -1145,12 +1147,27 @@ tag_to_etuff <- function (dir, meta_row, fName = NULL, tatBins = NULL, tadBins =
 			histo <- utils::read.table(filename, sep = ",", header = T, blank.lines.skip = F)			
             #histo <- utils::read.table(fList[fidx], sep = ",", header = T, blank.lines.skip = F)
 			### --- End of Tim's edits --- ###
+			
             tat.lim <- histo[which(histo$HistType == "TATLIMITS"), 
                 grep("Bin", names(histo))]
+            ### --- Tim's edits: filling in missing value for the last bin --- ###    
+            if (is.na(tat.lim[13])) {
+            	   print("TATLIMITS last bin check: filling in missing value with 45 degC")
+            	   tat.lim[13] = 45
+            }
+            ### --- End of Tim's edits --- ###   
             tat.lim <- Filter(function(x) !all(is.na(x)), tat.lim)
+            
             tad.lim <- histo[which(histo$HistType == "TADLIMITS"), 
                 grep("Bin", names(histo))]
+            ### --- Tim's edits: filling in missing value for the last bin --- ###     
+            if (is.na(tad.lim[13])) {
+            	   print("TADLIMITS last bin check: filling in missing value with 2000 meters")
+            	   tad.lim[13] = 2000
+            }
+            ### --- End of Tim's edits --- ###                            
             tad.lim <- c(Filter(function(x) !all(is.na(x)), tad.lim))
+            
             if (all(is.na(tat.lim)) & !is.null(tatBins)) {
                 tat.lim <- tatBins
             }
